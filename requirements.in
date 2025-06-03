@@ -6,3 +6,6 @@ sentence-transformers
 faiss-cpu
 kaggle
 fastapi[standard]
+huggingface-hub
+langgraph
+ollama
