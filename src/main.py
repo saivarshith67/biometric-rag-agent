@@ -18,6 +18,7 @@ from .langgraph_agent.nodes import (
 from functools import partial
 
 from langgraph.graph import MessagesState
+from langgraph.checkpoint.memory import MemorySaver
 
 
 def main() -> None:
@@ -28,14 +29,17 @@ def main() -> None:
     chunks = split_text(all_docs=all_docs)
 
     embedding_model = build_embedding_model()
-    store_vectors(chunks, embedding_model)
+    vectorstore = store_vectors(chunks, embedding_model)
 
     response_model = build_model()
     grader_model = build_model()
-    retriever_tool = build_retriever_tool()
+    retriever_tool = build_retriever_tool(vectorstore=vectorstore)
+    memory = MemorySaver()
 
     gen_query_or_respond_wrapped = partial(
-        generate_query_or_respond, response_model=response_model
+        generate_query_or_respond,
+        response_model=response_model,
+        retriever_tool=retriever_tool,
     )
     grade_documents_wrapped = partial(grade_documents, grader_model=grader_model)
     rewrite_question_wrapped = partial(rewrite_question, response_model=response_model)
@@ -48,11 +52,13 @@ def main() -> None:
         rewrite_question_wrapped,
         generate_answer_wrapped,
         grade_documents_wrapped,
-        memory_saver=None,
+        memory_saver=memory,
     )
 
     stream_graph_response(graph, "Hi My name is sai", "001")
-
+    stream_graph_response(graph, "How to create a user?", "001")
+    stream_graph_response(graph, "Do you remember my name?", "001")
+    stream_graph_response(graph, "What is the appropriate frequency for camera?", "001")
 
 
 if __name__ == "__main__":

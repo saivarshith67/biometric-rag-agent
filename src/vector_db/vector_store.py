@@ -8,3 +8,4 @@ def store_vectors(chunks: List[str],
                   ):
     vectorstore = FAISS.from_texts(texts=chunks, embedding=embedding_model)
     vectorstore.save_local(VECTOR_DB_NAME)
+    return vectorstore

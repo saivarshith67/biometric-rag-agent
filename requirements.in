@@ -9,3 +9,6 @@ fastapi[standard]
 huggingface-hub
 langgraph
 ollama
+pypdf
+pip-reqs
+pip-tools

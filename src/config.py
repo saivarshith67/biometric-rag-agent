@@ -5,7 +5,7 @@ load_dotenv()
 
 HF_TOKEN = os.getenv("HUGGINGFACE_ACCESS_TOKEN")
 
-DATA_DIR = ".../data"
+DATA_DIR = "data"
 
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
