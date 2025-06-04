@@ -19,10 +19,10 @@ from IPython.display import Image, display
 # === Load environment variables and login ===
 load_dotenv()
 hf_token = os.getenv("HUGGINGFACE_ACCESS_TOKEN")
-login(token=hf_token)
+# login(token=hf_token)
 
 # === Load PDFs ===
-directory_path = "E:\\Varshith\\biometric-rag-agent\\data"
+directory_path = "biometric-rag-agent/data"
 all_docs = []
 
 for file in os.listdir(directory_path):
