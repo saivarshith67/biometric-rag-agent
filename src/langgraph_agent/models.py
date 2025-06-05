@@ -1,4 +1,4 @@
-from ..config import MODEL_REPO_ID, HF_TOKEN
+from src.config import MODEL_REPO_ID, HF_TOKEN
 from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 
 

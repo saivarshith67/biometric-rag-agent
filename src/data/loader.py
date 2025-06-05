@@ -1,5 +1,5 @@
 import os
-from ..config import DATA_DIR
+from src.config import DATA_DIR
 from langchain_community.document_loaders import PyPDFLoader
 from typing import List
 from langchain.schema import Document

@@ -9,3 +9,22 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 "Hi my Name is Sai, How to create a user?"
+
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+"Do you know my name? if so please tell me."
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+"Could you tell me about the camera used here"
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+"Could you tell me about FaceStation2"

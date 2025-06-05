@@ -1,5 +1,5 @@
 from langchain_community.vectorstores import FAISS
-from ..config import VECTOR_DB_NAME
+from src.config import VECTOR_DB_NAME
 from langchain_huggingface import HuggingFaceEmbeddings
 from typing import List
 

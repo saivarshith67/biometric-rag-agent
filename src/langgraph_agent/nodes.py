@@ -1,6 +1,6 @@
 from langgraph.graph import MessagesState
 from pydantic import BaseModel, Field
-from .prompts import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
+from src.langgraph_agent.prompts import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
 from typing import Literal
 
 class GradeDocuments(BaseModel):
