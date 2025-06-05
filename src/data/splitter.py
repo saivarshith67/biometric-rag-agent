@@ -1,6 +1,9 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from typing import List
 from langchain.schema import Document
+from src.utils.logger import get_logger
+
+logger = get_logger(__name__)
 
 def split_text(all_docs: List[Document]) -> List[str]:
     # Initialize the text splitter
@@ -16,5 +19,5 @@ def split_text(all_docs: List[Document]) -> List[str]:
         for chunk in split_chunks:
             chunks.append(chunk)
 
-    print(f"Total chunks created: {len(chunks)}")
+    logger.info(f"Total chunks created: {len(chunks)}")
     return chunks

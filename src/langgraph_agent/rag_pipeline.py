@@ -14,6 +14,7 @@ from src.langgraph_agent.nodes import (
     rewrite_question,
 )
 
+from src.utils.logger import get_logger
 from src.langgraph_agent.workflow import build_workflow
 from src.langgraph_agent.graph_runner import stream_graph_response
 
@@ -21,6 +22,7 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import MessagesState
 from functools import partial
 
+logger = get_logger(__name__)
 
 class RagPipeline:
     def __init__(self, thread_id: str):
@@ -59,6 +61,9 @@ class RagPipeline:
             grade_documents_wrapped,
             memory_saver=memory,
         )
+
+        logger.info("Successfully initiated the logger")
+
 
     def invoke(self, query: str):
         return stream_graph_response(

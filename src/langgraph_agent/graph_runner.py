@@ -1,3 +1,7 @@
+from src.utils.logger import get_logger
+
+logger = get_logger(__name__)
+
 def stream_graph_response(graph, query: str, thread_id: str):
     """
     Stream the response from the LangGraph graph given a query and thread_id.
@@ -31,6 +35,7 @@ def stream_graph_response(graph, query: str, thread_id: str):
             print("\n\n")
             final_response = update["messages"]  # capture latest messages
 
-    
+    logger.info(f"final_response={final_response}")
+
     return final_response[-1].content if final_response else None
 
