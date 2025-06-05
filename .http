@@ -1,0 +1,11 @@
+###GET REQUEST TO HOME
+
+GET http://localhost:8000/
+
+
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+"Hi my Name is Sai, How to create a user?"
