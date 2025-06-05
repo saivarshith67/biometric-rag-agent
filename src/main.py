@@ -15,6 +15,8 @@ from .langgraph_agent.nodes import (
     grade_documents,
     rewrite_question,
 )
+
+from .langgraph_agent.rag_pipeline import RagPipeline
 from functools import partial
 
 from langgraph.graph import MessagesState
@@ -25,40 +27,17 @@ def main() -> None:
     # setup the project
     project_setup()
 
-    all_docs = load_data()
-    chunks = split_text(all_docs=all_docs)
-
-    embedding_model = build_embedding_model()
-    vectorstore = store_vectors(chunks, embedding_model)
-
-    response_model = build_model()
-    grader_model = build_model()
-    retriever_tool = build_retriever_tool(vectorstore=vectorstore)
-    memory = MemorySaver()
-
-    gen_query_or_respond_wrapped = partial(
-        generate_query_or_respond,
-        response_model=response_model,
-        retriever_tool=retriever_tool,
+    rag_pipeline = RagPipeline("001")
+    response = rag_pipeline.invoke("Hi My name is sai")
+    print(f"AI : {response}")
+    response = rag_pipeline.invoke("How to create a user?")
+    print(f"AI : {response}")
+    response = rag_pipeline.invoke(
+        "Do you remember my name? if so please tell me my name"
     )
-    grade_documents_wrapped = partial(grade_documents, grader_model=grader_model)
-    rewrite_question_wrapped = partial(rewrite_question, response_model=response_model)
-    generate_answer_wrapped = partial(generate_answer, response_model=response_model)
-
-    graph = build_workflow(
-        MessagesState,
-        retriever_tool,
-        gen_query_or_respond_wrapped,
-        rewrite_question_wrapped,
-        generate_answer_wrapped,
-        grade_documents_wrapped,
-        memory_saver=memory,
-    )
-
-    stream_graph_response(graph, "Hi My name is sai", "001")
-    stream_graph_response(graph, "How to create a user?", "001")
-    stream_graph_response(graph, "Do you remember my name?", "001")
-    stream_graph_response(graph, "What is the appropriate frequency for camera?", "001")
+    print(f"AI : {response}")
+    response = rag_pipeline.invoke("What is the perfect frequency for the camera?")
+    print(f"AI : {response}")
 
 
 if __name__ == "__main__":
