@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from src.api.routes import rag
 from src.project_setup import project_setup
-from src.langgraph_agent.rag_pipeline import RagPipeline
+from src.agent.rag_pipeline import RagPipeline
 from src.utils.logger import get_logger
 from uuid import uuid4
 

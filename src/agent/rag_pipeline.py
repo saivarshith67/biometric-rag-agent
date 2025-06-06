@@ -4,10 +4,10 @@ from src.data.splitter import split_text
 from src.vector_db.embeddings import build_embedding_model
 from src.vector_db.vector_store import store_vectors
 
-from src.langgraph_agent.models import build_model
-from src.langgraph_agent.tools import build_retriever_tool
+from src.agent.models import build_model
+from src.agent.tools import build_retriever_tool
 
-from src.langgraph_agent.nodes import (
+from src.agent.nodes import (
     generate_answer,
     generate_query_or_respond,
     grade_documents,
@@ -15,17 +15,18 @@ from src.langgraph_agent.nodes import (
 )
 
 from src.utils.logger import get_logger
-from src.langgraph_agent.workflow import build_workflow
-from src.langgraph_agent.graph_runner import stream_graph_response
+from src.agent.workflow import build_workflow
+from src.agent.graph_runner import stream_graph_response
 
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import MessagesState
 from functools import partial
+from uuid import uuid4
 
 logger = get_logger(__name__)
 
 class RagPipeline:
-    def __init__(self, thread_id: str):
+    def __init__(self, thread_id: uuid4):
         all_docs = load_data()
         chunks = split_text(all_docs=all_docs)
 

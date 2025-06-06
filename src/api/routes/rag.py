@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Body, Request
-from src.langgraph_agent.rag_pipeline import RagPipeline
+from src.agent.rag_pipeline import RagPipeline
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)

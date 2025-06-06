@@ -12,3 +12,4 @@ ollama
 pypdf
 pip-reqs
 pip-tools
+streamlit
