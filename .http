@@ -64,3 +64,15 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 "Who are you?"
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+"What is the schema of DEVICE table?"
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+"What's new in Firmware with build number : (Build No. 2.2.0_240704)"

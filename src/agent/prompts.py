@@ -1,10 +1,12 @@
 GRADE_PROMPT = (
-    "You are a grader assessing relevance of a retrieved document to a user question. \n "
-    "Here is the retrieved document: \n\n {context} \n\n"
-    "Here is the user question: {question} \n"
-    "If the document contains keyword(s) or semantic meaning related to the user question, grade it as relevant. \n"
-    "Give a binary score 'yes' or 'no' score to indicate whether the document is relevant to the question."
+    "You are a strict binary grader evaluating whether a retrieved document is relevant to a user's question.\n\n"
+    "Retrieved Document:\n{context}\n\n"
+    "User Question:\n{question}\n\n"
+    "If the document contains any relevant keywords or has semantic overlap with the user's question, respond with 'yes'.\n"
+    "Otherwise, respond with 'no'.\n\n"
+    "Respond with only a single word: either 'yes' or 'no'. Do not provide any explanation or additional text."
 )
+
 
 
 REWRITE_PROMPT = (
