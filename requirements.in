@@ -3,7 +3,7 @@ langchain-community
 langchain-huggingface
 langchain-openai
 sentence-transformers
-faiss-cpu
+chomradb
 kaggle
 fastapi[standard]
 huggingface-hub

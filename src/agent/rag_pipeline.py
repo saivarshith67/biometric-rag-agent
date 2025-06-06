@@ -14,11 +14,12 @@ from src.agent.nodes import (
     rewrite_question,
 )
 
+from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
 from src.agent.workflow import build_workflow
 from src.agent.graph_runner import stream_graph_response
+from src.agent.memory import get_memory
 
-from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import MessagesState
 from functools import partial
 from uuid import uuid4
@@ -27,16 +28,13 @@ logger = get_logger(__name__)
 
 class RagPipeline:
     def __init__(self, thread_id: uuid4):
-        all_docs = load_data()
-        chunks = split_text(all_docs=all_docs)
-
-        embedding_model = build_embedding_model()
-        vectorstore = store_vectors(chunks, embedding_model)
-
+        
+        embeding_model = build_embedding_model()
+        vectorstore = load_vectorstore(embedding_model=embeding_model)
         response_model = build_model()
         grader_model = build_model()
         retriever_tool = build_retriever_tool(vectorstore=vectorstore)
-        memory = MemorySaver()
+        memory = get_memory()
 
         gen_query_or_respond_wrapped = partial(
             generate_query_or_respond,
@@ -63,7 +61,7 @@ class RagPipeline:
             memory_saver=memory,
         )
 
-        logger.info("Successfully initiated the logger")
+        logger.info("Successfully initiated the rag pipeline")
 
 
     def invoke(self, query: str):

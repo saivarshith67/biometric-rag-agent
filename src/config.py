@@ -10,6 +10,6 @@ DATA_DIR = "data"
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 
-VECTOR_DB_NAME = "my_faiss_index"
+VECTOR_DB_NAME = "chroma_vector_db"
 
 MODEL_REPO_ID = "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
