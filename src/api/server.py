@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.api.routes import rag
+from src.api.routes import query
 from src.project_setup import project_setup
 from src.agent.rag_pipeline import RagPipeline
 from src.utils.logger import get_logger
@@ -19,4 +19,4 @@ def root():
     logger.info("Rag Agent initialised")
     return {"message" : "Welcome to biometric rag agent and Rag Agent is initialised"}
 
-app.include_router(rag.router)
+app.include_router(query.router)

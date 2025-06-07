@@ -95,3 +95,34 @@ POST localhost:8000/query
 Content-Type: application/json
 
 "What is the appropriate angle for the camera to be installed?"
+
+###POST REQUEST VIDEO FLICKER ISSUE
+POST localhost:8000/query
+Content-Type: application/json
+
+"My camera video is flickering what could be the issue?"
+
+
+###POST REQUEST VIDEO FLICKER CONTIUE
+POST localhost:8000/query
+Content-Type: application/json
+
+"Hmm great so is it 50Hz or 60Hz, I don't get it"
+
+###POST REQUEST
+POST localhost:8000/query
+Content-Type: application/json
+
+"So, If I tell my region can you suggest me the frequency ?"
+
+###POST REQUEST
+POST localhost:8000/query
+Content-Type: application/json
+
+"I live in india so what should I do to minize the video flickering?"
+
+###POST REQUEST
+POST localhost:8000/query
+Content-Type: application/json
+
+"A new employee has arrived yesterday we are facing issues with face and fingerprint enrollment what to do?"
