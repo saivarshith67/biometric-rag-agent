@@ -7,7 +7,9 @@ from frontend.utils.api import chat_with_bot, start
 
 st.set_page_config(page_title="Chatbot", layout="centered")
 
-start()
+if "startup_done" not in st.session_state:
+    start()
+    st.session_state.startup_done = True
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []

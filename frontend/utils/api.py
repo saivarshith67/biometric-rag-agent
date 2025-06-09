@@ -1,5 +1,6 @@
 import requests
-BASE_URL = "http://localhost:8000/"
+# BASE_URL = "http://localhost:8000/"
+BASE_URL = "https://7j0hq80w-8000.use2.devtunnels.ms/"
 
 def start():
     return requests.get(BASE_URL)
