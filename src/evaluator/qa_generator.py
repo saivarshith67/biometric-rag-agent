@@ -58,7 +58,7 @@ def qa_generator():
                     "source_doc": sampled_context.metadata["source"],
                 }
             )
-        except:
+        except Exception:
             continue
 
     question_groundedness_critique_prompt = """
