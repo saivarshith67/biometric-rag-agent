@@ -3,7 +3,7 @@ langchain-community
 langchain-huggingface
 langchain-openai
 sentence-transformers
-chomradb
+chromadb
 kaggle
 fastapi[standard]
 huggingface-hub
@@ -13,4 +13,3 @@ pypdf
 pip-reqs
 pip-tools
 streamlit
-chromadb

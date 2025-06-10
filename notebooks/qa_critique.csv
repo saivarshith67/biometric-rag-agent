@@ -1,0 +1,57 @@
+,context,question,answer
+0,"Correct fingerprint enrollment is critical in improving fingerprint recognition. BioStation 2 is loaded with powerful fingerprint algorithm which is capable of recognizing a fingerprint even when the angle or position of the finger on the reader is not optimal. Nevertheless, enrolling a fingerprint with the following instructions can improve the recognition performance.
+
+Choose Ideal Fingers to Enroll:
+• Each person can enroll up to ten fingerprints. If a finger is injured or scratched, it is recommended to use another finger.
+• If the fingerprint recognition fails, you can enroll the same finger multiple times, which will improves the recognition performance.
+• If a finger is injured or the fingerprint is not clear, please enroll a different finger.
+• The index finger and middle finger are preferred for enrolling fingerprints. Other fingers may have a lower recognition rate because those fingers tend to have difficulty being placed at the center of the fingerprint sensor.
+
+How to Enroll Fingerprints:
+1 When enrolling a fingerprint, the “Scan 1st finger” message will appear on the LCD screen. Place a finger on the fingerprint sensor, and then press softly in order to improve the recognition.
+2 After a beep sounds, you will be notified to scan again then remove your finger and place it again to scan. (You are required to scan the same finger twice for enrollment.)",What is the procedure for fingerprint enrollment?,"To enroll a fingerprint on the BioStation 2, start by selecting an ideal finger—preferably the index or middle finger. Avoid injured or unclear fingerprints. When the prompt 'Scan 1st finger' appears on the LCD screen, gently place your finger on the sensor. After a beep, lift and re-place the same finger to complete the second scan. The system requires two scans of the same finger to finalize the enrollment. For improved recognition accuracy, you can also register the same finger multiple times."
+1,"Correct face enrollment and authentication method
+
+Cautions for enrolling a face:
+• When enrolling a face, maintain a distance of 60–100 cm between the device and the face.
+• Do not change your face expression.
+• Do not wear masks, hats, or eye patches.
+• Do not enroll a face wearing a mask. It may increase the False Acceptance Rate (FAR) if both faces with and without a mask are enrolled.
+• Do not raise head up or lower head.
+• Do not wear thick makeup.
+• Do not close your eyes.
+• Make sure that both of your shoulders correctly appear on the screen.
+• Stand still and enroll your face by staring at the screen.
+• Be careful not to display two faces on the screen. Enroll one person at a time.
+• If you do not follow the instructions on the screen, the face enrollment may take longer or may fail.",How should a face be enrolled on the FaceStation F2?,"To enroll a face on the FaceStation F2, stand approximately 60–100 cm away from the device. Maintain a neutral expression and avoid wearing accessories like masks, hats, or glasses that may obstruct facial features. Ensure your eyes are open and that both shoulders are clearly visible in the frame. Only one person should appear on screen during enrollment to avoid confusion. Remain still and follow the on-screen guidance closely to ensure the system captures a high-quality facial template."
+2,"Suprema’s Live Finger Detection (LFD) technology is based on analysis of dynamic and static image characteristics of the fake fingers, and how they can be distinguished from those of live fingers. With the advanced analysis algorithm to detect abnormalities in dynamic changing pattern of fingerprints images, and several static features of liveness or unnaturalness of fingers, fake fingers are clearly distinguished from live fingers.
+
+Dynamic changing pattern analysis:
+Live fingers naturally demonstrate changes in patterns of area, intensity, and movement, while fake fingers produce unnatural changing patterns of separated areas, partially dark area, distorted boundary shape, and large movement of core part.
+
+Liveness feature analysis:
+There are localized features in fingerprint images that reveal liveness: pore distribution, ridge sharpness, and boundary regularity. These are difficult to replicate with materials like silicon or rubber.",What is Suprema's Live Finger Detection (LFD) technology?,"Suprema's Live Finger Detection (LFD) technology enhances security by distinguishing between real and fake fingerprints. It uses two key analyses: (1) dynamic pattern detection, which examines natural variations in fingerprint contact such as area, intensity, and movement; and (2) liveness feature analysis, which checks for biological details like pores and ridge sharpness that are hard to replicate. This dual approach helps reject spoofing attempts made with materials like rubber, silicone, or paper."
+3,"BioStar 2 API is what people call web services API or web API, and is an open API that everyone can use. Open API means that you open a set of APIs to allow others to use your own data and applications through network. BioStar 2 API uses REST API and JSON, so anyone can easily integrate BioStar 2 with 3rd party systems.
+
+Suprema provides users with BioStar 2 Mobile, which Suprema has developed using BioStar 2 API. Suprema Mobile supports Android and iOS and offers physical access control management features including user management, door management, monitoring and event notifications.",What is the BioStar 2 API and what does it offer?,"The BioStar 2 API is an open, RESTful web API that enables developers to integrate BioStar’s access control features with third-party applications. It uses JSON for data formatting, making it easy to connect with web and mobile platforms. Through this API, developers can build applications that manage users, doors, and events, and even enable real-time monitoring. Suprema also provides a mobile app built on this API, supporting Android and iOS platforms for managing access remotely."
+4,"The time and Attendance (T&A) System is a process that tracks and manages employees’ check-in and check-out times, meal times, vacations, and absences. Implementing an automated time and attendance system resolves manual errors, simplifies workforce management, and enables rule-based scheduling. BioStar 2’s system also helps prevent buddy punching by using biometric authentication.",What is the purpose of the BioStar 2 Time and Attendance system?,"BioStar 2's Time and Attendance (T&A) system is designed to automatically track and manage employee attendance, including work hours, breaks, leaves, and absences. It replaces manual methods prone to human error and fraud, and uses biometric authentication to prevent issues like buddy punching. The system simplifies workforce scheduling, ensures accurate payroll data, and provides customizable rules and reports for better workforce oversight."
+5,"FaceStation 2 has 80 wide angle near infrared LEDs and 60 narrow angle near infrared LEDs, so it can recognize a face even in an environment with 25,000 lux, which is equivalent to an environment with full daylight (not direct sun). It also uses pixel intensity distribution analysis to minimize the effects of ambient light when acquiring face images, improving recognition in bright conditions.",How does FaceStation 2 improve face recognition in bright environments?,"FaceStation 2 is optimized for performance in well-lit environments by using 80 wide-angle and 60 narrow-angle near infrared (IR) LEDs. These LEDs allow it to perform accurate facial recognition even under bright lighting conditions of up to 25,000 lux (equivalent to daylight). Additionally, it employs pixel intensity distribution analysis, which reduces the impact of shadows and glare, ensuring consistent image quality and better facial feature extraction even in challenging lighting."
+6,"Safety Instructions:
+Do not install the product in direct sunlight or in a location that is damp or dusty.
+Install the product in a dry place.
+Install the product in a place where there is no electromagnetic interference.
+Have qualified service professionals install or repair the product.
+Use a DC 12V power adapter that provides a current of at least 500mA.
+If installing outdoors, install together with the enclosure and properly seal cable covers to maintain IP65 rating.",What are the safety precautions during installation of Suprema devices?,"When installing Suprema devices, avoid placing them in direct sunlight, damp or dusty areas, or locations with strong electromagnetic interference. Always use a 12V DC power supply with at least 500mA current. Outdoor installations should include proper enclosures and sealed cable covers to maintain water and dust resistance (IP65 rating). Only qualified technicians should perform installation or repair to avoid electric hazards or voiding the warranty."
+7,"BioStar 2’s time and attendance management system consists of elements of Time Code, Shift, Schedule, Schedule Template, and Overtime Rule. The Time Card and Report features can be used to edit or print out individual time and attendance records as reports.",What components make up BioStar 2's T&A management system?,"BioStar 2’s Time and Attendance system is composed of several interrelated components: Time Code (to define work and break types), Shift (to define work hours), Schedule (combines shifts with rules), Schedule Template (to standardize scheduling), and Overtime Rule (to manage extra work hours). Time Cards track individual user data, and Reports provide printable or exportable summaries for attendance tracking and payroll processing."
+8,"When the fingerprint recognition fails:
+• If the finger is smeared with water or sweat, dry off the finger and then scan the finger.
+• If the finger is too dry, blow your breath on the fingertips and then scan.
+• If the finger has a cut, register the fingerprint of another finger.
+• The initially enrolled fingerprint often may have not been scanned correctly, so enroll the fingerprint again.",What should be done if fingerprint recognition fails on BioStation 2?,"If fingerprint recognition fails on BioStation 2, check if the finger is wet or too dry. Wipe moisture or moisten dry fingers slightly for better contact. If the fingerprint is unclear due to injury, use another finger. Sometimes, the initial enrollment may have been faulty—re-enroll the fingerprint carefully, ensuring correct finger placement and pressure on the sensor."
+9,"Cautions for authenticating a face:
+• Ensure that the face appears in the center of the device’s screen.
+• If a part of the face is covered with a hat, a mask, an eye patch, or sunglasses authentication may fail.
+• Authenticate your face at a distance of 90–100 cm from the device.
+• Make sure that both of your shoulders correctly appear on the screen.
+• Stand still, and then authenticate your face.",What are the guidelines for successful face authentication?,"For accurate face authentication, stand 90–100 cm from the device and center your face on the screen. Avoid wearing masks, hats, or glasses that may block facial features. Ensure both shoulders are visible and aligned, and remain still during scanning. Following these steps helps the system capture a clear and consistent image for authentication."
