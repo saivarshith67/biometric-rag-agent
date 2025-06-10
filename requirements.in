@@ -4,13 +4,10 @@ langchain-huggingface
 langchain-openai
 sentence-transformers
 chromadb
-kaggle
 fastapi[standard]
 huggingface-hub
 langgraph
 ollama
 pypdf
-pip-reqs
-pip-tools
 streamlit
 langchain-chroma

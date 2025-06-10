@@ -6,7 +6,7 @@
 #
 aiohappyeyeballs==2.6.1
     # via aiohttp
-aiohttp==3.12.6
+aiohttp==3.12.12
     # via langchain-community
 aiosignal==1.3.2
     # via aiohttp
@@ -27,20 +27,14 @@ attrs==25.3.0
     #   aiohttp
     #   jsonschema
     #   referencing
-backoff==1.11.1
-    # via
-    #   opentelemetry-exporter-otlp-proto-grpc
-    #   posthog
+backoff==2.2.1
+    # via posthog
 bcrypt==4.3.0
     # via chromadb
-bleach==6.2.0
-    # via kaggle
 blinker==1.9.0
     # via streamlit
 build==1.2.2.post1
-    # via
-    #   chromadb
-    #   pip-tools
+    # via chromadb
 cachetools==5.5.2
     # via
     #   google-auth
@@ -49,20 +43,16 @@ certifi==2025.4.26
     # via
     #   httpcore
     #   httpx
-    #   kaggle
     #   kubernetes
     #   requests
 charset-normalizer==3.4.2
+    # via requests
+chromadb==1.0.12
     # via
-    #   kaggle
-    #   requests
-chroma-hnswlib==0.7.6
-    # via chromadb
-chromadb==0.6.3
-    # via -r requirements.in
+    #   -r requirements.in
+    #   langchain-chroma
 click==8.2.1
     # via
-    #   pip-tools
     #   rich-toolkit
     #   streamlit
     #   typer
@@ -81,7 +71,7 @@ durationpy==0.10
     # via kubernetes
 email-validator==2.2.0
     # via fastapi
-fastapi[standard]==0.115.12
+fastapi[standard]==0.115.9
     # via
     #   -r requirements.in
     #   chromadb
@@ -94,7 +84,7 @@ filelock==3.18.0
     #   transformers
 flatbuffers==25.2.10
     # via onnxruntime
-frozenlist==1.6.0
+frozenlist==1.7.0
     # via
     #   aiohttp
     #   aiosignal
@@ -110,7 +100,7 @@ google-auth==2.40.3
     # via kubernetes
 googleapis-common-protos==1.70.0
     # via opentelemetry-exporter-otlp-proto-grpc
-greenlet==3.2.2
+greenlet==3.2.3
     # via sqlalchemy
 grpcio==1.73.0
     # via
@@ -136,7 +126,7 @@ httpx==0.28.1
     #   openai
 httpx-sse==0.4.0
     # via langchain-community
-huggingface-hub==0.32.3
+huggingface-hub==0.32.4
     # via
     #   -r requirements.in
     #   langchain-huggingface
@@ -150,7 +140,6 @@ idna==3.10
     #   anyio
     #   email-validator
     #   httpx
-    #   kaggle
     #   requests
     #   yarl
 importlib-metadata==8.7.0
@@ -172,22 +161,25 @@ jsonpatch==1.33
 jsonpointer==3.0.0
     # via jsonpatch
 jsonschema==4.24.0
-    # via altair
+    # via
+    #   altair
+    #   chromadb
 jsonschema-specifications==2025.4.1
     # via jsonschema
-kaggle==1.7.4.5
-    # via -r requirements.in
 kubernetes==33.1.0
     # via chromadb
 langchain==0.3.25
     # via
     #   -r requirements.in
     #   langchain-community
+langchain-chroma==0.2.4
+    # via -r requirements.in
 langchain-community==0.3.24
     # via -r requirements.in
-langchain-core==0.3.63
+langchain-core==0.3.64
     # via
     #   langchain
+    #   langchain-chroma
     #   langchain-community
     #   langchain-huggingface
     #   langchain-openai
@@ -197,7 +189,7 @@ langchain-core==0.3.63
     #   langgraph-prebuilt
 langchain-huggingface==0.2.0
     # via -r requirements.in
-langchain-openai==0.3.18
+langchain-openai==0.3.21
     # via -r requirements.in
 langchain-text-splitters==0.3.8
     # via langchain
@@ -211,7 +203,7 @@ langgraph-prebuilt==0.2.2
     # via langgraph
 langgraph-sdk==0.1.70
     # via langgraph
-langsmith==0.3.43
+langsmith==0.3.45
     # via
     #   langchain
     #   langchain-community
@@ -234,14 +226,14 @@ multidict==6.4.4
     #   yarl
 mypy-extensions==1.1.0
     # via typing-inspect
-narwhals==1.41.0
+narwhals==1.42.0
     # via altair
-networkx==3.4.2
+networkx==3.5
     # via torch
-numpy==2.2.6
+numpy==2.3.0
     # via
-    #   chroma-hnswlib
     #   chromadb
+    #   langchain-chroma
     #   langchain-community
     #   onnxruntime
     #   pandas
@@ -295,9 +287,9 @@ ollama==0.5.1
     # via -r requirements.in
 onnxruntime==1.22.0
     # via chromadb
-openai==1.82.1
+openai==1.85.0
     # via langchain-openai
-opentelemetry-api==1.34.0
+opentelemetry-api==1.34.1
     # via
     #   chromadb
     #   opentelemetry-exporter-otlp-proto-grpc
@@ -306,29 +298,33 @@ opentelemetry-api==1.34.0
     #   opentelemetry-instrumentation-fastapi
     #   opentelemetry-sdk
     #   opentelemetry-semantic-conventions
-opentelemetry-exporter-otlp-proto-grpc==1.11.1
+opentelemetry-exporter-otlp-proto-common==1.34.1
+    # via opentelemetry-exporter-otlp-proto-grpc
+opentelemetry-exporter-otlp-proto-grpc==1.34.1
     # via chromadb
-opentelemetry-instrumentation==0.55b0
+opentelemetry-instrumentation==0.55b1
     # via
     #   opentelemetry-instrumentation-asgi
     #   opentelemetry-instrumentation-fastapi
-opentelemetry-instrumentation-asgi==0.55b0
+opentelemetry-instrumentation-asgi==0.55b1
     # via opentelemetry-instrumentation-fastapi
-opentelemetry-instrumentation-fastapi==0.55b0
+opentelemetry-instrumentation-fastapi==0.55b1
     # via chromadb
-opentelemetry-proto==1.11.1
-    # via opentelemetry-exporter-otlp-proto-grpc
-opentelemetry-sdk==1.34.0
+opentelemetry-proto==1.34.1
+    # via
+    #   opentelemetry-exporter-otlp-proto-common
+    #   opentelemetry-exporter-otlp-proto-grpc
+opentelemetry-sdk==1.34.1
     # via
     #   chromadb
     #   opentelemetry-exporter-otlp-proto-grpc
-opentelemetry-semantic-conventions==0.55b0
+opentelemetry-semantic-conventions==0.55b1
     # via
     #   opentelemetry-instrumentation
     #   opentelemetry-instrumentation-asgi
     #   opentelemetry-instrumentation-fastapi
     #   opentelemetry-sdk
-opentelemetry-util-http==0.55b0
+opentelemetry-util-http==0.55b1
     # via
     #   opentelemetry-instrumentation-asgi
     #   opentelemetry-instrumentation-fastapi
@@ -359,20 +355,15 @@ pillow==11.2.1
     # via
     #   sentence-transformers
     #   streamlit
-pip-reqs==0.12.0
-    # via -r requirements.in
-pip-tools==7.4.1
-    # via -r requirements.in
 posthog==4.6.1
     # via chromadb
-propcache==0.3.1
+propcache==0.3.2
     # via
     #   aiohttp
     #   yarl
-protobuf==6.31.1
+protobuf==5.29.5
     # via
     #   googleapis-common-protos
-    #   kaggle
     #   onnxruntime
     #   opentelemetry-proto
     #   streamlit
@@ -408,12 +399,9 @@ pypdf==5.6.0
 pypika==0.48.9
     # via chromadb
 pyproject-hooks==1.2.0
-    # via
-    #   build
-    #   pip-tools
+    # via build
 python-dateutil==2.9.0.post0
     # via
-    #   kaggle
     #   kubernetes
     #   pandas
     #   posthog
@@ -423,8 +411,6 @@ python-dotenv==1.1.0
     #   uvicorn
 python-multipart==0.0.20
     # via fastapi
-python-slugify==8.0.4
-    # via kaggle
 pytz==2025.2
     # via pandas
 pyyaml==6.0.2
@@ -445,10 +431,9 @@ regex==2024.11.6
     # via
     #   tiktoken
     #   transformers
-requests==2.32.3
+requests==2.32.4
     # via
     #   huggingface-hub
-    #   kaggle
     #   kubernetes
     #   langchain
     #   langchain-community
@@ -478,7 +463,7 @@ rsa==4.9.1
     # via google-auth
 safetensors==0.5.3
     # via transformers
-scikit-learn==1.6.1
+scikit-learn==1.7.0
     # via sentence-transformers
 scipy==1.15.3
     # via
@@ -492,7 +477,6 @@ shellingham==1.5.4
     # via typer
 six==1.17.0
     # via
-    #   kaggle
     #   kubernetes
     #   posthog
     #   python-dateutil
@@ -506,7 +490,7 @@ sqlalchemy==2.0.41
     # via
     #   langchain
     #   langchain-community
-starlette==0.46.2
+starlette==0.45.3
     # via fastapi
 streamlit==1.45.1
     # via -r requirements.in
@@ -520,10 +504,6 @@ tenacity==9.1.2
     #   langchain-community
     #   langchain-core
     #   streamlit
-text-unidecode==1.3
-    # via
-    #   kaggle
-    #   python-slugify
 threadpoolctl==3.6.0
     # via scikit-learn
 tiktoken==0.9.0
@@ -535,7 +515,7 @@ tokenizers==0.21.1
     #   transformers
 toml==0.10.2
     # via streamlit
-torch==2.7.0
+torch==2.7.1
     # via sentence-transformers
 tornado==6.5.1
     # via streamlit
@@ -543,7 +523,6 @@ tqdm==4.67.1
     # via
     #   chromadb
     #   huggingface-hub
-    #   kaggle
     #   openai
     #   sentence-transformers
     #   transformers
@@ -551,7 +530,7 @@ transformers==4.52.4
     # via
     #   langchain-huggingface
     #   sentence-transformers
-triton==3.3.0
+triton==3.3.1
     # via torch
 typer==0.16.0
     # via
@@ -567,6 +546,7 @@ typing-extensions==4.14.0
     #   langchain-core
     #   openai
     #   opentelemetry-api
+    #   opentelemetry-exporter-otlp-proto-grpc
     #   opentelemetry-sdk
     #   opentelemetry-semantic-conventions
     #   pydantic
@@ -590,7 +570,6 @@ tzdata==2025.2
     # via pandas
 urllib3==2.4.0
     # via
-    #   kaggle
     #   kubernetes
     #   requests
 uvicorn[standard]==0.34.3
@@ -604,21 +583,15 @@ watchdog==6.0.0
     # via streamlit
 watchfiles==1.0.5
     # via uvicorn
-webencodings==0.5.1
-    # via
-    #   bleach
-    #   kaggle
 websocket-client==1.8.0
     # via kubernetes
 websockets==15.0.1
     # via uvicorn
-wheel==0.45.1
-    # via pip-tools
 wrapt==1.17.2
     # via opentelemetry-instrumentation
 xxhash==3.5.0
     # via langgraph
-yarl==1.20.0
+yarl==1.20.1
     # via aiohttp
 zipp==3.23.0
     # via importlib-metadata
@@ -626,5 +599,4 @@ zstandard==0.23.0
     # via langsmith
 
 # The following packages are considered to be unsafe in a requirements file:
-# pip
 # setuptools

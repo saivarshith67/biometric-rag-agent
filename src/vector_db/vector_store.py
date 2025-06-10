@@ -16,7 +16,6 @@ def store_vectors(
         embedding=embedding_model,
         persist_directory=VECTOR_DB_NAME
     )
-    vectorstore.persist()
     logger.info(f"Stored the data into Chroma at: {VECTOR_DB_NAME}")
 
 
