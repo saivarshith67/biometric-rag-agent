@@ -30,9 +30,10 @@ def stream_graph_response(graph, query: str, thread_id: str):
 
     for chunk in graph.stream(input=input_payload, config=config):
         for node, update in chunk.items():
-            print("Update from node", node)
+            logger.debug(f"Update from node : {node}")
             # update["messages"][-1].pretty_print()
-            print("\n\n")
+            latest_update = update["messages"][-1]
+            logger.debug(f"{latest_update}\n\n")
             final_response = update["messages"]  # capture latest messages
 
     logger.info(f"final_response={final_response}")

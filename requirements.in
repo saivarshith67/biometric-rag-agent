@@ -11,3 +11,4 @@ ollama
 pypdf
 streamlit
 langchain-chroma
+colorlog

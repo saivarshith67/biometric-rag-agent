@@ -5,7 +5,7 @@ import colorlog
 
 def get_logger(name: str) -> logging.Logger:
     logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)
 
     # Avoid duplicate handlers if already set
     if not logger.handlers:

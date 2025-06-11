@@ -1,18 +1,18 @@
 from langgraph.graph import MessagesState
 from pydantic import BaseModel, Field
-from src.agent.prompts import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
 from typing import Literal
 from langchain.output_parsers import BooleanOutputParser
 from langchain.output_parsers.retry import RetryWithErrorOutputParser
 from langchain_core.prompts import PromptTemplate
 
+from src.agent.prompts import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
+
+
 class GradeDocuments(BaseModel):
     """Grade documents using a binary score for relevance check."""
-
     binary_score: str = Field(
         description="Relevance score: 'yes' if relevant, or 'no' if not relevant"
     )
-
 
 
 def generate_query_or_respond(state: MessagesState, response_model, retriever_tool):
@@ -20,22 +20,20 @@ def generate_query_or_respond(state: MessagesState, response_model, retriever_to
         tools=[retriever_tool]
     ).invoke(state["messages"], tool_choice="auto")
 
-    return {"messages" : [response]}
+    return {"messages": [response]}
+
 
 def grade_documents(
     state: MessagesState,
-    grader_model  # e.g. ChatOpenAI or similar
+    grader_model
 ) -> Literal["generate_answer", "rewrite_question"]:
     """Determine whether the retrieved documents are relevant to the question."""
 
     question = state["messages"][0].content
     context = state["messages"][-1].content
 
-    # Prepare the prompt
     prompt_template = PromptTemplate.from_template(GRADE_PROMPT)
-
-    # Create parser and retry wrapper
-    parser = BooleanOutputParser()  # returns True or False
+    parser = BooleanOutputParser()
     retrying_parser = RetryWithErrorOutputParser.from_llm(
         llm=grader_model,
         parser=parser,
@@ -43,11 +41,9 @@ def grade_documents(
         max_retries=1,
     )
 
-    # Prepare the input values for the prompt
     input_values = {"question": question, "context": context}
     prompt_value = prompt_template.format_prompt(**input_values)
 
-    # Get raw output from LLM
     raw_output = grader_model.invoke(prompt_value)
 
     try:
@@ -62,15 +58,17 @@ def grade_documents(
     return "generate_answer" if result else "rewrite_question"
 
 
-
-
 def rewrite_question(state: MessagesState, response_model):
-    """Rewrite the original user question."""
+    """Rewrite the original user question and flag the state."""
     messages = state["messages"]
     question = messages[0].content
     prompt = REWRITE_PROMPT.format(question=question)
     response = response_model.invoke([{"role": "user", "content": prompt}])
-    return {"messages": [{"role": "user", "content": response.content}]}
+
+    return {
+        "messages": [{"role": "user", "content": response.content}],
+        "was_rewritten": True
+    }
 
 
 def generate_answer(state: MessagesState, response_model):

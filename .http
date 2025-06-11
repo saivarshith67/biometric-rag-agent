@@ -126,9 +126,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" :
-    "I live in india so what should I do to minize the video flickering?"
-
+    "query" : "I live in india so what should I do to minize the video flickering?"
 }
 
 ###POST REQUEST

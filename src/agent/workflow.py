@@ -1,6 +1,14 @@
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
-from typing import Callable, Dict
+from typing import Callable
+
+
+def next_step_after_generate(state):
+    """Route depending on whether the question was rewritten."""
+    if state.get("was_rewritten", False):
+        return "retrieve"
+    else:
+        return tools_condition(state)
 
 
 def add_nodes(
@@ -18,11 +26,12 @@ def add_nodes(
 
 def add_edges(workflow: StateGraph, grade_documents: Callable):
     workflow.add_edge(START, "generate_query_or_respond")
-    
+
     workflow.add_conditional_edges(
         "generate_query_or_respond",
-        tools_condition,
+        next_step_after_generate,
         {
+            "retrieve": "retrieve",
             "tools": "retrieve",
             END: END,
         },
@@ -30,7 +39,9 @@ def add_edges(workflow: StateGraph, grade_documents: Callable):
 
     workflow.add_conditional_edges("retrieve", grade_documents)
     workflow.add_edge("generate_answer", END)
-    workflow.add_edge("rewrite_question", "generate_query_or_respond")
+
+    # 🔁 fixed: go directly from rewrite → retrieve, not rerun tool selection
+    workflow.add_edge("rewrite_question", "retrieve")
 
 
 def build_workflow(
@@ -43,6 +54,7 @@ def build_workflow(
     memory_saver=None,
 ):
     workflow = StateGraph(MessagesState)
+
     add_nodes(
         workflow,
         retriever_tool,
@@ -50,6 +62,7 @@ def build_workflow(
         rewrite_question,
         generate_answer,
     )
+
     add_edges(workflow, grade_documents)
 
     memory = memory_saver
