@@ -12,12 +12,13 @@ from src.utils.logger import get_logger
 from src.agent.workflow import build_workflow
 from src.agent.graph_runner import stream_graph_response
 from src.agent.memory import get_memory
-from langgraph.checkpoint.postgres import PostgresSaver
+from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import MessagesState
 from functools import partial
 from uuid import uuid4
 import psycopg
-from src.config import SUPABASE_DB_URL
+from src.config import DB_URL
+import sqlite3
 
 logger = get_logger(__name__)
 
@@ -45,9 +46,9 @@ class RagPipeline:
         """
         Enter the context: connect to DB, create the checkpointer, and build the graph.
         """
-        conn_string = SUPABASE_DB_URL
-        self.db_connection = psycopg.connect(conn_string)
-        self.checkpointer = PostgresSaver(conn=self.db_connection)
+        conn_string = DB_URL
+        self.db_connection = sqlite3.connect(conn_string, check_same_thread=False)
+        self.checkpointer = SqliteSaver(conn=self.db_connection)
 
         gen_query_or_respond_wrapped = partial(
             generate_query_or_respond,
@@ -65,7 +66,6 @@ class RagPipeline:
         )
 
         self._graph = build_workflow(
-            MessagesState=MessagesState,
             retriever_tool=self.retriever_tool,
             generate_query_or_respond=gen_query_or_respond_wrapped,
             rewrite_question=rewrite_question_wrapped,
@@ -73,6 +73,8 @@ class RagPipeline:
             grade_documents=grade_documents_wrapped,
             checkpointer=self.checkpointer,
         )
+
+        return self
     
     async def __aenter__(self):
         return self.__enter__()

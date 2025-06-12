@@ -19,6 +19,8 @@ async def lifespan(app: FastAPI):
     app.state._rag_pipeline_context = rag_pipeline  # Keep reference for manual closing
     app.state.rag_agent = await rag_pipeline.__aenter__()
     logger.info("RagPipeline initialized")
+    logger.info("APPLICATION STARTUP COMPLETED")
+    logger.info(f"{app.state.rag_agent}")
 
     yield  # Run app
 

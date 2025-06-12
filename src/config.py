@@ -13,4 +13,4 @@ VECTOR_DB_NAME = "chroma_vector_db"
 
 MODEL_REPO_ID = "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
 
-SUPABASE_DB_URL = os.getenv("SUPABASE_DB_URL")
+DB_URL = os.getenv("DB_URL")
