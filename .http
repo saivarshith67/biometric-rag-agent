@@ -145,3 +145,19 @@ Content-Type: application/json
 {
     "query" : "For environments requiring temperature screening, what are the practical differences between 'Check Before Authentication,' 'Check After Authentication,' and 'Check Only' modes, and which would be most appropriate for different security scenarios?"
 }
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query" : "Show me the conversation history"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query" : "What are the exact question that I have asked you?"
+}
