@@ -1,7 +1,8 @@
 from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import ToolNode, tools_condition
 from typing import Callable
-
+from langgraph.types import Checkpointer
+from langgraph.graph import MessagesState
 
 def next_step_after_generate(state):
     """Route depending on whether the question was rewritten."""
@@ -45,13 +46,12 @@ def add_edges(workflow: StateGraph, grade_documents: Callable):
 
 
 def build_workflow(
-    MessagesState,
     retriever_tool,
     generate_query_or_respond: Callable,
     rewrite_question: Callable,
     generate_answer: Callable,
     grade_documents: Callable,
-    memory_saver=None,
+    checkpointer : Checkpointer
 ):
     workflow = StateGraph(MessagesState)
 
@@ -65,5 +65,4 @@ def build_workflow(
 
     add_edges(workflow, grade_documents)
 
-    memory = memory_saver
-    return workflow.compile(checkpointer=memory)
+    return workflow.compile(checkpointer=checkpointer)

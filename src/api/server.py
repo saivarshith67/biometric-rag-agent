@@ -4,19 +4,32 @@ from src.project_setup import project_setup
 from src.agent.rag_pipeline import RagPipeline
 from src.utils.logger import get_logger
 from uuid import uuid4
+from contextlib import asynccontextmanager
 
-app = FastAPI()
 logger = get_logger(__name__)
-rag_agent = None
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Starting FastAPI application...")
+    project_setup()
+    logger.info("Project setup completed")
+
+    # Proper async context usage
+    rag_pipeline = RagPipeline(thread_id=uuid4())
+    app.state._rag_pipeline_context = rag_pipeline  # Keep reference for manual closing
+    app.state.rag_agent = await rag_pipeline.__aenter__()
+    logger.info("RagPipeline initialized")
+
+    yield  # Run app
+
+    logger.info("Shutting down RagPipeline...")
+    await app.state._rag_pipeline_context.__aexit__(None, None, None)
+    logger.info("RagPipeline shut down")
+
+app = FastAPI(lifespan=lifespan)
 
 @app.get("/")
 def root():
-    logger.info("Root endpoint hit")
-    project_setup()
-    logger.info("Project set up completed")
-    thread_id = uuid4()
-    app.state.rag_agent = RagPipeline(thread_id=thread_id)
-    logger.info("Rag Agent initialised")
-    return {"message" : "Welcome to biometric rag agent and Rag Agent is initialised"}
+    return {"message": "Welcome to biometric rag agent"}
 
 app.include_router(query.router)
