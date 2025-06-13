@@ -65,6 +65,7 @@ dependencies = [
     "langchain-chroma==0.2.4",
     "langchain-community==0.3.24",
     "langchain-core==0.3.64",
+    "langchain-google-genai>=2.1.5",
     "langchain-huggingface==0.2.0",
     "langchain-openai==0.3.21",
     "langchain-text-splitters==0.3.8",

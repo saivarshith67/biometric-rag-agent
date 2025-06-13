@@ -1,124 +1,141 @@
 ###GET REQUEST TO HOME
-
 GET http://localhost:8000/
 
 
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "Hi my Name is Sai, How to create a user?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"Hi my Name is Sai, How to create a user?"
-
-
-###POST REQUEST
-POST http://localhost:8000/query
-Content-Type: application/json
-
-"Do you know my name? if so please tell me."
+{
+    "query": "Do you know my name? if so please tell me."
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"Could you tell me about setting up camera and the proper frequency so that video won't flicker"
+{
+    "query": "Could you tell me about setting up camera and the proper frequency so that video won't flicker"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"Could you tell me about FaceStation2"
+{
+    "query": "Could you tell me about FaceStation2"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"What is the correct method to enroll face?"
+{
+    "query": "What is the correct method to enroll face?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"How to enroll a fingerprint?"
+{
+    "query": "How to enroll a fingerprint?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"What should be the power line frequency so that video does not flicker?"
+{
+    "query": "What should be the power line frequency so that video does not flicker?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"Do you know my name?"
+{
+    "query": "Do you know my name?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"What are the questions that I have asked to you?"
+{
+    "query": "What are the questions that I have asked to you?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"Who are you?"
+{
+    "query": "Who are you?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"What is the schema of DEVICE table?"
+{
+    "query": "What is the schema of DEVICE table?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"What's new in the latest Firmware?"
+{
+    "query": "What's new in the latest Firmware?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"So, I am Living in india so what should I set the frequency to?"
-
-
-###POST REQUEST
-POST http://localhost:8000/query
-Content-Type: application/json
-
-"What would happen If I set the frequency to 60Hz?"
+{
+    "query": "So, I am Living in india so what should I set the frequency to?"
+}
 
 ###POST REQUEST
 POST http://localhost:8000/query
 Content-Type: application/json
 
-"What is the appropriate angle for the camera to be installed?"
+{
+    "query": "What would happen If I set the frequency to 60Hz?"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "What is the appropriate angle for the camera to be installed?"
+}
 
 ###POST REQUEST VIDEO FLICKER ISSUE
 POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "My camera video is flickering what could be the issue?"
+    "query": "My camera video is flickering what could be the issue?"
 }
 
-
-###POST REQUEST VIDEO FLICKER CONTIUE
+###POST REQUEST VIDEO FLICKER CONTINUE
 POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "Hmm great so is it 50Hz or 60Hz, I don't get it"
-}
-
-###POST REQUEST
-POST http://localhost:8000/query
-Content-Type: application/json
-
-{
-    "query" : "So, If I tell my region can you suggest me the frequency ?"
+    "query": "Hmm great so is it 50Hz or 60Hz, I don't get it"
 }
 
 ###POST REQUEST
@@ -126,7 +143,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "I live in india so what should I do to minize the video flickering?"
+    "query": "So, If I tell my region can you suggest me the frequency ?"
 }
 
 ###POST REQUEST
@@ -134,8 +151,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "A new employee has arrived yesterday we are facing issues with face and fingerprint enrollment what to do?"
-
+    "query": "I live in india so what should I do to minize the video flickering?"
 }
 
 ###POST REQUEST
@@ -143,7 +159,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "For environments requiring temperature screening, what are the practical differences between 'Check Before Authentication,' 'Check After Authentication,' and 'Check Only' modes, and which would be most appropriate for different security scenarios?"
+    "query": "A new employee has arrived yesterday we are facing issues with face and fingerprint enrollment what to do?"
 }
 
 ###POST REQUEST
@@ -151,7 +167,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "Show me the conversation history"
+    "query": "For environments requiring temperature screening, what are the practical differences between 'Check Before Authentication,' 'Check After Authentication,' and 'Check Only' modes, and which would be most appropriate for different security scenarios?"
 }
 
 ###POST REQUEST
@@ -159,5 +175,13 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query" : "What are the exact question that I have asked you?"
+    "query": "Show me the conversation history"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "What are the exact question that I have asked you?"
 }
