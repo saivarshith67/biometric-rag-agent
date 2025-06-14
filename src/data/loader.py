@@ -9,14 +9,14 @@ logger = get_logger(__name__)
 
 def load_data() -> List[Document]:
     all_docs : List[Document] = []
-    BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-    DATA_DIRECTORY = os.path.join(BASE_DIR, DATA_DIR)
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    data_directory = os.path.join(base_dir, DATA_DIR)
 
-    logger.info(f"Extracting data from : {DATA_DIRECTORY}")
+    logger.info(f"Extracting data from : {data_directory}")
 
-    for file in os.listdir(DATA_DIRECTORY):
+    for file in os.listdir(data_directory):
         if file.endswith(".pdf"):
-            file_path = os.path.join(DATA_DIRECTORY, file)
+            file_path = os.path.join(data_directory, file)
             loader = PyPDFLoader(file_path)
             docs = loader.load()
             all_docs.extend(docs)
