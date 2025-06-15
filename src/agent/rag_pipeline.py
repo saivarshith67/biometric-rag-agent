@@ -11,12 +11,10 @@ from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
 from src.agent.workflow import build_workflow
 from src.agent.graph_runner import stream_graph_response
-from src.agent.memory import get_memory
 from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import MessagesState
 from functools import partial
 from uuid import uuid4
-import psycopg
 from src.config import DB_URL
 import sqlite3
 
