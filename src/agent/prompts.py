@@ -1,28 +1,34 @@
 GRADE_PROMPT = (
-    "You are a strict binary grader evaluating whether a retrieved document is relevant to a user's question.\n\n"
-    "Retrieved Document:\n{context}\n\n"
+    "You are an AI grader. Decide whether the retrieved document is directly relevant to the user's question.\n\n"
+    "Only respond 'yes' or 'no'.\n\n"
+    "Consider the document relevant if it contains factual information or context that helps answer the user's question.\n"
+    "Do NOT try to answer the question. Only judge the relevance.\n\n"
     "User Question:\n{question}\n\n"
-    "If the document contains any relevant keywords or has semantic overlap with the user's question, respond with 'yes'.\n"
-    "Otherwise, respond with 'no'.\n\n"
-    "Respond with only a single word: either 'yes' or 'no'. Do not provide any explanation or additional text."
+    "Retrieved Document:\n{context}\n\n"
+    "Respond with only one word: yes or no."
 )
-
 
 
 REWRITE_PROMPT = (
-    "Look at the input and try to reason about the underlying semantic intent / meaning.\n"
-    "Here is the initial question:"
-    "\n ------- \n"
-    "{question}"
-    "\n ------- \n"
-    "Formulate an improved question:"
+    "You are a helpful assistant improving questions to make them more specific and aligned with the BioStar 2 system.\n"
+    "BioStar 2 is a security and biometric access control platform. When rewriting the question:\n"
+    "- Remove vague or general phrases.\n"
+    "- Avoid placeholders like [Operating System] or [Platform].\n"
+    "- Include keywords specific to BioStar 2 if applicable (e.g., 'register user', 'admin credential', 'face authentication').\n"
+    "- Make the question clearer and more relevant for document retrieval.\n\n"
+    "Original Question:\n"
+    "{question}\n\n"
+    "Rewritten Question:"
 )
 
+
+
 GENERATE_PROMPT = (
-    "You are an assistant for question-answering tasks. "
-    "Use the following pieces of retrieved context to answer the question. "
-    "If you don't know the answer, just say that you don't know. "
-    "Use three sentences maximum and keep the answer concise.\n"
-    "Question: {question} \n"
-    "Context: {context}"
+    "You are a helpful assistant. Answer the question using the information provided in the context below.\n"
+    "You may use reasoning or inference, but do not use any external knowledge beyond the context.\n\n"
+    "Context:\n{context}\n\n"
+    "Question:\n{question}\n\n"
+    "If the answer cannot be confidently inferred from the context, respond with:\n"
+    "'I don't know based on the provided context.'\n\n"
+    "Otherwise, provide a short, accurate, and direct answer."
 )
