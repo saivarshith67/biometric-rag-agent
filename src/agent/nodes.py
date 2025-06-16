@@ -51,6 +51,12 @@ def grade_documents(
 ) -> Literal["generate_answer", "rewrite_question"]:
     """Determine whether the retrieved documents are relevant to the question."""
 
+    rewrite_attempts = state.get("rewrite_attempts", 0)
+
+    if rewrite_attempts >= 2:
+        logger.warning("Rewrite attemps exceeded limit of 2")
+        return "generate_answer"
+
     question = _get_latest_user_question(state["messages"])
     context = _get_latest_context(state["messages"])
 

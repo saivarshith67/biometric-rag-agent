@@ -3,8 +3,10 @@ from langgraph.prebuilt import ToolNode
 from langgraph.types import Checkpointer
 from langgraph.graph import MessagesState
 from src.utils.logger import get_logger
+from typing import Literal
 
 logger = get_logger(__name__)
+
 
 def next_step_after_generate(state: MessagesState) -> str:
     """Route depending on whether the question was rewritten, with loop protection."""
@@ -46,7 +48,14 @@ def add_edges(workflow: StateGraph, grade_documents):
         },
     )
 
-    workflow.add_conditional_edges("retrieve", grade_documents)
+    workflow.add_conditional_edges(
+        "retrieve",
+        grade_documents,
+        {
+            "generate_answer": "generate_answer",
+            "rewrite_question": "rewrite_question",
+        },
+    )
     workflow.add_edge("generate_answer", END)
     workflow.add_edge("rewrite_question", "retrieve")  # Directly go to retrieve
 
@@ -71,4 +80,6 @@ def build_workflow(
 
     add_edges(workflow, grade_documents)
 
-    return workflow.compile(checkpointer=checkpointer)
+    compiled_workflow = workflow.compile(checkpointer=checkpointer)
+    compiled_workflow.get_graph().draw_png(".graph.png")
+    return compiled_workflow
