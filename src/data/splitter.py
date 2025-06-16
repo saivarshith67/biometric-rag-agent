@@ -7,7 +7,7 @@ logger = get_logger(__name__)
 
 def split_text(all_docs: List[Document]) -> List[str]:
     # Initialize the text splitter
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     
     texts: List[str] = []
     for doc in all_docs:

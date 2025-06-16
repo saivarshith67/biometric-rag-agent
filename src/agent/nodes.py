@@ -40,9 +40,11 @@ def _get_latest_user_question(messages):
 
 def _get_latest_context(messages):
     for msg in reversed(messages):
-        if isinstance(msg, (AIMessage, ToolMessage)):  # or SystemMessage
-            return msg.content
-    raise ValueError("No context message found in the state.")
+        if isinstance(msg, (AIMessage, ToolMessage)) and hasattr(msg, "content"):
+            if msg.content:
+                return msg.content
+    return ""
+
 
 
 def grade_documents(
@@ -59,6 +61,10 @@ def grade_documents(
 
     question = _get_latest_user_question(state["messages"])
     context = _get_latest_context(state["messages"])
+
+    if not context:
+        logger.warning("No context retrieved — skipping to rewrite.")
+        return "rewrite_question"
 
     prompt_template = PromptTemplate.from_template(GRADE_PROMPT)
     parser = BooleanOutputParser()
@@ -94,13 +100,17 @@ def rewrite_question(state: MessagesState, response_model):
     response = response_model.invoke([HumanMessage(content=prompt)])
     logger.debug(f"Rewrite response: {response}")
 
-    # Replace the latest user question with the rewritten question
+    if not hasattr(response, "content"):
+        raise ValueError("Response from model is missing 'content' attribute")
+
+    # Replace the latest user question with the rewritten one
     new_messages = messages[:]
     for i in reversed(range(len(messages))):
         if isinstance(messages[i], HumanMessage):
             new_messages[i] = HumanMessage(content=response.content)
             break
-
+    else:
+        raise ValueError("No HumanMessage found to rewrite")
 
     return {
         "messages": new_messages,
@@ -114,6 +124,12 @@ def generate_answer(state: MessagesState, response_model):
     question = _get_latest_user_question(state["messages"])
     logger.debug("Question: %s", question)
     raw_context = _get_latest_context(state["messages"])
+
+    if not raw_context:
+        logger.warning("No context found for answering. Skipping.")
+        return {"messages": [AIMessage(content="I couldn't find relevant information. Please try again.")]}
+
+
     logger.debug(f"Raw context: {raw_context}")
     context = _clean_context(raw_context)
     logger.debug(f"context: {context}")

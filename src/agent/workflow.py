@@ -39,14 +39,11 @@ def add_nodes(
 def add_edges(workflow: StateGraph, grade_documents):
     workflow.add_edge(START, "generate_query_or_respond")
 
-    workflow.add_conditional_edges(
+    workflow.add_edge(
         "generate_query_or_respond",
-        next_step_after_generate,
-        {
-            "retrieve": "retrieve",
-            "rewrite_question": "rewrite_question",
-        },
+        "rewrite_question",
     )
+    workflow.add_edge("rewrite_question", "retrieve")  # Directly go to retrieve
 
     workflow.add_conditional_edges(
         "retrieve",
@@ -57,7 +54,6 @@ def add_edges(workflow: StateGraph, grade_documents):
         },
     )
     workflow.add_edge("generate_answer", END)
-    workflow.add_edge("rewrite_question", "retrieve")  # Directly go to retrieve
 
 
 def build_workflow(

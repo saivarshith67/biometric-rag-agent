@@ -1,6 +1,6 @@
 """ 
 before running the main.py make sure to run the index_builder.py so that the vector indexes are created
-This stuff is moved away from rag_pipeline so as to increase the startup time
+This stuff is moved away from rag_pipeline so as to decrease the startup time
 
 run it with the following command
 ```python

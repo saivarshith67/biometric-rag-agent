@@ -8,7 +8,8 @@ def build_model():
     
     llm = ChatGoogleGenerativeAI(
         model = RESPONSE_MODEL_NAME,
-        google_api_key = GOOGLE_API_KEY
+        google_api_key = GOOGLE_API_KEY,
+        temperature = 0
     )
 
     logger.info("Succesfully created an instance of LLM")
