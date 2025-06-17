@@ -3,10 +3,17 @@ from pydantic import BaseModel, Field
 from typing import Literal
 from langchain.output_parsers import BooleanOutputParser
 from langchain.output_parsers.retry import RetryWithErrorOutputParser
+from langchain_core.output_parsers import BaseOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 
-from src.agent.prompts import GRADE_PROMPT, REWRITE_PROMPT, GENERATE_PROMPT
+from src.agent.prompts import (
+    GRADE_PROMPT,
+    REWRITE_PROMPT,
+    GENERATE_PROMPT,
+    RELAVANCE_PROMPT,
+    UNRELATED_QUERY_PROMPT,
+)
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
@@ -20,22 +27,27 @@ class GradeDocuments(BaseModel):
     )
 
 
+class RelevanceOutputParser(BaseOutputParser):
+    """Parses output from the Relevance Classification LLM step."""
+
+    def parse(self, text: str) -> str:
+        cleaned = text.strip().upper()
+        if cleaned in {"RELATED", "UNRELATED"}:
+            return cleaned
+        raise ValueError(
+            f"Invalid relevance output: '{text}' (expected 'RELATED' or 'UNRELATED')"
+        )
+
+    @property
+    def _type(self) -> str:
+        return "relevance_output_parser"
+
+
 def _clean_context(raw_text: str) -> str:
     """Clean up duplicated lines and excessive whitespace from retrieved context."""
     lines = raw_text.splitlines()
     unique_lines = list(dict.fromkeys(line.strip() for line in lines if line.strip()))
     return "\n".join(unique_lines)
-
-
-def generate_query_or_respond(state: MessagesState, response_model, retriever_tool):
-    response = response_model.bind_tools(tools=[retriever_tool]).invoke(
-        state["messages"], tool_choice="auto"
-    )
-
-    return {
-        "messages": [response],
-        "rewrite_attempts": state.get("rewrite_attempts", 0),
-    }
 
 
 def _get_latest_user_question(messages):
@@ -51,6 +63,41 @@ def _get_latest_context(messages):
         if isinstance(msg, ToolMessage) and hasattr(msg, "content") and msg.content:
             return msg.content
     return ""
+
+
+def query_relavance_checker(
+    state: MessagesState, response_model    
+) -> Literal["related", "unrelated"]:
+    question = _get_latest_user_question(state["messages"])
+
+    if not question:
+        raise ValueError("Question is empty please try again")
+
+    prompt_template = PromptTemplate.from_template(RELAVANCE_PROMPT)
+    parser = RelevanceOutputParser()
+    retrying_parser = RetryWithErrorOutputParser.from_llm(
+        llm=response_model,
+        parser=parser,
+        prompt=prompt_template,
+        max_retries=1,
+    )
+
+    input_values = {"question": question}
+    prompt_value = prompt_template.format_prompt(**input_values)
+    raw_output = response_model.invoke(prompt_value)
+
+    try:
+        result = retrying_parser.parse_with_prompt(
+            completion=raw_output.content,
+            prompt_value=prompt_value,
+        )
+        result = result.lower()
+        logger.debug(f"Relavance result: {result}")
+    except Exception as e:
+        logger.error(f"Parser failed: {e}")
+        return "unrelated"
+
+    return result
 
 
 def grade_documents(
@@ -97,6 +144,48 @@ def grade_documents(
         return "rewrite_question"
 
     return "generate_answer" if result else "rewrite_question"
+
+
+def check_query_relevance(state: MessagesState, response_model):
+    """
+    Check if the query is related to the knowledge base.
+    Sets `relevance_result` in state: 'related' or 'unrelated'.
+    """
+    result = query_relavance_checker(state, response_model)
+    return {
+        "messages": state["messages"],
+        "rewrite_attempts": state.get("rewrite_attempts", 0),
+        "relevance_result": result,
+    }
+
+
+def unrelated_query_response(state: MessagesState, response_model):
+    """
+    Return a general response for unrelated/small talk queries.
+    """
+    question = _get_latest_user_question(state["messages"])
+    prompt_template = PromptTemplate.from_template(UNRELATED_QUERY_PROMPT)
+
+    input_values = {"question": question}
+    prompt_value = prompt_template.format_prompt(**input_values)
+
+    response = response_model.invoke(prompt_value)
+
+    return {
+        "messages": [response],
+        "rewrite_attempts": state.get("rewrite_attempts", 0),
+    }
+
+
+def generate_query_or_respond(state: MessagesState, response_model, retriever_tool):
+    response = response_model.bind_tools(tools=[retriever_tool]).invoke(
+        state["messages"], tool_choice="auto"
+    )
+
+    return {
+        "messages": [response],
+        "rewrite_attempts": state.get("rewrite_attempts", 0),
+    }
 
 
 def rewrite_question(state: MessagesState, response_model):

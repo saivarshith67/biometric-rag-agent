@@ -234,3 +234,11 @@ Content-Type: application/json
 {
     "query": "Explain MDR technology"
 }
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "Hi bro wassup"
+}

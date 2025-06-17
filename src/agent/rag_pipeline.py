@@ -6,13 +6,16 @@ from src.agent.nodes import (
     generate_query_or_respond,
     grade_documents,
     rewrite_question,
+    check_query_relevance,
+    unrelated_query_response,
+    query_relavance_checker,
 )
 from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
 from src.agent.workflow import build_workflow
 from src.agent.graph_runner import stream_graph_response
+from src.agent.response_model import build_response_model
 from langgraph.checkpoint.sqlite import SqliteSaver
-from langgraph.graph import MessagesState
 from functools import partial
 from uuid import uuid4
 from src.config import DB_URL
@@ -31,9 +34,11 @@ class RagPipeline:
         # --- Component Initialization ---
         self.embeding_model = build_embedding_model()
         self.vectorstore = load_vectorstore(embedding_model=self.embeding_model)
-        self.response_model = build_model()
-        self.grader_model = build_model()
         self.retriever_tool = build_retriever_tool(vectorstore=self.vectorstore)
+        self.response_model = build_response_model(
+            retriever_tool=self.retriever_tool
+        )
+        self.grader_model = build_model()
 
         # --- Defer connection and graph objects ---
         self.db_connection = None
@@ -49,6 +54,7 @@ class RagPipeline:
         self.db_connection = sqlite3.connect(conn_string, check_same_thread=False)
         self.checkpointer = SqliteSaver(conn=self.db_connection)
 
+        # --- Wrap node functions ---
         gen_query_or_respond_wrapped = partial(
             generate_query_or_respond,
             response_model=self.response_model,
@@ -63,13 +69,26 @@ class RagPipeline:
         generate_answer_wrapped = partial(
             generate_answer, response_model=self.response_model
         )
+        check_query_relevance_wrapped = partial(
+            check_query_relevance, response_model=self.response_model
+        )
+        unrelated_query_response_wrapped = partial(
+            unrelated_query_response, response_model=self.response_model
+        )
+        query_relavance_checker_wrapped = partial(
+            query_relavance_checker, response_model=self.response_model
+        )
 
+        # --- Build the LangGraph workflow ---
         self._graph = build_workflow(
             retriever_tool=self.retriever_tool,
             generate_query_or_respond=gen_query_or_respond_wrapped,
             rewrite_question=rewrite_question_wrapped,
             generate_answer=generate_answer_wrapped,
             grade_documents=grade_documents_wrapped,
+            check_query_relevance=check_query_relevance_wrapped,
+            unrelated_query_response=unrelated_query_response_wrapped,
+            query_relavance_checker=query_relavance_checker_wrapped,
             checkpointer=self.checkpointer,
         )
 
