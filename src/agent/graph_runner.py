@@ -3,6 +3,7 @@ from langchain_core.messages import BaseMessage, AIMessage, ToolMessage, HumanMe
 
 logger = get_logger(__name__)
 
+
 def stream_graph_response(graph, query: str, thread_id: str):
     """
     Stream the response from the LangGraph graph given a query and thread_id.
@@ -23,9 +24,7 @@ def stream_graph_response(graph, query: str, thread_id: str):
             }
         ]
     }
-    config = {
-        "thread_id": thread_id
-    }
+    config = {"thread_id": thread_id}
 
     final_response = []
 
@@ -35,7 +34,9 @@ def stream_graph_response(graph, query: str, thread_id: str):
             latest_update = update.get("messages", [])
             if latest_update:
                 logger.debug(f"{latest_update}\n\n\n")
-                final_response = latest_update  # capture the most recent non-empty messages
+                final_response = (
+                    latest_update  # capture the most recent non-empty messages
+                )
 
     logger.info(f"final_response={final_response}")
 

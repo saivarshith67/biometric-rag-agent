@@ -22,7 +22,6 @@ REWRITE_PROMPT = (
 )
 
 
-
 GENERATE_PROMPT = (
     "You are a helpful assistant. Answer the question using the information provided in the context below.\n"
     "You may use reasoning or inference, but do not use any external knowledge beyond the context.\n\n"

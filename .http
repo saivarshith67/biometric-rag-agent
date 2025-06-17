@@ -193,3 +193,44 @@ Content-Type: application/json
 {
     "query": "What are the modes in RS485?"
 }
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "Explain me master mode in RS485"
+}
+
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "A new employee is facing issues with fingerprint and face enrollment what should we do?"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "How to Migrate Database ?"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "How to change from HTTP to HTTPS?"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "Explain MDR technology"
+}

@@ -8,6 +8,7 @@ from contextlib import asynccontextmanager
 
 logger = get_logger(__name__)
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Starting FastAPI application...")
@@ -28,10 +29,13 @@ async def lifespan(app: FastAPI):
     await app.state._rag_pipeline_context.__aexit__(None, None, None)
     logger.info("RagPipeline shut down")
 
+
 app = FastAPI(lifespan=lifespan)
+
 
 @app.get("/")
 def root():
     return {"message": "Welcome to biometric rag agent"}
+
 
 app.include_router(query.router)

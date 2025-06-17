@@ -11,11 +11,14 @@ from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+
 class GradeDocuments(BaseModel):
     """Grade documents using a binary score for relevance check."""
+
     binary_score: str = Field(
         description="Relevance score: 'yes' if relevant, or 'no' if not relevant"
     )
+
 
 def _clean_context(raw_text: str) -> str:
     """Clean up duplicated lines and excessive whitespace from retrieved context."""
@@ -23,12 +26,16 @@ def _clean_context(raw_text: str) -> str:
     unique_lines = list(dict.fromkeys(line.strip() for line in lines if line.strip()))
     return "\n".join(unique_lines)
 
-def generate_query_or_respond(state: MessagesState, response_model, retriever_tool):
-    response = response_model.bind_tools(
-        tools=[retriever_tool]
-    ).invoke(state["messages"], tool_choice="auto")
 
-    return {"messages": [response]}
+def generate_query_or_respond(state: MessagesState, response_model, retriever_tool):
+    response = response_model.bind_tools(tools=[retriever_tool]).invoke(
+        state["messages"], tool_choice="auto"
+    )
+
+    return {
+        "messages": [response],
+        "rewrite_attempts": state.get("rewrite_attempts", 0),
+    }
 
 
 def _get_latest_user_question(messages):
@@ -39,24 +46,24 @@ def _get_latest_user_question(messages):
 
 
 def _get_latest_context(messages):
+    """Get the most recent context from ToolMessage (retrieval results)."""
     for msg in reversed(messages):
-        if isinstance(msg, (AIMessage, ToolMessage)) and hasattr(msg, "content"):
-            if msg.content:
-                return msg.content
+        if isinstance(msg, ToolMessage) and hasattr(msg, "content") and msg.content:
+            return msg.content
     return ""
 
 
-
 def grade_documents(
-    state: MessagesState,
-    grader_model
+    state: MessagesState, grader_model
 ) -> Literal["generate_answer", "rewrite_question"]:
     """Determine whether the retrieved documents are relevant to the question."""
 
     rewrite_attempts = state.get("rewrite_attempts", 0)
+    logger.debug(f"Rewrite attempts: {rewrite_attempts}")
 
+    # Check rewrite attempts limit first
     if rewrite_attempts >= 2:
-        logger.warning("Rewrite attemps exceeded limit of 2")
+        logger.warning("Rewrite attempts exceeded limit of 2")
         return "generate_answer"
 
     question = _get_latest_user_question(state["messages"])
@@ -84,15 +91,16 @@ def grade_documents(
             completion=raw_output.content,
             prompt_value=prompt_value,
         )
+        logger.debug(f"Grading result: {result}")
     except Exception as e:
-        print(f"Parser failed: {e}")
+        logger.error(f"Parser failed: {e}")
         return "rewrite_question"
 
     return "generate_answer" if result else "rewrite_question"
 
 
 def rewrite_question(state: MessagesState, response_model):
-    """Rewrite the latest user question and flag the state."""
+    """Rewrite the latest user question and properly update state."""
     messages = state["messages"]
     question = _get_latest_user_question(messages)
     prompt = REWRITE_PROMPT.format(question=question)
@@ -103,19 +111,27 @@ def rewrite_question(state: MessagesState, response_model):
     if not hasattr(response, "content"):
         raise ValueError("Response from model is missing 'content' attribute")
 
-    # Replace the latest user question with the rewritten one
-    new_messages = messages[:]
-    for i in reversed(range(len(messages))):
-        if isinstance(messages[i], HumanMessage):
+    # Find and replace the most recent HumanMessage (the original question)
+    new_messages = messages.copy()
+    for i in reversed(range(len(new_messages))):
+        if isinstance(new_messages[i], HumanMessage):
             new_messages[i] = HumanMessage(content=response.content)
+            logger.debug(f"Replaced user question with: {response.content}")
             break
     else:
         raise ValueError("No HumanMessage found to rewrite")
 
+    # Properly increment rewrite attempts
+    current_attempts = state.get("rewrite_attempts", 0)
+    new_attempts = current_attempts + 1
+
+    logger.debug(
+        f"Incrementing rewrite attempts from {current_attempts} to {new_attempts}"
+    )
+
     return {
         "messages": new_messages,
-        "was_rewritten": True,
-        "rewrite_attempts": state.get("rewrite_attempts", 0) + 1,
+        "rewrite_attempts": new_attempts,
     }
 
 
@@ -127,12 +143,17 @@ def generate_answer(state: MessagesState, response_model):
 
     if not raw_context:
         logger.warning("No context found for answering. Skipping.")
-        return {"messages": [AIMessage(content="I couldn't find relevant information. Please try again.")]}
-
+        return {
+            "messages": [
+                AIMessage(
+                    content="I couldn't find relevant information. Please try again."
+                )
+            ]
+        }
 
     logger.debug(f"Raw context: {raw_context}")
     context = _clean_context(raw_context)
-    logger.debug(f"context: {context}")
+    logger.debug(f"Cleaned context: {context}")
 
     prompt = GENERATE_PROMPT.format(question=question, context=context)
     response = response_model.invoke(prompt)

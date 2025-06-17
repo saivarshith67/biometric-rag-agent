@@ -3,7 +3,7 @@ from langgraph.prebuilt import ToolNode
 from langgraph.types import Checkpointer
 from langgraph.graph import MessagesState
 from src.utils.logger import get_logger
-from typing import Literal
+
 
 logger = get_logger(__name__)
 
@@ -76,6 +76,8 @@ def build_workflow(
 
     add_edges(workflow, grade_documents)
 
-    compiled_workflow = workflow.compile(checkpointer=checkpointer)
+    compiled_workflow = workflow.compile(checkpointer=checkpointer).with_config(
+        {"merge_next": True}
+    )
     compiled_workflow.get_graph().draw_png(".graph.png")
     return compiled_workflow

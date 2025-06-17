@@ -4,15 +4,12 @@ from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+
 def build_model():
-    
     llm = ChatGoogleGenerativeAI(
-        model = RESPONSE_MODEL_NAME,
-        google_api_key = GOOGLE_API_KEY,
-        temperature = 0
+        model=RESPONSE_MODEL_NAME, google_api_key=GOOGLE_API_KEY, temperature=0
     )
 
     logger.info("Succesfully created an instance of LLM")
 
     return llm
-

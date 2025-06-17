@@ -20,6 +20,7 @@ import sqlite3
 
 logger = get_logger(__name__)
 
+
 class RagPipeline:
     def __init__(self, thread_id: uuid4):
         """
@@ -73,7 +74,7 @@ class RagPipeline:
         )
 
         return self
-    
+
     async def __aenter__(self):
         return self.__enter__()
 
