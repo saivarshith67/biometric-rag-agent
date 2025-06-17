@@ -1,12 +1,3 @@
-from langgraph.graph import MessagesState
-from pydantic import BaseModel, Field
-from typing import Literal
-from langchain.output_parsers import BooleanOutputParser
-from langchain.output_parsers.retry import RetryWithErrorOutputParser
-from langchain_core.output_parsers import BaseOutputParser
-from langchain_core.prompts import PromptTemplate
-from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
-
 from src.agent.prompts import (
     GRADE_PROMPT,
     REWRITE_PROMPT,
@@ -16,20 +7,26 @@ from src.agent.prompts import (
 )
 from src.utils.logger import get_logger
 
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import BaseOutputParser
+from langchain.output_parsers.retry import RetryWithErrorOutputParser
+from langchain.output_parsers import BooleanOutputParser
+from pydantic import BaseModel, Field
+from typing import Literal, cast
+
+from src.agent.state import State
+
 logger = get_logger(__name__)
 
 
 class GradeDocuments(BaseModel):
-    """Grade documents using a binary score for relevance check."""
-
     binary_score: str = Field(
         description="Relevance score: 'yes' if relevant, or 'no' if not relevant"
     )
 
 
 class RelevanceOutputParser(BaseOutputParser):
-    """Parses output from the Relevance Classification LLM step."""
-
     def parse(self, text: str) -> str:
         cleaned = text.strip().upper()
         if cleaned in {"RELATED", "UNRELATED"}:
@@ -44,7 +41,6 @@ class RelevanceOutputParser(BaseOutputParser):
 
 
 def _clean_context(raw_text: str) -> str:
-    """Clean up duplicated lines and excessive whitespace from retrieved context."""
     lines = raw_text.splitlines()
     unique_lines = list(dict.fromkeys(line.strip() for line in lines if line.strip()))
     return "\n".join(unique_lines)
@@ -58,17 +54,30 @@ def _get_latest_user_question(messages):
 
 
 def _get_latest_context(messages):
-    """Get the most recent context from ToolMessage (retrieval results)."""
     for msg in reversed(messages):
         if isinstance(msg, ToolMessage) and hasattr(msg, "content") and msg.content:
             return msg.content
     return ""
 
+def initialize_current_query(state: State) -> State:
+    if state.get("current_query"):
+        return state  # already initialized
+
+    for msg in reversed(state["messages"]):
+        if isinstance(msg, HumanMessage):
+            new_state = state.copy()
+            new_state["current_query"] = msg.content
+            new_state["was_rewritten"] = False
+            new_state["rewrite_attempts"] = 0
+            return new_state
+
+    raise ValueError("No user message found to initialize current_query")
+
 
 def query_relavance_checker(
-    state: MessagesState, response_model    
-) -> Literal["related", "unrelated"]:
-    question = _get_latest_user_question(state["messages"])
+    state: State, response_model
+) -> State:
+    question = state.get("current_query")
 
     if not question:
         raise ValueError("Question is empty please try again")
@@ -90,30 +99,24 @@ def query_relavance_checker(
         result = retrying_parser.parse_with_prompt(
             completion=raw_output.content,
             prompt_value=prompt_value,
-        )
-        result = result.lower()
-        logger.debug(f"Relavance result: {result}")
+        ).lower()
+        logger.debug(f"Relevance result: {result}")
     except Exception as e:
         logger.error(f"Parser failed: {e}")
-        return "unrelated"
+        result = "unrelated"
+
 
     return result
 
 
 def grade_documents(
-    state: MessagesState, grader_model
+    state: State, grader_model
 ) -> Literal["generate_answer", "rewrite_question"]:
-    """Determine whether the retrieved documents are relevant to the question."""
-
-    rewrite_attempts = state.get("rewrite_attempts", 0)
-    logger.debug(f"Rewrite attempts: {rewrite_attempts}")
-
-    # Check rewrite attempts limit first
-    if rewrite_attempts >= 2:
+    if state["rewrite_attempts"] >= 2:
         logger.warning("Rewrite attempts exceeded limit of 2")
         return "generate_answer"
 
-    question = _get_latest_user_question(state["messages"])
+    question = state["current_query"]
     context = _get_latest_context(state["messages"])
 
     if not context:
@@ -146,105 +149,117 @@ def grade_documents(
     return "generate_answer" if result else "rewrite_question"
 
 
-def check_query_relevance(state: MessagesState, response_model):
-    """
-    Check if the query is related to the knowledge base.
-    Sets `relevance_result` in state: 'related' or 'unrelated'.
-    """
-    result = query_relavance_checker(state, response_model)
+def check_query_relevance(
+    state: State, response_model
+) -> State:
+    question = state.get("current_query")
+    if not question:
+        raise ValueError("Question is empty please try again")
+
+    prompt_template = PromptTemplate.from_template(RELAVANCE_PROMPT)
+    parser = RelevanceOutputParser()
+    retrying_parser = RetryWithErrorOutputParser.from_llm(
+        llm=response_model,
+        parser=parser,
+        prompt=prompt_template,
+        max_retries=1,
+    )
+
+    input_values = {"question": question}
+    prompt_value = prompt_template.format_prompt(**input_values)
+    raw_output = response_model.invoke(prompt_value)
+
+    try:
+        result = retrying_parser.parse_with_prompt(
+            completion=raw_output.content,
+            prompt_value=prompt_value,
+        ).lower()
+        logger.debug(f"Relevance result: {result}")
+    except Exception as e:
+        logger.error(f"Parser failed: {e}")
+        result = "unrelated"
+
     return {
-        "messages": state["messages"],
-        "rewrite_attempts": state.get("rewrite_attempts", 0),
-        "relevance_result": result,
+        **state,
+        "relevance": result,
     }
 
 
-def unrelated_query_response(state: MessagesState, response_model):
-    """
-    Return a general response for unrelated/small talk queries.
-    """
-    question = _get_latest_user_question(state["messages"])
+def unrelated_query_response(
+    state: State, response_model
+) -> State:
+    question = state["current_query"]
     prompt_template = PromptTemplate.from_template(UNRELATED_QUERY_PROMPT)
 
     input_values = {"question": question}
     prompt_value = prompt_template.format_prompt(**input_values)
-
     response = response_model.invoke(prompt_value)
 
     return {
-        "messages": [response],
-        "rewrite_attempts": state.get("rewrite_attempts", 0),
+        **state,
+        "messages": state["messages"] + [AIMessage(content=response.content)],
     }
 
 
-def generate_query_or_respond(state: MessagesState, response_model, retriever_tool):
+def generate_query_or_respond(
+    state: State, response_model, retriever_tool
+) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
         state["messages"], tool_choice="auto"
     )
 
     return {
-        "messages": [response],
-        "rewrite_attempts": state.get("rewrite_attempts", 0),
+        **state,
+        "messages": state["messages"] + [response],
     }
 
 
-def rewrite_question(state: MessagesState, response_model):
-    """Rewrite the latest user question and properly update state."""
-    messages = state["messages"]
-    question = _get_latest_user_question(messages)
+def rewrite_question(
+    state: State, response_model
+) -> State:
+    question = state["current_query"]
     prompt = REWRITE_PROMPT.format(question=question)
 
     response = response_model.invoke([HumanMessage(content=prompt)])
     logger.debug(f"Rewrite response: {response}")
 
-    if not hasattr(response, "content"):
-        raise ValueError("Response from model is missing 'content' attribute")
-
-    # Find and replace the most recent HumanMessage (the original question)
-    new_messages = messages.copy()
+    new_messages = state["messages"].copy()
     for i in reversed(range(len(new_messages))):
         if isinstance(new_messages[i], HumanMessage):
             new_messages[i] = HumanMessage(content=response.content)
-            logger.debug(f"Replaced user question with: {response.content}")
             break
-    else:
-        raise ValueError("No HumanMessage found to rewrite")
-
-    # Properly increment rewrite attempts
-    current_attempts = state.get("rewrite_attempts", 0)
-    new_attempts = current_attempts + 1
-
-    logger.debug(
-        f"Incrementing rewrite attempts from {current_attempts} to {new_attempts}"
-    )
 
     return {
+        **state,
         "messages": new_messages,
-        "rewrite_attempts": new_attempts,
+        "current_query": response.content,
+        "rewrite_attempts": state["rewrite_attempts"] + 1,
+        "was_rewritten": True,
     }
 
 
-def generate_answer(state: MessagesState, response_model):
-    """Generate an answer based on cleaned context and question."""
-    question = _get_latest_user_question(state["messages"])
-    logger.debug("Question: %s", question)
+def generate_answer(
+    state: State, response_model
+) -> State:
+    question = state["current_query"]
     raw_context = _get_latest_context(state["messages"])
 
     if not raw_context:
-        logger.warning("No context found for answering. Skipping.")
         return {
-            "messages": [
+            **state,
+            "messages": state["messages"]
+            + [
                 AIMessage(
                     content="I couldn't find relevant information. Please try again."
                 )
-            ]
+            ],
         }
 
-    logger.debug(f"Raw context: {raw_context}")
     context = _clean_context(raw_context)
-    logger.debug(f"Cleaned context: {context}")
-
     prompt = GENERATE_PROMPT.format(question=question, context=context)
     response = response_model.invoke(prompt)
 
-    return {"messages": [response]}
+    return {
+        **state,
+        "messages": state["messages"] + [AIMessage(content=response.content)],
+    }

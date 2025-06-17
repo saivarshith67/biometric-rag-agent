@@ -30,8 +30,8 @@ dev-backend:
 	PYTHONPATH=. $(VENV_DIR)/bin/uvicorn src.api.server:app --reload --host 127.0.0.1 --port 8000
 
 # Run backend
-.PHONY: run-backend
-run-backend:
+.PHONY: backend
+backend:
 	$(PYTHON) -m src.main
 
 # Run Streamlit frontend

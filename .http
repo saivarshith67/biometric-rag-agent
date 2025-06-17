@@ -224,7 +224,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query": "How to change from HTTP to HTTPS?"
+    "query": "How to change from HTTP to HTTPS in biostar?"
 }
 
 ###POST REQUEST

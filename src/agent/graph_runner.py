@@ -33,7 +33,7 @@ def stream_graph_response(graph, query: str, thread_id: str):
             logger.debug(f"\n\n\nUpdate from node : {node}")
             latest_update = update.get("messages", [])
             if latest_update:
-                logger.debug(f"{latest_update}\n\n\n")
+                logger.debug(f"{latest_update[-1]}\n\n\n")
                 final_response = (
                     latest_update  # capture the most recent non-empty messages
                 )

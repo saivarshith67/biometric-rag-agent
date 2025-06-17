@@ -3,12 +3,12 @@ from src.agent.models import build_model
 from src.agent.tools import build_retriever_tool
 from src.agent.nodes import (
     generate_answer,
-    generate_query_or_respond,
     grade_documents,
     rewrite_question,
     check_query_relevance,
     unrelated_query_response,
     query_relavance_checker,
+    initialize_current_query
 )
 from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
@@ -55,11 +55,6 @@ class RagPipeline:
         self.checkpointer = SqliteSaver(conn=self.db_connection)
 
         # --- Wrap node functions ---
-        gen_query_or_respond_wrapped = partial(
-            generate_query_or_respond,
-            response_model=self.response_model,
-            retriever_tool=self.retriever_tool,
-        )
         grade_documents_wrapped = partial(
             grade_documents, grader_model=self.grader_model
         )
@@ -79,16 +74,19 @@ class RagPipeline:
             query_relavance_checker, response_model=self.response_model
         )
 
+        
+
         # --- Build the LangGraph workflow ---
         self._graph = build_workflow(
             retriever_tool=self.retriever_tool,
-            generate_query_or_respond=gen_query_or_respond_wrapped,
+
             rewrite_question=rewrite_question_wrapped,
             generate_answer=generate_answer_wrapped,
             grade_documents=grade_documents_wrapped,
             check_query_relevance=check_query_relevance_wrapped,
             unrelated_query_response=unrelated_query_response_wrapped,
             query_relavance_checker=query_relavance_checker_wrapped,
+            initialize_current_query=initialize_current_query,
             checkpointer=self.checkpointer,
         )
 

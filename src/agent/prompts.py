@@ -76,6 +76,10 @@ You must analyze the user's query and classify it into one of two categories:
 
 ---
 
+### Addional hints:
+
+if the question contains words like biostar or suprema the query is mostly related to biostar. and hence **related** should be returned.
+
 ### Examples:
 
 **User Query:** "How do I enroll a fingerprint in BioStar 2?"  
