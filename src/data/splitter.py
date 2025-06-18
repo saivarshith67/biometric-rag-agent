@@ -8,7 +8,7 @@ logger = get_logger(__name__)
 
 def split_text(cleaned_docs: List[Document]) -> List[Document]:
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=500, chunk_overlap=100, separators=["\n\n", "\n", ".", " ", ""]
+        chunk_size=1000, chunk_overlap=200, separators=["\n\n", "\n", ".", " ", ""]
     )
 
     # Split and retain metadata

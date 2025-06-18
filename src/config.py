@@ -15,4 +15,4 @@ MODEL_REPO_ID = "meta-llama/Llama-4-Maverick-17B-128E-Instruct"
 
 DB_URL = os.getenv("DB_URL")
 
-RESPONSE_MODEL_NAME = "gemini-2.0-flash"
+RESPONSE_MODEL_NAME = "gemini-2.5-flash-lite-preview-06-17"

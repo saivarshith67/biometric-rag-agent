@@ -63,9 +63,6 @@ def _get_latest_context(messages):
     return ""
 
 def initialize_current_query(state: State) -> State:
-    if state.get("current_query"):
-        return state  # already initialized
-
     for msg in reversed(state["messages"]):
         if isinstance(msg, HumanMessage):
             new_state = state.copy()
@@ -221,6 +218,7 @@ def rewrite_question(
     state: State, response_model
 ) -> State:
     question = state["current_query"]
+    logger.info(f"Current query : {question}")
     prompt = REWRITE_PROMPT.format(question=question)
 
     response = response_model.invoke([HumanMessage(content=prompt)])
