@@ -33,7 +33,8 @@ def stream_graph_response(graph, query: str, thread_id: str):
             logger.debug(f"\n\n\nUpdate from node : {node}")
             latest_update = update.get("messages", [])
             if latest_update:
-                logger.debug(f"{latest_update[-1]}\n\n\n")
+                latest_update = latest_update[-1]
+                logger.debug(f"{latest_update}\n\n\n")
                 final_response = (
                     latest_update  # capture the most recent non-empty messages
                 )
@@ -45,7 +46,7 @@ def stream_graph_response(graph, query: str, thread_id: str):
         logger.warning("No response messages were returned by the graph.")
         return "I couldn't generate a response. Please try rephrasing your question."
 
-    last_msg = final_response[-1]
+    last_msg = final_response
 
     if isinstance(last_msg, (AIMessage, ToolMessage, HumanMessage)):
         return last_msg.content or "No content available in the final message."

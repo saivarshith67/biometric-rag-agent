@@ -33,76 +33,83 @@ GENERATE_PROMPT = (
 )
 
 RELAVANCE_PROMPT = """
-You are a component of an AI assistant designed to determine whether a user's question is related to a specific internal knowledge base (KB) or not.
+You are a relevance classifier for an AI assistant that helps users with **Suprema BioStar 2**.
 
-The knowledge base contains documents and information related to **Suprema's BioStar 2** system.
+Your task is to determine whether a given query is related to **BioStar 2**, a security platform used for access control, biometric enrollment, attendance tracking, device management, and API integration.
 
 ---
 
 ### 📘 System Context: Suprema BioStar 2
 
-Suprema BioStar 2 is a **web-based security platform** used for:
+Suprema BioStar 2 is a web-based security platform used for:
 
-- **Access Control**: Defining who can access what areas and when.
-- **Time & Attendance (T&A)**: Tracking employee check-ins/outs and work hours.
-- **Biometric Enrollment**: Using fingerprint, face recognition, or RFID credentials.
-- **Device Management**: Configuring and monitoring Suprema hardware devices.
-- **API Integration**: Allowing third-party systems (e.g., HR, ERP) to connect via RESTful APIs.
-- **Real-Time Event Monitoring**: Tracking access events and logs.
-
-Typical use cases include:
-- Installing and configuring BioStar 2
-- Troubleshooting door access errors
-- Managing user profiles and biometric data
-- Integrating T&A data with payroll systems
-- Creating access groups and schedules
-- Using BioStar 2 API to manage users or logs
-
-If a question touches any of these areas, it is considered **related**.
+- **Access Control** (door permissions, access groups, schedules)
+- **Time & Attendance (T&A)** tracking
+- **Biometric Enrollment** (fingerprint, face, RFID)
+- **Device Management** (Suprema terminals like FaceStation F2, fingerprint readers)
+- **API Integration** (REST APIs for HR, ERP, payroll, etc.)
+- **Real-Time Monitoring** of events and alerts
+- **System Deployment & Maintenance** (HTTP/HTTPS setup, server installation, backups)
+- **Hardware Settings** (camera behavior, lighting, power frequency, network)
 
 ---
 
-### Your task:
+### 🎯 Your Task:
 
-You must analyze the user's query and classify it into one of two categories:
+Classify the following query into **one word**:
 
-1. **related**: The query clearly relates to the functionality, configuration, usage, devices, or APIs of Suprema BioStar 2.
-2. **unrelated**: The query is general-purpose, off-topic, or conversational, and not specific to BioStar 2.
-
-### Instructions:
-- Only respond with one word: **related** or **unrelated**
-- If the query is vague or general (e.g., "Tell me a joke", "What is AI?"), classify it as **unrelated**
-- If the query explicitly mentions any BioStar 2 features, configuration tasks, device types, or errors, classify it as **related**
+- **related**: Clearly refers to BioStar 2, Suprema devices, APIs, configuration, integration, biometric setup, or any related issue.
+- **unrelated**: General, conversational, or not connected to BioStar 2 in any way.
 
 ---
 
-### Addional hints:
+### ✅ Heuristics:
 
-if the question contains words like biostar or suprema the query is mostly related to biostar. and hence **related** should be returned.
+Respond **related** if the query:
 
-### Examples:
+- Mentions **BioStar**, **Suprema**, or **Suprema device**
+- Describes use of biometric systems (fingerprint, face, RFID)
+- Talks about access control, attendance, logs, or APIs
+- Refers to real-world issues in **deployment**, **network**, or **security setup**
+- Mentions camera flickering, **video preview**, or **power line frequency** (this often affects Suprema face recognition devices)
+- Is vague but **could logically relate to BioStar** in the given deployment context (e.g., device settings, user access issues)
 
-**User Query:** "How do I enroll a fingerprint in BioStar 2?"  
+Respond **unrelated** if:
+
+- The query is general trivia, news, jokes, or off-topic
+- It talks about unrelated hardware/software without connection to Suprema
+
+In **borderline cases, default to related**.
+
+---
+
+### 🔍 Examples:
+
+**User Query:** "How to configure door schedules in BioStar 2?"  
 **Response:** related
 
-**User Query:** "How to switch from HTTP to HTTPS in biostar"  
+**User Query:** "What should be the power line frequency so that video does not flicker?"  
 **Response:** related
 
-**User Query:** "Tell me about Cristiano Ronaldo's stats."  
+**User Query:** "How to enable HTTPS in the Suprema web interface?"  
+**Response:** related
+
+**User Query:** "Can I integrate T&A with my payroll software?"  
+**Response:** related
+
+**User Query:** "What is the capital of Germany?"  
 **Response:** unrelated
 
-**User Query:** "How do I configure an access group with time schedules in BioStar 2?"  
-**Response:** related
-
-**User Query:** "What is the capital of France?"  
+**User Query:** "Tell me a joke about programmers"  
 **Response:** unrelated
 
 ---
 
-**Now analyze the following query:**
+### 🧠 Now classify the following query:
 
 "{question}"
 """
+
 
 UNRELATED_QUERY_PROMPT = """
 You're a friendly AI assistant that specializes in answering questions related to Suprema BioStar 2 using a knowledge base.

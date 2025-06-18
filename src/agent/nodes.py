@@ -1,3 +1,6 @@
+# src.agent.nodes
+
+
 from src.agent.prompts import (
     GRADE_PROMPT,
     REWRITE_PROMPT,
@@ -201,7 +204,7 @@ def unrelated_query_response(
     }
 
 
-def generate_query_or_respond(
+def generate_tool_call(
     state: State, response_model, retriever_tool
 ) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
@@ -256,6 +259,8 @@ def generate_answer(
         }
 
     context = _clean_context(raw_context)
+    logger.info("INSIDE GENERATE ANSWER")
+    logger.info(f"CLEANED CONTEXT = {context}")
     prompt = GENERATE_PROMPT.format(question=question, context=context)
     response = response_model.invoke(prompt)
 
@@ -263,3 +268,12 @@ def generate_answer(
         **state,
         "messages": state["messages"] + [AIMessage(content=response.content)],
     }
+
+
+def retriever_failed_response(state: State) -> State:
+    return {
+        **state,
+        "messages": state["messages"]
+        + [AIMessage(content="I couldn't find anything useful related to your question. Try rephrasing or ask something else.")],
+    }
+

@@ -39,7 +39,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query": "What is the correct method to enroll face?"
+    "query": "What is the correct method to enroll fingerprint"
 }
 
 ###POST REQUEST
@@ -47,7 +47,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query": "How to enroll a fingerprint?"
+    "query": "How to enroll a fingerprint? and what are the cautions that must be taken"
 }
 
 ###POST REQUEST
@@ -241,4 +241,12 @@ Content-Type: application/json
 
 {
     "query": "Hi bro wassup"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "How to upgrade device firmware in BioStar 2"
 }

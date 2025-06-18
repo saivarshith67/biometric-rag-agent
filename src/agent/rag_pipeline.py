@@ -8,7 +8,9 @@ from src.agent.nodes import (
     check_query_relevance,
     unrelated_query_response,
     query_relavance_checker,
-    initialize_current_query
+    initialize_current_query,
+    retriever_failed_response,
+    generate_tool_call
 )
 from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
@@ -73,13 +75,17 @@ class RagPipeline:
         query_relavance_checker_wrapped = partial(
             query_relavance_checker, response_model=self.response_model
         )
-
         
+        # ADD THIS: Wrap the generate_tool_call function
+        generate_tool_call_wrapped = partial(
+            generate_tool_call, 
+            response_model=self.response_model,
+            retriever_tool=self.retriever_tool
+        )
 
         # --- Build the LangGraph workflow ---
         self._graph = build_workflow(
             retriever_tool=self.retriever_tool,
-
             rewrite_question=rewrite_question_wrapped,
             generate_answer=generate_answer_wrapped,
             grade_documents=grade_documents_wrapped,
@@ -87,6 +93,8 @@ class RagPipeline:
             unrelated_query_response=unrelated_query_response_wrapped,
             query_relavance_checker=query_relavance_checker_wrapped,
             initialize_current_query=initialize_current_query,
+            retriever_failed_response=retriever_failed_response,
+            generate_tool_call=generate_tool_call_wrapped,  # ADD THIS
             checkpointer=self.checkpointer,
         )
 
