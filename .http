@@ -250,3 +250,11 @@ Content-Type: application/json
 {
     "query": "How to upgrade device firmware in BioStar 2"
 }
+
+###POST REQUEST
+POST https://7j0hq80w-8000.use2.devtunnels.ms/query
+Content-Type: application/json
+
+{
+    "query": "How to upgrade device firmware in BioStar 2"
+}

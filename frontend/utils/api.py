@@ -8,11 +8,13 @@ def start():
 
 def chat_with_bot(user_input: str):
     body = {"query": user_input}
+    print(body)
+    
     headers = {"Content-Type": "application/json"}
 
-    response = requests.post(BASE_URL + "query", json=body, headers=headers)
+    response = requests.post(BASE_URL + "query", json=body, headers=headers, verify=False)
 
     if response.status_code == 200:
-        return response.json()["message"]
+        return response.json()["result"]
     else:
         raise Exception(f"Request failed: {response.status_code} - {response.text}")

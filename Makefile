@@ -34,6 +34,11 @@ dev-backend:
 backend:
 	$(PYTHON) -m src.main
 
+# Create Vector indices
+.PHONY: index
+index:
+	$(PYTHON) -m src.index_builder
+
 # Run Streamlit frontend
 .PHONY: frontend
 frontend:
