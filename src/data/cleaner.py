@@ -11,11 +11,18 @@ def clean_data(documents: List[Document]) -> List[Document]:
     for doc in documents:
         text = doc.page_content
 
-        # Cleaning steps
-        text = re.sub(r"(?i)page \d+", "", text)
+        # Remove common page indicators
+        text = re.sub(r"(?i)\b(page|pg)[\s:]*\d+\b", "", text)
+        # Remove extra newlines
         text = re.sub(r"\n{2,}", "\n", text)
+        # Remove extra spaces
         text = re.sub(r"\s{2,}", " ", text)
+        # Optionally remove non-ASCII
+        # text = re.sub(r"[^\x00-\x7F]+", " ", text)
+        # Strip leading/trailing whitespace
+        text = text.strip()
 
-        cleaned_docs.append(Document(page_content=text.strip(), metadata=doc.metadata))
-    logger.info("Cleaned the documents successfully")
+        cleaned_docs.append(Document(page_content=text, metadata=doc.metadata))
+
+    logger.info(f"Cleaned {len(documents)} documents successfully.")
     return cleaned_docs
