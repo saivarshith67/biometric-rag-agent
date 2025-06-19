@@ -1,6 +1,6 @@
 from src.vector_db.embeddings import build_embedding_model
 from src.agent.models import build_model
-from src.agent.tools import build_retriever_tool
+from src.agent.tools import build_retriever_tool, build_tavily_search_tool
 from src.agent.nodes import (
     generate_answer,
     grade_documents,
@@ -9,8 +9,8 @@ from src.agent.nodes import (
     unrelated_query_response,
     query_relavance_checker,
     initialize_current_query,
-    retriever_failed_response,
-    generate_tool_call,
+    generate_web_search_tool_call,
+    generate_retriever_tool_call,
 )
 from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
@@ -37,7 +37,10 @@ class RagPipeline:
         self.embeding_model = build_embedding_model()
         self.vectorstore = load_vectorstore(embedding_model=self.embeding_model)
         self.retriever_tool = build_retriever_tool(vectorstore=self.vectorstore)
-        self.response_model = build_response_model(retriever_tool=self.retriever_tool)
+        self.search_tool = build_tavily_search_tool(
+            max_results=10,
+        )
+        self.response_model = build_response_model(retriever_tool=self.retriever_tool, search_tool=self.search_tool)
         self.grader_model = build_model()
 
         # --- Defer connection and graph objects ---
@@ -74,9 +77,9 @@ class RagPipeline:
             query_relavance_checker, response_model=self.response_model
         )
 
-        # ADD THIS: Wrap the generate_tool_call function
-        generate_tool_call_wrapped = partial(
-            generate_tool_call,
+        # ADD THIS: Wrap the generate_retriever_tool_call function
+        generate_retriever_tool_call_wrapped = partial(
+            generate_retriever_tool_call,
             response_model=self.response_model,
             retriever_tool=self.retriever_tool,
         )
@@ -84,6 +87,7 @@ class RagPipeline:
         # --- Build the LangGraph workflow ---
         self._graph = build_workflow(
             retriever_tool=self.retriever_tool,
+            search_tool=self.search_tool,
             rewrite_question=rewrite_question_wrapped,
             generate_answer=generate_answer_wrapped,
             grade_documents=grade_documents_wrapped,
@@ -91,8 +95,8 @@ class RagPipeline:
             unrelated_query_response=unrelated_query_response_wrapped,
             query_relavance_checker=query_relavance_checker_wrapped,
             initialize_current_query=initialize_current_query,
-            retriever_failed_response=retriever_failed_response,
-            generate_tool_call=generate_tool_call_wrapped,  # ADD THIS
+            generate_web_search_tool_call=generate_web_search_tool_call,
+            generate_retriever_tool_call=generate_retriever_tool_call_wrapped,  # ADD THIS
             checkpointer=self.checkpointer,
         )
 

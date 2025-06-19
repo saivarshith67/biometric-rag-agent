@@ -195,9 +195,9 @@ def unrelated_query_response(state: State, response_model) -> State:
     }
 
 
-def generate_tool_call(state: State, response_model, retriever_tool) -> State:
+def generate_retriever_tool_call(state: State, response_model, retriever_tool) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
-        state["messages"], tool_choice="auto"
+        state["messages"], tool_choice="required"
     )
 
     return {
@@ -256,13 +256,12 @@ def generate_answer(state: State, response_model) -> State:
     }
 
 
-def retriever_failed_response(state: State) -> State:
+def generate_web_search_tool_call(state: State, response_model, search_tool) -> State:
+    response = response_model.bind_tools(tools=[search_tool]).invoke(
+        state["messages"], tool_choice="required"
+    )
+
     return {
         **state,
-        "messages": state["messages"]
-        + [
-            AIMessage(
-                content="I couldn't find anything useful related to your question. Try rephrasing or ask something else."
-            )
-        ],
+        "messages": state["messages"] + [response],
     }
