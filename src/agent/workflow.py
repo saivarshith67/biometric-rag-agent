@@ -30,7 +30,7 @@ def add_nodes(
     generate_answer,
     initialize_current_query,
     retriever_failed_response,
-    generate_tool_call  # Add this parameter
+    generate_tool_call,  # Add this parameter
 ):
     workflow.add_node("initialize_current_query", initialize_current_query)
     workflow.add_node("check_query_relevance", check_query_relevance)
@@ -60,7 +60,7 @@ def add_edges(workflow: StateGraph, grade_documents, query_relavance_checker):
 
     # CHANGED: After rewrite, go to generate_tool_call to create tool calls
     workflow.add_edge("rewrite_question", "generate_tool_call")
-    
+
     # CHANGED: From generate_tool_call, go to retrieve
     workflow.add_edge("generate_tool_call", "retrieve")
 
@@ -69,7 +69,7 @@ def add_edges(workflow: StateGraph, grade_documents, query_relavance_checker):
         grade_documents,
         {
             "generate_answer": "generate_answer",
-            "rewrite_question": "retriever_failed_response", 
+            "rewrite_question": "retriever_failed_response",
             # rewriting means retriever failed to retrieve relevant docs so directly going to this node
         },
     )
@@ -88,7 +88,7 @@ def build_workflow(
     initialize_current_query,
     checkpointer: Checkpointer,
     retriever_failed_response,
-    generate_tool_call  # Add this parameter
+    generate_tool_call,  # Add this parameter
 ):
     workflow = StateGraph(State)
 
@@ -101,7 +101,7 @@ def build_workflow(
         generate_answer,
         initialize_current_query,
         retriever_failed_response,
-        generate_tool_call  # Pass it to add_nodes
+        generate_tool_call,  # Pass it to add_nodes
     )
 
     add_edges(workflow, grade_documents, query_relavance_checker)

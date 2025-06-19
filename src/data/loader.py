@@ -6,6 +6,7 @@ from src.utils.logger import get_logger
 logger = get_logger(__name__)
 CLEANED_DIR = "cleaned_data"
 
+
 def load_data() -> List[Document]:
     all_docs: List[Document] = []
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -18,7 +19,9 @@ def load_data() -> List[Document]:
             file_path = os.path.join(cleaned_directory, file)
             with open(file_path, "r", encoding="utf-8") as f:
                 content = f.read()
-                all_docs.append(Document(page_content=content, metadata={"source": file}))
+                all_docs.append(
+                    Document(page_content=content, metadata={"source": file})
+                )
 
     logger.info("Loaded cleaned data completely")
     return all_docs

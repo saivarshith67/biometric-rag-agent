@@ -8,6 +8,7 @@ class State(TypedDict):
     Custom state extending LangGraph's MessagesState with additional fields
     needed for query routing and control.
     """
+
     messages: Annotated[list[AnyMessage], add_messages]
     rewrite_attempts: int
     was_rewritten: bool

@@ -62,6 +62,7 @@ def _get_latest_context(messages):
             return msg.content
     return ""
 
+
 def initialize_current_query(state: State) -> State:
     for msg in reversed(state["messages"]):
         if isinstance(msg, HumanMessage):
@@ -74,9 +75,7 @@ def initialize_current_query(state: State) -> State:
     raise ValueError("No user message found to initialize current_query")
 
 
-def query_relavance_checker(
-    state: State, response_model
-) -> State:
+def query_relavance_checker(state: State, response_model) -> State:
     question = state.get("current_query")
 
     if not question:
@@ -105,7 +104,6 @@ def query_relavance_checker(
         logger.error(f"Parser failed: {e}")
         result = "unrelated"
 
-
     return result
 
 
@@ -117,7 +115,7 @@ def grade_documents(
         return "generate_answer"
 
     question = state["current_query"]
-    context = _get_latest_context(state["messages"])
+    context = state["messages"][-1]
 
     if not context:
         logger.warning("No context retrieved — skipping to rewrite.")
@@ -149,9 +147,7 @@ def grade_documents(
     return "generate_answer" if result else "rewrite_question"
 
 
-def check_query_relevance(
-    state: State, response_model
-) -> State:
+def check_query_relevance(state: State, response_model) -> State:
     question = state.get("current_query")
     if not question:
         raise ValueError("Question is empty please try again")
@@ -185,9 +181,7 @@ def check_query_relevance(
     }
 
 
-def unrelated_query_response(
-    state: State, response_model
-) -> State:
+def unrelated_query_response(state: State, response_model) -> State:
     question = state["current_query"]
     prompt_template = PromptTemplate.from_template(UNRELATED_QUERY_PROMPT)
 
@@ -201,9 +195,7 @@ def unrelated_query_response(
     }
 
 
-def generate_tool_call(
-    state: State, response_model, retriever_tool
-) -> State:
+def generate_tool_call(state: State, response_model, retriever_tool) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
         state["messages"], tool_choice="auto"
     )
@@ -214,9 +206,7 @@ def generate_tool_call(
     }
 
 
-def rewrite_question(
-    state: State, response_model
-) -> State:
+def rewrite_question(state: State, response_model) -> State:
     question = state["current_query"]
     logger.info(f"Current query : {question}")
     prompt = REWRITE_PROMPT.format(question=question)
@@ -239,9 +229,7 @@ def rewrite_question(
     }
 
 
-def generate_answer(
-    state: State, response_model
-) -> State:
+def generate_answer(state: State, response_model) -> State:
     question = state["current_query"]
     raw_context = _get_latest_context(state["messages"])
 
@@ -272,6 +260,9 @@ def retriever_failed_response(state: State) -> State:
     return {
         **state,
         "messages": state["messages"]
-        + [AIMessage(content="I couldn't find anything useful related to your question. Try rephrasing or ask something else.")],
+        + [
+            AIMessage(
+                content="I couldn't find anything useful related to your question. Try rephrasing or ask something else."
+            )
+        ],
     }
-

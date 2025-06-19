@@ -7,7 +7,7 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 DATA_DIR = "data"
 
-EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 
 VECTOR_DB_NAME = "chroma_vector_db"
 

@@ -10,6 +10,7 @@ from src.utils.logger import get_logger
 logger = get_logger(__name__)
 CLEANED_DIR = "cleaned_data"
 
+
 def parse_and_clean_pdfs() -> None:
     os.makedirs(CLEANED_DIR, exist_ok=True)
     parser = LlamaParse(result_type="markdown")  # Structured markdown output
@@ -25,9 +26,10 @@ def parse_and_clean_pdfs() -> None:
             file_path = os.path.join(data_directory, file)
             docs = parser.load_data(file_path)
             for idx, doc in enumerate(docs):
-                output_path = os.path.join(output_directory, f"{os.path.splitext(file)[0]}_part{idx}.txt")
+                output_path = os.path.join(
+                    output_directory, f"{os.path.splitext(file)[0]}_part{idx}.txt"
+                )
                 with open(output_path, "w", encoding="utf-8") as f:
                     f.write(doc.text.strip())
 
     logger.info(f"Cleaned documents stored at: {output_directory}")
-

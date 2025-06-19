@@ -2,6 +2,7 @@
 
 import streamlit as st
 
+
 def display_chat(history):
     for _, (role, text) in enumerate(history):
         if role == "user":

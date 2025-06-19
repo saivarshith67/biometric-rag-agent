@@ -39,6 +39,11 @@ backend:
 index:
 	$(PYTHON) -m src.index_builder
 
+# Clean data before creating indices
+.PHONY: clean-data
+clean-data:
+	$(PYTHON) -m src.data_cleaner
+
 # Run Streamlit frontend
 .PHONY: frontend
 frontend:

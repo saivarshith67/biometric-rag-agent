@@ -13,10 +13,12 @@ langfuse = Langfuse(
     host=LANGFUSE_HOST_URL,
 )
 
+
 def traced(name: str):
     """
     Decorator to wrap any function with Langfuse trace and auto-log input/output.
     """
+
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
@@ -44,4 +46,5 @@ def traced(name: str):
                 raise
 
         return wrapper
+
     return decorator

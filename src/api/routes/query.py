@@ -9,8 +9,10 @@ import httpx  # Assuming external APIs like Gemini use httpx or requests
 logger = get_logger(__name__)
 router = APIRouter()
 
+
 class QueryRequest(BaseModel):
     query: str
+
 
 @router.post("/query")
 async def post_query(request: Request, query_request: QueryRequest) -> JSONResponse:
@@ -50,7 +52,7 @@ async def post_query(request: Request, query_request: QueryRequest) -> JSONRespo
                 content={
                     "status": "error",
                     "result": "Rate limit exceeded. Please wait and try again.",
-                    "help_url": "https://ai.google.dev/gemini-api/docs/rate-limits"
+                    "help_url": "https://ai.google.dev/gemini-api/docs/rate-limits",
                 },
             )
 

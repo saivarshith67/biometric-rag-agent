@@ -10,7 +10,7 @@ from src.agent.nodes import (
     query_relavance_checker,
     initialize_current_query,
     retriever_failed_response,
-    generate_tool_call
+    generate_tool_call,
 )
 from src.vector_db.vector_store import load_vectorstore
 from src.utils.logger import get_logger
@@ -37,9 +37,7 @@ class RagPipeline:
         self.embeding_model = build_embedding_model()
         self.vectorstore = load_vectorstore(embedding_model=self.embeding_model)
         self.retriever_tool = build_retriever_tool(vectorstore=self.vectorstore)
-        self.response_model = build_response_model(
-            retriever_tool=self.retriever_tool
-        )
+        self.response_model = build_response_model(retriever_tool=self.retriever_tool)
         self.grader_model = build_model()
 
         # --- Defer connection and graph objects ---
@@ -75,12 +73,12 @@ class RagPipeline:
         query_relavance_checker_wrapped = partial(
             query_relavance_checker, response_model=self.response_model
         )
-        
+
         # ADD THIS: Wrap the generate_tool_call function
         generate_tool_call_wrapped = partial(
-            generate_tool_call, 
+            generate_tool_call,
             response_model=self.response_model,
-            retriever_tool=self.retriever_tool
+            retriever_tool=self.retriever_tool,
         )
 
         # --- Build the LangGraph workflow ---
