@@ -1,0 +1,37 @@
+# Authentication
+
+# Server Matching
+
+You can set the server matching. When this option is activated, it performs user authentication matching in BioStar 2, not in the device. It can be used when the device has too much user information or when the device is installed outside.
+
+1. Press [Button] and authenticate with the Admin level credential.
+2. Select AUTHENTICATION and activate Server Matching (Fingerprint, Card, ID).
+
+- It is only available for fingerprint, card and ID options.
+- When you use the server matching option, you need to activate the option in both Biostar 2 and the device. Refer to the administrator manual of BioStar 2 to learn how to set the server matching settings in BioStar 2.
+
+# Face
+
+You can change the configuration for facial authentication.
+
+1. Press [Button] and authenticate with the Admin level credential.
+2. Select AUTHENTICATION → Face.
+3. Select and set the desired item.
+
+| Face                    | Operation |
+| ----------------------- | --------- |
+| Light Brightness        | Normal    |
+| Motion Sensor           | Medium    |
+| Enroll Timeout          | 20 Sec    |
+| Auth Timeout            | 5 Sec     |
+| Duplicate Check         |           |
+| Face Detect Setting     |           |
+| ToM Enrollment          |           |
+| Store Visual Face Image |           |
+| Face Recognition        |           |
+
+- Light Brightness: Adjust the brightness level of the light manually. Select Normal or High to change the level or select Not Use to turn off the light.
+- Motion Sensor: Set the sensitivity for detecting motion near the device. If Motion Sensor is set to OFF, tap the screen to authenticate the face.
+- Enroll Timeout: If a face is not registered during the set time, the face registration will be canceled.
+- Auth Timeout: If the authentication is not completed during the set time, the authentication will fail.
+- Duplicate Check: When registering a face, you can check duplicates.

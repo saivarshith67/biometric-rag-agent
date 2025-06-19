@@ -1,0 +1,22 @@
+# RS-485 Wiring Guide
+
+# RS-485, Termination
+
+RS-485 signaling relies upon balanced and differential signaling scheme, and has many advantages over unbalanced signaling such as RS-232, such as strong noise immunity and multi drop configuration capability. These are the most frequently-asked questions on using RS-485 signaling systems, which are worth reading before designing a RS-485 BioStar network system.
+
+# Cable
+
+The RS-485 transmission system requires twisted-pair cables for best results, to maximize its noise rejection characteristics. The characteristic impedance of the cable is recommended to be 120 ohms. One of most readily available twisted pair cables in the market is UTP (Unshielded Twisted Pair, CAT5/5e/CAT6) cable for Ethernet applications, whose characteristic impedance is around 100 ohms. You may use this cable for most applications. However, it’s advised to consider using STP cables for better noise rejection.
+
+# Termination
+
+As the cable gets longer, it acts as a transmission line, and the signals tend to reflect at the end of the line. To suppress this reflection, it is recommended to add termination resistors between signal pairs at both ends of the cable. The BioStar devices have on board termination resistors that can be enabled through slide switches or software configuration, so you may enable it if a device is placed at one of the ends of the cable.
+
+- Use proper resistor for termination. The resistance should match the characteristic impedance of the cable. As the RS-485 system recommends 120 ohm cables, the BioStar devices have 120 ohm resistors on board. However, you may get good results to use CAT5~CAT6 cables for most applications.
+- Place at the right place. The resistors should be placed at both ends of the cable to suppress line reflection. DO NOT PLACE more than two termination resistors within a cable.
+
+# Topology
+
+Use daisy chain.
+
+https://kb.supremainc.com/knowledge/

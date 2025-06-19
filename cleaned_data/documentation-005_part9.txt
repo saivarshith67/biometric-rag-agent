@@ -1,0 +1,35 @@
+# User
+
+# Registering user information
+
+The user information including credentials can be registered.
+
+1. Press and authenticate with the Admin level credential.
+2. Select USER →, and choose a credential you want to register.
+
+There are two steps for the user registration. Some options are available after the credential has been registered.
+
+| Add User       | Add User                   |              |      |             |
+| -------------- | -------------------------- | ------------ | ---- | ----------- |
+|                | (Input Name)               | (Input Name) | Face | Fingerprint |
+| Card           | PIN                        |              |      |             |
+| Operator Level | None                       |              |      |             |
+| Period         | 2001/01/01 - 2037/12/31    |              |      |             |
+| Duress         | Extended Private Auth Mode |              |      |             |
+| Next           | Save                       |              |      |             |
+
+- Register a user photo.
+- Name: Enter the username.
+- ID: Enter a number between 1 and 429467295 to register as the user ID. If User ID Type set to Alphanumeric, a combination of alphanumeric characters and symbols (_, -) can be used for the ID. Up to 32 characters can be input.
+- Face: Register a face for user authentication. Press Face → Next and register a face according to the instructions on the screen. To add more faces, press . Refer to Registering a face to learn more about the face registration.
+- Fingerprint: Register a fingerprint for user authentication. Press Fingerprint → Next and register a fingerprint according to the instructions on the screen. To add more fingerprint, press . Refer to Registering a fingerprint to learn more about the fingerprint registration.
+- Card: Register a card for user authentication. Press Card → Next and scan the card that will be assigned to the user. To register an additional card, press .
+- PIN: Enter the PIN you wish to use. Enter the PIN you wish to use, and then enter the same PIN again for confirmation. Enter a number between 4 and 16 digits to prevent leaking.
+- Operator Level: Select the level you wish to assign to a user.
+
+Available menus vary according to the set user level.
+
+- None: This is the general user level and menus cannot be accessed.
+- Administrator: All menus can be accessed.
+- Configuration: AUTHENTICATION, DISPLAY & SOUND, NETWORK, DEVICE, and EVENT LOG menus can be accessed.
+- User Management: USER and EVENT LOG menu can be accessed.

@@ -1,0 +1,35 @@
+# User Management
+
+# Edit User Information
+
+Users with the user level of Administrator and User Mgmt can change user information. They can add fingerprints or a card for a user, and also change PIN numbers and access levels.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to USER &gt; Search User and press OK.
+3. | Search User |      |             |      |
+| ----------- | ---- | ----------- | ---- |
+|             | Name | Fingerprint | Card |
+
+Select a search method and press the button. You can search for users by ID, Name, Fingerprint, or Card.
+4. - If you press OK without selecting a search method, a list of all users will be displayed.
+
+Select the user you want to edit and press F2. Edit the information by referring to Adding User Information.
+
+NOTE
+
+- Access Group can be registered in BioStar 2. For more information on registering access groups, see the BioStar 2 Administrator Guide.
+
+# Delete All Users
+
+You can delete all registered users.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to USER &gt; Delete User, then press OK.
+3. If you press OK, all registered users will be deleted.
+
+# Check User Usage
+
+Shows the numbers of registered users, fingerprints, and cards.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to USER &gt; User Usage, then press OK.

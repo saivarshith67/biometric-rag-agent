@@ -1,0 +1,41 @@
+# Authentication Configuration
+
+NOTE
+
+- You can configure a schedule with BioStar 2. You can select Never or Always if there is no configured schedule.
+- For more information on configuring schedules, see the BioStar 2 Administrator Guide.
+
+# ID
+
+A schedule can be configured for each authentication method using IDs.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to AUTHENTICATION &gt; ID, then press OK.
+3. | Never | Never | Always |
+| ----- | ----- | ------ |
+
+Select an item and press the / buttons to set a schedule.
+4. - + : In this mode, fingerprint authentication is required after entering an ID.
+- + : In this mode, a PIN must be entered after entering an ID.
+- + / : In this mode, fingerprint authentication or entering a PIN is required after entering an ID.
+- + + : In this mode, both fingerprint authentication and entering a PIN are required after entering an ID.
+
+Press OK to save the settings.
+
+NOTE
+
+- You can configure a schedule with BioStar 2. You can select Never or Always if there is no configured schedule.
+- For more information on configuring schedules, see the BioStar 2 Administrator Guide.
+
+# T&A Mode
+
+You can select registration options for the T&A Mode.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to AUTHENTICATION &gt; T&A Mode, then press OK.
+3. | T\&A Mode | By User      |
+| --------- | ------------ |
+| TEA Event | TEA Required |
+| Not Use   |              |
+
+Select an item and configure the settings.

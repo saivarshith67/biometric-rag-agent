@@ -1,0 +1,57 @@
+# How to use the DB migration tool
+
+Microzolt SQL Server Management Studio
+
+Connect
+
+Object Explorer
+
+Server type: Database Engine
+
+Connect to: localhost SQLExpress (SQL Server 10.50.4000)
+
+Databases
+
+System Databases
+
+Security
+
+Server Objects
+
+Replication
+
+Management
+
+192.168.16.43 SQLExpress (SQL Server 10.50.4000)
+
+Databases
+
+Security
+
+Server Objects
+
+Replication
+
+Management
+
+"DBType": "mssql"
+
+"ServerInfo":
+
+user:
+
+password: biostar
+
+server: 192.168.16.43#sqlexpress
+
+port:
+
+database: BioStar
+
+7. Press and hold the Shift key and right click on the folder that migration has been extracted, click on Open command window here to open a new command window with this specific directory.
+
+| Name | Date modified     | Type        | Size |
+| ---- | ----------------- | ----------- | ---- |
+| BZDM | 5/20/2015 5:50 PM | File folder |      |
+
+- https://kb.supremainc.com/knowledge/

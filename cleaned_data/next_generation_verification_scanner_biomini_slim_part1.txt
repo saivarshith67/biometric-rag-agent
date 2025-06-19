@@ -1,0 +1,19 @@
+# Next Generation Verification Scanner, BioMini Slim
+
+As the use of fingerprints increases and applications are extended to the financial field, such as banking or pension receiving, the importance of fake fingerprint detection is growing. BioMini Slim is made using the solid experience and know-how accumulated by Suprema in false fingerprinting and overcomes the limits of existing company sensors. The difference between an actual fingerprint and a false one lies in intrinsic physical differences and optical characteristics. BioMini Slim provides new and advanced Live Finger Detection (LFD) technology by applying a machine learning method that analyzes and categorizes image patterns according to optical characteristics, as shown in Fig 2. The product is made by improving the company’s technology and overcoming the limits of existing LFD tech, such as with Silicon, resulting in superior performance compared to competitor’s technologies.
+
+Based on the advantages mentioned above, BioMini Slim is an optimized market-ready solution regardless of application, such as personal authentication, healthcare, finance, etc. and has the potential to create new verification markets.
+
+# Figure 2
+
+BioMini Slim's live finger detection system in two different situations
+
+| Light                                   | Penetrated light source                       | lights              |
+| --------------------------------------- | --------------------------------------------- | ------------------- |
+| Scattered light through the fingerprint | (b) Total reflected light from internal light | from external light |
+
+From: http://kb.supremainc.com/knowledge/
+
+Permanent link: http://kb.supremainc.com/knowledge/doku.php?id=en:tc_technology_next_generation_verification_scanner_biomini_slim
+
+Last update: 2015/09/01 15:58

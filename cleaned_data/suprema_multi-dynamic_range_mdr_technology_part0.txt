@@ -1,0 +1,14 @@
+# Suprema Multi-dynamic Range (MDR) Technology
+
+# MDR, Multi-dynamic Range, Authentication Scanner
+
+Compared to the fingerprint access control devices installed in a fixed position, fingerprint authentication scanners are more likely to be used in varied positions and locations. In particular, light (ambient light), among those environmental factors, light condition around the scanner creates greater influence and often causes a decrease in quality of captured fingerprint images. Suprema developed the industry’s unique multi-dynamic range (MDR) technology to ensure consistency in quality of fingerprint images regardless of lighting conditions and moisture level of finger skin. Suprema’s patented MDR technology is available in selected BioMini models, namely BioMini Plus 2, BioMini Combo, and BioMini Slim. MDR technology delivers greater benefits to mobile authentication applications where fingerprint scanners are connected with mobile devices in varied locations and positions.
+
+| VelyBrightImaqe | Normal Image | MDR Algorithm | Optimized Image | Very Dark Image |
+| --------------- | ------------ | ------------- | --------------- | --------------- |
+
+# Multi-dynamic Range (MDR) Technology
+
+Suprema’s patented MDR technology works in a similar mechanism to HDR of cameras. With Suprema’s unique image processing algorithm, MDR technology smartly blends high-brightness images and dark images of the same object to gain optimal image quality regardless of lighting conditions. The fingerprint image acquisition methods exquisitely enhance the bright and dark parts of the image.
+
+http://kb.supremainc.com/knowledge/

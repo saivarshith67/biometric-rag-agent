@@ -1,0 +1,42 @@
+# How to use Leave Management function
+
+1. Add schedule as you wish
+
+BioStar 2
+
+Settings 66 Port About Help
+
+DASH Suprema BOARD
+
+| USER   | Name              | Suprema            |
+| ------ | ----------------- | ------------------ |
+| DEVICE | Rule              | None               |
+|        | Schedule template | Elias Garcia 7-20h |
+| DOOR   | Period            | \[2018-10-01]      |
+|        | Holiday           | None               |
+| ACCESS | CONTROL           | User               |
+|        | User group        | UUser im group(e)  |
+|        | Added users(a)    | All Users          |
+|        | Administrator     | Administrator      |
+|        | Kantakana         | Kantakana          |
+|        | Max               | Max                |
+
+Add selected user Delete all users
+
+Now when the schedule is created, you will be able to see it on the left-hand column. Expand it and click on a user to see his or her individual schedule in calendar format.
+
+BioStar 2 Settings88 Port About Help
+
+Administrator Logout
+
+DASH Add ScHedULE Suprema Administrator
+
+| Shift         | Schedule                       | Report                         | November 2018                  |                                |                                |                                |                                |
+| ------------- | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ |
+| USER          | Sun                            | Mon                            | Tue                            | Wed                            | Thu                            | Sat                            |                                |
+| Suprema       | 07900+20-00 Elias Garcia \~20h | 07900+20-00 Elias Garcia 7-20h | 07900+20-00 Elias Garcia \~20h | 07900+20-00 Elias Garcia 7-20h | 07900+20-00 Elias Garcia 7-20h |                                |                                |
+| Administrator | Kantakana                      | Max                            | 07900+20-00 Elias Garcia \~20h | 07900+20-00 Elias Garcia 7-20h | 07900+20-00 Elias Garcia \~20h | 07900+20-00 Elias Garcia 7-20h | 07900+20-00 Elias Garcia 7-20h |
+
+Click on anywhere on the calendar to authorize Leave for this employer, you can see that a menu is created to offer you options of “Add Temporary Schedule” or “Add Leave.” Click on “Add Leave.”
+
+- https://kb.supremainc.com/knowledge/

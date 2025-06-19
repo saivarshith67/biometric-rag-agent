@@ -1,0 +1,35 @@
+# BioStar2 V2.6.0 – Database Table
+
+# UPDATEDAT
+
+DATETIME - Updated date/time
+
+# TIMESCHEDULETIMESEGMENT
+
+Time Segments of Time Schedule
+
+| Column      | Data Type | Key | Description            |
+| ----------- | --------- | --- | ---------------------- |
+| DAY\_INDEX  | INT(11)   |     | Date Index of One Week |
+| START\_TIME | INT(11)   |     | Start time             |
+| END\_TIME   | INT(11)   |     | End time               |
+| CREATEDAT   | DATETIME  |     | Created date/time      |
+| UPDATEDAT   | DATETIME  |     | Updated date/time      |
+| TSID        | INT(11)   |     | Time Schedule ID       |
+
+# TR_EVT
+
+Trigger Event to Record Video/Snapshot Data
+
+| Column       | Data Type  | Key | Description                            |
+| ------------ | ---------- | --- | -------------------------------------- |
+| ID           | BIGINT(20) | PK  | Unique ID                              |
+|              | UNSIGNED   |     |                                        |
+| CREATEDAT    | DATETIME   |     | Created date/time                      |
+| UPDATEDAT    | DATETIME   |     | Updated date/time                      |
+| EVT\_TYP\_CD | INT(11)    |     | Event Type Code what trigger recording |
+| TSC\_ID      | INT(11)    |     | Time Schedule ID                       |
+| IP\_CAM\_ID  | INT(11)    |     | Target IP Camera ID                    |
+|              | UNSIGNED   |     |                                        |
+
+© 2018 by Suprema Inc.

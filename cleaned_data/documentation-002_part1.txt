@@ -1,0 +1,39 @@
+# BioStar2 V2.6.0 – Database Table
+
+# Cautions
+
+# Generic Cautions
+
+# A. Isolation Level
+
+If tx_isolation in Maria DB’s Global/Session variable is REPEATABLE READ avoid using INSERT INTO ~, SELECT ~, CREATE TABLE AS ~ SELECT ~
+
+- Alternative: Configure and use tx_isolation as READ UNCOMMITTED or READ COMMITTED.
+- Reference: Isolation Level
+
+# B. Multiple Sessions
+
+Avoid using REPLACE INTO ~ with multiple DB sessions. The REPLACE INTO ~ operation executes two operations of DELETE ~ and INSERT INTO ~ as one operation and when this status is linked with the isolation level mentioned above, a dead-lock may occur.
+
+- Alternative: Use INSERT INTO ~ ON DUPLICATE KEY UPDATE ~
+- Reference 1: Replace
+- Reference 2: INSERT on duplicate key update
+
+# C. Self-reference
+
+Self-reference should not be used if possible when executing an update or insert query. If a self-referencing SELECT statement is included in an update or insert query, many locks will be held which may lead to performance decrease. Furthermore, a reference to a table with a foreign key constraint may also provide a similar result as a self-reference.
+
+- Example 1: UPDATE T_USR SET NM = (SELECT NM FROM T_USR WHERE USRID = '1111');
+- Example 2: INSERT INTO T_USR (A, B, C, D) SELECT 'a', 'b', 'c', D FROM T_USR;
+
+# D. Transactions
+
+Transactions (batch jobs) should be held shortly as possible unless it is an insert and update execution for a large number of rows.
+
+# E. DDL Usage
+
+DDL usage within a transaction will execute an implicit commit which may result in unintended results. (Rollback is not possible)
+
+- Reference 1: SQL statements That Cause an Implicit Commit
+
+© 2018 by Suprema Inc.

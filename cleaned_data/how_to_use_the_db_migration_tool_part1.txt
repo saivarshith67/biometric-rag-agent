@@ -1,0 +1,36 @@
+# How to use the DB migration tool
+
+# SQL Server Configuration Manager
+
+| Name                             | Status                    | Start Mode |
+| -------------------------------- | ------------------------- | ---------- |
+| SQL Server (SQLEXPRESS)          | Running                   | Automatic  |
+| SQL Server Browser               | Running                   | Automatic  |
+| SQL Server Network Configuration | Server Agent (SQLEXPRESS) | Stopped    |
+
+On the left pane, click SQL Server Network Configuration. There will be protocols for SQLExpress and Protocols for BSSERVER as follows. Then, click the Protocols for SQLEXPRESS and check if the TCP/IP is Enabled.
+
+The name of protocols depends on your system configuration.
+
+# SQL Server Configuration Manager
+
+| Protocols for BSSERVER | Status   |
+| ---------------------- | -------- |
+| Shared Memory          | Enabled  |
+| Named Pipes            | Disabled |
+| TCP/IP                 | Enabled  |
+
+# SQL Server Services
+
+If you have changed any of the settings above you will have to restart the SQL Server. Click SQL Server Services from the left pane, right click SQL SERVER and click Restart.
+
+# SQL Server Configuration Manager
+
+| Name                             | Status                  | Start Mode          |
+| -------------------------------- | ----------------------- | ------------------- |
+| SQL Server (SQLEXPRESS)          | Running                 | Automatic           |
+| SQL Server Network Configuration | SQL Server (SQLEXPRESS) | Other (Boot System) |
+
+Restart (stop and then start) selected service:
+
+https://kb.supremainc.com/knowledge/

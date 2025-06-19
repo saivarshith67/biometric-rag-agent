@@ -1,0 +1,48 @@
+# System Setup
+
+# Network
+
+# TCP/IP Settings
+
+You can configure the network settings for the device.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to NETWORK &gt; TCP/IP then press OK.
+3. Press the   /   buttons to select a Type then select an item. You can select Ethernet or Wireless.
+
+| Type        | Ethernet       | Type       | Wireless |
+| ----------- | -------------- | ---------- | -------- |
+| PORT        | 51211          | AP Search  | MKNexus5 |
+| DHCP        | Enabled        | Encryption | None     |
+| IP Address  | 192.168.16.141 | Password   |          |
+| Gateway     | 192.168.16.1   | PORT       | 51211    |
+| Subnet Mask | 255.255.255.0  | DHCP       | Enabled  |
+
+- Port: Enter the port number of the device.
+- DHCP: Select whether or not to use DHCP. If Disabled is selected, the user can modify IP Address, Gateway, and Subnet Mask.
+- IP Address: Enter the IP address of the device.
+- Gateway: Enter the gateway address of the device.
+- Subnet Mask: Enter the subnet mask address of the device.
+
+4 Press OK to save the settings.
+
+# NOTE
+
+- Press the number buttons to enter the IP address, gateway address, and subnet mask address. Use the   button to delete the values entered. Use the   button to enter a separator.
+- To use Wireless, you need a wireless router. For more information on installing and configuring the wireless router, see the manual of the wireless router.
+
+# Server Settings
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to NETWORK &gt; Server then press OK.
+
+| Server          |                 |
+| --------------- | --------------- |
+| Connection Mode | Server - Device |
+| Server URL      |                 |
+| Server IP       | 0.0.0.0         |
+| Server Port     | 51212           |
+
+3 Select an item and change the settings.
+
+- Connection Mode: Select Device &gt; Server to send the connect signal from the device directly to the server. If Server &gt; Device is selected, Server IP and Server Port address cannot be entered.

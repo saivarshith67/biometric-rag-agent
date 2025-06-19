@@ -1,0 +1,32 @@
+# How to delete blacklisted CSN cards on BioStar 2
+
+# BioStar Setting
+
+# Service Status
+
+| TneBioStar 2 service has been stopped.   | Stopped | Start |
+| ---------------------------------------- | ------- | ----- |
+| The Web Server service has been started: | Running | Stop  |
+
+# Web Server Configuration
+
+HTTP Port
+
+1. Download SQLite Expert Personal 32bit. (http://www.sqliteexpert.com/download.html)
+2. Install the program.
+3. Run the program.
+4. Open the DB file by clicking File > Open Database > C:\Program Files (x86)\BioStar 2\db\biostar2.
+5. Paste the query below and change the red value (CRDCSN) below to your card’s CSN number.
+
+BEGIN  TRANSACTION;
+DELETE
+FROM  T_BLKL
+WHERE  CRDUID = (SELECT     CRDUID
+FROM  T_CRD
+WHERE  CRDCSN='1927837329' ) ;
+UPDATE T_LSTSYNSTA SET BLKL       = 0;
+COMMIT;
+
+Click Execute SQL.
+
+https://kb.supremainc.com/knowledge/

@@ -1,0 +1,29 @@
+# Safety Instructions
+
+# Operating Instructions
+
+Do not drop the product or subject it to shock or impact during use.
+
+- This can cause a failure.
+
+Keep the password secret from others and change it periodically.
+
+- Failure to do so may lead to an illegal intrusion.
+
+Do not press the buttons on the product with excessive force or with a sharp tool.
+
+- This can cause a failure.
+
+Be careful not to contaminate or damage the fingerprint reader with dirty hands or materials.
+
+- This can decrease performance or cause failures to read fingerprints.
+
+Clean the product with a soft, dry cloth. Do not use alcohol, benzene, or water.
+
+- This can cause a product failure.
+
+BioStation 2 uses the capacitive button. If there is much moisture (humidity) like a rainy weather or on the product, wipe with a soft and dry cloth.
+
+There is a risk of fire if batteries are replaced by an incorrect type.
+
+Dispose of batteries in accordance with local and national disposal regulations.

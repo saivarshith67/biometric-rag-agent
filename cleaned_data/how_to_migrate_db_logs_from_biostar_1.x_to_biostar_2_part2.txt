@@ -1,0 +1,28 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+1. Search for BioStar 2 Launcher Service.
+2. | Action | Name                                    | Description                            | Log On        |
+| ------ | --------------------------------------- | -------------------------------------- | ------------- |
+| Start  | BioStar Launcher Service                | Provides user management               | Local Service |
+| Start  | ASP NET State Service                   | Provides user management and automatic | Local Service |
+| Start  | Background Intelligent Transfer Service | Automatic                              | Local Service |
+| Start  | BioStar 2 Launcher Service              | Automatic                              | Local Service |
+| Start  | BitLocker Drive Encryption Service      | Manual                                 | Local Service |
+| Start  | Backup Engine Service                   | Manual                                 | Local Service |
+| Start  | Bluetooth Support Service               | Manual                                 | Local Service |
+
+Right-click BioStar 2 Launcher Service and click Stop. Then the Status now would become blank.
+3. | Name                       | Status | Start Type |
+| -------------------------- | ------ | ---------- |
+| BioStar 2 Launcher Service | Blank  | Automatic  |
+
+Go to config folder in the migration tool path. Open logConfig.mssql.
+4. | File Name       | Date Created     |
+| --------------- | ---------------- |
+| logConfig.mssql | 2015-05-15 27:35 |
+| MSSQL File      | 2015-05-06 27    |
+| ORACLE File     | 2015-05-07 27    |
+
+Copy the content and paste it in logConfig file.
+
+For more information, visit this link.

@@ -1,0 +1,29 @@
+# How to Troubleshoot Wiegand Output Issues
+
+# Issue
+
+1. You are using Suprema devices as Wiegand readers for a 3rd party controller and the controller is not receiving any signal from the Suprema device.
+2. A signal is being sent to the controller only when authentication succeeds, but you need the device to send the card number regardless of match success. In BioStar 2 you can only output the card ID. You cannot output the User ID like BioStar 1. Hence each user needs to have a card assigned. If you don't have a physical card, you can assign one manually.
+
+# Cause
+
+1. The Pulse Width and interval has to match the controller.
+2. Bypass mode is disabled.
+
+# Procedure
+
+1. Check the pulse interval and width of the 3rd party controller. Please contact the technical support team of the 3rd party controller if you do not know the pulse interval and width.
+2. Set up the pulse width and pulse interval accordingly.
+
+| Wiegand In/Out   | Formal              | 26 bit SIA Standard-410301 |
+| ---------------- | ------------------- | -------------------------- |
+| Pulse Width (µs) | Pulse Interval (µs) | 10000                      |
+| Enable Fail Code | Fail Code           |                            |
+| Bypass Mode      | Disable             |                            |
+
+Since the Suprema device is sending the signal out to the controller, the Wiegand signal should be set to *Out*.
+
+| Wiegand In/Out | Out |
+| -------------- | --- |
+
+- https://kb.supremainc.com/knowledge/

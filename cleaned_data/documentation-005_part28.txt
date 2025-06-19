@@ -1,0 +1,27 @@
+# Device
+
+# Device Info
+
+You can view the model name, device ID, serial number, firmware version of device ID, and MAC address.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Device Info. You can view the information including Model Name, Device ID, Serial No., HW, FW, Kernel, and MAC.
+
+| Model Name | FSF2-ODB                     |
+| ---------- | ---------------------------- |
+| Device ID  | 567878787                    |
+| Serial No. | 567878787                    |
+| HW         | 0.0.0                        |
+| FW         | 1.0.0 \[2020/08/25 09.33.37] |
+| Kernel     | 1.0.0 \[2020/07/13 09.04.32] |
+| MAC        | 00:17:FC:D9.24.83            |
+
+# Memory Info
+
+View the status of memory usage.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Memory Info. You can view the memory usage status of the device.
+
+| DRAM Usage | 738,544 | 2,007,488 | (KB) |
+| ---------- | ------- | --------- | ---- |

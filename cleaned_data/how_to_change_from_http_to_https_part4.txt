@@ -1,0 +1,26 @@
+# How to change from HTTP to HTTPS
+
+# Setting
+
+| DEVIGE | ACCOUNT        | PREFERENCE | CARD  | CARD FORMAT | SERVER |
+| ------ | -------------- | ---------- | ----- | ----------- | ------ |
+| Doqa   | TRIGGER ACTION | SCHEDULE   | ALERT | HTTPS       | CLOUD  |
+
+9. Click Cert.Download button to obtain a file named cert-register.zip.
+
+10. Unzip the cert-register.zip and run cert-register.exe file.
+
+| Name              | Date modified      | Type        | Size     |
+| ----------------- | ------------------ | ----------- | -------- |
+| certmgr           | 12/29/2015 8:10 AM | File folder |          |
+| cert-register.exe | 2/11/2015 4:57 PM  | Application | 2,211 KB |
+
+11. On the Enrollment Certification window, please enter the ip address of BioStar 2 server along with the HTTPS port you assigned on step 4 and then click Enrollment button.
+
+# Enrollment Certification
+
+| Server Address | 192.168.16.49.444 |
+| -------------- | ----------------- |
+| Enrollment     | Cancel            |
+
+- https://kb.supremainc.com/knowledge/

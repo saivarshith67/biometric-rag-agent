@@ -1,0 +1,19 @@
+# BioStar 2 and Web Security
+
+Web security is crucial in the modern world because 70% of all hacking is done through the web. Since the web holds the characteristic of easy access, it is also prone to be exposed to vulnerabilities. Hence, attacks through websites are not something that can be prevented by the administrator with careful consideration of tight security.
+
+This article explains the differences of the two security protocols (HTTP and HTTPS) that are being used by BioStar 2, which is a web-based security platform, and explains the reason why HTTPS should be used.
+
+# HTTP
+
+HTTP is an acronym for Hypertext Transfer Protocol. It is used to send and receive HTML (Hypertext Markup Language) documents. It is a protocol that sends data between the web client (user) and web server (service provider) through a web browser. It normally uses the TCP/UDP method and port 80.
+
+HTTP does not maintain its own connection status so data exchange is done through ‘REQUEST’ and ‘RESPONSE’. If this step does not exist, the web server cannot know what page the web browser is requesting, and the web browser cannot know what page the web server is transmitting.
+
+HTTP executes ‘REQUEST’ and ‘RESPONSE’ with unencrypted text so it is faster than HTTPS, but if someone intercepts the data and reads them, they can see the content of the page that the client is observing.
+
+# HTTPS
+
+HTTPS is an acronym for Hypertext Transfer Protocol over Secure Socket Layer and is a form of HTTP with enhanced security. When HTTPS is used, all ‘Request’ and ‘Response’ data is encrypted before data is sent to the network. This encrypted layer is composed of SSL (Secure Socket Layer) or TLS (Transport Layer Security). HTTPS may be slower than HTTP because it encrypts the communicated data but provides superior security.
+
+Source

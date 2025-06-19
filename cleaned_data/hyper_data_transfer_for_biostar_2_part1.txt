@@ -1,0 +1,19 @@
+# Hyper Data Transfer for BioStar 2
+
+# Asynchronous (Non-blocking I/O) System Architecture
+
+The asynchronous system architecture is extremely different from the synchronous system architecture.
+
+In the asynchronous system architecture, I/O operations are handled by an event-driven system. If the server requests an I/O operation with callback, the system just returns and lets the processor continue to work. When the operation is completed, it pushes the complete event to the event-loop with the result of the operation and calls the callback function with its result. Thus, in the asynchronous system architecture only a single thread is required for I/O operations.
+
+By adapting the asynchronous system architecture, BioStar 2 server does not need to wait for the response of the device. The server can send another request to a different device without collisions. In case that an I/O operation with a device has a problem such as a network disconnection, the I/O operations with the other devices will not be interrupted and can be handled normally.
+
+This system architecture doesn’t have large benefits for small-sized systems, however it exposes its advantages when a large number of devices or traffic is required.
+
+1) See C10K problem.
+
+From: http://kb.supremainc.com/knowledge/
+
+Permanent link: http://kb.supremainc.com/knowledge/doku.php?id=en:tc_technology_hyper_data_transfer
+
+Last update: 2017/04/12 17:13

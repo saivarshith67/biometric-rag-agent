@@ -1,0 +1,16 @@
+# System Setup
+
+# Memory Info
+
+Shows the memory usage status.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE > Memory Info, then press OK.
+
+# Memory Info
+
+| Dram Memory(KB) | 72,784  |
+| --------------- | ------- |
+|                 | 120,228 |
+
+Check the memory information and press OK.

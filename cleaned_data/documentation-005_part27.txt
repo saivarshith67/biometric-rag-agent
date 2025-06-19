@@ -1,0 +1,27 @@
+# Device
+
+# Daylight Saving Time
+
+You can use the device by applying daylight saving time. Set the start and end time correctly.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Daylight Saving Time and press to add additional daylight-saving time.
+3. Select the desired item and change the setting.
+
+| Add DST     | OK                     |
+| ----------- | ---------------------- |
+| Name        | Daylight Saving Time 1 |
+| Start Month | January                |
+| Start Week  | First                  |
+| Start Day   | Sunday                 |
+| Start Time  | 00.00                  |
+| End Month   | January                |
+| End Week    | First                  |
+| End Day     | Sunday                 |
+| End Time    | 00.00                  |
+
+- Name: Set the name of daylight-saving time.
+- Start Month / Start Week / Start Day / Start Time: Set details of when the daylight-saving time option begins.
+- End Month / End Week / End Day / End Time: Set details of when the daylight-saving time ends.
+
+4 To save settings, press OK.

@@ -1,0 +1,30 @@
+# Network
+
+# Network Settings
+
+You can change the network settings of the device, such as Ethernet, server, OSDP, etc.
+
+# Ethernet
+
+1. Press and authenticate with the Admin level credential.
+2. Select NETWORK → Ethernet.
+3. Change the desired item.
+
+| Ethernet    | OK    |
+| ----------- | ----- |
+| TCP/IP      |       |
+| DHCP        |       |
+| Device Port | 51211 |
+| IP Address  |       |
+| Gateway     |       |
+| Subnet Mask |       |
+| DNS         |       |
+
+- DHCP: Set whether to use DHCP. If DHCP setting is disabled, the user can modify Port, IP Address, Gateway, Subnet Mask, and DNS.
+- Device Port: Set the device port.
+- IP Address: View the IP address of the device. To modify, disable DHCP setting.
+- Gateway: View the gateway of the device. To modify, disable DHCP setting.
+- Subnet Mask: View the subnet mask of the device. To modify, disable DHCP setting.
+- DNS: Set the DNS server address.
+
+4 To save settings, press OK.

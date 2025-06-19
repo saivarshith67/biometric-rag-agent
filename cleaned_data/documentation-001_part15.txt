@@ -1,0 +1,38 @@
+# System Setup
+
+- Time Sync: Synchronizes the time with the server. To synchronize the time with the server, select Use.
+- Date Format: Selects the date format. You can select from among the YYYY/MM/DD, MM/DD/YYYY, or DD/MM/YYYY formats.
+- Time Format: Selects the time format. You can select from among the 24 hour or 12 hour (AM/PM) formats.
+
+NOTE
+
+- Press the number buttons to enter the date and time. Use the  button to delete the values entered. Use the  button to enter a separator.
+
+# Daylight Saving Time
+
+You can use the device by applying daylight saving time. Set the start and end time correctly.
+
+1. Press ESC and authenticate with the Admin level credential.
+2. Select DEVICE > Daylight Saving Time, then press OK.
+3. Select an item and press the / buttons to change the settings.
+4. To save settings, press OK.
+
+# User ID Type
+
+You can set the type of user ID to be registered on the device to Number or Alphanumeric characters.
+
+1. Press ESC and authenticate with the Admin level credential.
+2. Select DEVICE > User ID Type, then press OK.
+3. | User ID Type | Number |
+| ------------ | ------ |
+
+Press the / buttons to change the settings.
+4. To save settings, press OK.
+5. Press OK to save the settings.
+
+# USB Memory
+
+By connecting a USB memory stick, you can import or export the log, data and configurations data to or from the USB memory stick and upgrade the firmware.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE > USB Memory, then press OK.

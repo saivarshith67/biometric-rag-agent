@@ -1,0 +1,27 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+Each report can be exported as a CSV file.
+
+# Key Features
+
+# Tracking of All T&A Issues
+
+BioStar 2’s T&A System is not merely an employee Check-in and Check-out tracking system. Work, Break, Meal, Leave type, and times that are related to employee payroll can also be tracked. Furthermore, time and attendance records edited by the administrator can be seen in a single glance.
+
+# Customizable Time Code
+
+Time code (once called Pay Code), which is the core element of the Shift, can be created unlimitedly in BioStar 2’s T&A System. All company policies can be supported by combining Time Code Type, Time Rate, and Option (Worked, Not Worked).
+
+| Pay Code                | Attendance | Overtime | Leave      | Time Rate | Golor |
+| ----------------------- | ---------- | -------- | ---------- | --------- | ----- |
+| Business Trip (Paid)    | Yes        | Worked   |            |           |       |
+| Flexible Work (Holiday) | Yes        |          |            |           |       |
+| OT (night)              | Yes        |          |            |           |       |
+| OT (regular)            | Yes        |          |            |           |       |
+| OT (Weekend)            | Yes        |          |            |           |       |
+| Regular Work            | Yes        |          |            |           |       |
+| Sick Leave (Paid)       |            | Yes      | Worked     |           |       |
+| Vacation (Paid)         |            | Yes      | Worked     |           |       |
+| Vacation (Unpaid)       |            | Yes      | Not Worked |           |       |
+
+- https://kb.supremainc.com/knowledge/

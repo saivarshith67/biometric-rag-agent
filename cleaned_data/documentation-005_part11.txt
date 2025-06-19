@@ -1,0 +1,20 @@
+# User Modifying User Information
+
+User Management or Administrator can modify the registered user information. A card or fingerprint can be added, and PIN and level can be modified.
+
+1. Press   and authenticate with the Admin level credential.
+2. Select USER →  .
+3. Select your search terms. You can search for a user by All, User ID, Name, Fingerprint, and Card.
+4. Select a user you wish to modify.
+5. Modify the information by referring to Registering user information and press OK.
+
+Access Group can be registered in BioStar 2. For detailed contents regarding registering an access group, refer to the BioStar 2 Administrator Manual.
+
+# Delete All Users
+
+You can delete all registered users at once.
+
+1. Press   and authenticate with the Admin level credential.
+2. Select USER →  .
+3. Check Delete All to delete all registered users and press OK.
+4. When you press OK, all registered users will be deleted.

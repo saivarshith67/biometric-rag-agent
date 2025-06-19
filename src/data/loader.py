@@ -1,27 +1,24 @@
 import os
-from src.config import DATA_DIR
-from langchain_community.document_loaders import PyPDFLoader
 from typing import List
 from langchain.schema import Document
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
-
+CLEANED_DIR = "cleaned_data"
 
 def load_data() -> List[Document]:
     all_docs: List[Document] = []
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-    data_directory = os.path.join(base_dir, DATA_DIR)
+    cleaned_directory = os.path.join(base_dir, CLEANED_DIR)
 
-    logger.info(f"Extracting data from : {data_directory}")
+    logger.info(f"Loading cleaned text documents from : {cleaned_directory}")
 
-    for file in os.listdir(data_directory):
-        if file.endswith(".pdf"):
-            file_path = os.path.join(data_directory, file)
-            loader = PyPDFLoader(file_path)
-            docs = loader.load()
-            all_docs.extend(docs)
+    for file in os.listdir(cleaned_directory):
+        if file.endswith(".txt"):
+            file_path = os.path.join(cleaned_directory, file)
+            with open(file_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                all_docs.append(Document(page_content=content, metadata={"source": file}))
 
-    logger.info("Extracted Data completely")
-
+    logger.info("Loaded cleaned data completely")
     return all_docs

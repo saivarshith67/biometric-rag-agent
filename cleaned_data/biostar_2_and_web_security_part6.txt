@@ -1,0 +1,23 @@
+# BioStar 2 and Web Security
+
+# Conclusion
+
+HTTPS provides robust security by utilizing the SSL certificate. BioStar 2 supports both HTTP and HTTPS and provides certifications to be used in HTTPS communication. This certification is not a certificate signed by an official Certification Authority.
+
+You will be able to use BioStar 2 with enhanced security on HTTPS if you purchase SSL certificate signed by an officially authorized authority.
+
+# Certificate authority
+
+You can learn more about the types of Certification Authorities at Wikipedia.
+
+https://en.wikipedia.org/wiki/Certificate_authority
+
+From:
+
+https://kb.supremainc.com/knowledge/
+
+Permanent link:
+
+https://kb.supremainc.com/knowledge/doku.php?id=en:tc_technology_biostar_2_web_security
+
+Last update: 2016/06/07 12:28

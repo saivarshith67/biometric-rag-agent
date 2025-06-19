@@ -1,0 +1,27 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+| Overtime         | Not Use                             |                |
+| ---------------- | ----------------------------------- | -------------- |
+| Daily Overtime   | After                               | hour(s), apply |
+| After            | hour(s) of \[ OT ] apply OT (Night) |                |
+| Max overtime     | hour(s)                             |                |
+| Weekly overtime  |                                     |                |
+| Monthly overtime |                                     |                |
+
+# Intuitive Overtime Rule
+
+Overtime policies differ by each company; hence, the administrator can face difficulties configuring the Shift. An Overtime Rule is applied to a Shift, not a Time Code, which leads to flexibility in applying diverse company overtime rules. The overtime rule can be generated based on the flow of time by using the Overtime Pay Code, and daily, weekly, monthly, weekend, and holiday rules can be configured and managed effortlessly.
+
+| Type           | Fixed    | Flexible      |
+| -------------- | -------- | ------------- |
+| Day start time |          |               |
+| First check-in | Yes      |               |
+| Last check-out |          |               |
+| Working hours  | day      | per \_        |
+| Options        | Pay code | Flexible Work |
+
+# Support of Flexible Work Shift
+
+BioStar 2’s T&A System supports easy, Flexible Work configuration. Flexible Work shifts can be
+
+https://kb.supremainc.com/knowledge/

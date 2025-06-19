@@ -1,0 +1,30 @@
+# Firmware Version 2.0.2 (Build No. 2.0.2_220502)
+
+Release: 2022-05-10
+
+# New Features and Improvements
+
+1. Visual Face algorithm v2 support.
+2. Improved to detect a mask when enrolling a face so that the face cannot be enrolled with a mask on or covering the mouth.
+3. Improved Dynamic ROI (Region of Interest) performance.
+4. Added a progress bar to screen during migration.
+5. Improved to check for the duplication of cards registered with users when transmitting user data from the server to devices.
+6. Improved the Arm/Disarm status is maintained if the device loses power.
+
+# Bug Fixes
+
+1. When upgrading the firmware from v1.x.x to v2.x.x using a USB memory, the upgrade fails, and when the device is rebooted after removing the USB memory, the device stops in the loading state (Affects version: v1.0.0).
+When upgrading the firmware using a USB memory inevitably, first set Menu Timeout to Always On in the Display & Sound menu before proceeding with the upgrade. Also, even if a failure message is displayed during the upgrade, DO NOT remove the USB memory and wait until a success message is displayed. The device will restart automatically when the upgrade is complete.
+2. When upgrading the firmware from v1.x.x to v2.x.x while the device memory is full, the device does not boot (Affects version: v1.0.0).
+3. The device restarted abnormally after scanning some cards on the device (Affects version: v1.0.0).
+4. When communicating with a 3rd party control panel via OSDP, the device does not respond to the Output Status Report command while the relay reacts to it (Affects version: v1.1.2).
+5. When communicating with a 3rd party control panel via OSDP, the device incorrectly responds as 'Inactive' when receiving the Input Status Request command while the input port is grounded (Affects version: v1.1.2).
+6. When communicating with a 3rd party control panel via OSDP, the device does not respond to the Device Capabilities command (FSF2-DB, FSF2-AB)(Affects version: v1.0.0).
+7. The master device restarted abnormally if changing the floor settings after setting up the scheduled unlock zone (Affects version: v1.0.0).
+8. When different faces are enrolled in one user, authentication failed with the second enrolled face (Affects version: v1.0.0).
+9. When changing the intelligent slave settings on the detailed page of the device on BioStar 2, the settings were not applied (Affects version: v1.1.4).
+10. If the user authenticated on the device at the time of Auth Timeout, an incorrect error message was displayed (Affects version: v1.0.0).
+
+EN 301.00.FSF2
+
+FaceStation F2 Firmware Revision Notes

@@ -1,0 +1,25 @@
+# How to Troubleshoot Wiegand Output Issues
+
+If the device should act as a dummy reader (card number should be sent and no matching is done), bypass mode should be enabled.
+
+| Bypass Mode | Enable |
+| ----------- | ------ |
+
+Wiegand format does not have to be configured with Bypass Mode.
+
+# 4. Check that you have selected the correct Wiegand format and click apply.
+
+| Format         | 26 bit SIA Standard-H10301 |
+| -------------- | -------------------------- |
+| Pulse Interval | 26 bit SIA Standard-H10301 |
+|                | HID 37 bit-H10302          |
+| Fail Code      | HID 37 bit-H10304          |
+|                | HID Corporate 1000         |
+
+If you need to set a custom Wiegand format refer to the following link for more details: How to configure Wiegand Output
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_troubleshoot_wiegand_output_issues
+
+Last update: 2017/05/22 10:34

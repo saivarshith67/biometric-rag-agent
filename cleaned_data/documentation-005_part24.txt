@@ -1,0 +1,16 @@
+# Device
+
+# Camera
+
+Set the frequency to prevent the video from flickering.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Camera.
+
+# Camera
+
+| Power Line Frequency                                                                                                                                                  | 60 Hz |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| • Power Line Frequency: Set the frequency to 50 Hz or 60 Hz to prevent the video from flickering, depending on the lighting conditions where the device is installed. |       |
+
+28

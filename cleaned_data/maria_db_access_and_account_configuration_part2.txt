@@ -1,0 +1,70 @@
+# Maria DB Access and Account Configuration
+
+- ~~Hostname/IP:~~ 127.0.0.1
+- ~~User:~~ root
+- ~~Password:~~ [your root password]
+- ~~Port:~~ 3312
+
+# Session manager
+
+- Settings
+- Aqvanceo
+- Stalistics
+
+# BioStarz DBs
+
+- BioStar2 T&A
+- Unnamed
+- Unnamed-]
+
+| Network type:                     | MySQL (TCPMIP)         |
+| --------------------------------- | ---------------------- |
+| Hostname                          | 127.0.0.1              |
+| Prompt for credentials            |                        |
+| Use Windows authentication        |                        |
+| User:                             | TooI                   |
+| Password:                         | Ora;                   |
+| Port:                             | 3312/                  |
+| Compressed client server protocol |                        |
+| Databases:                        | Separated by semicolon |
+| Comment:                          |                        |
+
+- Save
+- Delete
+- Open
+- Cancel
+- More
+
+1. Click Open.
+2. Click Tools > User Manager.
+
+# BioStar2 DBs
+
+- Feidisul930,4934
+- Edit
+- Search
+- Tools
+- Help
+
+# Database filter
+
+- Previous tab: Shift-Ctrl+ Tab
+- Next tab: Ctrl+ Tab
+- Previous result tab: Alt+ Left
+- Next result tab: Alt + Right
+
+# User manager
+
+- Flush
+- Maintenance
+- Bulk table editor
+- Launch command line
+- Export database SQL
+- Export grid rows
+- Import CSV file
+- Insert files into TEXT/BLOB fields
+- Preferences
+
+Click on each default user (biostar2_ac_user & biostartnauser) and change the password.
+
+Knowledge Base

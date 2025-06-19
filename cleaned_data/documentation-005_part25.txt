@@ -1,0 +1,22 @@
+# Device
+
+# Relay
+
+You can set the open time and the input port of the exit button in the device.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Relay.
+
+# Relay
+
+| Open Time   | 3 Sec   |
+| ----------- | ------- |
+| Exit Button | Input 0 |
+| Switch      | N/O     |
+
+- Relay: You can set whether relay is enabled or not. To set the open time and the input port of the exit button, activate this option.
+- Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
+- Exit Button: Select the input port where the exit button is connected.
+- Switch: Select the relay type (N/O or N/C).
+
+29

@@ -1,0 +1,37 @@
+# Product Specifications
+
+| Category                    | Feature                                                            | Specification                        |   |
+| --------------------------- | ------------------------------------------------------------------ | ------------------------------------ | - |
+| Biometric                   | Fingerprint                                                        |                                      |   |
+| IP Rating                   | IP 65                                                              |                                      |   |
+| Main                        | • BS2-OMPW: 13.56Mhz MIFARE, MIFARE Plus, DESFire/EV1, FeliCa, NFC |                                      |   |
+| RF Option\*                 | • BS2-OIPW: 13.56MHz iCLASS SE/SR/Seos                             |                                      |   |
+| • BS2-OHPW: 125kHz HID Prox |                                                                    |                                      |   |
+| • BS2-OEPW: 125kHz EM       |                                                                    |                                      |   |
+| Max. User (1:1)             | 500,000                                                            |                                      |   |
+| Max. User (1:N)             | 20,000                                                             |                                      |   |
+| Capacity                    | Max. Template (1:1)                                                | 1,000,000 (Two templates per finger) |   |
+|                             | Max. Template (1:N)                                                | 40,000 (Two templates per finger)    |   |
+|                             | Max. Text Log                                                      | 3,000,000                            |   |
+| Wi-Fi                       | Yes                                                                |                                      |   |
+| TCP/IP                      | Yes                                                                |                                      |   |
+| RS-485                      | 1ch Host or Slave (Selectable)                                     |                                      |   |
+| Interface                   | Wiegand                                                            | 1ch Input, 1ch Output                |   |
+|                             | TTL Input                                                          | 2ch Inputs, 2ch Outputs              |   |
+|                             | Relay                                                              | 1 Relay                              |   |
+|                             | USB                                                                | USB 2.0 (Host)                       |   |
+| Voltage                     | Max. 24VDC                                                         |                                      |   |
+| Relay                       | Current                                                            | 0.5A, Max. 1.A                       |   |
+| CPU                         | 1.0 GHz                                                            |                                      |   |
+| Memory                      | 8GB Flash + 256 MB RAM                                             |                                      |   |
+| LCD                         | 2.8” QVGA Color LCD                                                |                                      |   |
+| LED                         | Multi-Color                                                        |                                      |   |
+| Sound                       | 16-bit Hi-Fi                                                       |                                      |   |
+| Hardware                    | Operating Temp.                                                    | -20°C \~ 50°C                        |   |
+|                             | Tamper                                                             | Yes                                  |   |
+|                             | Power                                                              | 9V \~ 18V                            |   |
+|                             | PoE                                                                | Optional                             |   |
+| Dimensions (W x H x D mm)   | 142 x 144 x 45(38)                                                 |                                      |   |
+| Certificates                | CE, FCC, KC, RoHS, REACH, WEEE                                     |                                      |   |
+
+* For detailed information on our supported card list, contact Suprema technical support team at support@supremainc.com.

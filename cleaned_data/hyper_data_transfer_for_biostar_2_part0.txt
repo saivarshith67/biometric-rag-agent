@@ -1,0 +1,27 @@
+# Hyper Data Transfer for BioStar 2
+
+# Chenl
+
+# Tnsk Resconsl
+
+# RCquCsl
+
+# Evec Loop
+
+# (Snje thieau)
+
+# Wokc thicads;
+
+# Resbonse
+
+The data transfer of Input and Output (I/O) devices on a computer is relatively much slower compared to the data processing within CPU and memory due to a number of different factors. The available memory bandwidth and increasing CPU performance outpace that of I/O devices. As a result, handling the I/O operations perfectly is the key point for designing a system architecture.
+
+For this reason, the BioStar 2 server adapted an asynchronous system architecture for handling network I/O operations. Before taking a deep look into the asynchronous system architecture, let’s understand the synchronous system architecture first.
+
+# Synchronous (Blocking I/O) System Architecture
+
+In a synchronous system architecture, the system conducts I/O operations in a sequential order. If the server requests an I/O operation which is to be handled by a device, the server has to wait for the response from the device. If one of the devices does not respond to the I/O operation because of network problems, the other I/O operations will not continue.
+
+This can be solved by spawning a new process or making a worker thread for each I/O operation. Spawning new processes consumes system resources of the system such as memory. Making a worker thread is more lightweight than spawning the process, but the more I/O operations are necessary the more threads need to be created. Because system resources are limited, the number of threads which a system can create is limited.1)
+
+http://kb.supremainc.com/knowledge/

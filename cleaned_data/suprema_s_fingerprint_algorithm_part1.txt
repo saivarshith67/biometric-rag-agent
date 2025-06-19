@@ -1,0 +1,20 @@
+# Suprema's Fingerprint Algorithm
+
+# Matcher
+
+Generally, there are trade-offs between matching speed and discriminating performance in conventional technologies. Our matching engine provides both fast matching speed and outstanding matching performance on noisy features, so that our algorithm is easily applied to the embedded systems, controlled by low-cost slow processors. And it also has the merit in searching large database.
+
+# Platform interoperability
+
+Suprema's algorithm is platform independent, enabled by low memory constraint, fast verification speed, and simple standard operations. This functionality enables the customers to integrate various platforms, such as PC and various controllers or DSP based embedded modules.
+
+# Sensor interoperability
+
+Suprema's algorithm is interoperable on different sensor images. For example, the customer can enroll fingerprints on PC using SFR300-S scanner and can download to the standalone modules using different sensors like TC (Upek's TouchChip) or FL (AuthenTec's AF-S2).
+
+# Interoperability Example
+
+| sensor 4 | sensor B | sensor C | sensor D |
+| -------- | -------- | -------- | -------- |
+
+https://kb.supremainc.com/knowledge/

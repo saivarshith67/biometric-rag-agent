@@ -1,0 +1,23 @@
+# Admin Menu
+
+# All Menus
+
+1. Press and authenticate with the Admin level credential.
+2. Select the desired menu.
+
+| USER                         | AUTHENTICATION               | DISPLAY & SOUND |
+| ---------------------------- | ---------------------------- | --------------- |
+| NETWORK                      | DEVICE                       | EVENT LOG       |
+| Enroll Wizard                |                              |                 |
+| 8                            | 24d                          | 31lID           |
+| FSF2-ODB                     | 567878787                    |                 |
+| HW                           | FW                           |                 |
+| 0.0.0                        | 1.0.0 \[2020/08/25 09.33.37] |                 |
+| 314                          | MAC                          |                 |
+| 1.0.0 \[2020/07/13 09.04.32] | 00:17 FC 09.24.83            |                 |
+
+If the administrator has not been designated, the menu screen will be displayed when you press.
+
+12
+
+Menu Admin

@@ -1,0 +1,35 @@
+# Display & Sound
+
+You can change the display and sound settings of the device.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DISPLAY & SOUND.
+3. Change the desired item.
+
+# DISPLAY & SOUND
+
+# Display
+
+- Home Screen
+- Language: English
+- Device Private Msg:
+- Server Private Msg:
+- Timeout
+- Menu Timeout: Always On
+- Message Timeout: 2 Sec
+- Backlight Timeout: Always On
+
+# Sound
+
+- Home Screen: Select items to be displayed in the background of the home screen.
+- Language: Set the language you wish to use.
+- Device Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. You can set Device Private Msg. by using the BioStar 2 Device SDK.
+- Server Private Msg.: Set whether to use a Private Message, which will be displayed on the screen when the user authenticates. You can set the Server Private Msg. by using the BioStar 2 API. If you have not set it on the server, the device does not display a message when authentication is successful even if Server Private Msg. is enabled on the device.
+- Screen Saver: Set this option to use the screen saver feature. It reduces unnecessary energy consumption by lowering the brightness of the LCD screen when the device is not in use.
+- Menu Timeout: Set the time (sec) for the menu screen to disappear automatically. If there is no button input during a set time, the screen will return to the home screen.
+- Message Timeout: Set the time (sec) for a setting complete message or information message to disappear automatically.
+- Backlight Timeout: Set the time (second) to turn off the lighting of LCD screen.
+- Voice Instruction: Set to use the voice instruction instead of alarm sounds.
+- Volume: Set the volume.
+
+Refer to the BioStar 2 Device SDK webpage on the Suprema Knowledge Base website (kb.supremainc.com/bs2sdk/) for more information on the BioStar 2 Device SDK.

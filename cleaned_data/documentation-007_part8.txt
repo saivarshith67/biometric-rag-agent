@@ -1,0 +1,13 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+Configuration information, but the User, User Group, and Device information can be shared with both the AC and TA modules. Furthermore, the User Group and Schedule settings can be checked in the Time Card and it is displayed in the same hierarchical structure that was configured in the AC module, providing consistent information to the administrator.
+
+# Module-based Device Functionality
+
+Device information that is registered to BioStar 2 is shared and can be used by both the AC and T&A modules. This may influence the device’s functionality beyond simply sharing device information. The T&A module can designate the AC module’s time and attendance device, and therefore the device may execute different functions based on the registered module. For example, if a device is registered only on the AC module, it can be used as an access control device, and if it is set as a time and attendance recording device in the T&A module, it can be used as an access control + time and attendance device. This module-based function allows the administrator to manage the device more easily.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:tc_whitepaper_introducing_biostar2_ta_system
+
+Last update: 2024/02/21 21:58

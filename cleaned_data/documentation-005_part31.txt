@@ -1,0 +1,28 @@
+# Device
+
+# Restore Default
+
+Device settings, network settings, and operator levels will be reset.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Restore Default.
+
+- All settings: You can reset all settings stored on the device. Press OK to reset all device settings.
+- Keep Network Settings: You can reset all settings except network settings. Press OK to reset all settings except network settings.
+- Factory Default: You can delete all the information saved in the device and the root certificate and restore default settings.
+- Delete the Root Certificate: You can delete the root certificate saved in the device.
+
+If you proceed to restore the defaults, the device will restart.
+
+- When you reset, the operator level will be reset as well. After resetting, make sure to set the operator level again.
+- Language setting will not change after resetting.
+- Factory Default menu can be used when the root certificate is saved in the device.
+- Delete the Root Certificate menu can be used only when the root certificate is saved in the device and Administrator has been designated.
+
+# User ID Type
+
+You can set the type of user ID to be registered on the device to a combination of alphabetic characters, numbers, and symbols (_, -).
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → User ID Type.
+3. Change to the desired item and press OK.

@@ -1,0 +1,26 @@
+# BioStar 2 and Web Security
+
+Client is called signature verification. Therefore, the purpose of this method is not to protect data but to guarantee the identity of the person providing the data.
+
+# Encryption Algorithms
+
+- RSA (Rivest-Shamir-Adleman cryptosystem)
+- DSA (Digital Signature Algorithm)
+
+# Advantages
+
+- A secure channel, which is necessary for a symmetric-key encryption, is not necessary since the public key is used.
+- Users are safe from external attacks because encryption and decryption is done through two different keys.
+
+# Disadvantages
+
+- Asymmetric Encryption is around 100~1000 times slower than symmetric-key encryption.
+- It requires more resources than symmetric-key encryption.
+
+# Combining Symmetric-Key and Asymmetric-Key Encryption
+
+Symmetric-key encryption and asymmetric-key encryption both have their special advantages but also have problems of key transport and degraded performance. Consequently, a hybrid cryptosystem was developed to ameliorate these issues.
+
+The communication method using SSL certification and a hybrid cryptosystem is a combination of symmetric encryption and asymmetric encryption.
+
+Source

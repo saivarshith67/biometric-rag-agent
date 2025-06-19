@@ -1,0 +1,18 @@
+# Suprema's Fingerprint Algorithm
+
+Suprema has developed a fingerprint verification algorithm, which has been proven to be one of the most advanced technologies in Fingerprint verification contest (FVC). It is the core technology of our company, which can be applied to the embedded module, PC authentication library, and various application products.
+
+# Advanced Minutiae Based Algorithm
+
+Suprema's algorithm is based on the minutiae, such as ending, bifurcation, and singular points in the fingerprint images, which have been known to be effective clues for fingerprint verification. Moreover, global ridge information is also utilized to overcome the shortcomings of local minutiae features, resulting in the outstanding verification performance. The algorithm is divided into two major processing components, feature extractor and matcher.
+
+# Feature Extractor
+
+Input fingerprint images captured from the sensors are noisy, in poor contrast, containing much flaw and smudge. Based on intensive analysis of the image characteristics, powerful image enhancement technique is developed, yielding high quality ridge image. Moreover, a lot of erroneous features are efficiently removed by noisy area reduction technique.
+
+| Captured Image                    | Enhanced Ridge | Extracted Minutiae |                |
+| --------------------------------- | -------------- | ------------------ | -------------- |
+| \[Example of Image Enhancement 1] |                |                    |                |
+| Captured Image                    | Enhanced Ridge | Captured Image     | Enhanced Ridge |
+
+https://kb.supremainc.com/knowledge/

@@ -1,0 +1,28 @@
+# How to use the DB migration tool
+
+| Name                                    | Description                   | Status  | Startup Type | Log On As     |
+| --------------------------------------- | ----------------------------- | ------- | ------------ | ------------- |
+| ASUS Com Service                        |                               | Started | Automatic    | Local System  |
+| Background Intelligent Transfer Service | Transfers files               | Started | Automatic    | Local System  |
+| Base Filtering Engine                   | The Base Filtering Engine     | Started | Automatic    | Local Service |
+| BioStar Launcher Service                | BioStar Launcher              |         | Start        |               |
+| BioStar Web Server Service              | BioStar Web Server            | Started | Stop         |               |
+| BioStar Server                          | BioStar Server                | Started |              |               |
+| BitLocker Drive Encryption Service      | BDESVC                        | Paused  |              |               |
+| Block Level Backup Engine Service       | The WBEN                      | Resume  |              |               |
+| Bluetooth Support Service               | The Bluetooth Support Service |         | Restart      |               |
+| BranchCache                             | This service                  |         | All Tasks    |               |
+| Certificate Propagation                 | Copies user certificates      |         |              |               |
+| Claims to Windows Token Service         | Service to                    |         | Refresh      |               |
+
+# Instructions
+
+11. Run BioStar2 and check the user list.
+
+# References
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_use_the_db_migration_tool
+
+Last update: 2015/10/19 14:32

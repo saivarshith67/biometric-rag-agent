@@ -1,0 +1,38 @@
+# BioStar2 V2.6.0 – Database Table
+
+# 1. SYSTEMSETTING
+
+| Column                              | Data Type           | Key | Description                                            |
+| ----------------------------------- | ------------------- | --- | ------------------------------------------------------ |
+| ID                                  | INT(11) UNSIGNED    | PK  | Unique ID                                              |
+| BIOSTAR\_SERVER\_URL                | VARCHAR(255)        |     |                                                        |
+| PASSWORD\_STRENGTH\_LEVEL           | VARCHAR(255)        |     |                                                        |
+| EXT\_SYSTEM\_ID                     | VARCHAR(255)        |     |                                                        |
+| EXT\_SYSTEM\_SESSION\_ID            | VARCHAR(255)        |     |                                                        |
+| EXT\_SYS\_BIOSTAR\_SESSION\_ID      | VARCHAR(255)        |     |                                                        |
+| EXT\_SYS\_SESSION\_UDT\_DATETIME    | DATETIME            |     |                                                        |
+| MAX\_BK\_DATE\_DAYS\_FOR\_EVT\_SYNC | INT(11)             |     |                                                        |
+| SEARCH\_LIMIT\_FOR\_USER\_SYNC      | INT(11)             |     |                                                        |
+| LAST\_UDT\_VER\_FOR\_USER\_SYNC     | INT(11)             |     |                                                        |
+| IS\_COMPLETE\_USER\_SYNC            | TINYINT(1)          |     |                                                        |
+| IS\_COMPLETE\_EVENT\_SYNC           | TINYINT(1)          |     |                                                        |
+| RC\_SP                              | FLOAT               |     | Reserved Space for record                              |
+| space\_rate\_to\_alert              | SMALLINT(5)         |     | Unused                                                 |
+| record\_mode                        | SMALLINT(5)         |     | 1: Circular Queue Mode 2: Stop on Record Space is full |
+| CREATEDAT                           | DATETIME            |     | Created date/time                                      |
+| UPDATEDAT                           | DATETIME            |     | Updated date/time                                      |
+| PATH\_ID                            | BIGINT(20) UNSIGNED |     | Current record path ID                                 |
+
+# 2. TIMESCHEDULE
+
+| Column        | Data Type    | Key | Description                 |
+| ------------- | ------------ | --- | --------------------------- |
+| NAME          | VARCHAR(255) |     | name                        |
+| TYPE          | VARCHAR(255) |     | Repetition type string      |
+| BIOSTAR\_ID   | INT(11)      | PK  | Schedule ID from BioStar    |
+| NUM\_OF\_DAYS | INT(11)      |     | Duration day                |
+| DSCR          | TEXT         |     | Description                 |
+| START\_DATE   | DATETIME     |     | Start date of this schedule |
+| CREATEDAT     | DATETIME     |     | Created date/time           |
+
+© 2018 by Suprema Inc.

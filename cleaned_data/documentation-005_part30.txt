@@ -1,0 +1,41 @@
+# Device
+
+• When upgrading firmware from version 1.0.5 or earlier to version 1.1.0 or later, it starts the migration of face templates registered. It may take up to 10 hours depending on the amount of data.
+
+Migration in process
+
+Please do NOT turn off device
+
+It may take up to 10 hours depending on the amount of data:
+
+55%
+
+• It is recommended to use a USB flash drive formatted in NTFS or exFAT. USB flash drives in FAT32 format may malfunction when more than 50,000 face credentials are stored.
+
+• Check the amount of free space on your USB flash drive. To save 100,000 face credentials, a minimum of 15 GB of free space is required.
+
+• The type of supported USB memory is as follows. If you use a different type of USB memory, the function may not operate normally.
+
+- Samsung: SUM-BSG 32 GB
+- LG Electronics: MU 1 USB 32 GB, MU28GBC 32 GB
+- SanDisk: Cruzer Blade CZ50 32 GB, CZ48 Ultra USB 3.0 64 GB, CZ80 USB3.0 64 GB, CZ52 64 GB, Cruzer Glide Z60 128 GB, Cruzer Force CZ71 32 GB
+- Sony: USM-SA1 32 GB
+- Transcend: JetFlash 760 32 GB
+
+The supported USB flash drives listed above were all tested with USB Type-A. To connect these USB flash drives to FaceStation F2, a separate USB Type-C gender is required.
+
+# Secure Tamper
+
+When the tamper is turned on, you can set to delete the entire user, the entire log, and the security key.
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select DEVICE.
+3. Activate Secure Tamper to delete data of all registered users, all logs, and secure keys when a tamper event occurs.
+
+# Restart Device
+
+The user can restart the device.
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select DEVICE → Restart Device.
+3. To restart the device, press OK. To return to the previous screen, press Cancel.

@@ -1,0 +1,23 @@
+# How to use Leave Management function
+
+If you want to authorize Leave to an employee/employer, you can utilize Leave Management tool. A Leave can be a various types of absence such as personal leave (vacation or time-off), family incidents (death or accidents), maternity leave (fraternity leave), Work off-site or business trips, or military service or jury duty(citizenship duties). Some of these can be taken into account as a part of worktime(paid time-off), or not considered as part of worktime(non-paid time-off).
+
+# Scenario in this example:
+
+An employer(Administrator) needs to go for his military service duty on Nov 1st, 2018.
+
+The purpose of using Leave Management is to identify if an employee/employer is entitled to have paid time-off or non-paid time-off.
+
+- Worked: paid time-off (counted as a part of worktime)
+- Non-worked: non-paid time-off (not considered as part of worktime)
+
+*Because the military service duty is not taken off of the employer's entitled leave for the year, it will be considered as “Worked” leave in this example.
+
+This characteristics is also explained in two articles with examples below:
+
+- How to create T&A settings for organizations with fixed shift
+- How to create T&A settings for organizations with flexible shift
+
+1) Connect to BioStar 2 Client and then go to Time Attendance tab, and click on “Add Time Code” button
+
+https://kb.supremainc.com/knowledge/

@@ -1,0 +1,18 @@
+# How to change from HTTP to HTTPS
+
+# BioStar Setting
+
+# Service Status
+
+| The Biostar service has been started | Running | Stop  |
+| ------------------------------------ | ------- | ----- |
+| Port 443 In use by "Skype.exe"       | Error   | Start |
+
+# Web Server Configuration
+
+HTTPS Port 443
+
+1. Try open the BioStar 2 web page along with the HTTPS port as displayed below.
+2. https://192.168.16.49:443
+
+The following error page may appear due to the security certificate presented by current BioStar 2 server is not issued by the trusted certificate authority.

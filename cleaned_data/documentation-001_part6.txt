@@ -1,0 +1,11 @@
+# Getting Started
+
+# Intercom
+
+| Pin | Name      | Color  |
+| --- | --------- | ------ |
+| 1   | INPH +VDC | Red    |
+| 2   | INPH GND  | Black  |
+| 3   | INPH AUD  | Orange |
+| 4   | INPH DTA  | Blue   |
+| 5   | SH GND    | Gray   |

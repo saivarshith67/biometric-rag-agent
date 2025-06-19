@@ -1,0 +1,15 @@
+# FaceStation 2 | Your face is the key
+
+# Narrov NIR
+
+# Narrov' NIR LED
+
+Another technology adopted by FaceStation 2 to enhance the performance is pixel intensity distribution analysis. One of the difficulties in using near infrared LED technology is the effects of ambient lighting. Ambient lighting can make near infrared LED lighting useless since it contains ultraviolet rays. Plus, the shadow on a face cast by ambient light can make it difficult for the face feature extraction algorithm to extract facial features.
+
+The three-dimensional pixel intensity distribution analysis minimizes the effects of ambient light when acquiring face images. As a result, the terminal acquires near infrared images with the minimal variation of contrast. It is easier for the algorithm to recognize the shape of the face with these uniform contrast images than with too bright or dark images, so it can extract more varied features, thus can create high quality face templates. High quality face templates are crucial for the performance of face authentication.
+
+| Ambient light image     | 3D Pixel Intensity Distribution Analysis Algorithm | Uniform contrast NIR image |
+| ----------------------- | -------------------------------------------------- | -------------------------- |
+| Ambient light NIR Image |                                                    |                            |
+
+https://kb.supremainc.com/knowledge/

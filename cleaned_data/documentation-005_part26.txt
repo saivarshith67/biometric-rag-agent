@@ -1,0 +1,25 @@
+# Device
+
+# Date & Time
+
+You can set date and time. Set the date and time accurately in order to collect accurate log data.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → Date & Time.
+3. Change the desired item.
+
+# Date & Time
+
+| Date & Time | 2020/08/27 AM 05.09.48 |
+| ----------- | ---------------------- |
+| Time Zone   | UTC                    |
+| Time Sync   |                        |
+| Format      |                        |
+| Date Format | YYYY/MM/DD             |
+| Time Format | AM/PM                  |
+
+- Date & Time: Check the current date and time. To modify it manually, disable Time Sync.
+- Time Zone: Set the time reference of the current location.
+- Time Sync: Synchronize the server and the time. If you wish to synchronize the server and the time, enable Time Sync.
+- Date Format: Set the date format. You can select among YYYY/MM/DD, MM/DD/YYYY and DD/MM/YYYY.
+- Time Format: Set the time format. You can select either 24-Hour or AM/PM.

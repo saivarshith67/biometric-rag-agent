@@ -1,0 +1,17 @@
+# Installation
+
+# Automatic door connection
+
+| 1 - RLY NO  | White |
+| ----------- | ----- |
+| 2 - RLY COM | Blue  |
+
+# Door button
+
+# Detection sensor
+
+# Automatic door control device
+
+# Door lock
+
+# FaceStation F2

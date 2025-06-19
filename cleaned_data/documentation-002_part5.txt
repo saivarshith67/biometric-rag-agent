@@ -1,0 +1,80 @@
+# EVENTLOG : Event Log
+
+| Column      | Data Type           | Key |
+| ----------- | ------------------- | --- |
+| ID          | UNSIGNED BIGINT(20) | PK  |
+| DV\_DT      | DATETIME            |     |
+| DV\_ID      | VARCHAR(255)        |     |
+| DR\_ID      | INT                 |     |
+| CH\_ID      | INT                 |     |
+| BS\_EVT\_CD | INT                 |     |
+| BS\_EVT\_ID | INT                 |     |
+| BS\_EVT\_DT | DATETIME            |     |
+| USER\_ID    | VARCHAR(255)        |     |
+| BS\_EVT\_M  | VARCHAR(10)         |     |
+| BS\_EVT\_LI | INT                 |     |
+| CREATEDAT   | DATETIME            |     |
+| UPDATEDAT   | DATETIME            |     |
+
+# EVENTSYNC : Event Type
+
+| Column               | Data Type    |
+| -------------------- | ------------ |
+| ID                   | INT(11)      |
+| ST\_DT               | DATETIME     |
+| END\_DT              | DATETIME     |
+| EMPTY\_RUN\_COUNT    | INT(11)      |
+| LAST\_QUERY\_END\_DT | DATETIME     |
+| CREATEDAT            | DATETIME     |
+| UPDATEDAT            | DATETIME     |
+| DV\_ID               | VARCHAR(255) |
+
+# Description
+
+Unique ID
+
+Date/time from Device
+
+Device ID
+
+Door ID
+
+NVR Channel ID
+
+BioStar Event Code
+
+BioStar Event ID
+
+BioStar Event Date/Time
+
+User ID
+
+Month of BioStar Event
+
+Index of BioStar Event
+
+Created date/time
+
+Updated date/time
+
+# Key
+
+PK Unique Event Sync ID
+
+Event Sync Start Time
+
+Event Sync End Time
+
+Count for Search request result empty
+
+Date/time of last search request
+
+Created date/time
+
+Updated date/time
+
+Device id of this event sync
+
+© 2018 by Suprema Inc.
+
+BioStar2 V2.6.0 – Database Table

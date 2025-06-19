@@ -1,0 +1,10 @@
+# Firmware Version 2.0.3 (Build No. 2.0.3_220705)
+
+Release: 2022-07-15
+
+# Bug Fixes
+
+1. Stuck in migration progress after upgrading the firmware (Affects version: v2.0.2).
+2. Fingerprint sensor not responding after upgrading FSF2-ODB from v1.1.0 to v2.0.2 (Affects version: v2.0.2).
+
+EN 301.00.FSF2 10 FaceStation F2 Firmware Revision Notes

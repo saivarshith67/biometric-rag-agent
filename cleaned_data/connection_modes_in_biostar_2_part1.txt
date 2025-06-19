@@ -1,0 +1,33 @@
+# Connection Modes in BioStar 2
+
+1. Click Apply.
+2. Delete the device from the device tree.
+3. Device will appear as a Waiting Device.
+4. Right click and click Add Waiting Device.
+
+| User           | All Devices        |
+| -------------- | ------------------ |
+| Bio Station    | 540094006          |
+| SecuBio        | 700679667          |
+| Waiting Device | BioStation         |
+| USB Device     | Add Waiting Device |
+
+# Troubleshooting Connection Change Issues
+
+If a device shows on the device tree or Waiting Device after changing it to server mode, try the method below:
+
+1. Delete the device if it appears disconnected as direct mode.
+2. Refresh your browser by pressing F5.
+3. If the device fails to appear after refreshing, check if you can ping the device.
+
+WUsersWEthan ping 192.168.16.216
+
+Pinging 192.168.16.216 with 32 bytes of data:
+Reply from 192.168.16.19: Destination host unreachable
+Reply from 192.168.16.19: Destination host unreachable
+Reply from 192.168.16.19: Destination host unreachable
+
+If the ping is failing, it means that your device has no network connection. Check your network connection.
+Check that you have set the correct server port. You can find it in Setting > Server. Default server port is 51212.
+
+https://kb.supremainc.com/knowledge/

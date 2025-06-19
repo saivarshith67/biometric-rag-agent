@@ -1,0 +1,13 @@
+# FaceStation 2 | Your face is the key
+
+# BioStar
+
+Live Face Detection
+
+FaceStation 2 analyzes the actual photo and the IR image based on its dual camera system and intelligent machine learning algorithm. Hardware-dependent live face detection systems (e.g. facial thermogram recognition, facial vein recognition) require expensive hardware components and provide less accurate matches and slower performance in authentication. Suprema’s live face detection technology provides users with ideal accuracy and speed for access control and time and attendance management.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:tc_whitepaper_introducing_facestation2
+
+Last update: 2023/08/01 17:04

@@ -1,0 +1,25 @@
+# BioStar 2 and Web Security
+
+| HTTP              | SSL        | HTTPS                       |
+| ----------------- | ---------- | --------------------------- |
+| Data transmission | Encryption | Transmission of secure data |
+
+# SSL and TLS
+
+SSL was developed by Netscape. It was used widely and the name changed to TLS when it was chosen as the international standard by IETF (Internet Engineering Task Force), which is the international organization for standardization. However, the name SSL is still used widely today.
+
+# SSL Certificate
+
+SSL certificate is necessary to utilize HTTPS. This is an electronic document that assures client and server communication by a third party (certification authority). When the client connects to the server, the server transmits SSL certificate information to the client and the client communicates after verifying that this certificate is credible.
+
+Hence there are no concerns of having private information such as login ID, password and etc. that are input on the web browser to be sniffed if SSL certificate is used. There are also benefits of identifying fraudulent sites and preventing data manipulations.
+
+# SSL Cryptography
+
+There are several concepts that should be grasped to understand SSL. SSL uses two encryption methods: symmetric-key encryption and asymmetric-key. The password which is used by these two encryptions is called the key. The encrypted result changes based on this key and therefore it is not possible to decrypt if the key is unknown.
+
+# Symmetric-Key Encryption (Symmetric Key)
+
+The symmetric key uses the same key to encrypt and decrypt. For example, if encryption was done through the key 1245, the key necessary for decryption would be 1245.
+
+https://kb.supremainc.com/knowledge/

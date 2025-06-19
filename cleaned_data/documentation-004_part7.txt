@@ -1,0 +1,12 @@
+# Installation
+
+# Fixing the bracket and the product
+
+1. Determine the correct position to install the bracket using the provided drilling template.
+| 85.8° | cm | 124 | 50 \~ 130 cm |
+| ----- | -- | --- | ------------ |
+
+- The optimal height for installing device is 124 cm.
+- Install the device where it does not reach the direct sunlight or UV light.
+- Adjust the installation position so that the face is not exposed to direct sunlight when a user tries to authenticate.
+2. Fix the bracket firmly using fixing screws through the bracket to the position where FaceStation F2 will be installed.

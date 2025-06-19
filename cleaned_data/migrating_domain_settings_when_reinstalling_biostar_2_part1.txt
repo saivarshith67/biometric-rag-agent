@@ -1,0 +1,38 @@
+# Migrating domain settings when reinstalling BioStar 2
+
+1. Copy the cloud related information shown below and save it in another notepad file to be safe.
+
+setting Notepad
+File Edit Format  View  Help
+"BioStar":
+"tna"
+"Uses_tna": uue
+"hud_ort": "3000"
+"hllps_por": "300Z"
+"ngrok_port": "51000"
+"https"
+"ssl_ador": "192.168.16.19"
+"use_ssi": "0"
+"cloud":
+"use_cloud": "api biostarz.com"
+"server_adoress": "ntto_port": "52000"
+"version": "ethan"
+"SUD_domain": "email": "ethanesuprema co,kr"
+"account_id": "5717390cbId04fc17d1b6C68"
+"http":
+"port": "81"
+
+Uninstall BioStar 2.
+Reinstall BioStar 2.
+Open the new ~~setting.conf~~ file at the same location as before.
+Paste the copied information within the cloud {} and save.
+Go to BioStar 2 > Setting > Cloud. You should be able to use the same sub-domain name you used before.
+
+- If you have already deleted BioStar2 without backing up the setting.conf file, please contact the technical support team.
+- Note: if you are an end-user or dealer, please contact your local Suprema distributor for technical support.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_backup_the_cloud_setting_when_reinstalling_biostar_2
+
+Last update: 2020/01/02 15:45

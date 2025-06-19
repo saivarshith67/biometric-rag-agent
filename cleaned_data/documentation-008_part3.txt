@@ -1,0 +1,17 @@
+# Suprema’s Live Finger Detection Technology
+
+The LDE can block fake fingerprints made from paper, film, glue, rubber, clay and silicon all together by comparing images obtained with white lights and infrared rays.
+
+The new OP5 sensor applied to Suprema’s recently released fingerprint readers has reduced distortion and improved contrast uniformity, and features Adaptive Gain Control algorithm and a proximity sensor, which enables the sensor to detect fake fingerprints made from paper, film, glue, rubber, clay and silicon all together.
+
+| Fake Finger Material & Characteristic | Device A | Device B | BioStation A2 |
+| ------------------------------------- | -------- | -------- | ------------- |
+| Paper inversely printed               | O        | O        | O             |
+| Film inversely printed                | O        | O        | O             |
+| Glue                                  | O        | O        | O             |
+| Rubber                                | O        | O        | O             |
+| Clay                                  | X        | O        | O             |
+| Silicone (Transparent)                | X        | X        | O             |
+| Silicone (Opaque)                     | X        | X        | O             |
+
+- https://kb.supremainc.com/knowledge/

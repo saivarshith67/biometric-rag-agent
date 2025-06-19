@@ -1,0 +1,15 @@
+# RS-485 Wiring Guide
+
+A common misunderstanding in RS-485 network that it only requires two wire cables is wrong, and it requires ground wire to equalize node voltage differences. Ground potential differences are harmful in signal quality and signal transceiver’s reliability, so it should be kept as low as possible within a network. A simple approach is to use ground wire at the cost of ground loop current. If using a CAT5 cable, you may use a signal pair for RS-485 signals and another pair for ground wiring.
+
+RS-485 signals
+
+RS-485gnd
+
+ground shield (for STP cables)
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:tc_technology_rs-485_wiring_guidelines
+
+Last update: 2015/09/01 08:52

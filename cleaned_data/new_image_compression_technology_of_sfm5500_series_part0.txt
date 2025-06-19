@@ -1,0 +1,14 @@
+# New Image Compression Technology of SFM5500 Series
+
+Fingerprint Image Compression Certified by FBI WSQ Specification, Version 3.1
+
+It has been nearly impractical to use the SFM series in sending fingerprint images, as it provides only UART serial communication, which supplies a stable network speed of 115,200 bps. For this reason, when sending a fingerprint image from SFM to Host PC, users used to quantize from the original format to 4-bit gray or binary format, which resulted in an image quality that is significantly compromised. (Figure 1)
+
+| (a) Original gray image | (b) Binarized image |
+| ----------------------- | ------------------- |
+
+[Figure 1] Compromised fingerprint image quality caused by binarization
+
+The SFM5500 series overcame this problem and have been equipped with the new technology to compress fingerprint images and quickly send high quality images via a low bandwidth network environment. When compressing, the quality degradation is minimized (Figure 2), but the data size is lowered by 90%, reducing the time it takes to be sent by 90%, as well. Moreover, you can set the system to compress images in different levels, enabling you to appropriately adjust the transfer speed and the image quality according to its use (Figure 3).
+
+- http://kb.supremainc.com/knowledge/

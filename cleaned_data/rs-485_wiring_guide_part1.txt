@@ -1,0 +1,13 @@
+# RS-485 Wiring Guide
+
+# Termination
+
+Avoid using long stubs for each node. Long stubs act as transmission lines and should be kept as short as possible if unavoidable.
+
+# Termination
+
+# Naiuminition
+
+Do not use star-shaped wiring. This makes transmission line system complicated and hard to suppress line reflections if not impossible.
+
+https://kb.supremainc.com/knowledge/

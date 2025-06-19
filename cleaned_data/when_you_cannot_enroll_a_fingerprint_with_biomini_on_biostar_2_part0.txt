@@ -1,0 +1,13 @@
+# When you cannot enroll a fingerprint with Biomini on BioStar 2
+
+This article is outdated. For an updated guide refer to the following link Troubleshooting Biomini Issues.
+
+In this document, we would like to introduce how to troubleshoot when you experience problem enrolling a fingerprint using Biomini on BioStar 2 Server.
+
+Before we begin, we assume you have installed Sup_Fingerprint_Driver and as a result of that the device can be found on BioStar 2 device list as well as Windows Device Manager.
+
+# SEARCH Device
+
+Advanced Search
+
+AII DevicesWaiting DeviceUSB DeviceUSB ScannerUniversal Serial Bus controllersGeneric USB HubGeneric USB HubIntel(R) Series/C220 Series USB EHCI =1 8C26Intel(R) Series/C220 Series USB EHCI =2 8C2DIntel(R) USB 3.0 extensible Host ControllerIntel(R) USB 3.0 Root HubSuprema Fingerprint ScannerUSB Root HubUSB Root Hub

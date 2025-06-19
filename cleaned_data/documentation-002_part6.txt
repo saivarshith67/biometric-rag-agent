@@ -1,0 +1,27 @@
+# BioStar2 V2.6.0 – Database Table
+
+EVENTTYPE
+
+|              |              |      |                  |
+| ------------ | ------------ | ---- | ---------------- |
+| Column       | Data Type    |      |                  |
+|              | Event Type   | CODE | INT(11) UNSIGNED |
+| NAME         | VARCHAR(50)  |      |                  |
+| DESCRIPTION  | VARCHAR(255) |      |                  |
+| STATUS\_CODE | VARCHAR(10)  |      |                  |
+| ALERTABLE    | TINYINT(1)   |      |                  |
+| CREATEDAT    | DATETIME     |      |                  |
+| UPDATEDAT    | DATETIME     |      |                  |
+
+# Key
+
+| PK | Unique ID                               |
+| -- | --------------------------------------- |
+|    | name                                    |
+|    | Description                             |
+|    | Status Code = AC (active)/IN (inactive) |
+|    | Is set alert mode as boolean            |
+|    | Created date/time                       |
+|    | Updated date/time                       |
+
+© 2018 by Suprema Inc.

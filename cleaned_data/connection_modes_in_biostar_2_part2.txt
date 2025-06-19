@@ -1,0 +1,24 @@
+# Connection Modes in BioStar 2
+
+# Server
+
+# General
+
+Bio Star Address
+
+Bio Star Port: 51213
+
+1. If the device is showing a Blue / Yellow LED, it means that it hasn’t received an IP. Check your DHCP server.
+2. If the device does not appear even after you can ping the device, try setting the device to factory default or resetting the network settings. Instructions for each device are in the device manual.
+
+Download BioStar 2 Device Manuals
+
+If you have BioStar 1.91~ and BioStar 2 server running at the same time, the device will connect to BioStar 1 on server mode.
+
+Turn off your BioStar 1.91~ server.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_connection_modes_in_biostar_2
+
+Last update: 2017/03/07 09:24

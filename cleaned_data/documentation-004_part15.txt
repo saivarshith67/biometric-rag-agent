@@ -1,0 +1,42 @@
+# Installation
+
+# Connecting as a standalone
+
+FaceStation F2 can be connected to the door lock, door button, and door sensor directly without connecting a separate I/O device.
+
+| TTL connection |        |
+| -------------- | ------ |
+| 1 - TTL IN0    | Red    |
+| 2 - TTL IN1    | Yellow |
+| 3 - TTL GND    | Black  |
+| 4 - SH GND     | Gray   |
+
+# Relay connection
+
+| 1 - RLY NO  | White  |
+| ----------- | ------ |
+| 2 - RLY COM | Blue   |
+| 3 - RLY NC  | Orange |
+
+Fail Secure Lock or Fail Safe Lock
+
+# Power
+
+DC power
+
+| 1 - PWR +VDC | Red (white stripe)   |
+| ------------ | -------------------- |
+| 2 - PWR GND  | Black (white stripe) |
+
+Suprema’s standalone intelligent readers contain internal relays that can directly lock/unlock doors without external controllers for added convenience. For access control applications in need of security, however, it is NOT recommended to use the internal relay of a reader to prevent any tampering attacks which can potentially trigger the door unlock. For such applications, it is highly recommended to use a separate relay unit for a lock control such as Suprema’s Secure I/O 2, DM-20 or CoreStation installed at a secure side of a door.
+
+- FaceStation F2 can be used as a multi-door controller with the slave devices with the RS-485 cable. The slave devices are used as dummy readers and authentication is performed in the master device.
+- If a fingerprint authentication device is configured as a slave device in FaceStation F2, you cannot add another FaceStation F2 as a slave device.
+- If the fingerprint authentication device is the master device, FaceStation F2 cannot be added as a slave device.
+- If BioStation 3 is a master device, FaceStation F2 cannot be used as a slave device, and vice versa.
+- When you connect FaceStation F2 as a slave device while FaceStation F2 is the master device, only one FaceStation F2 can be added as a slave device.
+- When FaceStation F2 is the master device and another FaceStation F2 is connected to it as a slave device, you can connect one additional Secure I/O 2 and DM-20 each.
+- When FaceStation F2 is the master device and another FaceStation F2 is connected to it as a slave device, you cannot connect additional OM-120.
+- The maximum number of slave devices available to connect varies according to the authentication method, number of users, and number of devices. Also note that the number of slave devices affects the authentication speed.
+- A master device can control 31 slave devices. The bandwidth of RS-485 allows for up to 7 fingerprint authentication devices to be connected.
+- For more information, contact the Suprema technical support team (https://support.supremainc.com).

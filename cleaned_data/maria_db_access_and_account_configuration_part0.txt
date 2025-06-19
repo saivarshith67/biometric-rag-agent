@@ -1,0 +1,38 @@
+# Maria DB Access and Account Configuration
+
+# FAQ, BioStar 2, Maria DB
+
+# Maria DB Access and Account Configuration
+
+In BioStar 2.4.1, the following security measures will be introduced (2017 Q2):
+
+- External access to Maria DB is blocked by default
+- Only Administrator account for Maria DB is the 'root' account
+
+However this setting is not applied automatically if you are upgrading BioStar 2 from another lower version and if you are using any BioStar 2 version lower than 2.4.1.
+
+# Blocking Remote Access
+
+Maria DB can be accessed via the IP of the hosting PC by default. You may want to limit the access of the database to be only on the hosting PC for security reasons. In that case you can follow the instructions below:
+
+1. Go to the path below in Windows explorer:
+2. C:\Program Files\BioStar 2(x64)\ta\mariadb-10.1.10-winx64
+
+Right click and edit ~~my.cnf~~ with a text editor such as Notepad.
+3. | Computer        | Local Disk (C)     | Program Files      | BioStar 2(x64)  | mariadb-10.1.10-winx64 |
+| --------------- | ------------------ | ------------------ | --------------- | ---------------------- |
+| Organize        | Include library    | Share with         | Burn            | New folder             |
+| Favorites       | Name               | Date modified      | Type            |                        |
+| Desktop         |                    | 11/23/2016 12:57   | File (folder)   |                        |
+| Downloads       | Cala               | 12/28/2016 7:43    | File folder     |                        |
+| Recent places   | include            | 10/17/2016 5:31 PM | File folder     |                        |
+|                 | share              | 10/17/2016 5:32 PM | File folder     |                        |
+| Documents       | sql-bench          | 10/17/2016 5:32 PM | File folder     |                        |
+| Music           | COPYING            | 10/4/2016 5:58 PM  |                 |                        |
+| Pictures        | COPYING LESSER     | 10/4/2016 5:58 PM  | LESSER File     |                        |
+| Videos          | COPYING thirdparty | 10/4/2016 5:58 PM  | THIRDPARTY File |                        |
+|                 | CREDITS            | 10/4/2016 5:58 PM  |                 |                        |
+| Computer        | EXCEPTIONS-CLIENT  | 10/4/2016 5:58 PM  | File            |                        |
+| Local Disk (C:) | my.cnf             | 10/17/2016 5:32 PM | CNF File        |                        |
+
+Copy and paste the text below into the file:

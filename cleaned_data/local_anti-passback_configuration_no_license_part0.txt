@@ -1,0 +1,28 @@
+# Local Anti-Passback configuration (No License)
+
+This document will guide you how to configure Local Anti-Passback zone which is provided without license.
+
+# RS-485 Mode
+
+Local zone means RS-485 based, master device is zone master. Please refer to the below link for RS-485 configuration.
+
+# RS485 Mode (Master, Default, Slave)
+
+# Door configuration
+
+Go to Device tap, click Add Door and configure the door which you want to set up Anti-Passback zone.
+
+| BioStar 2       | Sctting            | About          | Help   |
+| --------------- | ------------------ | -------------- | ------ |
+| DASH            | dd door            | All Doors      | BOARD  |
+| USER            | Door\_AntiPassBack | L2\_mobileTest | DEMICE |
+| WiegandTestDoor | Door\_An           | L2\_mobi       | Dooa   |
+|                 | Wiegand            | contnol        |        |
+
+# Monitoring
+
+# AttendANCE
+
+Assign each Entry device and Exit device to the devices you have already added at the above step. (RS-485 Master and Slave devices)
+
+https://kb.supremainc.com/knowledge/

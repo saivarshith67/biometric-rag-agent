@@ -1,0 +1,18 @@
+# FaceStation 2 | Your face is the key
+
+# Ergonomic design
+
+The angle and position of the cameras on FaceStation 2 are determined so that tall users do not need to bend their back too much. Plus, the different angles of view between the built-in visual and infrared cameras allow users to stand at a position that is most suitable for facial authentication (users can easily locate oneself by trying to locate one’s face at a right position on the screen).
+
+# Comparison of recognition coverage between FaceStation and FaceStation 2
+
+| Angle - t          | 1             | 1 | 1 | 8 | 9⁸ |
+| ------------------ | ------------- | - | - | - | -- |
+| Land IR \[calteras | 70 cm         |   |   |   |    |
+| FaceStation        | FaceStation 2 |   |   |   |    |
+
+# Incredible authentication performance with 1.4 GHz quad-core processor
+
+FaceStation 2 demonstrates exceptional performance, using its enhanced face template extraction technology and 1.4 GHz quad-core processor. It can perform up to 3,000 matchings (1:N) within one second. With the Group Matching feature, it can perform up to 30,000 matchings within one second.
+
+https://kb.supremainc.com/knowledge/

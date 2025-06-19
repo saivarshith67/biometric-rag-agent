@@ -1,0 +1,33 @@
+# Check Event Log
+
+# Search Logs
+
+You can search logs after setting the condition.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to EVENT LOG > Search then press OK.
+
+| Start Date | 2015.3.3 |
+| ---------- | -------- |
+| Start Time | 00.00.00 |
+| End Date   | 2015.3.3 |
+| End Time   | 23.59.59 |
+| Event      |          |
+| T\&A Event |          |
+| User ID    |          |
+
+Select an item and press the / buttons to change the condition. If you press OK, matching logs will be displayed on the screen.
+Press ESC to return to the previous screen.
+
+# Delete All Logs
+
+You can delete all logs stored on the device.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to EVENT LOG > Delete All then press OK.
+
+| Delete Logs | Are you sure to delete all logs? |
+| ----------- | -------------------------------- |
+| OK          | ESC                              |
+
+Press OK to delete all logs. Press ESC to cancel.

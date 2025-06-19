@@ -1,0 +1,49 @@
+# How to use Leave Management function
+
+# BioStar 2
+
+Settings | Port | About | Help
+
+DASH | add schedule | Suprema Administrator
+
+# BOARD
+
+# Shift Schedule Report
+
+November 2018
+
+| USER           | Sun                            | Mon                            | Tue                            | Wed                            | Thu                            |
+| -------------- | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ |
+| Suprema DEVICE | 07:00-20:00 Elias Garcia 7-20h | 07:00-20:00 Elias Garcia 7-20h | 07:00-20:00 Elias Garcia 7-20h | 07:00-20:00 Elias Garcia 7-20h | 07:00-20:00 Elias Garcia 7-20h |
+
+# Administrator
+
+Add Temporary Schedule
+
+Add Leave
+
+# DOOR
+
+Kantakana
+
+# ACCESS CONTROL
+
+Max
+
+# MONITORING
+
+# ATTENDANCE
+
+8) You will see an “Edit Leave” popup window, you can now set Leave for this employer. Select the appropriate time code for Leave menu bar. If you would like to authorize only a specific part of a day for absence check on “Use Time” box then you can allow this employee to only leave for a certain part of a day. You can also set Start Date and End Date of this leave, and can select other users in “Apply to Other Users” if you would like to apply this leave to multiple users. Lastly, the comment box offers an option to leave a memo for the Leave.
+
+# Edit Leave
+
+| Administrator | Date             | Leave         | Use Time | Start Date | End Date   | Leave Hours | Apply to Other Users | Approver Comments |
+| ------------- | ---------------- | ------------- | -------- | ---------- | ---------- | ----------- | -------------------- | ----------------- |
+| (1)           | 2018-11-01 (Thu) | Suprema Leave |          | 2018-11-01 | 2018-11-01 | 1 day(s)    |                      | Military service  |
+
+Cancel
+
+For the case of assigning specific part of the day for the Leave, check on Use Time checkbox. Normally from the set Day Start Time till the set End of the Day would be used.
+
+https://kb.supremainc.com/knowledge/

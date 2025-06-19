@@ -1,0 +1,9 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+Administrator: C:\Windows\system32\cmd.exe
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_migrate_db_logs_from_biostar_2_to_biostar_1x
+
+Last update: 2019/09/10 16:49

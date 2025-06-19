@@ -1,0 +1,18 @@
+# Next Generation Verification Scanner, BioMini Slim
+
+BioMini Slim, the world’s thinnest PIV certified FAP20 optical scanner, is made using key optical technology, image acquisition and algorithms accumulated over 10 years. It is a new concept scanner overcoming the available environmental limits of existing scanners and is optimized for the mobile environment.
+
+BioMini Slim applies the company’s unique image acquisition solution based on its own optical technology to capture high-resolution, high-precision fingerprint image acquisition. It can obtain outstanding fingerprint images compared to other scanners. It truly obtains consistent fingerprint images regardless of hand condition such as dry or humid fingerprints, and stably acquires fingerprints from children and the elderly. It shows a difference in performance with outstanding performance regardless of age or fingerprint conditions, functioning at a level several times better than any other products.
+
+Fingerprinting has been increasing in areas other than well-controlled indoor environments with the increase in mobile devices and the popularization of fingerprint use. However, existing scanners have difficulty in obtaining accurate fingerprint information according to environmental changes. In particular, fingerprint information is not attainable or is distorted by external lighting, such as direct sunlight. BioMini Slim can acquire fingerprints regardless of external light or fingerprint conditions, applying the company’s self-developed MDR technology, an improvement on existing HDR technology. It can get normal fingerprints even under 100,000 LUX direct light, which is impossible with other products (Refer to Fig 1.). In addition, it can obtain desirable-condition fingerprints in any environment because of its waterproof and dust proof properties, satisfying IP65.
+
+| Luxs    | BioMini | company | company | comPany |
+| ------- | ------- | ------- | ------- | ------- |
+| 1C0,0o0 |         |         |         |         |
+| 75,OCd  |         |         |         |         |
+| 50,OC0  |         |         |         |         |
+| 30,OC0  |         |         |         |         |
+
+[Figure 1] Fingerprint images under direct sunlight
+
+- http://kb.supremainc.com/knowledge/

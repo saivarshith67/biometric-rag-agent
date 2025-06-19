@@ -1,0 +1,38 @@
+# How to set BioStar 2 and device time
+
+This document will guide you to understand a way to set BioStar 2 and device time properly.
+
+# Server Time Setting
+
+1. Go to Setting &gt; Preference.
+
+| Preference |                                                  |   |
+| ---------- | ------------------------------------------------ | - |
+| Language   | Time Zone                                        |   |
+| English    | (UTC+9:00) Seoul; Tokyo; Osaka; Sapporo; Yakutsk |   |
+
+With BioStar 2, the server UTC time zone is selectable. By changing the time setting, you can see the event time logs based on the selected time zone.
+
+For example, the event logs are shown as below date and time with (UTC+9:00) Seoul, Tokyo, Osaka, Sapporo, Yakutsk time zone setting.
+
+| 2015/06/09 20:01:57 | 646261174 | Xpass552       | 546261174 (192.168.0.31) |
+| ------------------- | --------- | -------------- | ------------------------ |
+| 2015/06/09 20:01:25 | 646701174 | Xpass540261174 | (192.168.0.31)           |
+| 2015/06/09 20:01:25 | 540261174 | Xpass540261174 | (192.168.0.3)            |
+
+The same event logs are shown as below after changing to one hour early (UTC+8:00) Beijing, Perth, Singapore, Hong Kong time zone.
+
+| Preference |                                      |   |
+| ---------- | ------------------------------------ | - |
+| Language   | Time Zone                            |   |
+| English    | (UTC+8:00) Beijing; Perth; Singapore |   |
+
+| 2015/06/09 19:01:57 | 546261174 | Xpass546261174 | (192.168.0.31)          |
+| ------------------- | --------- | -------------- | ----------------------- |
+| 2015/06/09 19:01:25 | 546261174 | Xpass546261174 | (192.168.0.3)           |
+| 2015/06/09 19:01:25 | 546261174 | Xpass52        | 546261174 (192.168.0.3) |
+| 2015/06/09 19:01:25 | 546261174 | Xpass52        | 546261174 (192.168.0.3) |
+
+So, it’s necessary to set the time zone according to your location. The reason for this selectable option is to allow users from different time zones to be able to monitor event logs based on their time zones regardless of the server time.
+
+https://kb.supremainc.com/knowledge/

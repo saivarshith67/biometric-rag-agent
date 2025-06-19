@@ -1,0 +1,19 @@
+# BioStar 2 API and Ecosystem
+
+There has been an increase in demands for multiplatform as smart devices are getting popularity in the recent it market. At the same time, applications and APIs that support these smart devices are becoming more important than ever.
+
+BioStar 2, an access control management software, is a web-based application that goes beyond its previous Windows Desktop application. This web-based application eliminates the need to install a separate client application to connect to the server and allows users to connect to the server using a web browser. This means that you can connect to the server from any operating systems that support a standard web browser.
+
+BioStar 2 API is an open API and allows customers and partners to create a better business model by supporting them to develop applications and services easily. The combination of BioStar Cloud and BioStar 2 allows users to better utilize BioStar 2's multiplatform. This multiplatform support along with modularized architecture makes the integration with 3rd party systems easier.
+
+# BioStar 2 API
+
+BioStar 2 API is what people call web services API or web API, and is an open API that everyone can use. Open API means that you open a set of APIs to allow others to use your own data and applications through network. Many internet portals (e.g. Google, Amazon) and SNS services (e.g. Instagram, Facebook) are already providing open API for partners and developers to create new business opportunities.
+
+BioStar 2 API uses REST API1 and JSON2, so anyone can easily integrate BioStar 2 with 3rd party systems.
+
+# Using BioStar 2 API
+
+Using BioStar 2 API means that you are using REST APIs and JSON as its data format to communicate with BioStar 2 server.
+
+http://kb.supremainc.com/knowledge/

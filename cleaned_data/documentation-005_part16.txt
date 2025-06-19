@@ -1,0 +1,24 @@
+# Authentication
+
+• When Thermal Camera is enabled, you can set advanced settings.
+
+- Celsius/Fahrenheit: Change the unit of temperature.
+- Low Threshold Temperature: Set the minimum threshold temperature to limit the access. Users with detected temperature below the threshold will be denied access. It can be set between 1°C to 45°C and cannot be higher than the value of the maximum threshold temperature.
+- High Threshold Temperature: Set the maximum threshold temperature to limit the access. Users with detected temperature over the threshold will be denied access. It can be set between 1°C to 45°C and cannot be lower than the value of the minimum threshold temperature.
+- Save Temperature Data: Save temperature data. When this mode is activated, it saves both authentication and temperature logs. When this mode is deactivated, it only saves authentication logs.
+- Show Thermal Infrared Image: Display infrared imaging on the screen of the devices.
+- Dynamic ROI: If there are ambient light sources near the device, the thermal camera may incorrectly measure the subject’s temperature. You can set the thermal camera to automatically measure the skin temperature by detecting the ROI (Region of Interest) and to avoid detecting the temperature of ambient light devices.
+- Camera Configuration: Configure the thermal camera settings for accurate measurement.
+
+• When Thermal Camera is enabled, you can configure the thermal camera settings for accurate measurement depending on environment.
+
+- Distance(cm): Set up the distance between the user and device.
+- Emissivity: Set up the emissivity to precisely measure the temperature of the user.
+- ROI X(%), ROI Y(%), ROI Width(%), ROI Height(%): You can set the ROI manually when you disable Dynamic ROI. Set the temperature measurement area by adjusting the size and position of ROI (Region of Interest). To move the ROI horizontally (left or right), change the ROI X(%) value. The ROI moves to the right as entering a larger value. To move the ROI vertically (up or down), change the ROI Y(%) value. The ROI goes up as entering a larger value. To change the size of the ROI, change the ROI Width(%) or ROI Height(%) value. The ROI becomes bigger as entering a larger value. The following is an example for changing the ROI values for each option with 40 (X), 15 (Y), 70 (Width), 40 (Height).
+
+| When using the default values | When changing the default values with 40 (X), 15 (Y), 70 (Width), 40 (Height) |
+| ----------------------------- | ----------------------------------------------------------------------------- |
+
+- Skin Temperature Compensation: You can set the thermal camera to adjust its temperature value automatically measuring the ambient conditions.
+- Skin Temperature Correction: You can set the thermal camera to compensate for variations in caused by the ambient environment that consistently affect temperature measurement. For example, if the environment is causing temperature to be measured at 0.1°C higher, set the temperature correction to -0.1.
+- FW: It shows the current firmware version of the thermal camera when it is connected properly.

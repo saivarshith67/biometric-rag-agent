@@ -1,0 +1,48 @@
+# System Setup
+
+Select an item and change the settings.
+
+- Export: Selects data to export to the connected USB memory stick. Press the / buttons to select an item and press OK.
+- FW Upgrade: If there are firmware files stored on the USB memory stick, select the firmware file to use and press OK to upgrade the firmware.
+
+# NOTE
+
+Supported USB memory sticks are as follows. If you use other memory sticks, they may not work properly.
+
+- Samsung Electronics: SUM-LSB 8 GB, SUM-PSB 8 GB, SUM-PSB 16 GB, and SUM-BSG 32 GB
+- LG Electronics: XTICK J3 WINDY 8 GB, SMART USB MU1 White 8 GB, MU 1 USB 32 GB, MU28GBC 32 GB, XTICK MOBY J1 16 GB
+- SanDisk: Cruzer 16 GB, Cruzer Blade CZ50 4 GB, Cruzer Blade CZ50 32 GB, CZ48 Ultra USB 3.0 64 GB, CZ80 USB3.0 64 GB, CZ52 64 GB, Cruzer Glide Z60 128 GB, Cruzer Force CZ71 32 GB
+- Sony: Micro Vault Click 8 GB, MicroVault CLICK 16 GB, USM-SA1 32 GB
+- Transcend: JetFlash 760 8 GB, JetFlash 760 32 GB, JetFlash 500 8 GB
+- Memorette: MINI500 8 GB
+- A-DATA: S102 PRO 8 GB
+- TriGem: Pastel 8 GB
+
+# Restart Device
+
+The user can restart the device.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE > Restart Device, then press OK.
+
+| Restart Device | Restart now? |
+| -------------- | ------------ |
+| OK             | ESC          |
+
+Press OK to restart the device. Press ESC to cancel.
+
+# Restore Default
+
+Device settings, network settings, and operator levels will be reset.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE > Restore Default, then press OK.
+
+3 If you proceed to restore the defaults, the device will restart.
+
+# NOTE
+
+- When you reset, the operator level will be reset as well. After resetting, make sure to set the operator level again.
+- Language setting will not change after resetting.
+- Factory Default menu can be used when the root certificate is saved in the device.
+- Delete the Root Certificate menu can be used only when the root certificate is saved in the device and Administrator has been designated.

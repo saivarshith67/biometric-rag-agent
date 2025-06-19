@@ -1,0 +1,33 @@
+# New Image Compression Technology of SFM5500 Series
+
+# DWT Based Encoder
+
+| Source Image Data | Quantization | Entropy Focoder |
+| ----------------- | ------------ | --------------- |
+| DWT               | Table        | Table           |
+|                   | Table        | Table           |
+|                   | Table        | Table           |
+
+# DWT Based Decoder
+
+| Entropy Decode        | Dequantizer              | DWT |
+| --------------------- | ------------------------ | --- |
+| Compressed Image Data | Reconstructed Image Data |     |
+
+# Figure 4
+
+WSQ Image Compression Algorithm
+
+# JPEG Compression (ratio 14.28)
+
+# Original Image
+
+# WSQ Compression (ratio 14.28)
+
+# Figure 5
+
+Quality comparison of JPEG and WSQ fingerprint images based on the same compression ratio: In JPEG, discontinuation of ridges occur due to blocking artifact.
+
+The image compression technology applied to SFM5500 is a standard WSQ image compression technology of NIST and has been certified by NIST and the FBI. Therefore, any WSQ compression stream sent from SFM is restorable using any viewer with an FBI-certified decoder.
+
+- http://kb.supremainc.com/knowledge/

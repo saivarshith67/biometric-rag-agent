@@ -1,0 +1,38 @@
+# Getting Started
+
+# How to Enroll a Fingerprint
+
+Correct fingerprint enrollment is critical in improving fingerprint recognition. BioStation 2 is loaded with powerful fingerprint algorithm which is capable of recognizing a fingerprint even when the angle or position of the finger on the reader is not optimal. Nevertheless, enrolling a fingerprint with the following instructions can improve the recognition performance.
+
+# Choose Ideal Fingers to Enroll
+
+- Each person can enroll up to ten fingerprints. If a finger is injured or scratched, it is recommended to use another finger.
+- If the fingerprint recognition fails, you can enroll the same finger multiple times, which will improve the recognition performance.
+- If a finger is injured or the fingerprint is not clear, please enroll a different finger.
+- The index finger and middle finger are preferred for enrolling fingerprints. Other fingers may have a lower recognition rate because those fingers tend to have difficulty being placed at the center of the fingerprint sensor.
+
+# How to Enroll Fingerprints
+
+1. When enrolling a fingerprint, the “Scan 1st finger” message will appear on the LCD screen. Place a finger on the fingerprint sensor, and then press softly in order to improve the recognition.
+2. After a beep sounds, you will be notified to scan again then remove your finger and place it again to scan. (You are required to scan the same finger twice for enrollment.)
+
+# NOTE
+
+# Precautions for enrolling fingerprints
+
+Enrolling fingerprints is the most important procedure because this device uses enrolled fingerprints to compare them with a scanned fingerprint. Please ensure the following when enrolling fingerprints:
+
+- Place the finger firmly on the fingerprint sensor for it to be read completely.
+- The center of the fingerprint should be placed at the center of the fingerprint sensor.
+- If a finger is injured or the fingerprint is not clear, please enroll another finger.
+- Follow the instructions on the screen and place the finger correctly without movement when the finger is read.
+- Place your finger to completely cover the sensor with maximum surface.
+
+# When the fingerprint recognition fails
+
+BioStation 2 can read fingerprints regardless of the change in seasons or condition of the fingers. However, the external environment or the finger's position can affect the recognition performance. If the fingerprint recognition fails, the following actions are recommended:
+
+- If there is water or sweat on the finger, please wipe it off before scanning the finger.
+- If the finger is too dry, please blow softly on the fingertip before scanning the finger.
+- If the finger is injured, please enroll another finger.
+- If the fingerprint recognition failure persists, please follow ‘Precautions for enrolling fingerprints’ to re-enroll the fingerprint.

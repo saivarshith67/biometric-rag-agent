@@ -1,0 +1,16 @@
+# Installation
+
+- If installing FaceStation F2 on a concrete wall, drill holes, insert PVC anchors, and fix them with fixing screws.
+- To avoid RF interference, a minimum separation distance must be maintained.
+
+| Wall thickness | Distance |
+| -------------- | -------- |
+| 100 mm         | 200 mm   |
+| 120 mm         | 180 mm   |
+| 150 mm         | 150 mm   |
+| 300 mm         |          |
+
+- When using a mobile access card, install devices maintaining a minimum distance of 1 m between devices to avoid RF interference.
+
+1. Assemble the cable cover and install FaceStation F2 onto the fixed bracket.
+2. Connect FaceStation F2 to the bracket by rotating the product fixing screw of FaceStation F2.

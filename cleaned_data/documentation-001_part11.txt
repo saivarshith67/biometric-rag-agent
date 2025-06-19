@@ -1,0 +1,39 @@
+# Authentication Configuration
+
+# Finger
+
+A schedule can be configured for each authentication method using fingerprints.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to AUTHENTICATION &gt; Finger, then press OK.
+3. | Finger | Always | Never |
+| ------ | ------ | ----- |
+
+Select an item and press the   /   buttons to set a schedule.
+4. -   : This mode only uses fingerprints.
+-   +   : In this mode, a PIN must be entered after fingerprint authentication.
+
+Press OK to save the settings.
+
+NOTE
+
+- You can configure a schedule in BioStar 2. You can select Never or Always if there is no configured schedule.
+- For more information on configuring schedules, see the BioStar 2 Administrator Guide.
+
+# Card
+
+A schedule can be configured for each authentication method using cards.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to AUTHENTICATION &gt; Card, then press OK.
+3. | Card | Never | Never | Never |
+| ---- | ----- | ----- | ----- |
+
+Select an item and press the   /   buttons to set a schedule.
+4. -   : This mode only uses a card.
+-   +   : In this mode, fingerprint authentication is required after card authentication.
+-   +   : In this mode, a PIN must be entered after card authentication.
+-   +   /   : In this mode, fingerprint authentication or entering a PIN is required after card authentication.
+-   +   +   : In this mode, both fingerprint authentication and entering a PIN are required after card authentication.
+
+Press OK to save the settings.

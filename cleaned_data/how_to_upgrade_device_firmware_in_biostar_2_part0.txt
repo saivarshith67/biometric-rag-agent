@@ -1,0 +1,21 @@
+# How to upgrade device firmware in BioStar 2
+
+Firmware files are provided with an installation of the official version of BioStar 2, but if you have custom or more recent firmware files that you would like to use, you can follow the procedure below to apply it to your device.
+
+1. In File explorer go to the path below.
+2. - C:\Program Files (x86)\BioStar 2\firmware
+
+Copy and paste the provided firmware file into this folder.
+3. Log in to BioStar 2.
+4. In DEVICE menu check the device you want to upgrade and click Firmware Upgrade.
+5. Click on the desired firmware version to start the upgrade.
+
+| Device Type            | Firmware Version |
+| ---------------------- | ---------------- |
+| BioEntryPlus (BEPM-OC) | 22.3             |
+
+6. Wait for the device to upgrade and restart.
+
+If a hotfix version of firmware is based on the same version of the recent firmware, you will not be able to distinguish it on the Firmware Upgrade popup. In this case, delete or move the older firmware file to another folder to avoid confusion.
+
+https://kb.supremainc.com/knowledge/

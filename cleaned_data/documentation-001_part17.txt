@@ -1,0 +1,44 @@
+# System Setup
+
+# More Settings
+
+# Relay
+
+You can set the open time and the input port of the exit button in the device. This option is useful when the device is used as a standalone.
+
+1. Press ESC and authenticate with the Admin level credential.
+2. Select DEVICE &gt; Relay, then press OK.
+3. - Relay: You can set whether relay is enabled or not. To set the open time and the input port of the exit button, set to Enabled.
+- Open Time: Set the duration for the door to remain open when standard user authentication has been carried out.
+- Exit Button: Select the input port where the exit button is connected.
+
+To save settings, press OK.
+
+# Intercom
+
+You can select whether or not to use the intercom.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE &gt; Interphone, then press OK.
+3. - Interphone
+- Interphone: Disabled
+
+When the intercom is connected, press the / buttons to select Enabled.
+
+# Secure Tamper
+
+When the tamper is turned on, you can set to delete the entire user, the entire log, and the security key.
+
+1. Press ESC and authenticate with the Admin level credential.
+2. Select DEVICE &gt; Secure Tamper, then change the settings by pressing or .
+3. To save settings, press OK.
+
+# Device Info
+
+Shows the model name, device ID, FW version, and MAC address.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE &gt; Device Info, then press OK.
+3. - Shows the model name, device ID, HW / FW / Kernel versions and Ethernet/WiFi MAC addresses.
+
+Check the device information and press OK.

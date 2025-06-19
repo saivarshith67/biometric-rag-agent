@@ -1,0 +1,43 @@
+# RS485 Mode (Master, Default, Slave)
+
+# Search Device
+
+# All Devices
+
+Xpasss2 546261
+
+# Search Slave Device
+
+Wailing Device
+
+USB Device
+
+Disconnect
+
+# Manage Users Device
+
+Sync Device
+
+Redo
+
+Delete Device
+
+Slave devices are searched and shown on the list, and mark a check-box and click “Add” button.
+
+# Search Slave Device
+
+| Device ID | Name                | Device Type |
+| --------- | ------------------- | ----------- |
+| 659543808 | Secureloz 659543808 | Securel02   |
+
+Xpasss2 546261174 (192.168.16.229) has slave Device(s).
+
+Add
+Cancel
+One master device can connect up to 31 devices, but up to 8 fingerprint devices are able to be connectable through RS485. We recommend minimum number of RS485 connected fingerprint devices considering the number of users and connected devices. This is because it can lead to slow matching speed depending on the device which is used for “Master” device.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_rs485_mode_master_default_slave
+
+Last update: 2019/09/10 11:45

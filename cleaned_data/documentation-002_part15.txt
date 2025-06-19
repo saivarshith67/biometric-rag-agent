@@ -1,0 +1,27 @@
+# BioStar2 V2.6.0 – Database Table
+
+# USERSESSION : User Session
+
+| Column               | Data Type    | Key | Description        |
+| -------------------- | ------------ | --- | ------------------ |
+| ID                   | BIGINT(20)   | PK  | Unique ID          |
+| USER\_ID             | VARCHAR(255) |     | User ID            |
+| USER\_NAME           | VARCHAR(255) |     | Name               |
+| SESSION\_ID          | VARCHAR(255) |     | Session ID         |
+| BIOSTAR\_SESSION\_ID | VARCHAR(255) |     | Biostar Session ID |
+| LOGOUT\_DATE\_TIME   | DATETIME     |     | Logout date/time   |
+| LANGUAGE             | VARCHAR(255) |     | Language setting   |
+| CREATEDAT            | DATETIME     |     | Created date/time  |
+| UPDATEDAT            | DATETIME     |     | Updated date/time  |
+
+# VESESSION : Video Extension Session
+
+| Column    | Data Type    | Key | Description       |
+| --------- | ------------ | --- | ----------------- |
+| SID       | VARCHAR(255) | PK  | Unique ID         |
+| DATA      | TEXT         |     | Data              |
+| EXPIRES   | DATETIME     |     | Expire date/time  |
+| CREATEDAT | DATETIME     |     | Created date/time |
+| UPDATEDAT | DATETIME     |     | Updated date/time |
+
+© 2018 by Suprema Inc.

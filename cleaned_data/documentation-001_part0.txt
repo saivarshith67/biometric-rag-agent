@@ -1,0 +1,64 @@
+# Safety Instructions
+
+Please read the following instructions carefully before using the product. This information is important for ensuring the safety of the user and for preventing damage to the user's property.
+
+# Warning
+
+Failure to follow the instructions may cause serious injury or death.
+
+# Installation Instructions
+
+Do not install the product in direct sunlight or in a location that is damp or dusty.
+
+- This can cause a fire or electric shock.
+
+Do not install the product near any heat source such as electric heaters.
+
+- This can cause a fire from overheating or electric shock.
+
+Install the product in a dry place.
+
+- Moisture can cause product damage or electric shock.
+
+Install the product in a place where there is no electromagnetic interference.
+
+- This can cause product damage or electric shock.
+
+Have qualified service professionals install or repair the product.
+
+- Otherwise, it can cause a fire, electric shock, or injury.
+- If the product is damaged due to a user's unauthorized installation or dismantling of the product, a service fee will be charged for repair.
+
+# Operating Instructions
+
+Be careful not to spill any liquid such as water, drinks, or chemicals inside the product.
+
+- This can cause fire, electric shock, or product damage.
+
+# Caution
+
+Ignoring these instructions may result in minor injuries or damage to the product.
+
+# Installation Instructions
+
+Protect the power cord from being walked on or pinched.
+
+- This can cause product damage or injury.
+
+Keep the product away from strong magnetic objects such as magnets, TVs, monitors (especially CRT monitors), or speakers.
+
+- This can cause a failure.
+
+Only use a DC 12V power adapter that provides a current of at least 500mA.
+
+- This device does not work if the proper power source is not used.
+
+After all the cables are properly installed, apply the liquid silicone underneath and above the cables within the groove approximately 10mm wide. The cable cover must be installed to ensure the IP65 rating.
+
+- Non-proper installation of the cable cover may cause device malfunction or damage from water and dust.
+
+If installing the product outside where the product is completely exposed, it is recommended to install the product together with the enclosure.
+
+Use a separate power supply for Secure I/O 2, electric lock and BioStation 2 respectively.
+
+- If connecting and using the power supply to these devices together, the devices may malfunction.

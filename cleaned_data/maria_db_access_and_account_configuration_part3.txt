@@ -1,0 +1,39 @@
+# Maria DB Access and Account Configuration
+
+# User manager biostar2_ac_user
+
+Select user account:
+
+| Credentials Limitations | options |        |      |                   |
+| ----------------------- | ------- | ------ | ---- | ----------------- |
+| Add                     | Clone   | Delete | Qamc | diostalz \&C User |
+
+Username: biostar2_ac_user
+
+Password: "E08628C353GFA68DA3E3765537840355381893AC"
+
+Repeat password:
+
+Allow access
+
+# Access object
+
+| root | Global privileges      |
+| ---- | ---------------------- |
+| raat | Database: bloslarz\_Jc |
+| roat |                        |
+
+7. Click Save.
+
+There are 2 accounts for each user to have different passwords based on connection type.
+
+Below are what the Host type stands for:
+
+- Localhost: connection via 127.0.0.1 or localhost
+- %: connection via host PC IP
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_maria_db_access_and_account_configuration
+
+Last update: 2017/03/15 11:43

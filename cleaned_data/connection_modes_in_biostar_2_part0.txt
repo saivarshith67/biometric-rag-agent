@@ -1,0 +1,18 @@
+# Connection Modes in BioStar 2
+
+The concept of device connection is different in BioStar 2 compared to BioStar 1's server mode and direct mode.
+
+1. Log upload is automatic regardless of the connection type if you set the Log Upload to automatic in Setting &gt; Server.
+2. Device connection is automatic if the device gets disconnected regardless of the connection type.
+3. Connection type is not called direct mode or server mode.
+
+- It is either Server → Device connection (default) or Device → Server.
+- Use Device → Server mode if the devices remain disconnected often on the default connection mode.
+
+# Configuring Device to Server Connection
+
+1. Select your device in the device tree at the DEVICE menu.
+2. On the Network &gt; Server tab check Device &gt; Server Connection.
+3. Enter your IP and Server Port.
+
+- https://kb.supremainc.com/knowledge/

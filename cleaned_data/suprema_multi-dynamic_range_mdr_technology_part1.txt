@@ -1,0 +1,19 @@
+# Suprema Multi-dynamic Range (MDR) Technology
+
+hence produces optimal result without any loss in details. With the MDR technology, BioMini scanners can produce uncompromised image quality even under direct sunlight of up to 100,000 LUX. You can also obtain the optimal image, without any problems even in dry or wet fingers. MDR technology makes the highlights appear lighter and shadows appear darker with your fingerprints. This can help you fine-tuned fingerprint images acquired in accordance with express contrast.
+
+# 20,000 Lux - Indirect Light
+
+| Light Direction | Vertical | Front | Back | Side |
+| --------------- | -------- | ----- | ---- | ---- |
+| MDR ON          |          |       |      |      |
+| MDR OFF         |          |       |      |      |
+
+# 100000 Lux - Direct Light
+
+| Light Direction | Vertical | Front | Back | Side |
+| --------------- | -------- | ----- | ---- | ---- |
+| MDR ON          |          |       |      |      |
+| MDR OFF         |          |       |      |      |
+
+- http://kb.supremainc.com/knowledge/

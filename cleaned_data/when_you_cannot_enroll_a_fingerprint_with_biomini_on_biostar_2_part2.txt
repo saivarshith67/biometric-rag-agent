@@ -1,0 +1,21 @@
+# When you cannot enroll a fingerprint with Biomini on BioStar 2 privileges.
+
+# Resolution
+
+1. Run “Windows Task manager”. Please terminate the “BioMini-Agent.exe*32” process.
+| Qoton;          | Hdle               |
+| --------------- | ------------------ |
+| Ptoccs          | Iaje Nam           |
+| AcRdj2 exe \*32 | 115 :              |
+| 4JCRd32,CXC "32 | posta serve ex6 32 |
+| 5051E4          | B5S2NVCEXE         |
+| drone @x2 "32   | slee               |
+| dtote 2"32      | trona-zu2 "32      |
+| drone eje "37   | drone cic -32      |
+| slee            | dtona-z "32        |
+| Oc 412          |                    |
+
+CPU Usage: 282   Physical Memory: 91%
+2. Go to Windows Start > All Programs > Startup and right-click BioMini Agent then select Properties.
+
+http://kb.supremainc.com/knowledge/

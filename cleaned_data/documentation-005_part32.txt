@@ -1,0 +1,29 @@
+# Event Log
+
+# Search Log
+
+You can set a condition and search a log.
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select EVENT LOG. All event logs appear.
+3. Press [button] to search a specific log and change the condition.
+
+| Search      | OK                                 |
+| ----------- | ---------------------------------- |
+| Date & Time | 2001/01/01 00.00\~2037/12/31 23.59 |
+| Event       | All                                |
+| T\&A Event  | All                                |
+| User ID     | Input ID                           |
+|             | 00                                 |
+
+Press OK. A log that matches the condition will be displayed on the screen.
+
+# Delete All Logs
+
+You can delete all saved logs.
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select EVENT LOG.
+3. To delete all logs, select [button] and then press OK. To return to the previous screen, press Cancel.
+
+Log Event

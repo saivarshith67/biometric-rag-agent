@@ -1,0 +1,54 @@
+# Maria DB Access and Account Configuration
+
+[client]
+#password     your_password
+port          3312
+socket        {tIp{mysql sock
+
+Here follows entries for some specific programs:
+
+[mysqld]     3312
+Port
+character-set-Server-Ucfb
+collation-server-utfb unicode ci
+socket          {trplmysql sock
+skip external locking
+key buffer size  32M
+Iax allowed packet    64M
+Lable open_Cache
+sort puffer size     512K
+net_buffer_length    256K
+read buffer size
+read rnd buffer size  512K
+ryisan_sort_buffer_size
+connections  G00
+biln              creators
+bind-address-127.0.0.1
+TON   case
+log   C:Prograr Files:  BioStar 2 (*64) | Ica| Imariadb-10.1.10-winx64| !log| Idb log
+
+4. Save the file.
+
+Now you can only access the Maria database at the hosted PC.
+
+# Changing the Default Password
+
+If you install BioStar 2 with the express install, a default administrator account will be created for the AC and TA database. Account information is as shown below:
+
+You must know your root password to change the default administrator password of both databases.
+
+| DB: | ~~Biostar2\_ac~~   |
+| --- | ------------------ |
+| ID: | biostar2\_ac\_user |
+| PW: | biostar2\_ac\_pw   |
+| DB: | ~~BioStar\_tna~~   |
+| ID: | biostartnauser     |
+| PW: | suprematna123      |
+
+Follow the instructions below to change the password of the default accounts.
+
+1. Download HeidiSQL.
+2. Install and run HeidiSQL.
+3. Enter the information below on Settings:
+
+- https://kb.supremainc.com/knowledge/

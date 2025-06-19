@@ -1,0 +1,47 @@
+# BioStar 2 API and Ecosystem
+
+# BioStar Client
+
+Web browsers, App
+
+# BioStar Server
+
+HTTPS
+
+# BioStar API
+
+REST/JSON
+
+# BioStar Core Modules
+
+| Security          | Database | Server Matching |
+| ----------------- | -------- | --------------- |
+| Device Management | SQLite   | Access Control  |
+| User Management   |          | TRA             |
+| Eweni Management  |          |                 |
+
+# BioStar Device SDK
+
+C++, Java, NCA
+
+# Access Control Device
+
+# Overall Architecture of BioStar 2
+
+This architecture allows developers to be dependent from operating systems and programming languages, so it's easy for developers to create a new application and integrate with 3rd party systems. Suprema provides users with BioStar 2 Mobile, which Suprema has developed using BioStar 2 API. Suprema Mobile supports Android and iOS and offers physical access control management features including user management, door management, monitoring and event notifications. In the past, users had to use a PC to perform access control-related tasks like user registration and access control privilege modification for a certain user. However, you can do these tasks anywhere anytime with BioStar 2 Mobile.
+
+# Monitoring
+
+| suprema                   | 30245          | Monitoring          | Alarm               |
+| ------------------------- | -------------- | ------------------- | ------------------- |
+| 1220674663                | ENROLL Success | 03.13               | EnrOLL\_success     |
+| J0isrot/0t                | 15 10 44       | 997 Mlle' door held |                     |
+| 07/07, Tue                | Haine          | 4045                | @NROI Success       |
+| 996 Lille: door\_forced\_ | 1214507627     | 201521/07           | I6.10 4             |
+| 995 Lille device tam      | 2016/27/07     | 16.104              |                     |
+| Email                     | dpriond ccm    | Success             | 7ol;/07407 16 /8 36 |
+| Voncaung Ae               | Apalict        | 7015/07/07          | 15 1044             |
+
+# BioStar 2 Mobile
+
+http://kb.supremainc.com/knowledge/

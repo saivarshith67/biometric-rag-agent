@@ -1,0 +1,33 @@
+# BioStar2 V2.6.0 – Database Table
+
+# RECORDLOG : Record Log
+
+| Column          | Data Type           | Key | Description                                             |
+| --------------- | ------------------- | --- | ------------------------------------------------------- |
+| ID              | BIGINT(20) UNSIGNED | PK  | Unique ID                                               |
+| NVR\_ID         | INT(11) UNSIGNED    |     | NVR ID of this Record                                   |
+| CHANNEL\_NO     | TINYINT(4) UNSIGNED |     | NVR Channel ID of this Record                           |
+| REQ\_ID         | BIGINT(20) UNSIGNED |     | Request ID which indicate Event log (eventlog table ID) |
+| EVT\_CD         | INT(11) UNSIGNED    |     | Event code (eventtype table CODE)                       |
+| DL              | CHAR(1)             |     | Storage Drive Letter (if set zero, deleted file)        |
+| REC\_FILE       | VARCHAR(255)        |     | Record file name                                        |
+| REC\_FILE\_SIZE | BIGINT(11)          |     | Record file size                                        |
+| REC\_FILE\_DT   | DATETIME            |     | Record file date/time                                   |
+| TMB\_FILE       | VARCHAR(255)        |     | Thumbnail file name                                     |
+| TMB\_FILE\_SIZE | BIGINT(11) UNSIGNED |     | Thumbnail file size                                     |
+| TMB\_FILE\_DT   | DATETIME            |     | Created date/time                                       |
+| CREATEDAT       | DATETIME            |     | Created date/time                                       |
+| UPDATEDAT       | DATETIME            |     | Updated date/time                                       |
+| PATH\_ID        | BIGINT(20)          |     | RECPTH ID of this                                       |
+
+# ROLECODE : Role Code for one User
+
+| Column    | Data Type        | Key | Description                 |
+| --------- | ---------------- | --- | --------------------------- |
+| ID        | INT(11) UNSIGNED | PK  | Unique ID                   |
+| CODE      | VARCHAR(50)      |     | Role Code                   |
+| CREATEDAT | DATETIME         |     | Created date/time           |
+| UPDATEDAT | DATETIME         |     | Updated date/time           |
+| USER\_ID  | VARCHAR(255)     |     | User ID which has this role |
+
+© 2018 by Suprema Inc.

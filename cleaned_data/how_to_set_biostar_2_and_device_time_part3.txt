@@ -1,0 +1,29 @@
+# How to set BioStar 2 and device time
+
+Access Group
+
+| Weekdays | PM for everyone | Wednesdays |
+| -------- | --------------- | ---------- |
+
+With the same device time zone, both devices are showing access granted events.
+
+LOCKED
+
+Change to BioStation 2 device time zone to be one hour late.
+
+| Time Zone | (UTC+10.00) | Easter Australia; Guam; Vladivostok |
+| --------- | ----------- | ----------------------------------- |
+
+Time Synchronization with Server
+
+From BioStation 2 device, the access denied event is shown for the same auth try.
+
+# Conclusion
+
+Device time zone is necessary to be used to control devices in different time zone.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_set_biostar_2_and_device_time
+
+Last update: 2020/01/02 16:56

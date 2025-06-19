@@ -1,0 +1,22 @@
+# How to enroll a fingerprint
+
+# When the fingerprint recognition fails
+
+Suprema device can recognize a fingerprint regardless of a change of season or finger condition. However, the authentication rate may vary according to the external environment or fingerprint input method.
+
+If the fingerprint authentication cannot be done smoothly, it is recommended to take the following measures.
+
+- If the finger is smeared with water or sweat, dry off the finger and then scan the finger.
+- If the finger is too dry, blow your breath on the fingertips and then scan the finger.
+- If the finger has a cut, register the fingerprint of another finger.
+- The initially registered fingerprint often may have not been scanned correctly, so register the fingerprint again according to ‘Cautions for enrolling a fingerprint’.
+
+# See also
+
+- How to enroll users
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_hot_to_enroll_a_fingerprint
+
+Last update: 2020/01/02 14:30

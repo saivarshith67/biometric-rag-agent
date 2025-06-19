@@ -1,0 +1,71 @@
+# How to use Leave Management function
+
+# BioStar 2
+
+Settings
+Port
+About
+Help
+Administrator
+CLogout
+
+DASH
+Add FiLterR
+
+# BOARD
+
+USER
+Shift
+Schedule
+Report
+
+# Daily Report
+
+Name
+Daily Report
+Period
+Custom
+2018-11-01
+2018-11-09
+Start Date
+2018-11-01
+End Date
+2018-11-09
+
+# Individual Report
+
+Report Type
+Daily
+Column Setting
+User Group
+User
+1(Administrator)
+
+# Leave Report
+
+# ACCESS CONTROL
+
+# Exception Report
+
+# Edit History Report
+
+Save Filter
+Update Report
+CSV Export
+PDF Export
+
+# MONITORING
+
+# ATTENDANCE
+
+# Daily Report
+
+| Date       | Name          | User ID   | Department   | Shift | Leave         | Qut | Exception | Regular hours | Overtime hours | Total Work Hoza |
+| ---------- | ------------- | --------- | ------------ | ----- | ------------- | --- | --------- | ------------- | -------------- | --------------- |
+| 2018/11/01 | Administrator | All Users | Elias Garcia | 7-20h | Suprema Leave |     |           | 12-00.00      | 0-00.00        | 12-00.00        |
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_use_leave_management
+
+Last update: 2020/01/03 12:41

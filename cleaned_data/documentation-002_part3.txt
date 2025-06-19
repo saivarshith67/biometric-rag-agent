@@ -1,0 +1,45 @@
+# BioStar2 V2.6.0 – Database Table
+
+# Table Information
+
+[CAUTION] : Please do NOT manually modify any INTERNAL data in your database.
+
+# COL_SETTING
+
+Column Setting for List UI
+
+| Column    | Data Type    | Key | Description                                 |
+| --------- | ------------ | --- | ------------------------------------------- |
+| ID        | UNSIGNED INT | PK  | Unique ID (INTERNAL)                        |
+| CK        | TINYINT      |     | Show / Hide = 1 / 0                         |
+| KEY       | VARCHAR(255) |     | Message Text or Message Key for UI          |
+| MSG\_DB   | TINYINT      |     | Message Key Mode for Key field – Boolean    |
+|           |              |     | 1: KEY field is message key                 |
+|           |              |     | 0: KEY field is message text                |
+| INDEX     | INT          |     | Order on UI List                            |
+| WIDTH     | INT          |     | Column Width                                |
+| LT\_NE    | VARCHAR(10)  |     | List Name for Distinguish Target List on UI |
+| CREATEDAT | DATETIME     |     | Created date/time                           |
+| UPDATEDAT | DATETIME     |     | Updated date/time                           |
+| USER\_ID  | VARCHAR(255) |     | User ID of this setting                     |
+
+# DEVICE
+
+Devices
+
+| Column       | Data Type    | Key | Description                                  |
+| ------------ | ------------ | --- | -------------------------------------------- |
+| ID           | VARCHAR(255) | PK  | Unique Device ID                             |
+| NAME         | VARCHAR(255) |     | Name                                         |
+| IP\_ADDRESS  | VARCHAR(50)  |     | IP address                                   |
+| TYPE         | VARCHAR(40)  |     | Device Type                                  |
+| STATUS\_CODE | VARCHAR(10)  |     | Status Code = AC (active)/IN (inactive)      |
+| CREATEDAT    | DATETIME     |     | Created date/time                            |
+| UPDATEDAT    | DATETIME     |     | Updated date/time                            |
+| DG\_ID       | INT          |     | Device Group ID That this device belongs to  |
+|              |              |     | 1: global                                    |
+|              |              |     | 2: Not null                                  |
+| PDV\_ID      | VARCHAR(255) |     | Parent Device ID That this device belongs to |
+|              |              |     | Not null                                     |
+
+© 2018 by Suprema Inc.

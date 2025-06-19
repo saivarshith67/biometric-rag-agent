@@ -1,0 +1,39 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+# Configuration
+
+Then, click the Protocols for SQLEXPRESS and check if the TCP/IP is Enabled.
+
+| AL Sene Cortgusion Mlanager (Locall) | ShndManal | inbky |
+| ------------------------------------ | --------- | ----- |
+| Protocokicr SJLExcPRESS              | NamedPoe  | nakl  |
+| TCp F                                | Entbled   |       |
+
+If you have changed any of the settings above you will have to restart the SQL Server.
+
+# Migrating logs from BioStar 1.x DB to BioStar 2 DB
+
+1. Run Services from your Windows Control Panel. (Control Panel > Administrative Tools > Services)
+
+| CentiolPane         | All Control Panel Iter:                 | Admninictiatiy & Tcols |          |
+| ------------------- | --------------------------------------- | ---------------------- | -------- |
+| Oiganize            | Open                                    |                        |          |
+| Favonics            | Name                                    | Date modified          | Type     |
+| Dektop              |                                         | 2009-07-14             | shortcut |
+| Component Services  |                                         | 2009-07-14             | shortcut |
+| ComputenManagement  |                                         | 2009-07-14             | shortcut |
+| Data Sources (ODBC) |                                         | 2009-07-14             | shortcut |
+| BioStar CD          |                                         | 2009-07-14             | shortcut |
+| iScSIaitiator       |                                         | 2009-07-14             | shortcut |
+| #4e?                | LacalSccunt] Poboy                      | 2009-04-03             | Shortcut |
+| TS\_\_7             | Pefcrmance Mcnitor                      | 2009-07-14             | shortcut |
+| Utiltic;            | Dement                                  | 2009-04-03             | shortcut |
+| Senices             |                                         |                        | Shortcut |
+| Lipralies           | Task Scheduler                          | 2009-07-14             | shortcut |
+| Vocumcat;           | Windows Firewall with Advanced Security | 2009-07-14             | shortcut |
+| uae                 | Windows Memory Diagnostic               | 2009-07-14             | shortcut |
+| Dicunes             | Windows PowerShell Modules              | 2009-07-14             | shortcut |
+| Vidtoz              | Services                                | 2009-07-14             |          |
+|                     | Dale Created                            | 2009-07-14             |          |
+
+- https://kb.supremainc.com/knowledge/

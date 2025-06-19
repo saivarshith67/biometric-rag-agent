@@ -1,0 +1,26 @@
+# How to use the DB migration tool
+
+1. To start the migration, type run_user.bat and press Enter.
+2. Copy biostar2.db from B2DM\db folder and paste it to C:\Program Files (x86)\BioStar 2\db folder.
+3. Start the BioStar 2 Launcher Service from Services.
+
+Administrator: C:\Windows\system32\cmd.exe
+
+insertOPMode
+
+insertUserCard
+
+done
+
+#Users#kylee#Downloads#BZDM>
+
+Favorites
+
+- Name
+- Desktop: biostar2 db
+- Downloads: biostar2 db log bk
+- Documents
+- BioStar CD
+- Logs
+
+https://kb.supremainc.com/knowledge/

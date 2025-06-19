@@ -1,0 +1,33 @@
+# Introduction
+
+# Components
+
+| FaceStation F2    | Wall Bracket    | Drilling Template                  |
+| ----------------- | --------------- | ---------------------------------- |
+| Connection Cables | Diode           | 120 Ω Resistor                     |
+| PVC Anchor x6     | Fixing Screw x6 | Bracket Fixing Screw (Star Shaped) |
+
+# FaceStation F2
+
+201.00.FSF2-ODB V*.**
+
+# Open Source Software
+
+- Linux Kernel GPL
+- BoringSSL
+- Original SSLeay
+- AOSP Apache
+
+G 306.00 V*.**
+
+# Cable Cover
+
+# Quick Guide
+
+# Open Source Software Guide
+
+- Components may vary according to the installation environment.
+- When assembling the product with the bracket, you can use the included bracket fixing screw (Star Shaped) instead of the product fixing screw for enhanced security.
+- For more details regarding the product, visit the Suprema website (https://www.supremainc.com) and refer to the user guide.
+
+5

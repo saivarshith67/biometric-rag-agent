@@ -1,0 +1,31 @@
+# Authentication
+
+# Fingerprint
+
+You can change settings regarding the fingerprint authentication.
+
+1. Press and authenticate with the Admin level credential.
+2. Select AUTHENTICATION → Fingerprint.
+3. Select and set the desired item.
+
+| Fingerprint           | Fingerprint |
+| --------------------- | ----------- |
+| Security Level        | Normal      |
+| Matching Timeout      | 5 Sec       |
+| View Image            |             |
+| Sensor Sensitivity    |             |
+| I:N Fast Mode         | Auto        |
+| Template Format       | Suprema     |
+| Sensor Mode           | Auto On     |
+| Live Finger Detection | Not Used    |
+
+- Security Level: Set the security level for 1:N authentication.
+- Matching Timeout: Set the fingerprint matching timeout. If the authentication is not completed during a set time, the authentication will fail.
+- View Image: Set to view the original image when scanning the fingerprint.
+- Sensor Sensitivity: Set the sensitivity of the fingerprint authentication sensor. To obtain more precise fingerprint information by increasing the sensor sensitivity, set the sensor sensitivity higher.
+- 1:N Fast Mode: Set the fingerprint authentication speed. If you select Auto, the authentication speed will be set according to all fingerprint templates enrolled on the device.
+- Template Format: Set the fingerprint template format. SUPREMA is set as the default, and if you change the template format, all fingerprints saved previously cannot be used. Use caution when changing the Template Format.
+- Sensor Mode: When Auto On is set, the fingerprint sensor recognizes a user’s fingerprint and turns on. When Always On is set, the sensor is always on.
+- Live Finger Detection: Set the level of the fake fingerprint detection. The higher the fake fingerprint detection level, the higher the rejection rate of fingerprint.
+- Advanced Enrollment: Inspect the quality of a scanned fingerprint in order to save high quality fingerprint information. When Use is set and the quality of the fingerprint is low, it notifies such information to the user and helps the user scan the fingerprint correctly.
+- Duplicate Check: When registering fingerprints, you can check duplicates.

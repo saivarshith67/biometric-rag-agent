@@ -1,0 +1,19 @@
+# When you cannot enroll a fingerprint with Biomini on BioStar 2
+
+# Enroll Fingerprint
+
+| Device  | USB Scanner                              |
+| ------- | ---------------------------------------- |
+| Quality | Please Place 1st finger near the sensor; |
+
+# Enroll Fingerprint
+
+| Device  | USB Scanner              |
+| ------- | ------------------------ |
+| Quality | Failed scan fingerprint: |
+
+# Cause
+
+This issue can occur when the BioMini-Agent.exe*32 process is running with insufficient access
+
+http://kb.supremainc.com/knowledge/

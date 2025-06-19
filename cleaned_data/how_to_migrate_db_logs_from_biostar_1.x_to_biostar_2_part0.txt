@@ -1,0 +1,19 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+This document will guide you through the process of how to migrate logs from BioStar 1.x to BioStar 2 using the DB migration tool. Please carefully read and follow the instructions.
+
+If you use BioStar 2 2.3, please proceed with migration in the following order.
+
+- BioStar 1.x → BioStar 2.2 → BioStar 2.3
+
+Please note that this migration way is able to available up to BioStar 2.3. If the upper version of BioStar 2.3, please refer to the following link: Freshdesk FAQ
+
+# Limitations
+
+- This migration tool currently does not support migration to Oracle DB.
+- For BioStar 1.x DB, only authentication logs are transferrable.
+
+# Preparations
+
+1. The authentication for the SQL Server must be done as SQL Server Authentication. Windows Authentication is not supported. Login ID and PW in required in the later instruction. If you don’t know how to create a SQL server authentication login ID, please refer to How to create a SQL server authentication login ID document.
+2. Run the SQL Server Configuration Manager. On the left pane, click SQL Server Services and check the state of the SQL Server Browser. It has to be Running.

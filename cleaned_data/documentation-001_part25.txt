@@ -1,0 +1,9 @@
+# Product Specifications
+
+# Dimensions
+
+| (Unit: mm) | 38      | 144   |
+| ---------- | ------- | ----- |
+| ESC        | suprema | 142   |
+| 45         | 137.2   | 122.2 |
+| Hzh        | 131.5   | 29    |

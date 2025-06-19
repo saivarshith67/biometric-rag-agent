@@ -1,0 +1,45 @@
+# Getting Started
+
+# Cables and connectors
+
+# Power
+
+| Pin | Name     | Color                |
+| --- | -------- | -------------------- |
+| 1   | PWR +VDC | Red (White stripe)   |
+| 2   | PWR GND  | Black (White stripe) |
+
+# Relay
+
+| Pin | Name    | Color  |
+| --- | ------- | ------ |
+| 1   | RLY NO  | White  |
+| 2   | RLY COM | Blue   |
+| 3   | RLY NC  | Orange |
+
+# RS-485
+
+| Pin | Name     | Color  |
+| --- | -------- | ------ |
+| 1   | 485 TRXP | Blue   |
+| 2   | 485 TRXN | Yellow |
+| 3   | 485 GND  | Black  |
+| 4   | SH GND   | Gray   |
+
+# TTL input/output
+
+| Pin | Name           | Color  |
+| --- | -------------- | ------ |
+| 1   | TTL IN0 / OUT0 | Red    |
+| 2   | TTL IN1 / OUT1 | Yellow |
+| 3   | TTL GND        | Black  |
+| 4   | SH GND         | Gray   |
+
+# Wiegand input/output
+
+| Pin | Name          | Color |
+| --- | ------------- | ----- |
+| 1   | WG IN0 / OUT0 | Green |
+| 2   | WG IN1 / OUT1 | White |
+| 3   | WG GND        | Black |
+| 4   | SH GND        | Gray  |

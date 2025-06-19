@@ -1,0 +1,39 @@
+# BioStar2 V2.6.0 – Database Table
+
+# HOLIDAY : Holiday Schedule
+
+| Column      | Data Type   | Key | Description             |
+| ----------- | ----------- | --- | ----------------------- |
+| ID          | INT(11)     | PK  | Unique ID               |
+|             | UNSIGNED    |     |                         |
+| NAME        | VARCHAR(50) |     | Name                    |
+| DSCR        | TEXT        |     | Description             |
+| BIOSTAR\_ID | INT(11)     |     | Holiday ID from BioStar |
+| CREATEDAT   | DATETIME    |     | Created date/time       |
+| UPDATEDAT   | DATETIME    |     | Updated date/time       |
+
+# HOLIDAYDATE : Holiday Schedule Date Information
+
+| Column           | Data Type   | Key | Description                |
+| ---------------- | ----------- | --- | -------------------------- |
+| ID               | INT(11)     | PK  | Unique ID                  |
+|                  | UNSIGNED    |     |                            |
+| REPETITION\_TYPE | VARCHAR(30) |     | Repetition type of holiday |
+| DATE             | VARCHAR(30) |     | Holiday Date               |
+| CREATEDAT        | DATETIME    |     | Created date/time          |
+| UPDATEDAT        | DATETIME    |     | Updated date/time          |
+| HOLIDAY\_ID      | INT(11)     |     | Holiday Schedule ID        |
+|                  | UNSIGNED    |     |                            |
+
+# TSHOLIDAYTIMESEGMENT : Time Segments of Holiday Schedule Date Information
+
+| Column      | Data Type | Key | Description                |
+| ----------- | --------- | --- | -------------------------- |
+| START\_TIME | INT(11)   |     | Start Time of time segment |
+| END\_TIME   | INT(11)   |     | End Time of time segment   |
+| CREATEDAT   | DATETIME  |     | Created date/time          |
+| UPDATEDAT   | DATETIME  |     | Updated date/time          |
+| TSID        | INT(11)   |     | Time Schedule ID of this   |
+|             | UNSIGNED  |     |                            |
+
+© 2018 by Suprema Inc.

@@ -1,0 +1,13 @@
+# Getting Started
+
+# Components
+
+| Cable Cover      | BioStation 2                                          | Wall Bracket         | Bracket Fixing Screw (Star Shaped) |
+| ---------------- | ----------------------------------------------------- | -------------------- | ---------------------------------- |
+| Fixing Screws x4 | Connector Cables (1x2-pin, 1x3-pin, 3x4-pin, 1x5-pin) | Drilling Template    | Diode                              |
+| Ferrite Core     | PVC Anchors x4                                        | Open Source Software | Quick Guide                        |
+
+NOTE
+
+- The components may differ depending on where the product is installed.
+- For more information on installation, visit the Suprema website (www.supremainc.com) to see the installation guide.

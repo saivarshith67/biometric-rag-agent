@@ -1,0 +1,30 @@
+# Migrating domain settings when reinstalling BioStar 2
+
+# BioStar 2, FAQ
+
+If you uninstall BioStar 2 and reinstall it after you have to use the cloud setting in BioStar 2, you will not be able to use the same subdomain name. However, if you back up the setting.conf file and overwrite the file in your new installation, you should be able to reuse the subdomain name.
+
+# Procedure
+
+1. Open File Explorer in Windows.
+2. Go to the BioStar2 Installation folder as shown below and find the file: ~~setting.conf~~
+- In case of installed BioStar 2 for 32bit: C:\Program Files (x86)\BioStar 2
+- In case of installed BioStar 2 for 64bit: C:\Program Files\BioStar 2\BioStar 2(x64)
+3. Right click on the file and click Open.
+
+Windows
+
+Windows can't open this file:
+
+File: setting conf
+
+Open this file; Windows needs to know what program you want to open
+
+What do you want to do?
+
+- Use the Web service to find the correct program
+- Select program from list of installed programs
+4. Select Select a program from a list of installed programs and click OK.
+5. Choose Notepad (or any other text related software) and click OK.
+
+https://kb.supremainc.com/knowledge/

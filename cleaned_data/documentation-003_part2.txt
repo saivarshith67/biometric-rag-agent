@@ -1,0 +1,20 @@
+# BioStar 2 API and Ecosystem
+
+# BioStar
+
+| Subdomain | Subdomjin   | Cloud |
+| --------- | ----------- | ----- |
+| Subdomain | Subdomain   |       |
+| Subdomair | Subdomjin 4 |       |
+
+| BioStar 2 | BioStar 2 | BioStar 2 | BioStar 2 | BioStar 2 |
+| --------- | --------- | --------- | --------- | --------- |
+| Server    | Server    | Server    | Server    | Server    |
+| Unique    | Unique    | Unique    | Unique    | Unique    |
+| SUBDOMAIN | SUBDOMAIN | SUBDOMAIN | SUBDOMAIN | SUBDOMAIN |
+
+# BioStar 2 Ecosystem
+
+Suprema provides its partners and customers with BioStar 2's core functionality through BioStar 2 API and supports them to create better business models. You can easily integrate BioStar 2's functionality with your existing security solution or create new security solutions using BioStar 2 API. BioStar 2 API offers everything you need for integration and application development. BioStar 2 is a modularized architecture, so each feature of BioStar 2 is a separate module. This modularized architecture makes it easy to integrate with 3rd party systems and expand its own functionality.
+
+http://kb.supremainc.com/knowledge/

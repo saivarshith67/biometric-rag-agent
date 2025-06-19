@@ -1,0 +1,39 @@
+# Network
+
+# Server
+
+1. Press and authenticate with the Admin level credential.
+2. Select NETWORK → Server.
+3. Change the desired item.
+
+Edit Server OK
+
+| Device      | Server    |
+| ----------- | --------- |
+| Server IP   | Input IP  |
+| Server URL  | Input URL |
+| Server Port | 51212     |
+
+- Device → Server: You can send a connection signal from the device to a server with the input information directly. When the Device → Server is enabled, the user can enter the Server IP, Server URL, and Server Port.
+- Server IP: Enter the IP address of the PC on which BioStar 2 is installed.
+- Server URL: Enter the Server URL instead of Server IP.
+- Server Port: Enter the port of the PC on which BioStar 2 is installed.
+
+To save settings, press OK.
+
+# OSDP Setting
+
+1. Press and authenticate with the Admin level credential.
+2. Select NETWORK.
+3. Change the desired item in the OSDP Setting.
+
+OSDP Setting
+
+| RS-485                | Default                        |
+| --------------------- | ------------------------------ |
+| Baud Rate             | 115200                         |
+| Authentication Result | Display Result from Controller |
+
+- RS-485: Select the RS-485 mode.
+- Baud Rate: Select the desired baud rate.
+- Authentication Result: When using Intelligent Slave, the authentication results of 3rd party controllers or devices can be selected to be displayed on the screen. This option can be used when RS-485 is set to Default or Slave.

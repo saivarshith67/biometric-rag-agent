@@ -1,0 +1,24 @@
+# How to change from HTTP to HTTPS
+
+# BioStar 2, HTTPS
+
+# How to change from HTTP to HTTPS
+
+Can we use HTTPS for BioStar 2?
+
+Yes, the BioStar 2 supports a secure communication protocol called HTTPs between the BioStar 2 Server and the BioStar 2 Clients. HTTPs consists of communication over HTTP with encryption of Secure Socket Layer. This will provide protection of the privacy and the integrity of the data exchanged between the BioStar 2 Server and the BioStar 2 Clients.
+
+If you are going to use the HTTPS protocol, you must apply the certificate (steps 8 and following). If the certificate is not applied, you will experience slowness and other erratic behavior on the web client such as no response to clicks.
+
+# To enable HTTPS protocol
+
+1. Login the BioStar 2 as an Administrator account.
+2. BioStar 2
+
+admin
+
+Login
+
+Go to Setting > SERVER.
+
+https://kb.supremainc.com/knowledge/

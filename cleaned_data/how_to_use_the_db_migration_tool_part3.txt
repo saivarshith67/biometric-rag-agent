@@ -1,0 +1,37 @@
+# How to use the DB migration tool
+
+● For MYSQL, please copy userConfig.mysql file to [userConfig] file.
+
+| common           | 2015-05-19 | 2=5 | File folder |
+| ---------------- | ---------- | --- | ----------- |
+| config           | 2015-05-19 | 238 | File folder |
+| data             | 2015-05-19 | 2=5 | File folder |
+|                  | 2015-05-19 | 228 | File folder |
+| logConfig        |            |     |             |
+| logConfig mssql  |            |     |             |
+| logConfig mysql  |            |     |             |
+| userConfig       |            |     |             |
+| userConfig mssqu |            |     |             |
+| userConfig mysql |            |     |             |
+
+5. Edit the user, password, server, port, database name.
+
+userConfig Notepad
+
+"DBType"  "mssql"
+
+ServerInfo
+
+user: "biosta"
+
+port: 992
+
+Password: "43W8Wsqlexpress"
+
+server: "433"
+
+database: "BioStar"
+
+6. In case you don’t know the information, you may find relevant information if you open Microsoft SQL Server Management Studio Express.
+
+- https://kb.supremainc.com/knowledge/

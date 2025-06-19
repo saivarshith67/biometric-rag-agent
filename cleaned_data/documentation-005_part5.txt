@@ -1,0 +1,19 @@
+# Introduction
+
+# TTL input
+
+| Pin | Name    | Color  |
+| --- | ------- | ------ |
+| 1   | TTL IN0 | Red    |
+| 2   | TTL IN1 | Yellow |
+| 3   | TTL GND | Black  |
+| 4   | SH GND  | Gray   |
+
+# Wiegand input and output
+
+| Pin | Name   | Color |
+| --- | ------ | ----- |
+| 1   | WG D0  | Green |
+| 2   | WG D1  | White |
+| 3   | WG GND | Black |
+| 4   | SH GND | Gray  |

@@ -1,0 +1,41 @@
+# Local Anti-Passback configuration (No License)
+
+# Door_AntiPassBack
+
+# Information
+
+All Done
+
+# Configuration
+
+| Entry Device       | 1422-TESTZ                           |
+| ------------------ | ------------------------------------ |
+| pnnr #enanr        | biosiacidn ? 540337502               |
+| Door\_AntiPassBack |                                      |
+| Configuration      |                                      |
+| Entry Device       | Riostation 546\*32586 (92 228 TESTZ) |
+| Door Relay         | Relay O                              |
+| Exit Button        | Inerit Pert 0 ot Riastalion          |
+| Saltoh             | Bio Statico                          |
+| Bio Stanan         |                                      |
+
+Once you assigned Entry Device and Exit Device, Anti-Passback and Alarm menu will be added at the bottom.
+
+# Configuration
+
+| Exit Button         |   |
+| ------------------- | - |
+| Switch              |   |
+| Dual Authentication |   |
+| Anti Passback       |   |
+| Alarm               |   |
+
+From:
+
+https://kb.supremainc.com/knowledge/
+
+Permanent link:
+
+https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_configure_anti-passback_zone_basic-no_license
+
+Last update: 2017/10/26 15:58

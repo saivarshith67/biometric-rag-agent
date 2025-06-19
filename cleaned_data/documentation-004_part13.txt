@@ -1,0 +1,16 @@
+# Installation
+
+# Fail Secure Lock
+
+In order to use the Fail Secure Lock, connect N/O relay as shown in the figure below. There is normally no current flowing through the relay for the Fail Secure Lock. When the current flow is activated by the relay, the door will open. If the power supply to the product is cut off due to a power failure or an external factor, the door will lock.
+
+| Dead bolt / |       | DC power |   | FaceStation F2 |
+| ----------- | ----- | -------- | - | -------------- |
+| 1 - RLY NO  | White |          |   |                |
+| 2 - RLY COM | Blue  |          |   |                |
+
+- Install a diode at both sides of the door lock wire as shown in the figure to protect the relay from the reverse current, which occurs when the door lock operates.
+- Use a separate power supply for FaceStation F2 and the door lock.
+- Suprema’s standalone intelligent readers contain internal relays that can directly lock/unlock doors without external controllers for added convenience. For access control applications in need of security, however, it is NOT recommended to use the internal relay of a reader to prevent any tampering attacks which can potentially trigger the door unlock. For such applications, it is highly recommended to use a separate relay unit for a lock control such as Suprema’s Secure I/O 2, DM-20 or CoreStation installed at a secure side of a door.
+
+Take caution of the installation direction of the diode. Install the diode close to the door lock.

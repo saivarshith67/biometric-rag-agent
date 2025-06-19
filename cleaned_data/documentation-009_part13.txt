@@ -1,0 +1,30 @@
+# Firmware Version 1.1.2 (Build No. 1.1.2_210903)
+
+Release: 2021-10-01
+
+# New Features and Improvements
+
+1. Intelligent Slave Support
+- Intelligent Slave: A function that enables 1:1 or 1:N matching directly from the Suprema device and transmits the authentication result as OSDP card data to the third-party controller.
+
+# Bug Fixes
+
+1. The device rebooted abnormally when adding an occupancy limit zone. (Affects version: v1.1.1 or earlier)
+2. When the LAN connection of the device configured in the occupancy limit zone was removed, the device rebooted abnormally if a user belonging to the bypass group authenticated on the entry device. (Affects version: v1.1.1 or earlier)
+3. An abnormal IP address was set when using DHCP. (Affects version: v1.1.1 or earlier)
+4. If some ports of the OM-120 connected as a slave are set as a door relay and the device is rebooted, the relay was operated abnormally. (Affects version: v1.1.1 or earlier)
+5. If the device is rebooted with Live Finger Detection turned on, then the device fails to detect a fake fingerprint. (Affects version: v1.1.1 or earlier)
+6. Abnormal authentication failure occurred when the slave device’s auth mode was set to card+fingerprint. (Affects version: v1.1.1 or earlier)
+7. PIN authentication did not work properly. (Affects version: v1.1.1 or earlier)
+8. Renamed and improved the light brightness feature (Affects version: v1.1.1 or earlier)
+- Changed the option name from ‘LED Brightness’ to ‘Light Brightness’.
+- Fixed the device to automatically operate as ‘Normal’ option when the administrator sets the light brightness to an invalid option.
+9. After setting the auth mode to include fingerprint and fingerprint/PIN, an abnormal error message is displayed if a user whose fingerprint or PIN is not enrolled authenticates on a slave device that does not support Extended Private Auth Mode. (Affects version: v1.1.1 or earlier)
+10. If the face auth mode was not used for more than 10 hours and then activated, the face authentication did not work. (Affects version: v1.1.1 or earlier)
+11. When using server matching, the device rebooted abnormally during the loading if a user with an Operator Level of ‘None’ inquires about the event log. (Affects version: v1.1.1 or earlier)
+- This issue was caused by a conflict between uploading event logs to the server and outputting the user’s event logs when the device has a large number of event logs that have not been uploaded to the server for a long period of time.
+12. Capturing and authenticating face images in the background was activated during operations unrelated to face authentication. (Affects version: v1.1.1 or earlier)
+
+EN 301.00.FSF2
+
+FaceStation F2 Firmware Revision Notes

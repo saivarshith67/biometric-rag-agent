@@ -1,0 +1,17 @@
+# BioStar 2 Server and Device Port Usage
+
+# Device to Server Mode
+
+| Random           | BioStar 2 Client    | TCP 443 (Default)               |
+| ---------------- | ------------------- | ------------------------------- |
+| BioStar 2 Server | TCP 51212 (Default) | Inbound port 51212 must be open |
+
+# Changing the Web Server Port
+
+The server HTTP port or HTTPS port which is used to communicate with the client can be changed in BioStar Setting.
+
+BioStar Setting is included in the installation of BioStar. You can search for the application in the start menu.
+
+You will have to stop the services to change the port.
+
+https://kb.supremainc.com/knowledge/

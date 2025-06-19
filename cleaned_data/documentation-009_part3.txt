@@ -1,0 +1,69 @@
+# 3.
+
+When devices are connected as master-slave, if the slave device is disconnected or deleted, the master device restarts. (Affects version: v1.1.0)
+
+# 4.
+
+Device abnormally restarts when changing the device’s Network settings in BioStar 2. (Affects version: v1.1.0)
+
+# 5.
+
+Face authentication fails on a slave device when the master device restarts without having any Auth Mode. (Affects version: v1.1.0)
+
+# 6.
+
+Intermittently, the door does not open even if authentication succeeds when the door uses the slave device's relay. (Affects version: v1.1.0)
+
+# 7.
+
+Device -> Server mode could be set without entering a Server IP address in the Server menu. (Affects version: v1.1.0)
+
+# 8.
+
+When a fingerprint is entered into the slave device and fingerprint matching is in progress, the master device does not accept a fingerprint scan. (Affects version: v1.0.0)
+
+# 9.
+
+Authentication fails when authenticating with a DESFire AoC while the device is connected as a slave. (Affects version: v1.0.0)
+
+# 10.
+
+When Relay is set in the device menu, the door does not open with a mobile card. (Affects version: v1.0.0)
+
+# 11.
+
+The user ID stored as a 32-character string is truncated to only 31 characters in a specific event log. (Affects version: v1.1.0)
+
+# 12.
+
+When the device and BioStar 2 are connected using two ethernet hubs, the device does not automatically reconnect to BioStar 2 after the LAN cable between the hubs is disconnected and reconnected. (Affects version: v1.1.0)
+
+# 13.
+
+If the number of fingerprints stored in the device exceeds the 1:N maximum, the Finger in User Usage count is displayed abnormally. (Affects version: v1.1.0)
+
+# 14.
+
+When the Reset Time for Timed Anti PassBack is set to 0, anti-passback does not work. (Affects version: v1.1.0)
+
+# 15.
+
+The Auth Mode UI intermittently disappears on the device detail page of BioStar 2. (Affects version: v1.1.0)
+
+# 16.
+
+When the bit interval is set for the Facility Code and ID Field of the Wiegand card format and the card is scanned during add user, the Facility Code is displayed as an incorrect value. (Affects version: v1.0.0)
+
+# 17.
+
+Fixed GPU issues causing broken graphics on the home screen or failures in facial detection. (Affects version: v1.0.0)
+
+# 18.
+
+Deleted image logs from the device gets continuously uploaded to the server. (Affects version: v2.1.1)
+
+EN 301.00.FSF2
+
+4
+
+FaceStation F2 Firmware Revision Notes

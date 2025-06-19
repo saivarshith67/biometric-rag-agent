@@ -1,0 +1,87 @@
+# 11.
+
+When authenticating with a duress fingerprint on a device with the auth mode set to ID+face+fingerprint/PIN, the duress fingerprint log does not leave (Affects version: v1.0.0).
+
+# 12.
+
+Device does not recognize certain HID iCLASS Seos cards (Affects version: v1.0.0).
+
+# 13.
+
+Device does not connect to a 3rd party controller (Software House iSTAR Edge G2) via OSDP (Affects version: v1.0.0).
+
+# 14.
+
+The device’s face authentication and temperature measurement performance has deteriorated in outdoor environments with ceilings (Affects version: v1.0.0).
+
+# 15.
+
+The device’s mask detection performance has deteriorated when the user wears a specific color mask (Affects version: v1.0.0).
+
+# 16.
+
+The device is slow to recognize the EM card (Affects version: v1.0.0).
+
+# 17.
+
+If the user authenticated on the device at the time of Auth Timeout, it was authenticated, but the door was not opened (Affects version: v1.0.0).
+
+# 18.
+
+When the dual authentication was set on the device, if the fake fingerprint was used in the second authentication, a screen unrelated to the situation was output after authentication failure (FSF2-ODB)(Affects version: v1.0.0).
+
+# 19.
+
+The device rebooted abnormally when a user scanned a card on the device with several cards overlapped in a wallet or the like (Affects version: v1.0.0).
+
+# 20.
+
+When setting the elevator to the scheduled unlock zone and using the ‘Started by User Authentication’ option, the floor is activated normally when a user belonging to the access group authenticates, but the ‘Floor released’ logs are output (Affects version: v1.0.0).
+
+# 21.
+
+When upgrading firmware using USB memory, the device reboots after an upgrade failure message is displayed, and the firmware is upgraded afterward (Affects version: v1.0.0).
+
+# 22.
+
+Global APB behavior for the same input was different depending on firmware version (Affects version: v1.1.1).
+
+# 23.
+
+When the device is connected as an intelligent slave and the first card registered to the user is a Wiegand card of a format other than 26-bit, the CSN value is output through OSDP when authenticated with the user’s credentials other than the card (Affects version: v1.1.2).
+
+# 24.
+
+If some ports of the OM-120 connected as a slave are set as a door relay and the device is rebooted, the relay was operated abnormally (Affects version: v1.0.0).
+
+# 25.
+
+‘Check Only’ was displayed in the event log even though the Check Mode of the thermal camera was set to ‘Check After Authentication’ (Affects version: v1.1.1).
+
+# 26.
+
+When loading the logs for the user who entered the admin menu using the SDK, the user ID was not displayed (Affects version: v1.0.0).
+
+# 27.
+
+The ‘Delete the Root Certificate’ was not displayed when a user with the administrator level accessed the menu on the device where the certificate was stored (Affects version: v1.0.0).
+
+# 28.
+
+When authenticating on a device that has dual authentication set up, the authentication success sound is not output for the dual authentication result, and the home screen is maintained (Affects version: v1.0.0).
+
+# 29.
+
+The user ID was abnormally displayed in the event log if the user authenticated with AoC set as the blacklist card when the User ID Type was set to Alphanumeric (Affects version: v1.0.0).
+
+# 30.
+
+After issuing a secure credential card with face data to a user, when the user’s face data was deleted and the secure credential card was authenticated, authentication failed even though the face template was stored in the card (Affects version: v1.0.0).
+
+# 31.
+
+When initializing the master device with the ‘Keep Network Settings’ option, the RS-485 communication key was initialized and the slave device was disconnected (Affects version: v1.0.0).
+
+EN 301.00.FSF2
+
+FaceStation F2 Firmware Revision Notes

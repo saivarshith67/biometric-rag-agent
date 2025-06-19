@@ -1,0 +1,16 @@
+# BioStar 2 and Web Security
+
+# Process
+
+1. The website submits its own information and website’s public key to the certification authority.
+2. The certification authority verifies the website information and the website’s public key and then encrypts them with the certification authority’s private key. This is the SSL certification.
+3. The certification authority provides its public key to the web browser.
+4. When the user connects to the website with a web browser, the website sends its SSL certification to the web browser. This SSL certificate holds the website’s information and the website’s public key encrypted with the private key of the certification authority.
+5. The web browser decrypts the SSL certification with the certification authority’s public key and verifies the information.
+6. The pre-shared key is encrypted with the website’s public key which is included in the SSL certificate and is sent to the website.
+7. The website decrypts the encrypted pre-shared key sent by the web browser with its own private key and obtains the pre-shared key. Hence the pre-shared key created by the web browser has been safely transmitted to the website.
+8. The communication between the web browser and the website is executed securely by utilizing the pre-shared key.
+
+* The pre-shared key is a key necessary for symmetric-key encryption and the communication between the web browser and the website is encrypted through symmetric-key encryption.
+
+- https://kb.supremainc.com/knowledge/

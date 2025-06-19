@@ -1,0 +1,11 @@
+# How to Upgrade the Resource Firmware for BioLite Net V2
+
+1. Please click Update Resource button next to the Language menu item.
+2. On Language Resource window, please select the appropriate Resource file to update the device resource.
+| Device Type | Resource File       |
+| ----------- | ------------------- |
+| BioLite net | bln\_res 2.2 bin    |
+| BioLite let | BLN\_rES 2.2 O, bin |
+3. Please verify that the device menu item and its associated string corresponds to each other.
+
+https://kb.supremainc.com/knowledge/

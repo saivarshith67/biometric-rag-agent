@@ -1,0 +1,25 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+# BioStar 2 T&A Concepts
+
+# Time Code
+
+Time code (once called Pay Code) is the configuration of Type and Time Rate. The available Time Code types are Attendance Management, Overtime Management, and Leave Management. The Time Rate can be configured between 0 and 10. Examples of Type and Time Rate applications are as follows:
+
+- Configuring the Type as Attendance Management and Time Rate as 1: This time code will be used to calculate the regular work time. Since the time rate has been set to 1, the work time will be calculated as one hour if an employee works one hour.
+- Configuring the Type as Overtime Management and Time Rate as 2: This time code will be used to calculate the overtime work hour. Since the time rate has been set to 2, the work time will be calculated as two hours if an employee works one hour.
+- Configuring the Type as Leave Management, Option as Worked, and Time Rate as 0.5: This time code will be used to calculate leave management in cases of vacations, working outside of the office, sick days, etc. Since the time rate has been set to 0.5, the work time will be calculated as 0.5 hours if an employee works one hour.
+
+Furthermore, you can select colors to distinguish the Time Codes easily.
+
+# Benefits and Comparison with BioStar 1
+
+Time Code is similar to BioStar 1’s Time Category. BioStar 2’s Time Code is categorized into three types (Attendance, Overtime, and Leave), and they do not have individual rounding rules. BioStar 2 T&A System manages rounding rules in the Shift menu, and because of this structure, rounding rules can be easily applied when creating shifts with various time codes.
+
+# Shift
+
+Shift is configuring one day’s (24 hours) work rules. You can configure the rules’ specific details such as work type (Fixed / Flexible), work start time, Time Code’s time segment, Rounding (Shift, Punch in, Punch out), Grace, and Meal Deduction. The Time Code has to be configured prior to configuring the Shift.
+
+- Work Type (Fixed, Flexible)–BioStar 2 supports two work types. If the work type is configured as Fixed, employees must check in and out at established times. If the work type is configured as Flexible, employees have more freedom in their check-in and check-out times.
+
+https://kb.supremainc.com/knowledge/

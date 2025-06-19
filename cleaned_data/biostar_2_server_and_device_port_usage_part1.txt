@@ -1,0 +1,11 @@
+# BioStar 2 Server and Device Port Usage
+
+# Server to Device Mode
+
+| Random           | BioStar 2 Client    | TCP 443 (Default)                |
+| ---------------- | ------------------- | -------------------------------- |
+| BioStar 2 Server | TCP 51211 (Default) | Outbound port 51211 must be open |
+
+# Device to Server Mode
+
+https://kb.supremainc.com/knowledge/

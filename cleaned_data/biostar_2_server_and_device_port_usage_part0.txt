@@ -1,0 +1,25 @@
+# BioStar 2 Server and Device Port Usage
+
+BioStar 2 uses several ports to establish device and data communication. This information is crucial if you are installing the devices on remote networks with WAN or VPN. If you need more information regarding connection modes please refer to Connection Modes in BioStar 2.
+
+The server port of BioStar 2 is 51212 by default, but it can be configured to another port in Setting > Server.
+
+- Maria DB uses port 3312
+- T&A module uses port 3000, 3002
+- Nginx uses port 9000
+
+To check out the full list of port usage, refer to our Freshdesk FAQ article.
+
+# Server to Device
+
+With server to device mode, the device connection is initiated from the BioStar Client and the client makes a connection to the server. This is why you cannot see the device from another client when it’s already connected to a particular client. In this case, the port number is like the below.
+
+| J0 | 0 | 1 |
+| -- | - | - |
+|    | 1 |   |
+
+If you are installing devices in a remote network, it is recommended that you use device to server, so that the device will automatically connect to the server if it loses connection.
+
+Refer to the images below to see what ports should be open and forwarded as necessary in your firewall and router.
+
+Server to Device Mode - https://kb.supremainc.com/knowledge/

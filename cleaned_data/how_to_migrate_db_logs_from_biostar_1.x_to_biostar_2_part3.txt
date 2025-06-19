@@ -1,0 +1,16 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+6. In logConfig file, fill the log starting/sending month, user, password, server, port, database information of your BioStar 1.x DB system and save it.
+
+| Year       | Month     | Year     | Month         | SQLServer 2012 |   |   |   |
+| ---------- | --------- | -------- | ------------- | -------------- | - | - | - |
+| Type       | DostariDO | yes      | Aucheventonly | Contt          |   |   |   |
+| user       | Password  | server   | Database      | Dosear         |   |   |   |
+| Tiable     | FVFYTL0G  | Column   | Cutr          |                |   |   |   |
+| Eventti    | Hame      | nDatelmt | mt            | nevent\[dn     |   |   |   |
+| Hame       | nivapvent | Dutabase | NUserID       | Namc           |   |   |   |
+| nRcaderidr |           |          |               |                |   |   |   |
+
+7. Go to BioStar2 installation folder (C:\Program Files (x86)\BioStar 2) and go to db folder.
+
+https://kb.supremainc.com/knowledge/

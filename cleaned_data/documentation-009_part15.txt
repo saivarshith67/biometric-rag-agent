@@ -1,0 +1,28 @@
+# 6.
+
+The screen was abnormally displayed when the second user authentication was successful on a slave device with dual authentication. (Affects version: v1.1.0 or earlier)
+
+# 7.
+
+After being disconnected from BioStar 2, an incorrect pop-up message was displayed until they were reconnected. (Affects version: v1.0.5 or earlier)
+
+# 8.
+
+The duress authentication logs did not occur in order according to the set authentication mode. (Affects version: v1.0.5 or earlier)
+
+# 9.
+
+The relay operated as Off (Lock) after setting the scheduled unlock zone in the elevator and rebooting the master device. (Affects version: v1.1.0 or earlier)
+
+# 10.
+
+All files in the database were deleted after exporting them to a USB. (Affects version: v1.0.5 or earlier)
+
+# 11.
+
+Improved the Visual Face matching algorithm. (Affects version: v1.1.0 or earlier)
+
+- Improved authentication performance when wearing masks.
+- Improved the facial authentication algorithm for glasses-wearers.
+
+EN 301.00.FSF2 16 FaceStation F2 Firmware Revision Notes

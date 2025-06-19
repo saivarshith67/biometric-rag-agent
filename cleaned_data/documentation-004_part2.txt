@@ -1,0 +1,15 @@
+# Introduction
+
+# Name and function of each part
+
+| LED Lamp                                           | Turned on when the user is detected in the dark.             |
+| -------------------------------------------------- | ------------------------------------------------------------ |
+| Infrared Camera                                    | Capture the infrared face image.                             |
+| Visual Camera                                      | Capture an actual face image.                                |
+| LCD Screen                                         | Provides UI for operation.                                   |
+| RF card and mobile access card authentication unit | Part to scan a RFID card or mobile access card for entrance. |
+| Fingerprint Sensor                                 | Reads fingerprints.                                          |
+| Speaker                                            | Delivers sound.                                              |
+| Ethernet                                           | Connect the Ethernet cable.                                  |
+| TTL Input (4 pins)                                 | Connect the TTL input cable.                                 |
+| Relay (3 pins)                                     | Connect the relay cable.                                     |

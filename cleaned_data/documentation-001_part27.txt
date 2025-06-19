@@ -1,0 +1,38 @@
+# Appendices
+
+# Disclaimers
+
+- The information contained in this Guide is provided in regard to the Suprema product.
+- Your right of usage is recognized only for products included in sales agreements and conditions guaranteed by Suprema. No license rights over other intellectual properties mentioned in this Guide are recognized.
+- Suprema makes no representations or warranties concerning infringement of patents, copyrights or other intellectual property rights as well as merchantability and fitness of the product for a particular purpose in regard to the sale or use of the Suprema product.
+- Do not use the Suprema product in medical, life-saving and life-sustaining situations or in situations where malfunction of the product could lead to personal injury or loss of life. However, if an accident occurs while the purchaser is using the product in any of the situations stated above, even if shortcomings are discovered in the design or production process of the product and are claimed as a point of major negligence, employees, subsidiaries, branches, affiliates, or distributors of Suprema shall not be liable and shall not make reimbursements for any direct or indirect costs or expenses associated, including lawyer fees.
+- Suprema may change the product standards and specifications at any time without any adequate notice for improvements in stability, performance or design of the product. Designers should keep in mind that features or descriptions marked as "to be implemented" or "to be defined" are always subject to change. Suprema will implement or define such features or descriptions in the near future and shall not be liable for any consequential problems, including problems of compatibility.
+- If you wish to obtain the latest specification documentation before you place an order for the product, please contact Suprema, a sales agent of Suprema, or a regional distributor.
+
+# Copyright Notice
+
+Suprema owns the copyright for this document. The rights of other product names, brands, and trademarks belong to the individuals or organizations who own them.
+
+# Open Source License
+
+- The software of this product is based on "Linux Kernel 3.x", which is licensed under GPL. As for GPL, please refer to the GNU General Public License in this manual.
+- This product uses the "glibc" library, which is licensed under LGPL. As for LGPL, please refer to the GNU Lesser General Public License in this manual.
+- This product uses the "QT" library, which is licensed under LGPL. As for LGPL, please refer to the GNU Lesser General Public License in this manual.
+- This product uses the "OpenSSL", which is licensed under the OpenSSL and Original SSLeay licenses. As for the OpenSSL and Original SSLeay licenses, please refer to OpenSSL License and Original SSLeay License in this manual.
+- To request the modified source code based on Linux Kernel 3.x and the source code of glibc and QT libraries, which are included in this product, please contact us at tech@supremainc.com.
+
+# GNU General Public License
+
+Version 3, 29 June 2007
+
+Copyright © 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+# Preamble
+
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
+
+The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users. We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors. You can apply it to your programs, too.
+
+When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure

@@ -1,0 +1,42 @@
+# Getting Started
+
+# Parts
+
+- Microphone
+- LCD screen
+- Arrow keys/OK button
+- LED lamp
+- Speaker
+- Fingerprint sensor
+- Numpad/Intercom/ESC button
+- RF card reader
+- Function buttons
+- Mini-USB cable port
+- USB memory port
+- DIP switches
+- TTL input (4-pin)
+- Ethernet
+- Wiegand input (4-pin)
+- RS-485 (4-pin)
+- Wiegand output (4-pin)
+- TTL output (4-pin)
+- Relay (3-pin)
+- Intercom (5-pin)
+- Power (2-pin)
+
+| Name                       | Description                                                                                                                                                           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Microphone                 | Transmits the user's voice to the intercom.                                                                                                                           |
+| LCD screen                 | Displays various information or settings.                                                                                                                             |
+| Numpad/Intercom/ESC button | * 1 to 9: Enters numbers/characters or selects a menu item.
+* : Connects to the intercom.
+* ESC: Opens the menu, moves back to the previous screen, or cancels input. |
+| Function buttons           | - Serves as T\&A function key or selects a sub-menu item.
+- : Changes the character type.
+- : Changes the character type or selects a T\&A event.                     |
+| Arrow keys/OK button       | * : Deletes numbers/characters.
+* : Inserts symbols or configures an item.
+* OK: Selects an item or saves the settings.                                               |
+| Speaker                    | Makes a sound.                                                                                                                                                        |
+| LED lamp                   | Shows the status of the product with different colors.                                                                                                                |
+| Fingerprint sensor         | Reads fingerprints.                                                                                                                                                   |

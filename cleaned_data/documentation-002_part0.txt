@@ -1,0 +1,20 @@
+# BioStar2 V2.6.0 – Database Table
+
+# Revision Note
+
+# BioStar 2.6
+
+- Video is supported in MSSQL DB
+- RC_SP, space_rate_to_alert, record_mode added in SYSTEMSETTING table
+
+# BioStar 2.5
+
+- Video is supported in Maria DB
+
+# Highlight index
+
+| Added Version | Color |
+| ------------- | ----- |
+| BioStar 2.6   |       |
+
+© 2018 by Suprema Inc.

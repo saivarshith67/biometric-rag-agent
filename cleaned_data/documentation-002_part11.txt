@@ -1,0 +1,18 @@
+# BioStar2 V2.6.0 – Database Table
+
+| Column                  | Data Type        | Key | Description       |
+| ----------------------- | ---------------- | --- | ----------------- |
+| ID                      | INT(11) UNSIGNED | PK  | Unique ID         |
+| HOST\_PRIVATE\_KEY      | TEXT             |     |                   |
+| HOST\_CERTIFICATION     | TEXT             |     |                   |
+| RSA\_PRIVATE\_KEY       | TEXT             |     |                   |
+| RSA\_PUBLIC\_KEY        | TEXT             |     |                   |
+| BIOSTAR2\_PUBLIC\_KEY   | TEXT             |     |                   |
+| DEFAULT\_ADMIN\_ACCOUNT | TEXT             |     |                   |
+| SESSION\_SECRET         | VARCHAR(255)     |     |                   |
+| SYSTEM\_SALT            | VARCHAR(255)     |     |                   |
+| ENCRYPTION\_KEY         | VARCHAR(255)     |     |                   |
+| CREATEDAT               | DATETIME         |     | Created date/time |
+| UPDATEDAT               | DATETIME         |     | Updated date/time |
+
+© 2018 by Suprema Inc.

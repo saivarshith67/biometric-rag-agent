@@ -1,28 +1,33 @@
-import re
+## src.data.cleaner
+
+import os
+from llama_parse import LlamaParse
+from src.config import DATA_DIR
 from langchain.schema import Document
 from typing import List
 from src.utils.logger import get_logger
 
 logger = get_logger(__name__)
+CLEANED_DIR = "cleaned_data"
 
+def parse_and_clean_pdfs() -> None:
+    os.makedirs(CLEANED_DIR, exist_ok=True)
+    parser = LlamaParse(result_type="markdown")  # Structured markdown output
 
-def clean_data(documents: List[Document]) -> List[Document]:
-    cleaned_docs = []
-    for doc in documents:
-        text = doc.page_content
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    data_directory = os.path.join(base_dir, DATA_DIR)
+    output_directory = os.path.join(base_dir, CLEANED_DIR)
 
-        # Remove common page indicators
-        text = re.sub(r"(?i)\b(page|pg)[\s:]*\d+\b", "", text)
-        # Remove extra newlines
-        text = re.sub(r"\n{2,}", "\n", text)
-        # Remove extra spaces
-        text = re.sub(r"\s{2,}", " ", text)
-        # Optionally remove non-ASCII
-        # text = re.sub(r"[^\x00-\x7F]+", " ", text)
-        # Strip leading/trailing whitespace
-        text = text.strip()
+    logger.info(f"Parsing and cleaning PDFs from {data_directory}")
 
-        cleaned_docs.append(Document(page_content=text, metadata=doc.metadata))
+    for file in os.listdir(data_directory):
+        if file.endswith(".pdf"):
+            file_path = os.path.join(data_directory, file)
+            docs = parser.load_data(file_path)
+            for idx, doc in enumerate(docs):
+                output_path = os.path.join(output_directory, f"{os.path.splitext(file)[0]}_part{idx}.txt")
+                with open(output_path, "w", encoding="utf-8") as f:
+                    f.write(doc.text.strip())
 
-    logger.info(f"Cleaned {len(documents)} documents successfully.")
-    return cleaned_docs
+    logger.info(f"Cleaned documents stored at: {output_directory}")
+

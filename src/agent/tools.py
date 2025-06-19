@@ -7,5 +7,7 @@ def build_retriever_tool(
     name: str = "retrieve_docs",
     description: str = "Search and return information from Suprema Biostar2 documentation.",
 ):
-    retriever: VectorStoreRetriever = vectorstore.as_retriever(search_kwargs={"k": 5})
+    retriever: VectorStoreRetriever = vectorstore.as_retriever(
+        search_kwargs={"k": 5}
+        )
     return create_retriever_tool(retriever, name, description)

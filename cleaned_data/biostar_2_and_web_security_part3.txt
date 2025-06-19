@@ -1,0 +1,25 @@
+# BioStar 2 and Web Security
+
+corresponding system resources.
+
+# Brute-force Attack
+
+This is an attack method that calculates every possible combination to crack a specific password. Most encryption methods are theoretically not safe from brute-force attacks. Encrypted information can be decrypted if enough time is available.
+
+# Asymmetric-Key Encryption (Public Key and Private Key)
+
+Symmetric-key encryption is useless when the key is leaked since it uses a single key. To prevent this issue, the public key encryption was conceived.
+
+The public key method uses two keys (public key and private key). If a file is encrypted through key A, it can be decrypted with key B and if it is encrypted with key B it can be decrypted with key A. These keys work as pairs. Therefore, since A-B key are pairs, it cannot be decrypted with key C.
+
+Public key is distributed with encryption and the private key is the key held by the distributor of the public key. In a server and client example, the private key is held by the server and the encrypted public key is provided to the client. The client encrypts the data with the public key provided by the server and transmits the data. The server decrypts the encrypted data with the private key. Even if the public key is exposed during this process, a malicious hacker would not know the private key so the data cannot be decrypted.
+
+# Public Key Exchange
+
+Encrypt
+
+Decrypt
+
+In addition to encrypting and securing data, the public key method can also be used to verify the identity of the person distributing the data. This method includes the server encrypting its own data through the private key and decrypting the data through the public key. In this case, the encrypted data can be decrypted by anyone who has a public key but encrypting is only possible by the server. If decryption is possible through the public key, it means that the key is a pair with the private key of the server. This encryption through the private key is called digital certification and decryption by the
+
+https://kb.supremainc.com/knowledge/

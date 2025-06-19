@@ -1,0 +1,97 @@
+# DEVICEGROUP : Device Group
+
+| Column    | Data Type    |
+| --------- | ------------ |
+| ID        | UNSIGNED INT |
+| NAME      | VARCHAR(255) |
+| DEPTH     | INT          |
+| CREATEDAT | DATETIME     |
+| UPDATEDAT | DATETIME     |
+| PDG\_ID   | UNSIGNED INT |
+
+# DOOR: Door
+
+| Column             | Data Type    |
+| ------------------ | ------------ |
+| ID                 | UNSIGNED INT |
+| NAME               | VARCHAR(255) |
+| STATUS\_CODE       | VARCHAR(10)  |
+| CREATEDAT          | DATETIME     |
+| UPDATEDAT          | DATETIME     |
+| DG\_ID             | UNSIGNED INT |
+| ENTRY\_DEVICE\_ID  | VARCHAR(255) |
+| EXIT\_DEVICE\_ID   | VARCHAR(255) |
+| RELAY\_DEVICE\_ID  | VARCHAR(255) |
+| SENSOR\_DEVICE\_ID | VARCHAR(255) |
+| BUTTON\_DEVICE\_ID | VARCHAR(255) |
+
+# DOORGROUP : Door Group
+
+| Column    | Data Type    |
+| --------- | ------------ |
+| ID        | UNSIGNED INT |
+| NAME      | VARCHAR(255) |
+| DEPTH     | INT          |
+| CREATEDAT | DATETIME     |
+| UPDATEDAT | DATETIME     |
+| PDG\_ID   | UNSIGNED INT |
+
+# Key
+
+PK   Unique Device ID
+
+Name
+
+Device Group Tree Depth Level
+
+0: All Devices
+
+1~: depth
+
+Created date/time
+
+Updated date/time
+
+Parent Device Group ID of this group
+
+# Key
+
+PK   Unique Door ID
+
+Name
+
+Status Code = AC (active)/IN (inactive)
+
+Created date/time
+
+Updated date/time
+
+Door Group ID of this Door
+
+Entry Device ID on this Door
+
+Exit Device ID on this Door
+
+Relay Device ID on this Door
+
+Sensor Device ID on this Door
+
+Button Device ID on this Door
+
+# Key
+
+PK   Unique Door ID
+
+Name
+
+Door Group Tree Depth Level
+
+Created date/time
+
+Updated date/time
+
+Parent Door Group ID of this group
+
+© 2018 by Suprema Inc.
+
+BioStar2 V2.6.0 – Database Table

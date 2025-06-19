@@ -1,0 +1,17 @@
+# FaceStation 2 | Your face is the key
+
+Face is one of the easiest way to distinguish a person from another. Even a toddler can recognize the mother’s face several days after the birth. It’s more intuitive to recognize a person by face than by other factors such as how a person walks, their voice, and height.
+
+Biometric authentication systems use physical traits such as fingerprint, face, iris and vein as a credential. Among others, face authentication terminals use face as a credential, which is the most similar way for a human to recognize a person. Due to this nature of the face authentication technology, people feel comfortable to perform the face authentication.
+
+Fingerprint recognition devices, which are the most commonly used for biometric authentication, are equipped with an optical sensor. As the face authentication utilizes cameras to identify a person, it does not require an optical sensor. Thus, it allows a user to perform authentication without physical contact. Since face authentication terminals use IR (Infrared) technology, one of the major drawbacks of face authentication is the limitation of installable location: a face authentication terminal will perform poorly when it’s installed outside or near windows because of the strong ambient light.
+
+FaceStation 2, Suprema’s newest face authentication terminal, goes beyond this limitation. It is an access control and time and attendance terminal, featuring better user experience with Android 5.0 Lollipop and Suprema’s latest algorithm, hardware and software. A wide range of functions and enhanced performance will provide users with a whole new different non-contact biometric authentication experience.
+
+# Enhanced face authentication technology and near infrared LED
+
+Processing ambient light is critical to the face authentication performance. Most of face authentication terminals out in the market have limited installable locations because the recognition performance varies depending on the strength of ambient light.
+
+FaceStation 2 has 80 wide angle near infrared LEDs and 60 narrow angle near infrared LEDs, so it can recognize a face even in an environment with 25,000 lux, which is equivalent to an environment with full daylight (not direct sun). This allows users to install the terminals at indoor locations near windows, lobbies and building entries.
+
+https://kb.supremainc.com/knowledge/

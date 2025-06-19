@@ -1,0 +1,9 @@
+# When you cannot start BioStar 2 Server
+
+Once you change the port number to for example 81, you need to add this port number at the back of the URL. For example, http://localhost:81 or http://serverip:81
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_troubleshoot_when_you_cannot_start_biostar_2_server
+
+Last update: 2015/10/08 12:08

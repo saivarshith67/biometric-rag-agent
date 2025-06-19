@@ -1,0 +1,21 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+If a T&A system combined with biometrics technology is utilized, efficient management is possible, incorporating the benefits of preventing buddy punching and the benefit of an additional decrease in costs. Furthermore, it has superior security than cards, FoB, PINs, and passwords. Biostar 2, linked with Suprema’s latest fingerprint recognition devices, allows you to manage an organization’s human resources efficiently and professionally. You can also prevent authorization with forged fingerprints if you utilize the Live Finger Detection (LFD) feature mounted on Suprema’s latest fingerprint recognition devices.
+
+# The Redesigned BioStar 2 Time and Attendance System
+
+BioStar 2’s time and attendance management system consists of elements of Time Code (once called Pay Code), Shift, Schedule, Schedule Template, and Overtime Rule. The Time Card and Report features can be used to edit or print out individual time and attendance records as reports.
+
+Structure-wise, BioStar 2 T&A and BioStar 1 T&A may look similar. However, BioStar 2 T&A simplified the complicated configuration of BioStar 1 T&A and increased the flexibility of the functions to allow diverse configurations.
+
+| RULE              | Weekly / Monthly | Weekend      | Holiday                         | Overtime   |
+| ----------------- | ---------------- | ------------ | ------------------------------- | ---------- |
+| Maf               | Day Start Time   | Max Overtime | RULE                            | PAM Code   |
+| TCA SCHEDULE      | Shift            | PAY CODE     | Time Rate                       | Many       |
+| SCHEDULE TEMPLATE | Main             | PAY CODE     | Leave                           |            |
+| Shift             |                  | CC Or        |                                 |            |
+| Pltud             | Holiday          | (AC Module)  | Cycle                           | To€Segment |
+| UserGroup         | (AC Module)      | Time Slcl    | First check-in & Last Check-out | Glace      |
+| Rounding          |                  |              |                                 |            |
+
+BioStar 2 T&A System Structure

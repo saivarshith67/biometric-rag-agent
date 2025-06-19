@@ -1,0 +1,41 @@
+# User
+
+- Period: Set an expiry date to use the user account.
+- Duress: Select this option to add the fingerprint as a duress fingerprint. When threatened by someone to open the door, the user can authenticate using this fingerprint to send an alarm signal to BioStar 2.
+- Extended Private Auth Mode: Change the authentication method according to the user. You can set extended private auth mode. This mode allows you to combine user authentication methods, including both faces and fingerprints. Otherwise, you can use the device’s basic authentication mode.
+
+To save settings, press OK.
+
+# Registering a face
+
+1. Press button and authenticate with the Admin level credential.
+2. Select USER → button.
+3. Select Face → Next.
+4. Adjust a distance between the face and screen and look straight at the camera of the device.
+5. Once your face is captured successfully, press OK → Save. To retake a photo, press Re-Shot.
+
+- The visual face data of FaceStation F2 are not compatible with face templates of FaceStation 2 or FaceLite.
+- You can register Visual Face not only directly from FaceStation F2 but from the BioStar 2 by uploading photos or importing CSV files. You can also register Visual Face with your smartphone via a link sent from BioStar 2. To learn more about how to register Visual Face for each method, please refer to the BioStar 2 help manual.
+- To use a Visual Face feature correctly, take a picture by following instructions below:
+- When registering a face, maintain a distance of 60 cm to 100 cm between the device and the face.
+- Do not change your face expression.
+- Do not wear masks, hats, or eye patches.
+- Do not raise head up or lower head.
+- Do not wear thick makeup.
+- Do not close your eyes.
+- Make sure that both of your shoulders correctly appear on the screen.
+- Stand still and register your face by staring at the screen.
+- Be careful not to display two faces on the screen. Register one person at a time.
+- If you do not follow the instructions on the screen, the face registration may take longer or may fail.
+
+# Registering a fingerprint
+
+1. Press button and authenticate with the Admin level credential.
+2. Select USER → button.
+3. Select Fingerprint → Next.
+
+- Place the finger deep enough to contact with the sensor completely.
+- Place the center of the fingerprint in the center of the sensor.
+- If a finger has a cut or the fingerprint is blurry, select another finger for the fingerprint.
+- Scan the fingerprint correctly without moving according to the instruction on the screen.
+- If you make the finger upright so that the contact area with the sensor is decreased or the angle of finger is warped, fingerprint authentication may not be performed.

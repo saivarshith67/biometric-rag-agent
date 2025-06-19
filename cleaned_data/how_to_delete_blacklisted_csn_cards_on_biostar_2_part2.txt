@@ -1,0 +1,21 @@
+# How to delete blacklisted CSN cards on BioStar 2
+
+File View   Database Object   SQL  Transaction Tools   Help
+
+Database: biostar2 File: CAProgram Files (X86)| BioStar_biostar2 Database  Data   DDL2idblbiostar2 db
+
+BEGIN TRANSACTION;
+DELETE FROM BLEL
+WHERE CRDUID IN (SELECT CRDUID FROM CRD WHERE CRDCSN IN ('133967', '932'));
+UPDATE LSTSYNSTA SET BLKL;
+COMMIT;
+
+9. Start BioStar 2 service in BioStar Setting.
+
+10. Check if the Blacklisted card has been deleted from Setting > Card > Blacklist Card.
+
+From: https://kb.supremainc.com/knowledge/
+
+Permanent link: https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_delete_blacklisted_csn_card_on_biostar2
+
+Last update: 2017/09/22 13:39

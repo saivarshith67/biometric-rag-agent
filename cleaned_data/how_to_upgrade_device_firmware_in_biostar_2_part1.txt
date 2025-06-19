@@ -1,0 +1,18 @@
+# How to upgrade device firmware in BioStar 2
+
+# Firmware Upgrade
+
+| BloLitaNet       | 538101263 (192.168.16.237) |
+| ---------------- | -------------------------- |
+| Firmware Version | 225                        |
+| Bio\_iteret      | 226                        |
+
+From:
+
+https://kb.supremainc.com/knowledge/
+
+Permanent link:
+
+https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_upgrade_device_firmware_in_biostar_2
+
+Last update: 2020/01/02 17:01

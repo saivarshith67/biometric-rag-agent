@@ -1,0 +1,22 @@
+# Authentication
+
+# T&A Mode
+
+You can set how to register T&A Mode.
+
+1. Press and authenticate with the Admin level credential.
+2. Select AUTHENTICATION → T&A Mode.
+3. Select and set the desired item.
+
+| T\&A      | T\&A Mode     | By User  |
+| --------- | ------------- | -------- |
+| T\&A Code | T\&A Required | Job Code |
+| OO        |               |          |
+
+- T&A Mode: Set the method to use T&A mode.
+- T&A Code: You can register T&A events. Select T&A Code → to register a T&A event and set an icon, name of T&A event, and schedule.
+- T&A Required: Set to require a user to select a T&A event when authenticating. This option can be used when T&A Mode is set to By User.
+- Fixed T&A Key: Set to use only a T&A event selected by the administrator. This option can be used when T&A Mode is set to Fixed.
+- Job Code: Select whether to use Job Code.
+
+23

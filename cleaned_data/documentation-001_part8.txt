@@ -1,0 +1,31 @@
+# Administrator Menus
+
+# Full Menu
+
+1. Press the ESC button then authenticate as an administrator.
+2. Select the desired menu item.
+
+| USER   | AUTHENTI- | DISPLAY & |
+| ------ | --------- | --------- |
+| DEVICE | NETWORK   | EVENT LOG |
+
+NOTE
+
+- If there is no administrator on the device, anyone can access the menu just by pressing the ESC button.
+
+# Quick Menu
+
+1. Press and hold the ESC button for more than one second and then release the button. Next, authenticate yourself as an administrator.
+2. Select the desired menu item.
+
+- 88 QUICK MENU
+- Add User
+- Search User
+- User Usage
+- Search
+- USB Memory
+- TCP/IP
+
+NOTE
+
+- If there is no administrator on the device, anyone can access the quick menu just by pressing and holding the ESC button and then releasing the button.

@@ -1,0 +1,29 @@
+# BioStar 2 API and Ecosystem
+
+# BioStar Mobile
+
+# BioStar API
+
+# Device:
+
+# Usera
+
+# BioStar Server
+
+# Extension SDK
+
+# Extensions
+
+# Video
+
+# [BioStar 2 Ecosystem]
+
+In 2000, Roy Fielding suggested REST (Representational State Transfer) as software architecture style in his doctorate paper. After that, REST has been accepted by more and more developers across the globe. SOAP has a service oriented architecture while REST has a resource oriented architecture (ROA) where content (text, image, video) and data of the website are identified as a resource and given an URI for that resource. And basic HTTP methods (POST, GET, PUT and DELETE) are used to do the CRUD (Create, Read, Update, Delete) tasks.
+
+JSON is an acronym of JavaScript Object Notation and a lightweight, text-based and language independent data exchange format. It is possible to represent complex relations of objects with characters, parenthesis and symbols only. JSON is used with many languages including PHP, C# and Python.
+
+From: http://kb.supremainc.com/knowledge/
+
+Permanent link: http://kb.supremainc.com/knowledge/doku.php?id=en:tc_whitepaper_biostar2_open_api
+
+Last update: 2016/03/03 16:54

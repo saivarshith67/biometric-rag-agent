@@ -1,0 +1,23 @@
+# Authentication
+
+It is recommended to maintain the default values of the camera configuration settings for the best performance. The default values of each option are as follows:
+
+- Distance(cm): 100
+- Emissivity: 0.98
+- ROI X(%): 30
+- ROI Y(%): 25
+- ROI Width(%): 50
+- ROI Height(%): 55
+
+The yellow guide box will appear to guide the ROI area when using it with default values. You can measure temperature by placing the face inside of the ROI area. The yellow guide box will disappear when changing the default values or using Dynamic ROI.
+
+| Input Face                    | Input Face                                            |
+| ----------------------------- | ----------------------------------------------------- |
+| Card Fingerprint ID           | Card Fingerprint ID                                   |
+| When using the default values | When changing the default values or using Dynamic ROI |
+
+It is not possible to use both face authentication with a mask on and thermal camera features on a slave device.
+
+The supported thermal camera is TCM10-FSF2.
+
+21

@@ -1,0 +1,63 @@
+# How to use Leave Management function
+
+# BioStar 2
+
+# Settings
+
+Port
+
+About
+
+Hclp
+
+# DASH
+
+Add Time Code
+
+Time Code
+
+# BOARD
+
+Shift
+
+Schedule
+
+Report
+
+# USER
+
+Time Code
+
+me Co
+
+# DEVICE
+
+EnU
+
+Shift
+
+Normal
+
+# Schedule Template
+
+Suprema Leave Rule
+
+# ELEVATOR
+
+# ZONE
+
+# ACCESS CONTROL
+
+# MONITORING
+
+# VIDEO
+
+# WME
+
+# Attendance
+
+2) Check on “Leave Management” tab of Type, set the name and description, and then create it by clicking Apply
+
+- as mentioned, military service will be considered paid time-off, thus this Leave Management will be created as “worked.”
+
+- https://kb.supremainc.com/knowledge/

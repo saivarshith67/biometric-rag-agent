@@ -1,0 +1,17 @@
+# Getting Started
+
+| RF card reader                                             | Reads RF cards.                                            |
+| ---------------------------------------------------------- | ---------------------------------------------------------- |
+| USB memory port                                            | Connects a USB memory stick.                               |
+| Mini-USB cable port                                        | To be supported later.                                     |
+| TTL input (4-pin)                                          | Connects a TTL input/output cable.                         |
+| RS-485 (4-pin)                                             | Connects an RS-485 cable.                                  |
+| TTL output (4-pin)                                         | Connects a TTL input/output cable.                         |
+| Relay (3-pin)                                              | Connects a relay cable.                                    |
+| Power (2-pin)                                              | Connects the power cable.                                  |
+| DIP switch                                                 | Turns on the termination resistor for the RS-485 interface |
+| • To use the termination resistor, set DIP switch 1 to ON. |                                                            |
+| Ethernet                                                   | Connects an Ethernet cable.                                |
+| Wiegand input (4-pin)                                      | Connects a Wiegand input/output cable.                     |
+| Wiegand output (4-pin)                                     | Connects a Wiegand input/output cable.                     |
+| Intercom (5-pin)                                           | Connects the intercom cable.                               |

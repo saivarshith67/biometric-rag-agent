@@ -1,0 +1,7 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+8. Copy the biostar2.db file and paste it in the db folder in the migration tool folder.
+
+9. Go back to B2DM folder. Shift+Right-click then click Open command window here.
+
+https://kb.supremainc.com/knowledge/

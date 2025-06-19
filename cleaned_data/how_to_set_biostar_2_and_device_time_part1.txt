@@ -1,0 +1,33 @@
+# How to set BioStar 2 and device time
+
+# Device Time Setting
+
+1. Go to Device → Information.
+2. The default is to use Time Synchronization with Server. With this option, the device time keeps checking the server time and making sync based on the server time. By disabling the sync option, the device date and time can be manually configurable. However, in order to maintain the consistency of event date and time, it’s not recommended.
+
+# Sygtem
+
+From the device, the device time zone can be set to use a different time zone. Once it’s changed to use a different time zone, the device time display is changed to show that time zone. For the devices without display, the internal time clock is changed.
+
+| Device Type                      | BioStation                                       |
+| -------------------------------- | ------------------------------------------------ |
+| Product Name                     | 052-OMPI                                         |
+| imeZone                          | (UTC-10.00) Eastern Australia; Guam; Vladivostok |
+| Time Synchronization With Server |                                                  |
+
+# [Server Time]
+
+| Language  | English                                          |
+| --------- | ------------------------------------------------ |
+| Time Zone | (UTC+9:00) Seoul; Tokyo, Osaka, Sapporo, Yakutsk |
+
+From the monitoring, you can check the device event logs based on the server time zone, even though the device display shows a different time.
+
+# [Real-time Log]
+
+| Date                | Door | Device Id |
+| ------------------- | ---- | --------- |
+| 2015/06/15 5:18:56  |      | 100000007 |
+| 2015/06/15 15:16:57 |      | 100000007 |
+
+- https://kb.supremainc.com/knowledge/

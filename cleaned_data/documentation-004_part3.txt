@@ -1,0 +1,35 @@
+# Introduction
+
+| Name                          | Description                             |
+| ----------------------------- | --------------------------------------- |
+| Wiegand Input/Output (4 pins) | Connect the Wiegand input/output cable. |
+| Power Supply (2 pins)         | Connect the power supply cable.         |
+| RS-485 (4 pins)               | Connect the RS-485 cable.               |
+| SAM Card Slot                 | Insert the SAM card.                    |
+| USB (Type-C) Memory Slot      | Connects the USB memory.                |
+
+# Cables and connectors
+
+# Power supply
+
+| Pin | Name     | Color                |
+| --- | -------- | -------------------- |
+| 1   | PWR +VDC | Red (white stripe)   |
+| 2   | PWR GND  | Black (white stripe) |
+
+# Relay
+
+| Pin | Name    | Color  |
+| --- | ------- | ------ |
+| 1   | RLY NO  | White  |
+| 2   | RLY COM | Blue   |
+| 3   | RLY NC  | Orange |
+
+# RS-485
+
+| Pin | Name     | Color  |
+| --- | -------- | ------ |
+| 1   | 485 TRXP | Blue   |
+| 2   | 485 TRXN | Yellow |
+| 3   | 485 GND  | Black  |
+| 4   | SH GND   | Gray   |

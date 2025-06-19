@@ -1,0 +1,29 @@
+# How to migrate DB logs from BioStar 1.x to BioStar 2
+
+Date Modified: 2015-07-01 20
+
+File folder: Downloads
+
+File folder: Oncove
+
+File folder: Junb, Flez Documento
+
+Projects
+
+Libraries
+
+Documenting
+
+Node modules
+
+References
+
+Type run_log.bat and enter.
+
+Administrator; C:\Windows\system32\cmd.exe
+
+C:\Users\Htyn lee\Downloads\BZDM_150515\BZDM2\run_log.bat
+
+You will see migration logs.
+
+https://kb.supremainc.com/knowledge/

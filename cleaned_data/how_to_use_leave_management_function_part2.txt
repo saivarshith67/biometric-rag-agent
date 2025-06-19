@@ -1,0 +1,84 @@
+# How to use Leave Management function
+
+# Suprema Leave
+
+| Name        | Suprema Leave         |                     |                  |
+| ----------- | --------------------- | ------------------- | ---------------- |
+| Description | leave                 |                     |                  |
+| Type        | Attendance management | Overtime management | Leave management |
+| Option      | Worked                | Not Worked          |                  |
+
+3) Create shift as you require, hit Apply & Next
+
+# BioStar 2
+
+Settings | Port | About | Help
+
+# DASH
+
+# BOARD
+
+# USER
+
+|      | Name        | Elias Garcia 7-20h |
+| ---- | ----------- | ------------------ |
+|      | Description | Elias Garcia 7-20h |
+| Type | Fixed       | Flexible           |
+
+# DEVICE
+
+# DOOR
+
+| Day start time | First check-in | Last check-out | Time segment |
+| -------------- | -------------- | -------------- | ------------ |
+
+# ELEVATOR
+
+# ZONE
+
+# ACCESS CONTROL
+
+# MONITORING
+
+| Time code | Start time | End time | Min. Duration | Meal deduction |
+| --------- | ---------- | -------- | ------------- | -------------- |
+| Normal    | 07.00      | 20.00    | 04.00         | 01.00          |
+
+# VIDEO
+
+# ATVENDAnce
+
+| Rounding | Punch in | Punch out | Break by Punch |
+| -------- | -------- | --------- | -------------- |
+
+Apply & Next | Apply
+
+4) Create schedule template as you require
+
+# BioStar 2
+
+Settings | Port | About | Help
+
+# DASH
+
+# ADD SCHEDULE TEMPLATE
+
+# USER
+
+| Name        | Sut                | Type  | Time         | Day start time |
+| ----------- | ------------------ | ----- | ------------ | -------------- |
+| Description | Elias Garcia 7-20h | Fixed | 07-00\~20.00 | 07.00          |
+
+# DEVICE
+
+# DOOR
+
+| MON | Copy | Elas Carca 7-20h |
+| --- | ---- | ---------------- |
+|     | TUE  | Elas Carca 7-20h |
+|     | WED  | Elas Carca 7-20h |
+|     | THU  | Elas Carca 7-20h |
+| FRI |      | Elas Carca 7-20h |
+| SAT |      | Elas Carca 7-20h |
+
+- https://kb.supremainc.com/knowledge/

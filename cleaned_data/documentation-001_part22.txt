@@ -1,0 +1,13 @@
+# Check Event Log
+
+# Check Log Usage
+
+Shows the status of the log usage.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to EVENT LOG > Log Usage then press OK.
+
+| Log Usage | Total Log | 213 |
+| --------- | --------- | --- |
+
+3 Press OK after checking the log usage.

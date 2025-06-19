@@ -1,0 +1,26 @@
+# When you cannot start BioStar 2 Server
+
+# Cause
+
+This issue can occur when the default BioStar port 80 is already being used by other program or applications.
+
+# Resolution
+
+1. Run “Windows Task manager”. Please end the “biostar-server.exe” process.
+2. | Jpton; | Jafomeroe Kebicno | Imsoe Nane   | Meney WFTI-. |
+| ------ | ----------------- | ------------ | ------------ |
+| SISTEY | 114,184k          | bJjjjjexe    | LCCAL EERVIC |
+| cDnOZ  | 2,910 k           | uoma,EXE     | 52,76 k      |
+|        | 47,776 <          | 73,7z0 <     | 155,124<     |
+| SSa    | SISTEM            | CPU Usage 1% |              |
+
+Open “BioStar Setting” as administrator privilege.
+3. | Setting               | R-oStaf            | GamgunoNetwork | PC Fax        |
+| --------------------- | ------------------ | -------------- | ------------- |
+| BioStar VidecPhon     | Sjsem              | Chro me        | CrossCem      |
+| Cpen uc ocation       | DB Browser for SQL | Open           | casypayplugin |
+| Ruum a9 admunistralor | FPGON              |                |               |
+
+Change the HTTP Port number and start the BioStar Server again.
+
+- https://kb.supremainc.com/knowledge/

@@ -1,0 +1,26 @@
+# Authentication
+
+# Auth Result Display Option
+
+You can set the auth result display option.
+
+1. Press and authenticate with the Admin level credential.
+2. Select AUTHENTICATION.
+3. Change the desired item in the Auth Result Display Option.
+
+# Auth Result Display Option
+
+| User ID Display   | Display All |
+| ----------------- | ----------- |
+| User Name Display | Display All |
+
+- User ID Display: You can select how the user ID is displayed on the authentication result screen of the device.
+- Display All: Displays the entire user ID.
+- Mask All but First Letter: Displays only the first letter of the user ID.
+- Hide All: Do not display the user ID.
+- User Name Display: You can select how the user name is displayed on the authentication result screen of the device.
+- Display All: Displays the entire user name.
+- Mask All but First Letter: Displays only the first letter of the user name.
+- Hide All: Do not display the user name.
+
+24

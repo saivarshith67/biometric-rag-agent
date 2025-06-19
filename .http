@@ -274,3 +274,19 @@ Content-Type: application/json
 {
     "query": "How does image compression of SFM5500 work?"
 }
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "RS485 Wiriing guide"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "Maria DB Access configuration"
+}

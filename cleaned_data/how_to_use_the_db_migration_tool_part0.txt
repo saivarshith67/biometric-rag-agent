@@ -1,0 +1,27 @@
+# How to use the DB migration tool
+
+This document will guide you through the process of how to use the DB migration tool. This DB migration Tool will be helpful to convert user information of BioStar 1.x to user information of Biostar 2.x. Please read the manual carefully and follow the instructions.
+
+- This migration tool will overwrite any user information currently stored in the BioStar 2 database. We highly recommend you to make backup DB if you already have users stored in the BioStar 2.
+- This migration tool currently does not support Oracle DB.
+- Department information will not be converted to BioStar2 database.
+- User ID 1 will be not converted (BioStar2 creates a default administrator ID with User ID 1).
+- User access level will be changed as a normal user because of the difference in concept between BioStar1.x and BioStar2.x.
+- For the card information, only Mifare CSN(7byte) will be converted.
+- Windows Authentication is not supported. The authentication for SQL Server must be done as SQL Server Authentication.
+
+| Dalanase            | @atanas               | SOL Sener | Conimre |
+| ------------------- | --------------------- | --------- | ------- |
+| Datajase Name       | Blostar               | Sat Nama  |         |
+| 3ener\_uthenlicauon | Kinojw5 \~Uhenacalion |           |         |
+| Database Senver     | KHYOC BSSERVER        | 163703    |         |
+
+If you need to set SQL server authentication, please refer the following link;
+
+https://www.supremainc.com/en/node/618
+
+# Preparations
+
+1. Run the SQL Server Configuration Manager. On the left pane, click SQL Server Services and check the status of the SQL Server Browser. Set it to Running if it is set to Stopped.
+
+https://kb.supremainc.com/knowledge/

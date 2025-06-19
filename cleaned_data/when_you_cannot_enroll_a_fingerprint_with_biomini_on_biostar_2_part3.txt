@@ -1,0 +1,26 @@
+# When you cannot enroll a fingerprint with Biomini on BioStar 2
+
+3. On the Compatibility tab, please enable Run this program as an administrator option then click OK button to save the configuration.
+
+# BioMini Agent Properties
+
+| Gencre                | Shericu                            | Compatibility                     |
+| --------------------- | ---------------------------------- | --------------------------------- |
+| Jancryccon Windows    | jcedthe compatibility mode tha:    | MacTestnat eener Version          |
+| Help                  | settings                           | Mcchoosethc                       |
+| Compatibility Mode    | Aun this pigen compatibility modes | Windows XP (Service Pack 3)       |
+| Settings              | Aun N 256 colors                   | Aun n 640 x 480 screen resolution |
+| Disable visual themes | Disable desktop composition        | Disable enhance DPI settings      |
+| Prevler Level         | Aun this program as administrator  |                                   |
+
+Cancel OK
+
+From:
+
+http://kb.supremainc.com/knowledge/
+
+Permanent link:
+
+http://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_how_to_troubleshoot_when_you_cannot_enroll_a_fingerprint_with_biomini
+
+Last update: 2020/01/03 12:55

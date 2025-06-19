@@ -1,0 +1,30 @@
+# Authentication
+
+# Auth Mode
+
+Set the authentication mode. You can make a combination of face, fingerprint, PIN, card, or ID and you can also set a schedule for each authentication mode.
+
+# Registering auth mode
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select AUTHENTICATION → Auth Mode and press [button].
+3. Press [button] and select one of options you want to use. To add additional options, repeat this step.
+4. Press Schedule and set a schedule.
+- You can combine selected authentication mode to authenticate all in order or only some of the selected authentication mode to authenticate. For example, if you combine the authentication mode with [face] + [fingerprint] + [PIN], a user should authenticate a face, fingerprint, and PIN, and if you combine the authentication mode with [face] + [card] / [ID], a user authenticates a face first and fingerprint or PIN.
+- A schedule can be set in BioStar 2. If there is no set schedule, only Always can be selected.
+- For detailed contents regarding setting a schedule, refer to BioStar 2 Administrator’s manual.
+5. Press OK to save the settings.
+
+# Modifying Auth Mode
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select AUTHENTICATION → Auth Mode.
+3. Select the authentication mode to modify.
+4. Modify the authentication mode by referring to Registering auth mode and press OK.
+
+# Delete Auth Mode
+
+1. Press [button] and authenticate with the Admin level credential.
+2. Select AUTHENTICATION → Auth Mode.
+3. Press [button] and select the authentication mode to delete. You can select multiple options.
+4. Press OK. To delete the selected option, press OK. Or, press Cancel to cancel the deletion.

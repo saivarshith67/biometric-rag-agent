@@ -1,0 +1,33 @@
+# Product specifications
+
+| Category                   | Feature                                                                            | Specification                  |
+| -------------------------- | ---------------------------------------------------------------------------------- | ------------------------------ |
+| Biometric                  | Face, Fingerprint                                                                  |                                |
+| RF Option                  | 125 kHz EM & 13.56 MHz MIFARE, MIFARE Plus, DESFire, DESFire EV1/EV2/EV31), FeliCa |                                |
+| RF Read Range2)            | EM/MIFARE/DESFire: 50 mm, Felica: 30 mm                                            |                                |
+| Mobile                     | NFC, BLE                                                                           |                                |
+| CPU                        | 1.8 GHz Dual Core + 1.4 GHz Quad Core                                              |                                |
+| General                    | Memory                                                                             | 16 GB Flash + 2 GB RAM         |
+| Crypto Chip                | Supported                                                                          |                                |
+| LCD Type                   | 7” IPS color LCD                                                                   |                                |
+| LCD Resolution             | 800 x 1280 pixels                                                                  |                                |
+| Sound                      | 16 bit                                                                             |                                |
+| Operating Temperature      | -20 °C \~ 50 °C                                                                    |                                |
+| Storage Temperature        | -40 °C \~ 70 °C                                                                    |                                |
+| Operating Humidity         | 0 % \~ 80 %, non-condensing                                                        |                                |
+| Storage Humidity           | 0 % \~ 90 %, non-condensing                                                        |                                |
+| Camera                     | 2 MP 2 EA                                                                          |                                |
+| Dimension (W x H x D)      | 119.8 x 268.3 x 49.6 (Bottom) / 23.5 (Top) (mm)                                    |                                |
+| Weight                     | • Device: 670 g • Bracket (Including washer and bolt): 205 g                       |                                |
+| IP Rating                  | IP65                                                                               |                                |
+| Certificates               | CE, UKCA, KC, FCC, IC, RCM, BIS, ANATEL, SIG, RoHS, REACH, WEEE                    |                                |
+| Authentication Distance3)  | 0.3 \~ 1.3 m                                                                       |                                |
+| Face                       | Authentication Height                                                              | 1.4 \~ 1.9 m                   |
+| Matching Speed             | Within 0.5 seconds                                                                 |                                |
+| Live Face Detection        | Supported                                                                          |                                |
+| Image Dimension            | 300 x 400 pixels                                                                   |                                |
+| Resolution                 | 500 dpi                                                                            |                                |
+| Fingerprint                | Template                                                                           | SUPREMA / ISO19794-2, ANSI-378 |
+| Extractor / Matcher        | MINEX certified and compliant                                                      |                                |
+| Sensor Certificates        | FBI PIV and FBI Mobile ID FAP20                                                    |                                |
+| Live Fingerprint Detection | Supported (SW-based)                                                               |                                |

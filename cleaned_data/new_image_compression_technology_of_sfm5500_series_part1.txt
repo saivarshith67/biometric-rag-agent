@@ -1,0 +1,26 @@
+# New Image Compression Technology of SFM5500 Series
+
+(a) Original image
+
+(b) Compressed image by WSQ (5.1) Compressed image by WSQ (15.1)
+
+[Figure 2] Different image qualities according to WSQ compression ratio (minimal difference)
+
+| 9000 | Wimc                          |
+| ---- | ----------------------------- |
+| 8000 | Transferring (ms)             |
+| 7000 | Encoding Processing Time (ms) |
+| 6000 |                               |
+| 5000 |                               |
+| 4000 |                               |
+| 3000 |                               |
+| 2000 |                               |
+| 1000 |                               |
+
+Binary WSQ (Q 15.1) WSQ (MQ 10.1) WSQ (HA 5.1) Gray
+
+[Figure 3] Comparison of transfer speeds of a single fingerprint image according to WSQ compression ratio: In the case of 15.1 compression ratio, the transfer speed is similar to that of a binary image; including the encoding.
+
+Moreover, starting with SFM SDK v1.6, it offers the WSQ decoding function, enabling the original recovery of the WSQ compression image sent by SFM. The WSQ image compression is an image compression method based on the wavelet transform (Figure 4), optimal for fingerprint images; and its strength is that it retains the image quality much better than block-based compression methods, such as JPEG. (Figure 5)
+
+- http://kb.supremainc.com/knowledge/

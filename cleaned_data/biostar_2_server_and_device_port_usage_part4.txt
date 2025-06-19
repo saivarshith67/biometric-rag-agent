@@ -1,0 +1,21 @@
+# BioStar 2 Server and Device Port Usage
+
+For device with LCDs, you can set it on the device as well.
+
+| Type        | Ethernet       |
+| ----------- | -------------- |
+| Port        | 51211          |
+| DHCP        | Enabled        |
+| IP Address  | 192.168.16.141 |
+| Gateway     | 192.168.16.1   |
+| Subnet Mask | 255.255.255.0  |
+
+From:
+
+https://kb.supremainc.com/knowledge/
+
+Permanent link:
+
+https://kb.supremainc.com/knowledge/doku.php?id=en:2xfaq_what_ports_biostar_2_server_device_use
+
+Last update: 2025/05/21 14:55

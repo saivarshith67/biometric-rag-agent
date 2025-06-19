@@ -1,0 +1,23 @@
+# How to set BioStar 2 and device time
+
+This is mainly because the device time zone setting is to support the case of managing devices in different locations from one single server.
+
+# Access Group Time Zone Setting
+
+If you have branches in different time zones, the access control time will need to be different based on their time zones.
+
+For example, at HQ, it has an access group rule that employees can enter the office from 7 AM to 4 PM during weekdays. With the device time zone setting, the same rule can be easily applied to the devices in different time zones.
+
+The server time zone is set to be as below.
+
+| Language | TimeZone                                    |
+| -------- | ------------------------------------------- |
+| English  | (UTC+9) Seoul; Tokyo, Osaka, Sapporo, Kakut |
+
+● Current Time is 15:56
+
+● Two devices and doors are created.
+
+Here, for example, the below time zone is created and used for the access group setting.
+
+https://kb.supremainc.com/knowledge/

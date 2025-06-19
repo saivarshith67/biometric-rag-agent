@@ -1,0 +1,12 @@
+# Installation
+
+| TTL input connection | Cable shield (optional) |
+| -------------------- | ----------------------- |
+| Door sensor          | 1                       |
+| Door button          | 1                       |
+| 1 - TTL IN0          | Red                     |
+| 2 - TTL IN1          | Yellow                  |
+| 3 - TTL GND          | Black                   |
+| 4 - SH GND           | Gray                    |
+
+FaceStation F2

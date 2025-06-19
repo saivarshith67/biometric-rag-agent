@@ -1,0 +1,9 @@
+# FaceStation F2 Firmware Revision Notes
+
+Firmware Version 1.0.0 (Build No. 1.0.0_200915)
+
+Release: 2020-09-15
+
+Initial Firmware Developed.
+
+EN 301.00.FSF2

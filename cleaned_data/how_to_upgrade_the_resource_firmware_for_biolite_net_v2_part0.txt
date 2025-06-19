@@ -1,0 +1,20 @@
+# How to Upgrade the Resource Firmware for BioLite Net V2
+
+# Overview
+
+Sometimes if you complete the device firmware update for the BioLite Net v2, the device menu and its associated string item does not correspond to each other. This problem can be introduced when the firmware update presented some enhancement/modification in the device functionality/menu items and the existing resource firmware do not reflect the changes.
+
+In this case, you also have to upgrade the resource firmware to maintain the up-to-date status.
+
+# Preparations
+
+1. Make sure you have the resource firmware placed in the path C:\Program Files (x86)\BioStar 2\resource.
+2. Have a BioLite Net device added on the BioStar 2.
+
+# Start BioStar 2 and update the resource firmware
+
+1. Start BioStar2 client and log in.
+2. Go to DEVICE and click the BioLite Net device that you want to update its resource firmware.
+3. Expand the Advanced tab and locate the Display/Sound section.
+
+https://kb.supremainc.com/knowledge/

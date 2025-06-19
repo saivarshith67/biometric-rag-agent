@@ -1,0 +1,12 @@
+# Event Log
+
+# View Log Usage
+
+You can check the status of log usage.
+
+1. Press and authenticate with the Admin level credential.
+2. Select EVENT LOG → You can check the capacity of event and image logs on the device.
+
+| EventLogUsage | Total Event Logs | 250 | 5,000,000 |
+| ------------- | ---------------- | --- | --------- |
+|               | Total Image Logs | 0   | 50,000    |

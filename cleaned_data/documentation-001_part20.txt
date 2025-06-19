@@ -1,0 +1,26 @@
+# System Setup
+
+- Server URL: Enter the BioStar 2 server’s URL instead of Server IP. You can enter the values when Device > Server is selected for Connection Mode.
+- Server IP: Enter the IP address of the PC where BioStar 2 is installed. You can enter the values when Device > Server is selected for Connection Mode.
+- Server Port: Enter the port address of the PC with BioStar 2 installed. You can enter the values when Device > Server is selected for Connection Mode.
+
+Press OK to save the settings.
+
+# NOTE
+
+- Press the number buttons to enter the values for Server IP and Server Port. Use the  button to delete the values entered. Use the  button to enter a separator.
+
+# RS-485 Settings
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to NETWORK > RS-485 then press OK.
+
+| RS-485    | Mode   | Default |
+| --------- | ------ | ------- |
+| Baud Rate | 115200 |         |
+
+Select an item and press the  /  buttons to change the settings.
+- Mode: Select RS-485 mode.
+- Baud Rate: Select a baud rate.
+
+Press OK to save the settings.

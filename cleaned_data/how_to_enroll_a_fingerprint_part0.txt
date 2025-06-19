@@ -1,0 +1,24 @@
+# How to enroll a fingerprint
+
+# BioStar 2, Fingerprint
+
+In order to improve the fingerprint authentication rate, register the fingerprint correctly. If you register the fingerprint with attention to the following matters, the authentication rate can be improved.
+
+# Selecting a finger for fingerprint input
+
+- In preparation for the case that the fingerprint of a specific finger cannot be used, for example if the user is lifting a load with one hand or a finger gets hurt, up to 10 fingerprints for each user can be registered.
+- In the case of a user whose fingerprint cannot be recognized well, the authentication rate can be improved by enrolling the same finger twice repeatedly.
+- If a finger has a cut or the fingerprint is blurry, select another finger for the fingerprint.
+- It is recommended to use the index finger or the middle finger when scanning the fingerprint. The authentication rate can be reduced if it is difficult to place another finger at the center of the fingerprint sensor accurately.
+
+# Cautions for enrolling a fingerprint
+
+When a fingerprint is recognized, it is compared with the initially registered fingerprint, so the initial fingerprint enroll is the most important. Pay attention to the following matters when enrolling in the fingerprint.
+
+- Place the finger deep enough to contact the sensor completely.
+- Place the center of the fingerprint in the center of the sensor.
+- If a finger has a cut or the fingerprint is blurry, select another finger for the fingerprint.
+- Scan the fingerprint correctly without moving according to the instruction on the screen.
+- If you make the finger upright so that the contact area with the sensor has decreased or the angle of finger has warped, fingerprint authentication may not be performed.
+
+Source

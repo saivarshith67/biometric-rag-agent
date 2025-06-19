@@ -1,0 +1,27 @@
+# How to use the DB migration tool
+
+1. Run Services from your Windows control panel (Control Panel &gt; Administrative Tools &gt; Services)
+2. Search for BioStar 2 Launcher Service.
+
+| Action              | Name                                    | Description       | Log On          |
+| ------------------- | --------------------------------------- | ----------------- | --------------- |
+| Start the service   | Background Intelligent Transfer Service | Granted Automatic | Local System    |
+| Restart the service | Base Filtering Engine                   | Granted Automatic | Local System    |
+|                     | BioStar Video Service                   | Granted Automatic | Local System    |
+|                     | BitLocker Drive Encryption Service      | Manual            | Local System    |
+|                     | Bluetooth Support Service               | Manual            | Local Service   |
+|                     | BranchCache                             | Manual            | Network Service |
+|                     | Certificate Propagation                 | Manual            | Local System    |
+|                     | Climatology Windows                     |                   | Local Service   |
+
+The status would appear as blank.
+
+BioStar 2 Launcher Service: BioStar2 Lr Automatic
+
+Right click BioStar2 Launcher Service and click Stop.
+
+Fill out the DB information in the migration tool configuration file. (B2DM\config\userConfig).
+
+- For MSSQL, please copy userConfig.mssql file to [userConfig] file.
+
+https://kb.supremainc.com/knowledge/

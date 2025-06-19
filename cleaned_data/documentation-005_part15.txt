@@ -1,0 +1,19 @@
+# Authentication
+
+- Face Detect Setting: Set the face authentication area by adjusting the size and position of the detected area.
+- It is recommended to maintain the default values of options under Face Detect Setting. The default values of each option are as follows:
+- ToM Enrollment: Enabling ToM Enrollment can be enrolled the Template on Mobile issued by BioStar 2. Template on Mobile is a Mobile Access card in which the user’s biometric templates can be stored so you can still use biometric authentication although your biometric information is not stored in BioStar 2 server, Airfob Portal, or device.
+- For detailed contents regarding Template on Mobile, refer to the BioStar 2 Administrator Guide.
+- Store Visual Face Image: Set whether to store both the actual image and the template in the visual face or to store only the template without storing the actual image. If disabled, all stored images of visual faces will be deleted, and newly enrolled visual faces will store templates excluding images.
+- After disabling this setting, please use BioStar 2 v2.9.7 or higher.
+- Security Level: Set the security level for 1:N authentication.
+- Operation Mode: Set the operation mode of the device when the face is authenticated.
+- Fusion Matching: Use both visual and infrared cameras to increase the face authentication accuracy.
+- Fast Matching: The device authenticates users who pass an access point without a pause within the authentication distance.
+- Fake Detection: The device prevents user authentication using fake faces, such as photos. It is available when Operation Mode is set to Fusion Matching.
+- Advanced Settings: Set the settings of the face authentication, such as mask detection, thermal camera.
+- Check Mode: Set the check mode depending on the usage.
+- Authentication Fail Sound: Set the alarm to trigger when a user is not wearing a mask, or the measured temperature is higher than preset threshold.
+- Mask Detection: Set the mask detection mode to detect whether a user is wearing a mask or not. If you select Enabled (Hard), it refuses authentication of users who are not wearing a mask and saves event logs. If you select Enabled (Soft), users who are not wearing a mask can authenticate but event logs still be saved.
+- Thermal Camera: Set the thermal camera options. If you select Enabled (Hard), it refuses authentication of users with elevated temperature than the preset threshold and saves event logs. If you select Enabled (Soft), users with elevated temperature than the preset threshold can authenticate but event logs still be saved.
+- Set the Check Mode depending on the usage when Mask Detection or Thermal Camera is activated.

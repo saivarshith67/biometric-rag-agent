@@ -1,0 +1,31 @@
+# Product specifications
+
+| Category                      | Feature                                                                                      | Specification                                           |
+| ----------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Capacity                      | Max. User                                                                                    | 100,0004)                                               |
+| Max. Credential (1:N)         | • Face: 50,000 • Fingerprint: 100,000 • Face: 100,000                                        |                                                         |
+| Max. Credential (1:1)         | • Fingerprint: 100,000 • Card: 100,000 • PIN: 100,000                                        |                                                         |
+| Max. Text Log                 | 5,000,000                                                                                    |                                                         |
+| Max. Image Log                | 50,000                                                                                       |                                                         |
+| Interface                     | Ethernet                                                                                     | Supported (10/100 Mbps, auto MDI/MDI-X)                 |
+| RS-485                        | 1 ch Master / Slave (Selectable)                                                             |                                                         |
+| RS-485 Communication Protocol | OSDP V2 compliant                                                                            |                                                         |
+| Wiegand                       | 1 ch Input / 1 ch Output (Selectable)                                                        |                                                         |
+| TTL Input                     | 2 ch Inputs                                                                                  |                                                         |
+| Electrical                    | Relay                                                                                        | 1 Relay                                                 |
+| USB                           | USB 2.0 (Host)                                                                               |                                                         |
+| Tamper                        | Supported                                                                                    |                                                         |
+| Power                         | • Voltage: 12 Vdc • Current: Max. 2.1 A • Voltage: 24 Vdc • Current: Max. 1 A                |                                                         |
+| Switch Input                  | VIH                                                                                          | • Min.: 3 V • Max.: 5 V                                 |
+| VIL                           | Max.: 1 V                                                                                    |                                                         |
+| Pull-up Resistance            | 4.7 kΩ (The input pots are pulled up with 4.7 kΩ.)                                           |                                                         |
+| Wiegand Output                | VOH: More than 4.8 V VOL: Less than 0.2 V Pull-up Resistance: Internally pulled up with 1 kΩ |                                                         |
+| Relay                         |                                                                                              | 2 A @ 30 VDC Resistive load 1 A @ 30 VDC Inductive load |
+
+1) DESFire EV2/EV3 cards are supported by having backward compatibility of DESFire EV1 cards. CSN and smart card functions are compatible with FaceStation F2.
+
+2) RF read range will vary depending on installation environment.
+
+3) The minimum face authentication distance shown is the default setting for the product, and the recommended face authentication distance is 0.5 to 1.3 m.
+
+4) The number of users registered without having any credential data.

@@ -1,0 +1,26 @@
+# Safety instructions
+
+# Caution
+
+# Operation
+
+- Do not drop the product or cause impacts to the product.
+- The product may malfunction.
+- Do not disconnect the power supply while upgrading the firmware of the product.
+- The product may malfunction.
+- Do not disclose the password to others and change it regularly.
+- This may result in illegal intrusion.
+- Do not press buttons on the product by force or do not press them with a sharp tool.
+- The product may malfunction.
+- Do not store your product in very hot or very cold places. It is recommended to use your product at temperatures from -20 °C to 50 °C.
+- The product may malfunction.
+- When cleaning the product, mind the following.
+- Wipe the product with a clean and dry towel.
+- If you need to sanitize the product, moisten the cloth or the wipe with a proper amount of rubbing alcohol and gently clean all exposed surfaces including fingerprint sensor. Use rubbing alcohol (containing 70% Isopropyl alcohol) and a clean, non-abrasive cloth like lens wipe.
+- Do not apply liquid directly to the surface of the product.
+- Do not use the product for anything other than its intended use.
+- The product may malfunction.
+
+# RTC Battery
+
+Use of an unapproved or incorrect type of battery may result in a risk of explosion. Discard the battery according to the appropriate regional or international waste regulations.

@@ -1,0 +1,54 @@
+# System Setup
+
+# Display & Sound
+
+You can configure the display and sound settings on the device.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DISPLAY & SOUND, then press OK.
+
+| DISPLAY & SOUND   |          |
+| ----------------- | -------- |
+| Theme             | Theme    |
+| Background        | Logo     |
+| Backlight Timeout |          |
+| Menu Timeout      |          |
+| Msg Timeout       |          |
+| Language          | English  |
+| Voice Instruction | Disabled |
+
+3. Select an item and press the &#x25B2; / &#x25BC; buttons to change the settings.
+
+- Theme: Changes the style of the home screen.
+- Background: Selects items to display on the home screen background.
+- Backlight Timeout: Configures how long (in seconds) the LCD screen light stays on.
+- Menu Timeout: Configures the time (in seconds) for the menu screen to automatically disappear. If there is no button input for the specified period, the display goes back to the home screen.
+- Msg Timeout: Configures the time (in seconds) for the configuration completion message or notification message to automatically disappear.
+- Language: Selects the language to use.
+- Voice Instruction: You can use voice instructions instead of beep.
+- Volume: Adjusts the volume.
+
+4. Press OK to save the settings.
+
+# Device
+
+# Date & Time
+
+You can configure the date and time settings. Be sure to correctly configure the settings to collect accurate log data.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to DEVICE &gt; Date & Time, then press OK.
+
+| Date        | 2015/03/03 |
+| ----------- | ---------- |
+| Time        | 15.29.59   |
+| Time Zone   | UTC +9.00  |
+| Time Sync   | Disabled   |
+| Date Format | YYYY/MM/DD |
+| Time Format | 24-Hour    |
+
+3. Select an item and press the &#x25B2; / &#x25BC; buttons to change the settings.
+
+- Date: Sets the current date. Press the number buttons to enter the date.
+- Time: Sets the current time. Press the number buttons to enter the time.
+- Time Zone: Sets the time zone for your area.

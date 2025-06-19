@@ -1,0 +1,15 @@
+# Suprema’s Live Finger Detection Technology
+
+# LFD, Live Finger Detection, Fingerprint
+
+Technology related to physical security systems has made great leap forward, however traditional authentication methods such as locks and keys, PIN, cards are still widely used. This leads to potential risks of credential breach where credentials are passed to others, lost or stolen that ultimately leads to compromise in security. Biometric authentication can easily resolve such problems, drastically enhancing security and credibility of personal authentication by forcing the use of true identity and prevent people from authenticating oneself using someone else’s credentials.
+
+The advantages provided by biometric technology allowed quick adoption by the security markets. Among the biometric technologies, fingerprint technology offered most flexibility with cost benefits that allowed its adoption to various applications. Today, fingerprint is the most flexible and reliable method with higher recognition rate than any biometric technologies such as iris, facial, and vein recognitions.
+
+However, there’s also a growing concern with regards to the usage of fake fingerprints. Since fingerprint residue can be easily captured from things that we touch in our daily lives, if we do not pay enough attention, somebody can capture and replicate your fingerprints and use them for malicious purposes.
+
+# Big Enemy; Fake Fingerprint and Spoofing
+
+The replicated fingerprint made from materials like clay, gelatin, silicone and rubber is called ‘fake fingerprint’ and authenticating with these fake fingerprints is called ‘spoofing’. After the release of the iPhone 5S and introduction of a built-in fingerprint sensor, contests were held to crack the device’s fingerprint scanner have been held with lots of hackers joining the competitions and numerous IT
+
+- https://kb.supremainc.com/knowledge/

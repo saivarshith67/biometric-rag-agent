@@ -1,0 +1,18 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+# What is a Time and Attendance System?
+
+The time and Attendance (T&A) System is a process that tracks and manages employees’ check-in and check-out times, meal times, vacations, and absences. Traditional time and attendance systems were based on a manual recording process, where employees recorded their time and schedule information on various manual recording devices from paper, punch cards or computers. The data gathered from such records then would be processed by managers, and salaries were calculated based on such information. The process is deemed very inefficient due to the large amount of time it takes for a manager to process such data. Furthermore, such processes suffer from inaccuracy and lack of reliability from data input errors, calculation errors, or scamming activities arising from human resources.
+
+Implementing an automated time and attendance system will resolve previously mentioned issues by greatly reducing errors that may occur during the collection and calculation stages. The automated time and attendance system will allow for simpler workforce management as they can be easily grouped, and attendance rules such as work hours, breaks, absences, meal-time, etc. can be applied accordingly. Furthermore, reports can be generated on demand as such data is processed and calculated automatically.
+
+# Time and Attendance System
+
+| Attendance | Time Rate | Schedule | Working Job Costing |
+| ---------- | --------- | -------- | ------------------- |
+
+“I’m running in 8 minutes late. Can you punch in for me?”
+
+A T&A system’s largest threat is ‘buddy punching,’ which means another person records the time instead of the actual worker. Workforce waste, overpaid payroll, and cheating clocks are increasing annually across the globe because of buddy punching. Buddy punching means that a fellow employee records time in place of the actual employee, and an ordinary time and attendance system that uses credentials such as cards, PINs, or passwords cannot prevent buddy punching because credentials can be shared. For example, let's say that Tom and John are good friends at work. John can register a check-in time for John, who is late for work, or John can register a check-out time for Tom, who left work early without meeting the regulated work hours.
+
+https://kb.supremainc.com/knowledge/

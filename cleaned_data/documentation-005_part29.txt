@@ -1,0 +1,27 @@
+# Device
+
+# USB Memory
+
+Connect USB Memory and import user information to the device or export log and user information from the device.
+
+Upgrade the firmware.
+
+1. Press and authenticate with the Admin level credential.
+2. Select DEVICE → USB Memory.
+3. Select the desired item and change the setting.
+
+# USB Memory
+
+- Import
+- Export
+- FW Upgrade
+
+• Import: Import user information from the connected USB memory.
+
+• Export: Select information you wish to export to the connected USB memory.
+
+• FW Upgrade: Upgrade the firmware if the firmware files are saved in the connected USB memory.
+
+- Do not disconnect the power supply while upgrading the firmware of the device. The device may malfunction.
+- When upgrading the firmware from v1.x.x to v2.x.x, it is recommended to use BioStar 2 or BioStar 2 Device SDK.
+- When upgrading the firmware using a USB memory inevitably, first set Menu Timeout to Always On in the Display & Sound menu before proceeding with the upgrade. Also, even if a failure message is displayed during the upgrade, DO NOT remove the USB memory and wait until a success message is displayed. The device will restart automatically when the upgrade is complete.

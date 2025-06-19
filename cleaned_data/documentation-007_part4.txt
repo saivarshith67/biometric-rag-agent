@@ -1,0 +1,27 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+# Schedule
+
+Schedule allows the structuring of a work schedule by designating the Schedule template, period, holiday, and users. To configure a Schedule, the Time Code, Shift, and Schedule Template has to be configured beforehand, and user and holiday information configured in the BioStar 2 AC module are required as well.
+
+# Benefits and Comparison with BioStar 1
+
+Schedule is similar to BioStar 1’s Individual Shift and Holiday Management. BioStar 2’s Schedule has the Calendar view feature, which shows the Shift to be viewed in a single glance, and Temporary Schedule and Leave may be registered as well. A temporary schedule is particularly useful when temporarily assigning a shift for users because it overrides the normal schedule for a certain period. For example, the Schedule Template has to be reconfigured if a user with a fixed working rule is to be set to use the flexible shift on a specific period of time, but if a Temporary Schedule is registered, it can be configured with a few clicks. Temporary Schedule is similar to BioStar 1’s Shift Override Management, but the function in BioStar 1 requires an upgrade to the SE version.
+
+# Time Card
+
+This function allows a detailed overview and editing of individual time and attendance records.
+
+# Benefits and Comparison with BioStar 1
+
+Time Card is similar to a portion of the Report’s functions in BioStar 1. BioStar 2’s Time Card allows users' time and attendance records to be viewed at one glance with the Calendar View or List View. It also allows editing of these records and registration of Leave as well. In contrast to BioStar 1, the time can be displayed with the time rate applied, and the report is generated in the Report function.
+
+# Report
+
+This function can generate reports about user time and attendance events captured through the time and attendance management system.
+
+# Benefits and Comparison with BioStar 1
+
+Report is similar to BioStar 1’s Report. However, BioStar 2’s Report provides a larger variety of report types than BioStar 1’s Report function. Daily, Daily Summary, Individual, Individual Summary, Leave, Exception, and Modified Punch Log History can be generated as reports, and
+
+https://kb.supremainc.com/knowledge/

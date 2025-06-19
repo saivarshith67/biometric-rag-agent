@@ -1,0 +1,33 @@
+# RS485 Mode (Master, Default, Slave)
+
+This document will guide you to understand the concept of the changed RS485 mode with BioStar 2.
+
+# RS-485 Mode
+
+Three different RS485 modes are supported as below.
+
+|         | TCP/IP Connection | RS485 Slave Device Search | Device Matching |
+| ------- | ----------------- | ------------------------- | --------------- |
+| Default | O                 | X                         | O               |
+| Master  | O                 | O                         | O               |
+| Slave   | O                 | X                         | X               |
+
+* Slave device is not making a device matching, and is just sending the credential input to a master device, and receiving the result and showing it from the indicator or LCD display.
+
+# Add a slave device
+
+Change the RS485 mode to “Master”
+
+Serial
+
+4S485 Mastem
+
+Check the device mode. The “M” mark is shown before device IP address.
+
+IP Address
+
+192.168.16.229
+
+Move a mouse cursor to the master device, and do a right click.
+
+https://kb.supremainc.com/knowledge/

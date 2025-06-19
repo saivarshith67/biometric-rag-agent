@@ -1,0 +1,25 @@
+# Installation
+
+# Network connection
+
+# TCP/IP
+
+# LAN connection (connecting to a hub)
+
+You can connect the product to a hub using a general type CAT-5 cable.
+
+| Hub | PC | FaceStation F2 |
+| --- | -- | -------------- |
+
+# LAN connection (connecting to a PC directly)
+
+FaceStation F2 has an automatic MDI/MDIX function so that it can be connected to a PC directly using a normal straight type CAT-5 cable or a cross cable.
+
+| PC | FaceStation F2 |
+| -- | -------------- |
+
+• When you use a gigabit network switch, please see below information.
+
+- Use a Cat5e UTP (Unshielded Twisted Pair) cable.
+- Use all 4 pairs (8 lines) of cable for network connection.
+- DO NOT use the pair of cable for other purpose.

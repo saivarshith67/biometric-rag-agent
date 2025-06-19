@@ -1,0 +1,31 @@
+# BioStar2 V2.6.0 – Database Table
+
+# NVR
+
+| Column                | Data Type        | Key | Description                                                     |
+| --------------------- | ---------------- | --- | --------------------------------------------------------------- |
+| ID                    | INT(11) UNSIGNED | PK  | Unique ID                                                       |
+| MAKE                  | VARCHAR(255)     |     | NVR Make                                                        |
+| NAME                  | VARCHAR(255)     |     | Name                                                            |
+| IP\_ADDRESS           | VARCHAR(50)      |     | IP Address                                                      |
+| PORT                  | INT(10) UNSIGNED |     | IP Port                                                         |
+| LOGIN\_USER\_ID       | VARCHAR(255)     |     | Login ID for NVR                                                |
+| LOGIN\_PASSWORD       | VARCHAR(255)     |     | Password for NVR                                                |
+| LOG\_TYPE             | VARCHAR(10)      |     | Default Record type for Child IP Cameras, values Video/Snapshot |
+| VIDEO\_LOG\_FROM\_SEC | INT(4) UNSIGNED  |     | Default Video Record Start time from Event time                 |
+| VIDEO\_LOG\_TO\_SEC   | INT(4) UNSIGNED  |     | Default Video Record End time from Event time                   |
+| IMAGE\_LOG\_SEC       | INT(4)           |     | Default Snapshot time from Event time                           |
+| STATUS\_CODE          | VARCHAR(10)      |     | Status Code = AC (active)/IN (inactive)                         |
+| CREATEDAT             | DATETIME         |     | Created date/time                                               |
+| UPDATEDAT             | DATETIME         |     | Updated date/time                                               |
+
+# RCDPTH
+
+| Column    | Data Type           | Key | Description            |
+| --------- | ------------------- | --- | ---------------------- |
+| ID        | BIGINT(20) UNSIGNED | PK  | Unique ID              |
+| PATH      | VARCHAR(255)        |     | Path String of storage |
+| CREATEDAT | DATETIME            |     | Created date/time      |
+| UPDATEDAT | DATETIME            |     | Updated date/time      |
+
+© 2018 by Suprema Inc.

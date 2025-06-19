@@ -1,0 +1,25 @@
+# Installation
+
+# Power supply connection
+
+# UPS (Optional)
+
+| 1            | DC power             |
+| ------------ | -------------------- |
+| 1 - PWR +VDC | Red (white stripe)   |
+| 2 - PWR GND  | Black (white stripe) |
+
+FaceStation F2
+
+- Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. If you wish to connect and use another device to the power supply adapter, you should use an adapter with a current capacity which is the same or larger than the total power consumption required for the terminal and another device. Refer to the Power in the product specifications for maximum current consumption specifications.
+- DO NOT extend the length of power cable when using the power adapter.
+- Use a separate power supply for Secure I/O 2, the electric lock, and the product respectively. If connecting and using the power supply to these devices together, the devices may malfunction.
+- When connecting the power supply, be aware of the distance between FaceStation F2 and the power supply. The FaceStation F2 should be connected as close as possible to the power supply so that the length of the connecting cable is kept to a minimum. If cable connections are made improperly it may cause the device to malfunction. It is recommended to use a 16 AWG or 18 AWG cable if the FaceStation F2 is far from the power supply. The connection distance may differ depending on the standard of the cable used and the installation environment. FaceStation F2 supports both DC 24 V and DC 12 V power, so check the maximum length according to the cable specification to ensure that the unit is properly powered.
+
+| Max. extended length | Cable standard | DC 24 V | DC 12 V |
+| -------------------- | -------------- | ------- | ------- |
+| 16 AWG               | 150 m          | 50 m    |         |
+| 18 AWG               | 136 m          | 30 m    |         |
+| 20 AWG               | 90 m           | 20 m    |         |
+
+DO NOT use the CAT5 UTP 2-Wire for power supply purpose.

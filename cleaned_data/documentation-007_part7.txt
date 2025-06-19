@@ -1,0 +1,22 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+applied to users or user groups with a few clicks after Time Codes with Attendance Type are configured.
+
+# All in a Single Glance - Calendar View of Time Card
+
+With BioStar 2 T&A System’s Time Card, the Daily work hours, used Shift names, normal working hours, exceptions, absences, and holiday states that affect employee schedule and salary can be seen at a glance. This helps the administrator to manage employees efficiently. Furthermore, each user’s punch records can be edited, and absences can be registered to allow for the simple processing of exceptions.
+
+| Work Time  | Shift   | Regular   | Overtime | Exception | Leave   | Holiday   |
+| ---------- | ------- | --------- | -------- | --------- | ------- | --------- |
+| March 2016 | Sun     | Mon       | Tue      | Wed       | Thu     | Fri       |
+| 08:00      | 00:00   | 00:00     | 00:00    | 00:00     | 00:00   | 00:00     |
+| 8.00.00    | 8.00.00 | (0.00.00) | 8.00.00  | 0.00.00   | 0.00.00 | 0.00.00   |
+| 0.00 00    | 0.00 00 | 0.00.00   | 0.00 00  | @0.00 00  | 0.00 00 | 0.00 -00  |
+| Absence    | Absence | Shift     | Schedule | Time      | Card    | All Users |
+| HQ         | Dep\_   | Dep\_     |          |           |         |           |
+
+# Two Modules Share Same Core Information
+
+BioStar 2’s function can be divided into access control and time and attendance management, which are managed by the AC and TA modules, respectively. These two modules have their own.
+
+- https://kb.supremainc.com/knowledge/

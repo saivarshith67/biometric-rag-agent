@@ -1,0 +1,28 @@
+# Introducing BioStar 2’s Time and Attendance System
+
+Flexible, employees are free to choose their own check-in and check-out times for work each day, and this work type can be changed with a single click.
+
+- Automatic Meal Deduction – A complicated design of a different Time Code or Time Segment is unnecessary for meal time because of this feature. If the Automatic Meal Deduction is checked on, configuration for a meal time can be completed with a few clicks.
+- Break by Punch – You can track how employees use their entire break time daily. Employees have to register break start/break end event with a T&A device for their break, and the administrator can see this record through the Time Card or Report in a single glance.
+
+# Benefits and Comparison with BioStar 1
+
+Shift is similar to BioStar 1’s Daily Schedule. BioStar 2’s Shift additionally supports Work Type (Fixed / Flexible), Automatic Meal Deduction, and Break by Punch.
+
+# Schedule Template
+
+The Schedule Template is the configuration of repeated Shift cycles. Cycles can be configured daily or weekly. The Shift has to be configured beforehand to configure the Schedule Template.
+
+# Benefits and Comparison with BioStar 1
+
+The Schedule Template is similar to BioStar 1’s Shift. BioStar 1 required users to purchase the BioStar SE license to create daily shifts, but BioStar 2’s Schedule Template does not require the purchase of an additional license for this feature. Furthermore, the configured Shift can be easily configured by drag & drop.
+
+# Rule
+
+Rule can be helpful in configuring Shifts when overtime is not applied. Normally, the Overtime Time Code has to be configured first, then time segments for each Overtime Time Code has to be individually configured to configure overtime. However, this method does not allow complicated overtime configuration. Rules can be configured overtime with contextual visibility by configuring time rules, allowing easy implementation of complicated Shifts. For example, if two Overtime Time Codes of A and B need to be implemented, you can configure a flow such as “After 8 hours, apply → overtime of 3 hours then apply overtime B → limit to max overtime of 5 hours.”
+
+# Benefits and Comparison with BioStar 1
+
+Rule is a new function added in BioStar 2. Rule allows easy implementation of overtime rule and allows effortless management of Weekend and Holiday overtime as well.
+
+https://kb.supremainc.com/knowledge/

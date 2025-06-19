@@ -1,0 +1,13 @@
+# FaceStation 2 | Your face is the key
+
+Accommodating a broad array of RFID cards with Multi-RFID technology
+
+FaceStation 2 features Multi-RFID technology, supporting 125 kHz and 13.56 MHz cards all together. If a customer is using 125 kHz cards such as EM and HID Prox and wants to change the access cards to a more advanced and secure 13.56 MHz cards (Mifare, Mifare DESFire, Felica, iClass), then employees at the customer’s site can use both 125 kHz and 13.56 MHz during the transition period. FaceStation 2 also supports NFC and BLE communication technologies.
+
+# Bluetooth
+
+# SIP-based VoIP videophone
+
+FaceStation 2 works as a SIP (session initiation protocol) videophone as well, eliminating the need to install a separate videophone. If a SIP server is already installed at the site, you can utilize the existing SIP infrastructure. Otherwise, customers can install a well-known open source SIP server recommended and tested by Suprema to utilize FaceStation 2 as a videophone.
+
+https://kb.supremainc.com/knowledge/

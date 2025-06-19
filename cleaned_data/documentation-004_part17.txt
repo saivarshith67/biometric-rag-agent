@@ -1,0 +1,15 @@
+# Installation
+
+# Wiegand connection
+
+Use as a Wiegand input or output device
+
+| Cable shield             | (optional) |
+| ------------------------ | ---------- |
+| RFID reader / Controller |            |
+| 1 - WG D0                | Green      |
+| 2 - WG D1                | White      |
+| 3 - WG GND               | Black      |
+| 4 - SH GND               | Gray       |
+
+FaceStation F2

@@ -1,0 +1,40 @@
+# BioStar2 V2.6.0 – Database Table
+
+# USER
+
+| Column                | Data Type    | Key | Description                             |
+| --------------------- | ------------ | --- | --------------------------------------- |
+| USER\_ID              | VARCHAR(255) | PK  | Unique ID                               |
+| NAME                  | VARCHAR(255) |     | Name                                    |
+| BIRTH\_DATE           | DATETIME     |     | NOT Used                                |
+| ST\_DT                | DATETIME     |     | Start date/time                         |
+| EXP\_DT               | DATETIME     |     | Expire date/time                        |
+| GENDER\_CODE          | VARCHAR(255) |     | NOT Used                                |
+| LOGIN\_ID             | VARCHAR(255) |     | Login ID                                |
+| PASSWORD              | VARCHAR(255) |     |                                         |
+| PASSWORD\_EXIST       | TINYINT(1)   |     |                                         |
+| MOBILE\_PHONE         | VARCHAR(255) |     |                                         |
+| EMAIL                 | VARCHAR(255) |     | NOT Used                                |
+| PHOTO\_EXIST          | TINYINT(1)   |     | NOT Used                                |
+| PHOTO                 | VARCHAR(255) |     | NOT Used                                |
+| PHOTO\_DOWNLOADED     | TINYINT(1)   |     | NOT Used                                |
+| STATUS\_CODE          | VARCHAR(10)  |     | Status Code = AC (active)/IN (inactive) |
+| LAST\_UPDATE\_VERSION | INT(11)      |     | Figure out update or not                |
+| CREATEDAT             | DATETIME     |     | Created date/time                       |
+| UPDATEDAT             | DATETIME     |     | Updated date/time                       |
+| UG\_ID                | BIGINT(20)   |     | Parent User Group ID                    |
+
+# USERGROUP
+
+| Column    | Data Type    | Key | Description                 |
+| --------- | ------------ | --- | --------------------------- |
+| ID        | BIGINT(20)   | PK  | Unique ID                   |
+|           | UNSIGNED     |     |                             |
+| NAME      | VARCHAR(255) |     | Name                        |
+| DEPTH     | INT(11)      |     | User Group Tree depth Level |
+| CREATEDAT | DATETIME     |     | Created date/time           |
+| UPDATEDAT | DATETIME     |     | Updated date/time           |
+| PUG\_ID   | BIGINT(20)   |     | Parent User Group ID        |
+|           | UNSIGNED     |     |                             |
+
+© 2018 by Suprema Inc.

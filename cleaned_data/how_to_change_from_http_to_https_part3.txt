@@ -1,0 +1,20 @@
+# How to change from HTTP to HTTPS
+
+Your connection is not private
+
+Attackers might be trying to steal your information from 192.168.16.49 (for example; passwords; messages; Or credit cards). NET:ERR_CERT_AUTHORITY_INVALID
+
+Automatically report details 5 possible security incidents Google Privacy policy
+
+Hide advanced
+
+Back to safety
+
+This server could not prove that it is 192.168.16.49; its security certificate is not trusted by your computer & operating system. This may be caused by misconfiguration or an attacker intercepting your connection:
+
+Proceed to 192.168.16.49 (unsafe)
+
+1. Once again, login with the administrator account.
+2. Go to Setting > HTTPS which is newly created menu when you switch the Web Server protocol to HTTPS.
+
+https://kb.supremainc.com/knowledge/

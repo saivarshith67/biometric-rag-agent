@@ -1,0 +1,61 @@
+# How to use Leave Management function
+
+# Edit Leave
+
+Administrator(1)
+
+| Date                   | 2018-11-01 (Thu) |
+| ---------------------- | ---------------- |
+| Leave                  | Suprema Leave    |
+| Start Datetime         | 2018-11-01       |
+| End Datetime           | 2018-11-01       |
+| Leave Hours            | 13.00            |
+| Apply to Other User(e) |                  |
+| Approver Comments      | Military service |
+
+Now when you click OK, you can see that this leave is now authorized for this user on his or her calendar.
+
+BioStar 2 Settings8Port About Help Administrator
+
+Logout
+
+# DASHBOARD
+
+Add SCHEDULE Suprema Administrator
+
+# USER
+
+Shift Schedule Report
+
+| Sun           | Mon | Tue | Wed | Thu | Sat |
+| ------------- | --- | --- | --- | --- | --- |
+| November 2018 |     |     |     |     |     |
+
+Suprema
+
+# DEVICE
+
+| 107:00      | 20.00        | Elias Garcia | 7 Zh |
+| ----------- | ------------ | ------------ | ---- |
+| 07.00       | 20.00        | Elias Garcia | 7 Zh |
+| 07h00-20 00 | Elias Garcia | 7 Zh         |      |
+| 07.00       | 20.00        | Elias Garcia | 7 Zh |
+| 07h00-20 00 | Elias Garcia | 7 Z0h        |      |
+
+# ACCESS CONTROL
+
+07.00-20 00 Elias Garcia 7 Zoh_
+
+07.00-20.00 Ellas Garcia Zon
+
+07.00-20.00 Ellas Garcia Zon
+
+07.00-20 00 Elias Garcia 7 Zoh_
+
+07.00-20.00 Ellas Garcia Zon
+
+# MONITORING ATTENDANCE
+
+Go to Report section, set the desired information on period, report type, column setting, user, and press “Update Report” after check on Rebuild Time Card. You will see that the Leave that you assigned for the user is now shown on the report.
+
+https://kb.supremainc.com/knowledge/

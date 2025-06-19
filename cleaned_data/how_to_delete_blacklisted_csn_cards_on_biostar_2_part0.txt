@@ -1,0 +1,27 @@
+# How to delete blacklisted CSN cards on BioStar 2
+
+# Summary of the issue
+
+In BioStar 2, you can currently (version 2.2.1, 4/29/16)
+
+- Block (blacklist) a CSN card and delete card
+- Block (blacklist) a CSN card and delete the user
+
+In such cases, you cannot reuse this card because it remains in the Blacklist and there is no way to delete it from the list.
+
+The best way to prevent such problems is to delete the user after unblocking the card so please keep that in mind.
+
+In future versions of BioStar 2 you will be able to delete such Blacklisted cards, but for now, you can use the temporary solution below to delete the Blacklisted card.
+
+This solution only applies for CSN cards. You cannot delete a blacklisted Smart Card with this process.
+
+If you're looking for a solution for BioStar 2.3 or above refer to the Freshdesk FAQ Link.
+
+This makes direct changes to your database. Please back up your database before proceeding.
+
+# Procedure
+
+1. Find the card CSN in Setting > Card > Blacklist Card and write the number down.
+2. Stop BioStar 2 service in BioStar Setting.
+
+https://kb.supremainc.com/knowledge/

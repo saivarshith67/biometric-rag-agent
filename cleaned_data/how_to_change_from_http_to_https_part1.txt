@@ -1,0 +1,6 @@
+# How to change from HTTP to HTTPS
+
+1. To enable HTTPS protocol, select HTTPS for Web Server Protocol and then click Apply.
+2. Open BioStar Setting program (All programs > BioStar 2 > BioStar Setting) and make sure that all service is up and running. You may have the port 443 already designated for another application as displayed below and in this case, make sure you assign the unoccupied HTTPS Port and then click Start to run the service.
+
+- https://kb.supremainc.com/knowledge/

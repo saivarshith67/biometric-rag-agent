@@ -1,0 +1,19 @@
+# Suprema’s Live Finger Detection Technology
+
+# Local pattern of live fingerprint
+
+# Loch patterns of fake fingerprints
+
+# Unnaturalness feature analysis
+
+Usually, it is very hard to make a perfect fake finger and almost every fake finger cannot avoid revealing their unnaturalness - unnatural sharp boundaries, too many white blobs or too large black blobs within fingerprint area, abnormal peaks in histogram distribution, and so on. By observing the mixture of numerous unnaturalness features, numerous fake fingers are effectively rejected.
+
+| Unnatural boundary          | White blob | Black blob | Abnormal projected histogram |
+| --------------------------- | ---------- | ---------- | ---------------------------- |
+| Unnatural fake fingerprints |            |            |                              |
+
+# New Live Finger Detection technology and Liveness Decision Engine
+
+Suprema’s newly developed Liveness Decision Engine (LDE) can effectively prevent spoofing. It detects fake fingerprints with a technology called Dual Light Source Imaging which utilizes infra-red rays and a white light.
+
+https://kb.supremainc.com/knowledge/

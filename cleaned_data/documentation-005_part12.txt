@@ -1,0 +1,16 @@
+# User
+
+# View User Usage
+
+You can see the number of registered users, and cards at a glance.
+
+1. Press and authenticate with the Admin level credential.
+2. Select USER → User usage information appears.
+
+# User Usage
+
+| Total User        | 0 / 100,000 |
+| ----------------- | ----------- |
+| Total Face        | 0 / 100,000 |
+| Total Fingerprint | 0 / 100,000 |
+| Total Card        | 0 / 100,000 |

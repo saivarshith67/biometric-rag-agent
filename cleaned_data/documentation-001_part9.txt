@@ -1,0 +1,37 @@
+# User Management
+
+# Add User Information
+
+You can register the user information and fingerprints.
+
+1. Press the ESC button then authenticate as an administrator.
+2. Go to USER > Add User and press OK.
+
+# Add User
+
+| Name       | PIN        | Fingerprint | Card | User Level | None |
+| ---------- | ---------- | ----------- | ---- | ---------- | ---- |
+| Start Date | 2001.01.01 |             |      |            |      |
+
+3. Select an item then press the button. Press OK after configuring the item to register the user information.
+
+- ID: Enter a number between 1 and 429467295 to register as the user ID. If User ID Type set to Alphanumeric, a combination of alphanumeric characters and symbols (_, -) can be used for the ID. Up to 32 characters can be input.
+- Name: Enters the user name with the number buttons. Press the / buttons to switch between letters and numbers. Press F1/F2 to show more letters.
+- PIN: Enters a PIN. Enter the PIN and press OK. Enter the PIN again to confirm it, then press the OK button. PIN numbers must be 4 to 16 digits to prevent leaking of the PIN.
+- Fingerprint: Enrolls fingerprints for user authentication. After scanning the fingerprint of the registered finger, the same finger should be scanned one more time. Press the ESC button if you do not want to enroll a fingerprint.
+- Card: Registers cards for user authentication. Scan the cards that you want to assign to users. Press the ESC button if you do not want to register another card.
+- User Level: Selects the privileges to assign to the user. Use the / buttons to select the user level.
+- Start Date: Sets the start date for the user account. Press the number buttons to enter the date. Use the button to delete the date. Use the button to enter a separator.
+- Expiration Date: Sets the end date for the user account. Press the number buttons to enter the date. Use the button to delete the date. Use the button to enter a separator.
+- Security Level: Sets the security level for 1:1 Authentication.
+- Duress: Selects the index of the fingerprints to be used as duress fingerprints. This is available only when there are two or more registered fingerprints.
+- Private Auth Mode: Changes the authentication mode for each user. Select a desired item and press the / buttons to change the settings.
+
+# NOTE
+
+The available menus vary depending on the selected user level.
+
+- None: Indicates the level for normal users who cannot use the menu.
+- Administrator: The user can use all menus.
+- Configuration: The user can use AUTHENTICATION, DISPLAY & SOUND, DEVICE, NETWORK, and EVENT LOG menus.
+- User Mgmt: The user can use USER and EVENT LOG menus.

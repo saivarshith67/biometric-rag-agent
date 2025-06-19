@@ -1,0 +1,12 @@
+# Firmware Version 2.1.2 (Build No. 2.1.2_230130)
+
+Release: 2023-02-01
+
+For devices with the new SE processor, after upgrading the firmware to v2.1.0 or higher, you cannot downgrade to a lower version and downgrade the firmware customized in the lower version. Devices with existing SE processor can be downgraded to a lower version. For more information, check the serial number of the device and contact the Suprema (supremainc.com).
+
+# Bug Fixes
+
+1. When using the relay of the master device for the door, the door does not open when authenticating from the device connected as a slave. (Affects version: v2.1.1)
+2. The door does not open on authentication when a door deleted from BioStar 2 gets re-added. (Affects version: v1.0.0)
+
+EN 301.00.FSF2 7 FaceStation F2 Firmware Revision Notes

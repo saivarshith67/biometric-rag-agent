@@ -1,0 +1,16 @@
+# BioStar2 V2.6.0 – Database Table
+
+# BioStar 2 Database Related Cautions
+
+# A. Allowed Tables
+
+Usage of any other table not included in the Table Information section of this document is not allowed.
+
+# B. Auto Sync Tables
+
+There is two kind of table which Synchronized with BioStar. Or not
+
+- a. COL-SETTING, EVENTSYNC, IPCAMERA, NVR, RCDPTH, RECORDLOG, TR_EVT are not sync data.
+- b. Lest data is sync data or not allowed.
+
+© 2018 by Suprema Inc.

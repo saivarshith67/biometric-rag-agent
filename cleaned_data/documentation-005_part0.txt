@@ -1,0 +1,42 @@
+# Safety instructions
+
+# Caution
+
+# Installation
+
+Please read this manual before installing the product to ensure a safe and correct installation.
+
+When wiring the power cable and other cables, make sure to connect them with the power turned off for all devices involved.
+
+- The product may malfunction.
+
+Before connecting power to the product, double-check the manual to ensure that the wiring is correct, then connect the power.
+
+Do not install the product under direct sunlight or UV light.
+
+- This may result in product damage, malfunction, discoloration, or deformation.
+
+Do not install the power supply cable in a location where people pass by.
+
+- This may result in injury or product damage.
+
+Do not install the product near magnetic objects, such as a magnet, TV, monitor (especially CRT), or speaker.
+
+- The product may malfunction.
+
+Keep the minimum distance between products when installing multiple products.
+
+- The product may be affected by radio frequencies emitted by other products and the product may malfunction.
+
+Use the IEC/EN 62368-1 approved power adapter that supports higher power consumption than the product. It is highly recommended to use the power adapter sold by Suprema.
+
+- If the right power supply is not used, the product may malfunction.
+- Refer to the Power in the product specifications for maximum current consumption specifications.
+
+Use a separate power supply for the Secure I/O 2, electric lock, and the product.
+
+- If connecting and using the same power supply, the product may malfunction.
+
+Make sure that the cable cover is completely closed after connecting it to the product to maintain the water-resistant and dust-resistant features (IP65 rating). It is recommended to use the enclosure if the product is installed outside.
+
+- The product may malfunction if the water-resistant and dust-resistant features are damaged.

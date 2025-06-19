@@ -1,0 +1,20 @@
+# Suprema’s Live Finger Detection Technology
+
+Magazines reported about the vulnerability of the fingerprint sensor against fake fingerprints. Numerous videos have been recently uploaded on YouTube where hackers breached the security by making fake fingerprints from Play-Doh, gelatin, silicone, rubber and the like and explained how to make the fake fingerprints.
+
+# What is the solution?
+
+Suprema’s Live Finger Detection (LFD) technology is based on analysis of dynamic and static image characteristics of the fake fingers, and how they can be distinguished from those of live fingers. With the advanced analysis algorithm to detect abnormalities in dynamic changing pattern of fingerprints images, and several static features of liveness or unnaturalness of fingers, fake fingers are clearly distinguished from live fingers.
+
+# Dynamic changing pattern analysis
+
+As fingers gradually make contact with the sensor surface, live fingers naturally demonstrate changes in patterns of area, intensity, and movement, but fake fingers produce unnatural changing patterns of separated areas, partially dark area, distorted boundary shape, and large movement of core part. By detecting these abnormalities in dynamic changing patterns from continuous analysis of fingerprint images, fake fingers are distinguished from live fingers. Specifically, this method is very effective in rejecting fake fingers made from hard materials such as paper, film, clay, and hard rubber.
+
+| Live fingerprint | Fake fingerprint |
+| ---------------- | ---------------- |
+
+# Liveness feature analysis
+
+In fingerprint images, there are several localized features which reveal the liveness of fingers: pore distribution, ridge sharpness, regularity of ridge-valley boundary among others. These localized liveness features are normally too small and elaborate to be copied by simple and soft faking materials such as silicon, rubber, and gelatin. Since Suprema’s high performance imaging sensor can capture high quality fingerprint images, and various local liveness features can easily be distinguished by our advanced analysis algorithm.
+
+Source
