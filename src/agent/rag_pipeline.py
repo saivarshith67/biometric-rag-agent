@@ -40,7 +40,9 @@ class RagPipeline:
         self.search_tool = build_tavily_search_tool(
             max_results=10,
         )
-        self.response_model = build_response_model(retriever_tool=self.retriever_tool, search_tool=self.search_tool)
+        self.response_model = build_response_model(
+            retriever_tool=self.retriever_tool, search_tool=self.search_tool
+        )
         self.grader_model = build_model()
 
         # --- Defer connection and graph objects ---
@@ -86,9 +88,8 @@ class RagPipeline:
 
         generate_web_search_tool_call_wrapped = partial(
             generate_web_search_tool_call,
-            response_model = self.response_model,
-            search_tool = self.search_tool
-            
+            response_model=self.response_model,
+            search_tool=self.search_tool,
         )
 
         # --- Build the LangGraph workflow ---

@@ -36,7 +36,9 @@ def add_nodes(
     workflow.add_node("initialize_current_query", initialize_current_query)
     workflow.add_node("check_query_relevance", check_query_relevance)
     workflow.add_node("unrelated_query_response", unrelated_query_response)
-    workflow.add_node("generate_retriever_tool_call", generate_retriever_tool_call)  # Add this node
+    workflow.add_node(
+        "generate_retriever_tool_call", generate_retriever_tool_call
+    )  # Add this node
     workflow.add_node("retrieve", ToolNode([retriever_tool]))
     workflow.add_node("web_search", ToolNode([search_tool]))
     workflow.add_node("rewrite_question", rewrite_question)

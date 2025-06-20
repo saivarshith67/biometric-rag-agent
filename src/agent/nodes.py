@@ -9,7 +9,8 @@ from src.agent.prompts import (
     UNRELATED_QUERY_PROMPT,
 )
 from src.utils.logger import get_logger
-
+from langfuse import observe
+from langfuse.langchain import CallbackHandler
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import BaseOutputParser
@@ -17,10 +18,11 @@ from langchain.output_parsers.retry import RetryWithErrorOutputParser
 from langchain.output_parsers import BooleanOutputParser
 from pydantic import BaseModel, Field
 from typing import Literal, cast
-
 from src.agent.state import State
 
+
 logger = get_logger(__name__)
+langfuse_handler = CallbackHandler()
 
 
 class GradeDocuments(BaseModel):
@@ -63,6 +65,7 @@ def _get_latest_context(messages):
     return ""
 
 
+@observe()
 def initialize_current_query(state: State) -> State:
     for msg in reversed(state["messages"]):
         if isinstance(msg, HumanMessage):
@@ -75,6 +78,7 @@ def initialize_current_query(state: State) -> State:
     raise ValueError("No user message found to initialize current_query")
 
 
+@observe(name="query_relevance_checker", as_type="generation")
 def query_relavance_checker(state: State, response_model) -> State:
     question = state.get("current_query")
 
@@ -92,7 +96,11 @@ def query_relavance_checker(state: State, response_model) -> State:
 
     input_values = {"question": question}
     prompt_value = prompt_template.format_prompt(**input_values)
-    raw_output = response_model.invoke(prompt_value)
+
+
+    raw_output = response_model.invoke(
+        prompt_value, config={"callbacks": [langfuse_handler]}
+    )
 
     try:
         result = retrying_parser.parse_with_prompt(
@@ -107,6 +115,7 @@ def query_relavance_checker(state: State, response_model) -> State:
     return result
 
 
+@observe()
 def grade_documents(
     state: State, grader_model
 ) -> Literal["generate_answer", "rewrite_question"]:
@@ -132,7 +141,7 @@ def grade_documents(
 
     input_values = {"question": question, "context": context}
     prompt_value = prompt_template.format_prompt(**input_values)
-    raw_output = grader_model.invoke(prompt_value)
+    raw_output = grader_model.invoke(prompt_value, config={"callbacks": [langfuse_handler]})
 
     try:
         result = retrying_parser.parse_with_prompt(
@@ -147,6 +156,7 @@ def grade_documents(
     return "generate_answer" if result else "rewrite_question"
 
 
+@observe()
 def check_query_relevance(state: State, response_model) -> State:
     question = state.get("current_query")
     if not question:
@@ -163,7 +173,7 @@ def check_query_relevance(state: State, response_model) -> State:
 
     input_values = {"question": question}
     prompt_value = prompt_template.format_prompt(**input_values)
-    raw_output = response_model.invoke(prompt_value)
+    raw_output = response_model.invoke(prompt_value, config={"callbacks": [langfuse_handler]})
 
     try:
         result = retrying_parser.parse_with_prompt(
@@ -181,13 +191,14 @@ def check_query_relevance(state: State, response_model) -> State:
     }
 
 
+@observe()
 def unrelated_query_response(state: State, response_model) -> State:
     question = state["current_query"]
     prompt_template = PromptTemplate.from_template(UNRELATED_QUERY_PROMPT)
 
     input_values = {"question": question}
     prompt_value = prompt_template.format_prompt(**input_values)
-    response = response_model.invoke(prompt_value)
+    response = response_model.invoke(prompt_value, config={"callbacks": [langfuse_handler]})
 
     return {
         **state,
@@ -195,9 +206,10 @@ def unrelated_query_response(state: State, response_model) -> State:
     }
 
 
+@observe()
 def generate_retriever_tool_call(state: State, response_model, retriever_tool) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
-        state["messages"], tool_choice="auto"
+        state["messages"], tool_choice="auto", config={"callbacks": [langfuse_handler]}
     )
 
     return {
@@ -206,49 +218,60 @@ def generate_retriever_tool_call(state: State, response_model, retriever_tool) -
     }
 
 
+@observe()
 def rewrite_question(state: State, response_model) -> State:
     question = state["current_query"]
     logger.info(f"Current query : {question}")
     prompt = REWRITE_PROMPT.format(question=question)
 
-    response = response_model.invoke([HumanMessage(content=prompt)])
+    response = response_model.invoke([HumanMessage(content=prompt)], config={"callbacks": [langfuse_handler]})
     logger.debug(f"Rewrite response: {response}")
 
-    new_messages = state["messages"].copy()
-    for i in reversed(range(len(new_messages))):
-        if isinstance(new_messages[i], HumanMessage):
-            new_messages[i] = HumanMessage(content=response.content)
-            break
 
     return {
         **state,
-        "messages": new_messages,
+        "messages": state["messages"] + [response],
         "current_query": response.content,
         "rewrite_attempts": state["rewrite_attempts"] + 1,
         "was_rewritten": True,
     }
 
-
+@observe()
 def generate_answer(state: State, response_model) -> State:
     question = state["current_query"]
-    raw_context = _get_latest_context(state["messages"])
 
-    if not raw_context:
+    # Step 1: Find index of the last HumanMessage (i.e., the current query)
+    last_human_index = -1
+    for i in reversed(range(len(state["messages"]))):
+        if isinstance(state["messages"][i], HumanMessage):
+            last_human_index = i
+            break
+
+    if last_human_index == -1:
+        raise ValueError("No HumanMessage found for the current query.")
+
+    # Step 2: Collect ToolMessages that are responses to this query (i.e., after HumanMessage)
+    tool_messages = [
+        msg for msg in state["messages"][last_human_index + 1 :]
+        if isinstance(msg, ToolMessage) and getattr(msg, "content", None)
+    ]
+
+    if not tool_messages:
         return {
             **state,
             "messages": state["messages"]
-            + [
-                AIMessage(
-                    content="I couldn't find relevant information. Please try again."
-                )
-            ],
+            + [AIMessage(content="I couldn't find relevant information. Please try again.")]
         }
 
-    context = _clean_context(raw_context)
+    # Step 3: Concatenate and clean context
+    combined_context = "\n".join(_clean_context(msg.content) for msg in tool_messages)
+
     logger.info("INSIDE GENERATE ANSWER")
-    logger.info(f"CLEANED CONTEXT = {context}")
-    prompt = GENERATE_PROMPT.format(question=question, context=context)
-    response = response_model.invoke(prompt)
+    logger.info(f"CLEANED CONTEXT = {combined_context}")
+
+    # Step 4: Format prompt and generate answer
+    prompt = GENERATE_PROMPT.format(question=question, context=combined_context)
+    response = response_model.invoke(prompt, config={"callbacks": [langfuse_handler]})
 
     return {
         **state,
@@ -256,10 +279,10 @@ def generate_answer(state: State, response_model) -> State:
     }
 
 
+@observe()
 def generate_web_search_tool_call(state: State, response_model, search_tool) -> State:
-    
     response = response_model.bind_tools(tools=[search_tool]).invoke(
-        state["messages"], tool_choice="auto"
+        state["messages"], tool_choice="auto", config={"callbacks": [langfuse_handler]}
     )
 
     return {

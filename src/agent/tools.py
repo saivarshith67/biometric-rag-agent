@@ -12,5 +12,5 @@ def build_retriever_tool(
     return create_retriever_tool(retriever, name, description)
 
 
-def build_tavily_search_tool(max_results, topic="general"):
+def build_tavily_search_tool(max_results, topic="general", name="tavily_search"):
     return TavilySearch(max_results=max_results, topic=topic)
