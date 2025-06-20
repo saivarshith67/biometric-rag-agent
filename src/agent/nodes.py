@@ -253,7 +253,7 @@ def generate_answer(state: State, response_model) -> State:
     # Step 2: Collect ToolMessages that are responses to this query (i.e., after HumanMessage)
     tool_messages = [
         msg for msg in state["messages"][last_human_index + 1 :]
-        if isinstance(msg, ToolMessage) and getattr(msg, "content", None)
+        if (isinstance(msg, ToolMessage)) and getattr(msg, "content", None)
     ]
 
     if not tool_messages:
