@@ -66,15 +66,17 @@ def add_edges(workflow: StateGraph, grade_documents, query_relavance_checker):
     # CHANGED: From generate_retriever_tool_call, go to retrieve
     workflow.add_edge("generate_retriever_tool_call", "retrieve")
 
-    workflow.add_conditional_edges(
-        "retrieve",
-        grade_documents,
-        {
-            "generate_answer": "generate_answer",
-            "rewrite_question": "generate_web_search_tool_call",
-            # rewriting means retriever failed to retrieve relevant docs so directly going to this node
-        },
-    )
+    # workflow.add_conditional_edges(
+    #     "retrieve",
+    #     grade_documents,
+    #     {
+    #         "generate_answer": "generate_answer",
+    #         "rewrite_question": "generate_web_search_tool_call",
+    #         # rewriting means retriever failed to retrieve relevant docs so directly going to this node
+    #     },
+    # )
+
+    workflow.add_edge("retrieve", "generate_web_search_tool_call")
     workflow.add_edge("generate_web_search_tool_call", "web_search")
     workflow.add_edge("web_search", "generate_answer")
     workflow.add_edge("generate_answer", END)

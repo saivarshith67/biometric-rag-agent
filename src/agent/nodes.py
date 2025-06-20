@@ -197,7 +197,7 @@ def unrelated_query_response(state: State, response_model) -> State:
 
 def generate_retriever_tool_call(state: State, response_model, retriever_tool) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
-        state["messages"], tool_choice="required"
+        state["messages"], tool_choice="auto"
     )
 
     return {
@@ -257,8 +257,9 @@ def generate_answer(state: State, response_model) -> State:
 
 
 def generate_web_search_tool_call(state: State, response_model, search_tool) -> State:
+    
     response = response_model.bind_tools(tools=[search_tool]).invoke(
-        state["messages"], tool_choice="required"
+        state["messages"], tool_choice="auto"
     )
 
     return {

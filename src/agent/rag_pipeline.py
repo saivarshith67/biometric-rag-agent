@@ -84,6 +84,13 @@ class RagPipeline:
             retriever_tool=self.retriever_tool,
         )
 
+        generate_web_search_tool_call_wrapped = partial(
+            generate_web_search_tool_call,
+            response_model = self.response_model,
+            search_tool = self.search_tool
+            
+        )
+
         # --- Build the LangGraph workflow ---
         self._graph = build_workflow(
             retriever_tool=self.retriever_tool,
@@ -95,7 +102,7 @@ class RagPipeline:
             unrelated_query_response=unrelated_query_response_wrapped,
             query_relavance_checker=query_relavance_checker_wrapped,
             initialize_current_query=initialize_current_query,
-            generate_web_search_tool_call=generate_web_search_tool_call,
+            generate_web_search_tool_call=generate_web_search_tool_call_wrapped,
             generate_retriever_tool_call=generate_retriever_tool_call_wrapped,  # ADD THIS
             checkpointer=self.checkpointer,
         )
