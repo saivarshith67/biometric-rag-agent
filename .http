@@ -191,7 +191,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query": "What are the modes in RS485?"
+    "query": "What are the modes in RS485? in biostar"
 }
 
 ###POST REQUEST
@@ -199,7 +199,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query": "Explain me master mode in RS485"
+    "query": "Explain me master mode in RS485 biostar"
 }
 
 
@@ -248,7 +248,7 @@ POST http://localhost:8000/query
 Content-Type: application/json
 
 {
-    "query": "How to upgrade device firmware in BioStar 2"
+    "query": "How to upgrade device firmware in BioStar"
 }
 
 ###POST REQUEST
@@ -289,4 +289,27 @@ Content-Type: application/json
 
 {
     "query": "Maria DB Access configuration"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "How to Upgrade the Resource Firmware for BioLite Net V2"
+}
+
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "How to migrate DB logs"
+}
+###POST REQUEST
+POST http://localhost:8000/query
+Content-Type: application/json
+
+{
+    "query": "How to use Leave Management function?"
 }

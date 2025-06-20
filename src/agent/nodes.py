@@ -209,7 +209,7 @@ def unrelated_query_response(state: State, response_model) -> State:
 @observe()
 def generate_retriever_tool_call(state: State, response_model, retriever_tool) -> State:
     response = response_model.bind_tools(tools=[retriever_tool]).invoke(
-        state["messages"], tool_choice="auto", config={"callbacks": [langfuse_handler]}
+        state["current_query"], tool_choice="auto", config={"callbacks": [langfuse_handler]}
     )
 
     return {
