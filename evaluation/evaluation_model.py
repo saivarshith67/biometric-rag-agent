@@ -3,7 +3,11 @@ from deepeval.models.base_model import DeepEvalBaseLLM # Ensure this
 import json
 import re
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 
+import json
+import re
+from deepeval.models.base_model import DeepEvalBaseLLM
 
 class EvaluationModel(DeepEvalBaseLLM):
     def __init__(self, model):
@@ -14,22 +18,18 @@ class EvaluationModel(DeepEvalBaseLLM):
 
     def _clean_json_response(self, response: str) -> str:
         """Clean and extract JSON from response"""
-        # Remove any markdown formatting
         response = re.sub(r'```json\n?', '', response)
         response = re.sub(r'```\n?', '', response)
 
-        # Try to find JSON in the response
         json_match = re.search(r'\{.*\}', response, re.DOTALL)
         if json_match:
             json_str = json_match.group(0)
             try:
-                # Validate JSON
                 json.loads(json_str)
                 return json_str
             except json.JSONDecodeError:
                 pass
 
-        # If no valid JSON found, return the original response
         return response.strip()
 
     def generate(self, prompt: str) -> str:
@@ -42,13 +42,13 @@ class EvaluationModel(DeepEvalBaseLLM):
         response = chat_model.invoke(enhanced_prompt).content
         return self._clean_json_response(response)
 
-    async def a_generate(self, prompt: str) -> str:
+    async def a_generate(self, prompt: str, schema=None) -> str:
         chat_model = self.load_model()
         res = await chat_model.ainvoke(prompt)
         return self._clean_json_response(res.content)
 
     def get_model_name(self):
-        return "llama3-8b-8192"
+        return "qwen2.5:0.5b"
 
 
 # model = model = ChatOpenAI(
@@ -62,11 +62,14 @@ class EvaluationModel(DeepEvalBaseLLM):
 
 if __name__ == "__main__":
 
-    model = ChatOpenAI(
-        model="meta-llama/llama-3.3-8b-instruct:free",
-        temperature=0,
-        base_url="https://openrouter.ai/api/v1",  # ✅ Corrected URL
-        api_key="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",
+    model = ChatOllama(
+        model="qwen2.5:0.5b",
+        temperature=0
     )
     evaluation_model = EvaluationModel(model=model)
-    print(evaluation_model.generate("""Write me a joke in JSON format like IMPORTANT: Your response must ONLY contain valid JSON. DO NOT include ANY text, explanations, or markdown. Respond ONLY with raw JSON like: {"joke": "..."}"""))
+    response = evaluation_model.generate("""Write me a joke in JSON format. IMPORTANT: Your response must ONLY contain valid JSON. DO NOT include ANY text, explanations, or markdown. Respond ONLY with raw JSON like: {"joke": "..."}""")
+    try:
+        print(response)
+        json.loads(response)
+    except Exception as e:
+        print(e)

@@ -300,6 +300,7 @@ dependencies = [
     { name = "langchain-community" },
     { name = "langchain-google-genai" },
     { name = "langchain-huggingface" },
+    { name = "langchain-ollama" },
     { name = "langchain-tavily" },
     { name = "langfuse" },
     { name = "langgraph" },
@@ -309,7 +310,6 @@ dependencies = [
     { name = "llama-parse" },
     { name = "psycopg" },
     { name = "pydantic" },
-    { name = "pygraphviz" },
     { name = "pypdf" },
     { name = "ragas" },
     { name = "ruff" },
@@ -329,6 +329,7 @@ requires-dist = [
     { name = "langchain-community", specifier = ">=0.3.25" },
     { name = "langchain-google-genai", specifier = ">=2.1.5" },
     { name = "langchain-huggingface", specifier = ">=0.3.0" },
+    { name = "langchain-ollama", specifier = ">=0.3.3" },
     { name = "langchain-tavily", specifier = ">=0.2.3" },
     { name = "langfuse", specifier = ">=3.0.3" },
     { name = "langgraph", specifier = ">=0.4.8" },
@@ -338,7 +339,6 @@ requires-dist = [
     { name = "llama-parse", specifier = ">=0.6.34" },
     { name = "psycopg", specifier = ">=3.2.9" },
     { name = "pydantic", specifier = ">=2.11.5" },
-    { name = "pygraphviz", specifier = ">=1.14" },
     { name = "pypdf", specifier = ">=5.6.0" },
     { name = "ragas", specifier = ">=0.2.15" },
     { name = "ruff", specifier = ">=0.11.13" },
@@ -1515,6 +1515,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/3d/72/5f32c8e6db4d94c00252318aa7910102134b4bd6b2af1b13f2042f7f95f6/langchain_huggingface-0.3.0.tar.gz", hash = "sha256:d1cf93fb4d4eafc8b44edcd5fba904b27cbd3fda6cdef0e2321fbcf4efcda822", size = 24823, upload-time = "2025-06-10T20:50:44.739Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c1/da/7446c2eeacd420cb975ceb49c6feca7be40cf8ed3686a128ca78410c148f/langchain_huggingface-0.3.0-py3-none-any.whl", hash = "sha256:aab85d57e649c805d2f2a9f8d72d87b5d12c45dd4831309ac9c37753ddb237ed", size = 27359, upload-time = "2025-06-10T20:50:43.506Z" },
+]
+
+[[package]]
+name = "langchain-ollama"
+version = "0.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "ollama" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/59/9f/6683f69f14b0cde3556c6b7752fb290bfce743981dc1312efa924619365f/langchain_ollama-0.3.3.tar.gz", hash = "sha256:7d6ed75bfb706751b83173fe886b72ae25bb0b1bd7f3eb2622821c4149f7807b", size = 21913, upload-time = "2025-05-15T20:27:06.027Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/84/6f/ab7a470522e27b95ed008eb9ef81b1ab55321f3f3aff21ca0109aae53cdf/langchain_ollama-0.3.3-py3-none-any.whl", hash = "sha256:f1c745a4b59d36bb51995c23c6b0fbc20f71956715659425ab88639a14b213cd", size = 21156, upload-time = "2025-05-15T20:27:05.159Z" },
 ]
 
 [[package]]
@@ -3290,12 +3303,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/7c/2d/c3338d48ea6cc0feb
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl", hash = "sha256:9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c", size = 1225293, upload-time = "2025-01-06T17:26:25.553Z" },
 ]
-
-[[package]]
-name = "pygraphviz"
-version = "1.14"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/66/ca/823d5c74a73d6b8b08e1f5aea12468ef334f0732c65cbb18df2a7f285c87/pygraphviz-1.14.tar.gz", hash = "sha256:c10df02377f4e39b00ae17c862f4ee7e5767317f1c6b2dfd04cea6acc7fc2bea", size = 106003, upload-time = "2024-09-29T18:31:12.471Z" }
 
 [[package]]
 name = "pypdf"

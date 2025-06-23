@@ -8,6 +8,7 @@ from deepeval.metrics import (
     ContextualRelevancyMetric,
 )
 from langchain_openai import ChatOpenAI
+from langchain_ollama import ChatOllama
 import time
 
 
@@ -48,19 +49,10 @@ if __name__ == "__main__":
         )
 
     # Step 3: Initialize custom model
-    # model = model = ChatOpenAI(
-    #     model="meta-llama/llama-3.3-8b-instruct:free",
-    #     temperature=0,
-    #     base_url="https://openrouter.ai/api/v1",  # ✅ Corrected URL
-    #     api_key="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",
-    # )
 
-    model = model = ChatOpenAI(
-        model="llama3-8b-8192",
-        temperature=0,
-        base_url="https://api.groq.com/openai/v1",  # ✅ Corrected URL
-        # api_key="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",
-        api_key="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",
+    model = ChatOllama(
+        model="qwen2.5:0.5b",
+        temperature=0
     )
     custom_model = EvaluationModel(model=model)
 
