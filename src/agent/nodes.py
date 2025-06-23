@@ -19,7 +19,7 @@ from langchain.output_parsers import BooleanOutputParser
 from pydantic import BaseModel, Field
 from typing import Literal, cast
 from src.agent.state import State
-
+import json
 
 logger = get_logger(__name__)
 langfuse_handler = CallbackHandler()
@@ -273,9 +273,22 @@ def generate_answer(state: State, response_model) -> State:
     prompt = GENERATE_PROMPT.format(question=question, context=combined_context)
     response = response_model.invoke(prompt, config={"callbacks": [langfuse_handler]})
 
+    answer = response.content
+
+    evaluation = {
+        "question" : question,
+        "answer" : answer,
+        "context" : combined_context
+    }
+
+    EVALS_FILE = "./evaluation/evaluations.jsonl"
+
+    with open(EVALS_FILE, "a", encoding="utf-8") as f:
+        f.write(json.dumps(evaluation, ensure_ascii=False) + "\n")
+
     return {
         **state,
-        "messages": state["messages"] + [AIMessage(content=response.content)],
+        "messages": state["messages"] + [AIMessage(content=answer)],
     }
 
 
