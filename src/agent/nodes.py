@@ -275,16 +275,16 @@ def generate_answer(state: State, response_model) -> State:
 
     answer = response.content
 
-    evaluation = {
-        "question" : question,
-        "answer" : answer,
-        "context" : combined_context
-    }
+    # evaluation = {
+    #     "question" : question,
+    #     "answer" : answer,
+    #     "context" : combined_context
+    # }
 
-    EVALS_FILE = "./evaluation/evaluations.jsonl"
+    # EVALS_FILE = "./evaluation/evaluations.jsonl"
 
-    with open(EVALS_FILE, "a", encoding="utf-8") as f:
-        f.write(json.dumps(evaluation, ensure_ascii=False) + "\n")
+    # with open(EVALS_FILE, "a", encoding="utf-8") as f:
+    #     f.write(json.dumps(evaluation, ensure_ascii=False) + "\n")
 
     return {
         **state,
