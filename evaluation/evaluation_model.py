@@ -51,16 +51,22 @@ class EvaluationModel(DeepEvalBaseLLM):
         return "llama3-8b-8192"
 
 
-# ✅ Create Gemini 1.5 Flash model using LangChain
-model = model = ChatOpenAI(
-    model="llama3-8b-8192",
-    temperature=0,
-    base_url="https://api.groq.com/openai/v1",  # ✅ Corrected URL
-    api_key="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",
-)
+# model = model = ChatOpenAI(
+#     model="llama3-8b-8192",
+#     temperature=0,
+#     base_url="https://api.groq.com/openai/v1",  # ✅ Corrected URL
+#     api_key="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",
+# )
 
 
-evaluation_model = EvaluationModel(model=model)
 
 if __name__ == "__main__":
+
+    model = ChatOpenAI(
+        model="meta-llama/llama-3.3-8b-instruct:free",
+        temperature=0,
+        base_url="https://openrouter.ai/api/v1",  # ✅ Corrected URL
+        api_key="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",
+    )
+    evaluation_model = EvaluationModel(model=model)
     print(evaluation_model.generate("""Write me a joke in JSON format like IMPORTANT: Your response must ONLY contain valid JSON. DO NOT include ANY text, explanations, or markdown. Respond ONLY with raw JSON like: {"joke": "..."}"""))
