@@ -16,7 +16,7 @@ WORKDIR /app
 COPY pyproject.toml uv.lock ./
 
 # Install Python dependencies
-RUN uv sync
+RUN uv sync --no-dev && uv cache clean
 
 # Copy application code
 COPY ./src /app/src
