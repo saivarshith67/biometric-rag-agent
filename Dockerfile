@@ -24,7 +24,7 @@ COPY ./cleaned_data /app/cleaned_data
 COPY Makefile /app/
 
 # Build index (make sure this step doesn't fail)
-RUN make index
+RUN python -m src.index_builder
 
 # Create non-root user for security
 RUN useradd --create-home --shell /bin/bash app && \
@@ -35,4 +35,4 @@ USER app
 EXPOSE 8000
 
 # Use exec form for better signal handling
-CMD ["make", "backend"]
+CMD ["python", "-m", "src.main"]
