@@ -20,14 +20,11 @@ RUN uv sync
 
 # Copy application code
 COPY ./src /app/src
-COPY ./cleaned_data /app/cleaned_data
-COPY Makefile /app/
+COPY ./chroma_vector_db /app/chroma_vector_db
 
 # Set PATH to use the virtual environment (replaces the need for activation)
 ENV PATH="/app/.venv/bin:$PATH"
 
-# Build index (make sure this step doesn't fail)
-RUN python -m src.index_builder
 
 # Create non-root user for security
 RUN useradd --create-home --shell /bin/bash app && \
