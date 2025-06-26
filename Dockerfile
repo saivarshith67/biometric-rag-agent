@@ -1,7 +1,7 @@
 # ================================
 # STAGE 1: Builder - Install dependencies
 # ================================
-FROM python:3.11-slim as builder
+FROM python:3.11.13-alpine as builder
 
 # Install uv and any build dependencies needed
 RUN pip install --no-cache-dir uv
@@ -23,7 +23,7 @@ FROM python:3.11-slim
 
 # Install only runtime system dependencies in one layer
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends nginx curl && \
+    apt-get install -y --no-install-recommends nginx && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
