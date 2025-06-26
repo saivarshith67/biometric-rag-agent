@@ -1,7 +1,7 @@
 # ================================
 # STAGE 1: Builder - Install dependencies
 # ================================
-FROM python:3.11.13-alpine as builder
+FROM python:3.11.13-slim as builder
 
 # Install uv and any build dependencies needed
 RUN pip install --no-cache-dir uv
