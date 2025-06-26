@@ -1,38 +1,32 @@
 FROM python:3.11-slim
 
-# Install system dependencies and clean up in same layer to reduce image size
+# Do EVERYTHING in one RUN command to avoid layer bloat
 RUN apt-get update && \
-    apt-get install -y nginx curl && \
+    apt-get install -y --no-install-recommends nginx curl && \
+    pip install --no-cache-dir uv && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /root/.cache/*
 
-# Install uv
-RUN pip install uv
-
-# Set working directory
 WORKDIR /app
 
-# Copy dependency files first for better layer caching
+# Copy dependency files
 COPY pyproject.toml uv.lock ./
 
-# Install Python dependencies
-RUN uv sync --no-dev && uv cache clean
+# Install dependencies and clean up in ONE layer
+RUN uv sync --no-dev && \
+    uv cache clean && \
+    rm -rf /root/.cache/* /tmp/* /var/tmp/*
 
 # Copy application code
 COPY ./src /app/src
 COPY ./chroma_vector_db /app/chroma_vector_db
 
-# Set PATH to use the virtual environment (replaces the need for activation)
-ENV PATH="/app/.venv/bin:$PATH"
-
-
-# Create non-root user for security
+# Create user and set permissions
 RUN useradd --create-home --shell /bin/bash app && \
     chown -R app:app /app
+
+ENV PATH="/app/.venv/bin:$PATH"
 USER app
 
-# Expose port
 EXPOSE 8000
-
-# Use exec form for better signal handling
 CMD ["python", "-m", "src.main"]
