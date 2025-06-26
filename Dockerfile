@@ -1,17 +1,22 @@
-FROM python-3.11.13:slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
+# Install uv
 RUN pip install uv
 
+# Copy dependency files first for better caching
 COPY pyproject.toml /app/
+
+# Install dependencies
+RUN uv sync
+
+# Copy application code
 COPY ./src /app/src
 COPY ./chroma_vector_db /app/chroma_vector_db
 
-RUN uv sync
-
-RUN . .venv/bin/activate
-
+# Expose port
 EXPOSE 8000
 
-CMD ["python", "-m", "src.main"]
+# Run the application using uv
+CMD ["uv", "run", "python", "-m", "src.main"]
