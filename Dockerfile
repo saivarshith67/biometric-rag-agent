@@ -23,6 +23,8 @@ COPY ./src /app/src
 COPY ./cleaned_data /app/cleaned_data
 COPY Makefile /app/
 
+# activate the virtual environment
+RUN source .venv/bin/activate
 # Build index (make sure this step doesn't fail)
 RUN python -m src.index_builder
 
