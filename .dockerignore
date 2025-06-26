@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.ipynb
+*.lock
+venv/
+models/
+data/
+notebooks/
+evaluation/
+diagrams/
+.env
+.git
