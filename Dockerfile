@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir uv
 WORKDIR /app
 
 # Copy only dependency files
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml ./
 
 # Create venv and install dependencies
 RUN uv venv /opt/venv && \
